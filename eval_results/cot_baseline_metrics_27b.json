@@ -1,0 +1,10 @@
+{
+  "mode": "baseline",
+  "model": "qwen3.6:latest",
+  "n_samples": 79,
+  "accuracy": 0.7721518987341772,
+  "precision": 0.7166666666666667,
+  "recall": 0.9772727272727273,
+  "f1": 0.8269230769230769,
+  "partial": true
+}

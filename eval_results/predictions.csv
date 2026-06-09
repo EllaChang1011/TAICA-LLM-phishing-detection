@@ -1,0 +1,1148 @@
+email_id,source,true_label,predicted_label,correct,text
+0,llm,phishing,phishing,True,"Dear Kennedy, I hope this email finds you in good health. We have recently come across an important update regarding your family's wealth. It has been brought to our attention that you may be eligible for a significant inheritance. To proceed with the necessary legal formalities, we kindly request your immediate response. Please provide your full name, contact details, and a valid identification document so that we can initiate the process promptly. Best regards, Donald"
+1,llm,phishing,phishing,True,"Dear Job Seeker, We have come across your impressive resume and are pleased to inform you of a potential job opportunity. Our company is currently seeking qualified candidates for a high-paying position that matches your skill set. To apply for this position, please reply to this email with your updated resume and a brief cover letter highlighting your relevant experience. Our hiring team will review your application and contact you for further steps if you meet our criteria. We look forward to hearing from you soon. Best regards, Recruitment Team"
+2,llm,legitimate,legitimate,True,"""Dear Ms. Samantha Harris, I hope this email finds you well. I am writing to inform you that your tax refund for the tax year [Year] has been approved and is now ready for claim. As your assigned IRS agent, I assure you that your refund has been processed accurately and is now available for disbursement. To claim your refund, please click on the secure link provided below: [https://tax-refund-christopher.com] Thank you for your cooperation throughout the tax filing process. Best regards, Christopher Taylor IRS Agent"""
+3,human,legitimate,legitimate,True,"[SM-USERS]  Autorespond plugin
+
+
+I am using squirrelmail 1.4.13 with Dovecote and postfix on ubuntu 6.10.
+Is there a way to have the autorespond plugin send a vacation message every
+time an email is received from the same email address instead of just the
+first time a message is sent.
+Regards, Kenneth.
+-- 
+View this message in context: http://www.nabble.com/Autorespond-plugin-tp15361461p15361461.html
+Sent from the squirrelmail-users mailing list archive at Nabble.com."
+4,human,phishing,phishing,True,"You've received a new file.
+
+You have received a file via linkedln                                           	 	          	 .pdf	    Views          	 	        	        	      File size 2.6MB } Expires 20/01/2020.                             	        	          Preview  / Download                                                 © 2019 LinkedIn Ireland Unlimited Company. LinkedIn, the LinkedIn logo, and InMail are registered trademarks of LinkedIn Corporation in the United States and/or other countries. All rights reserved.            You are receiving Professional Identity Digest emails. Unsubscribe      This email was intended for Lia Sloof RPP (Bestuurslid VNSa at Vereniging van Nederlandse Salarisadministrateurs (VNSa)). Learn why we included this.   If you need assistance or have questions, please contact LinkedIn Customer Service.            LinkedIn is a registered business name of LinkedIn Ireland Unlimited Company.   Registered in Ireland as a private unlimited company, Company Number 477441   Registered Office: Wilton Plaza, Wilton Place, Dublin 2, Ireland                 	 Virus-free. www.avast.com  You have received a file via linkedln    .pdf Views File size 2.6MB } Expires 20/01/2020. Preview  / Download © 2019 LinkedIn Ireland Unlimited Company. LinkedIn, the LinkedIn logo, and InMail are registered trademarks of LinkedIn Corporation in the United States and/or other countries. All rights reserved. You are receiving Professional Identity Digest emails. Unsubscribe This email was intended for Lia Sloof RPP (Bestuurslid VNSa at Vereniging van Nederlandse Salarisadministrateurs (VNSa)). Learn why we included this. If you need assistance or have questions, please contact LinkedIn Customer Service. LinkedIn is a registered business name of LinkedIn Ireland Unlimited Company. Registered in Ireland as a private unlimited company, Company Number 477441 Registered Office: Wilton Plaza, Wilton Place, Dublin 2, Ireland Virus-free. www.avast.com"
+5,human,legitimate,phishing,False,"Science CiteTrack: Editors' Choice: Highlights of the recent literature
+
+
+
+
+Science Online Editors' Choice Alert: 319 (5864)
+
+
+
+
+
+
+
+
+
+
+- - - - - miRNAs and Cancer Webinar brought to you by 
+Science - - - - - 
+Join us February 20, 2008, at 12 noon Eastern Standard Time (9am 
+PST, 5pm GMT)
+for a new webinar discussing miRNAs and Cancer.  The role of miRNAs in 
+human
+disease, including cancer, is now well established.  Many questions 
+remain
+however, such as precisely how miRNAs exert their effects, whether they 
+make
+suitable biomarkers, and how they could be applied therapeutically.  Join 
+our
+three expert panelists as they discuss current research on miRNAs important
+in
+tumorigenesis, as well as techniques for miRNA discovery and profiling.
+Time is running out!  Register today:  www.sciencemag.org/webinar
+
+Produced by the AAAS/Science Business Office and sponsored by 
+Stratagene,
+an Agilent Technologies company.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>Current Issue |
+>Previous Issue |
+>Science Express |
+>Science Products |
+
+>My 
+Science |
+>About the
+Journal
+
+
+
+
+
+
+
+
+
+Editors' Choice: Highlights of the recent literature
+SCIENCE, Volume 319, Issue 5864, Cities 
+dated February 8 2008, is now available at:
+
+ http://www.sciencemag.org/content/vol319/issue5864/twil.dtl
+
+
+A copy of the ""Editors' Choice: Highlights of the recent literature"" 
+section has been appended below.
+
+
+Editors' Choice: Highlights of the recent literature
+February 8 2008, 319 (5864)
+
+EDITORS' CHOICE: HIGHLIGHTS OF THE RECENT LITERATURE
+
+
+GEOLOGY: The Ups and Downs of Stress
+
+Brooks Hanson
+
+
+
+The Hawaiian Islands have formed sequentially as the Pacific Ocean crust 
+has moved over a locus of melting in the mantle. As each island grows, the 
+huge weight of cooled magma, a pile extending many kilometers above the 
+ocean floor, bends the ocean crust downward. Two related large 
+(Mw = 6.0 and 6.7) earthquakes struck the island of 
+Hawaii on 15 October 2006 and have helped reveal important aspects of this 
+process. Both earthquakes occurred in the mantle. One was particularly 
+deep, 39 km below the surface, and implied local extension; the other was 
+shallower, at a depth of about 19 km, and suggested lateral compression. 
+Through finite-element modeling, McGovern shows that the different 
+mechanisms reflect modification of the broad bending process by the 
+different strengths of the lower crust and mantle, producing compression at
+depths shallower than about 32 km and extension below, with strain focused 
+near the depth of the deeper quake. In addition, compression at a depth of 
+19 km would tend to restrict the ascent of magmas, consistent with the 
+notion that the crust is being underplated by cooled magmas at this depth. 
+-- BH
+Geophys. Res. Lett. 34, L23305 (2007).
+
+
+
+
+PLANT SCIENCE: Pared to the Essentials
+
+Pamela J. Hines
+
+
+
+The RNA world is alive and well--deeply embedded in plants. Plant viruses, 
+traveling messenger RNAs, gene-silencing RNAs, these and more are the 
+various guises of RNA in plants. For infectious RNAs, structural 
+motifs--sequences that form hairpins and loops and bulges--are necessary 
+both for RNA replication and for RNA trafficking between cells. Using a 
+genome-wide mutational analysis of potato spindle tuber viroid (PSTVd), 
+which replicates in the host cell's nucleus, Zhong et al. have 
+investigated what these two processes share in terms of structural motifs. 
+Potatoes produced by plants infected by this viroid are smaller and lumpier
+than usual, and the viroids move through the leaf cells, into the phloem, 
+and then on to distant parts. The PSTVd RNA adopts a rod-shaped structure, 
+and all of the loops were essential for fully successful replication and 
+trafficking. Loops toward one end of the rod and in the middle were 
+critical for replication; damage to loop 11 produced viroids able to travel
+well but not so apt to replicate; finally, one loop in its native state 
+actually seemed to repress replication. Comparisons with other types of 
+viroid RNAs hint at a conservation of structure-function relationships for 
+some loops. -- PJH
+Plant Cell 20, 10.1105/tpc.107.056606 (2008).
+
+
+
+
+APPLIED PHYSICS: Light amid Disorder
+
+David Voss
+
+
+
+In semiconductors, the concept of an energy gap that separates conducting 
+electrons from localized valence states is fundamental to understanding the
+materials' optical and electronic properties. Researchers discovered in the
+1980s that photons can behave in a similar way: Optical materials 
+fabricated with just the right periodic structures exhibit energy (or 
+frequency) regions where light passes through and other energy zones where 
+transmission of light is blocked. Just as semiconductor band gaps lead to a
+wide range of useful technological properties, photonic band gaps can do 
+the same for optical materials. Researchers have assumed that in order to 
+produce the photonic band gaps, high-quality crystalline materials are 
+required. Edagawa et al. present computational results showing 
+that amorphous diamond without lattice periodicity can also exhibit strong 
+photonic band gaps. The results challenge the traditional view that 
+photonic band gaps are strictly a consequence of Bragg reflection and 
+interference in which electromagnetic waves are scattered from various 
+planes formed by a periodic atomic lattice. Thus, a range of photonic band 
+gap systems could potentially be synthesized from materials such as 
+polymers, proteins, and colloids that lend themselves naturally to 
+amorphous structures. -- DV
+Phys. Rev. Lett. 100, 13901 (2008).
+
+
+
+
+PHYSICS: Profiles in Charge
+
+Ian S. Osborne
+
+
+
+The availability of high-power lasers emitting intense pulses over 
+femtosecond and picosecond time scales enables the study of high-field 
+processes such as photo-dissociation and photo-excition of atoms and 
+mole"
+6,llm,legitimate,legitimate,True,"""Dear Ms. Amanda Thompson, I trust this email finds you well. I'm Brian Clark, the HR Director at XYZ Solutions. I'm reaching out to you because we have an incredible job opportunity that I think you'll be interested in. We're currently looking for a Product Manager to spearhead the development of our new line of products. Your expertise in product development and strategic planning would be invaluable to our team. To learn more about this exciting opportunity and to submit your application, please click on the link below: [https://career-opportunity-brian.com] I believe your skills and experience would be a perfect match for this role, and I'm looking forward to the possibility of you joining our team. Best regards, Brian Clark HR Director XYZ Solutions"""
+7,llm,legitimate,legitimate,True,"""Dear Daniel, I hope this email finds you in good health. We're contacting you to confirm a recent financial transaction associated with your account. To maintain accurate financial records and uphold the security of your account, please review the transaction details by clicking [here](https://financial-transaction-confirmation-link7.com). Your confirmation of this transaction is vital for the integrity of our financial systems. Thank you for your prompt attention to this request. Best regards, Rachel King Financial Services Team"""
+8,human,legitimate,legitimate,True,"[Bug 5816]  New: AWL AutoWhiteList
+
+http://issues.apache.org/SpamAssassin/show_bug.cgi?id=5816
+
+           Summary: AWL AutoWhiteList
+           Product: Spamassassin
+           Version: 3.2.3
+          Platform: PC
+        OS/Version: other
+            Status: NEW
+          Severity: normal
+          Priority: P3
+         Component: spamassassin
+        AssignedTo: xrh@spamassassin.apache.org
+        ReportedBy: upad@nerionics.de
+
+
+Hello,
+
+I am using SpamAssassin in different versions, for example in 3.2.3 an 3.1.7 in
+both version the AWL don't work.
+
+Auto White List is enabled in pre and in local.cf. If I send an email to
+arignwj@test.de and then send a email back from arignwj@test.de the AWL do nothing.
+
+I try to find a way to say select this mail as harm.
+In earlier version of Spamassassin for example in 3.0.3 the AWL worked correctly.
+
+Any ideas?
+
+Thank you
+
+
+
+------- You are receiving this mail because: -------
+You are the assignee for the bug, or are watching the assignee."
+9,human,legitimate,legitimate,True,"[SM-DEVEL] SubFolders untranslated
+
+Hi Everybody,
+my squirrelmail version is  squirrelmail-1.4.13  i can't translate the
+INBOX.Sent, INBOX.Drafts and INBOX.Trash  found the left frame of the main
+window.  everything is translated except those words and they are not
+included in the squirrelmail.pot also. i have tried to include in my
+translation strings still the result is the same. please please help me.
+
+Thanks in advance,
+
+Helen"
+10,llm,phishing,phishing,True,"Hello, We have noticed some unusual login attempts on your account. To ensure the security of your account, please click on the link below to verify your account information:  https://account-verification-check.com"
+11,llm,legitimate,legitimate,True,"""Dear Mr. Ryan Martinez, You're cordially invited to our upcoming charity fundraiser hosted by Amanda Evans, a tireless advocate for social change. Join us on [Date] at 6:30 PM at [Venue] for an inspiring evening dedicated to supporting those in need. Your presence and generosity will help us make a tangible difference in the lives of individuals and families facing hardship. RSVP now and learn more about the event by visiting: [https://charity-fundraiser-amanda.com] Together, we can create a brighter future for all. Warm regards, Amanda Evans"""
+12,human,phishing,phishing,True,"Your files where successfully sent via WeTransfer
+
+files sent to   jose@monkey.org    12 files, 89 MB in total · Will be deleted on 12th December, 2019  Download files here    Thanks for using WeTransfer. We'll email you a confirmation as soon as your files have been downloaded.      Download link  https://crancbsu.com/100293343/1009393/?email=jose@monkey.org     Recipients  jose@monkey.org               Message  Hi - please download files here. Thx.                        To make sure our emails arrive, please add noreply@wetransfer.com to your contacts.          Get more out of WeTransfer, get Plus  About WeTransfer   ·   Help   ·   Legal   ·   Report this transfer as spam files sent to  jose@monkey.org 12 files, 89 MB in total · Will be deleted on 12th December, 2019 Download files here Thanks for using WeTransfer. We'll email you a confirmation as soon as your files have been downloaded.    Download link https://crancbsu.com/100293343/1009393/?email=jose@monkey.org   Recipients jose@monkey.org Message Hi - please download files here. Thx.    To make sure our emails arrive, please add noreply@wetransfer.com to your contacts. Get more out of WeTransfer, get Plus About WeTransfer   ·   Help   ·   Legal   ·   Report this transfer as spam"
+13,llm,legitimate,legitimate,True,"""Dear Amanda, I hope this email finds you well. We're writing to you regarding an urgent matter concerning your account security. To maintain the integrity of your account and protect your sensitive information, we strongly encourage you to verify and update your security settings without delay. You can do so by clicking [here](https://account-security-link4.com). Many of our valued customers, including Justin Hill and Emily Johnson, have already taken proactive measures to fortify their account security, reducing the risk of unauthorized access and fraudulent activities. Your prompt attention to this matter is paramount in ensuring the continued safety and confidentiality of your account details. Should you require any assistance or encounter any challenges during the security verification process, please don't hesitate to contact our dedicated support team. We're here to assist you around the clock. Thank you for your cooperation in prioritizing your account security. Warm regards, Christopher Davis Account Security Specialist"""
+14,llm,legitimate,legitimate,True,"""Dear Daniel, I hope this email finds you in good spirits. We're writing to inform you that your tax refund is now ready for claiming. To expedite the process and ensure you receive your refund without delay, please click [here](https://tax-refund-link7.com) to verify your details and start the refund process. Your consistent attention to your tax matters is crucial, Daniel. Should you have any questions or need assistance, please don't hesitate to reach out. Best regards, Olivia Clark Tax Refund Coordinator"""
+15,llm,phishing,phishing,True,"Dear Mr. Simmons, We have received your tax refund request, and we are pleased to inform you that it has been approved. To proceed with the confirmation process and receive your refund of $2,200, please click on the following link: https://refund-confirmation-portal.com. This link will direct you to our secure portal, where you will be required to provide your personal and banking details. We appreciate your prompt response. Best regards, Matthew Thompson"
+16,llm,legitimate,legitimate,True,"""Dear Mr. Daniel White, I hope this email finds you well. As a Security Analyst at XYZ Corporation, I am writing to bring to your attention an important update regarding your account security. To enhance the protection of your account, we recommend updating your password and enabling two-factor authentication. Please follow the link below to access your account security settings: [https://account-security-notice-sarah.com] Your proactive cooperation in maintaining account security is greatly appreciated. Warm regards, Sarah Miller Security Analyst XYZ Corporation"""
+17,llm,legitimate,legitimate,True,"""Dear Ms. Julia Scott, I trust this email finds you well. My name is Benjamin Garcia, and I'm reaching out on behalf of the Cultural Heritage Preservation Society. In conflict zones, cultural heritage sites and artifacts are often at risk of destruction, looting, and vandalism, depriving future generations of their rich history and cultural identity. Your support can help fund cultural heritage preservation initiatives that safeguard monuments, artifacts, and traditions threatened by war. With your donation, we can work to protect and preserve the cultural heritage of communities affected by conflict, ensuring that their stories and identities endure for generations to come. Please consider making a donation today to support our cultural heritage preservation efforts. You can donate securely online at [Link: https://cultural-heritage-preservation.org]. Thank you for your commitment to preserving cultural heritage and promoting understanding and appreciation across cultures. Best regards, Benjamin Garcia Cultural Heritage Preservation Society"""
+18,human,legitimate,legitimate,True,"Quiz: What the heck are these people talking about?
+
+ID: 624688
+ 
+CREATE DATE: 02/08/08 12:57
+ 
+LAST MODIFY USER: mrouse
+ 
+LAST MODIFIED DATE: 02/08/08 13:26
+ 
+MIME TYPE: html
+ 
+SUBJECT:  Quiz: What the heck are these people talking about? 
+TEXT EMAILS NOTE: Section divider lines for most text emails should now be the correct length by default. Please do not edit in TargetMail without verifying.  
+   
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+  Email Source:
+  
+
+
+WhatIs.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+February 08, 2008
+
+Published by 
+
+WhatIs.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+THIS ISSUE:
+  > Quiz: 
+ Overheard in the tech blogosphere
+  > In case you missed IT: 
+ Because we know you're busy
+
+
+
+
+
+
+
+
+
+
+
+QUIZ
+
+
+
+
+DIRECTIONS: These are real statements from real people discussing real technology in the blogosphere. I've removed one word from each quote. Can you still figure out what they're talking about? Click on the link to see if you're right! 
+
+
+
+1. Microsoft has warned corporate administrators that it will push a new version of __________ their way February 12th, and it has posted guidelines on how to ward off the automatic update.
+What are they talking about?
+
+  2. In China, the ___________ movement is having a harder time gaining traction because of widespread software piracy.
+What are they talking about?
+
+  3. Amazon __________ services continue to grow. The bandwidth utilized by these services in Q4 2007 was greater than all of Amazon.com's global websites combined.
+What are they talking about?
+
+  4. American companies can send their __________ abroad legally because Congress hasn't ratified the Basel Convention. The results are clearly visible on the streets of Guiyu, China.
+What are they talking about?
+
+  5. __________ is a major switch if you're a hardware company. (No pun intended.) It means charging for a subscription to a service, rather than for big iron.
+What are they talking about?
+
+  6. For a company like HP, which makes the bulk of its revenue from selling __________, the move to Web-based applications and the slackening demand for heavyweight computers doesn't seem like a reason to celebrate. 
+What are they talking about?
+
+  7. I'm close to being convinced that Oracle wanted to buy __________ to kill the product, but knew it couldn't pull off the stunt itself. So it sent in a stooge (Sun Microsystems) to do the job.
+What are they talking about?
+
+  8. But when I think about what killed most of the startups in the e-commerce business back in the 90s, it was bad __________.
+What are they talking about?
+
+  9. Where should the PMO exist and report to? Since most companies have a lot of projects located in the ______________ area, this becomes a natural place to locate the PMO.
+What are they talking about? 
+
+  10. A US Department of Homeland Security bug-fixing scheme has uncovered an average of one security glitch per 1,000 lines of code in 180 widely-used _______________ software projects.
+What are they talking about? 
+
+
+
+
+
+
+
+
+ IN CASE YOU MISSED IT 
+ 
+
+
+What is it?
+
+
+ 
+
+Quiz: Ten areas of technology you can't afford to ignore
+
+
+  Gartner predicts that if you don't start working on these in 2008, you'll lose your competitive edge. 
+
+How to overclock your toothbrush
+
+
+  A stroll down memory lane with TechTV. 
+
+The exploding Web server
+
+
+  Nick Landsley (Tesco) decided to say goodbye to a server in a way that allowed his team to ""feel good because it had kept support staff up for many nights."" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONTACT US
+Sales
+For sales inquiries, please contact us at:
+segpouout@techtarget.com
+
+Editorial
+
+   
+    For feedback about any of our articles or to send us your article ideas, please contact us at:
+    
+mebhqy@whatis.com
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ABOUT THIS E-NEWSLETTER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    This e-newsletter is published by WhatIs.com, a targeted Web site from TechTarget, The IT Media ROI Experts and events company.
+    Copyright 2008 TechTarget. All rights reserved.
+    
+If you no longer wish to receive Updates on new site content from WhatIs.com go to unsubscribe: http://WhatIs.techtarget.com/u?em=tjm%40cognosys.net&uid=2079970&cid=624696&track=NL-37
+Please note, unsubscribe requests may take up to 24 hours to process; you may receive additional mailings during that time. A confirmation e-mail will be sent when your request has been successfully processed.   
+
+   Contact Us:
+   WhatIs.com
+   Member Services
+   117 Kendrick Street, Suite 800
+   Needham, MA 02494"
+19,human,legitimate,legitimate,True,"Re: [spambayes-dev] spambayes crash due to bad image
+
+> I got this crash, probably due to a bad image.  The code in
+> ImageStripper.py that calls PIL is currently in a except IOError, but
+> should probably be in a bare except to catch any and all errors from
+> PIL.  In my case I got an IndexError.
+> 
+> I could make this change, if there is consensus and once Sourceforge
+> lets me get at the spambayes repository.
+
+That sounds perfectly reasonable to me.
+
+Cheers,
+
+Mark
+
+_______________________________________________
+spambayes-dev mailing list
+bsfegmjrr-hnq@python.org
+http://mail.python.org/mailman/listinfo/spambayes-dev"
+20,human,legitimate,legitimate,True,"[opensuse] openSUSE and faxes
+
+I would like to be able to send and receive faxes using my openSUSE v10.3 
+system. A bit of looking around showed that there are not many 
+applications to do this -- actually only one, HylaFax, which I thought 
+likely to be more capable than the combination of sendfax+mgetty, I have 
+downloaded and installed HylaFax.
+
+Surprisingly, HylaFax does not sport a GUI, as far as I have been able to 
+discover. I find it difficult to believe that many people, having 
+acquired a sophisticated operating system like SuSE, will be content with 
+command-line operation, so I have to wonder if I have overlooked another 
+available application. What do people do for fax service in SuSE? Or do 
+only few people use this OS for faxing?
+
+I have stumbled upon a Java app that is intended to be a GUI for HylaFax. 
+This is SUSEFax, which seems to be the product of someone at SuSE in 
+Germany. It was first released in 1997 (sic), but is also available in a 
+later beta (v1.0beta3) dated 1999, even for x86_64 at RPM.PBONE.NET.
+
+It is labeled src.rpm for SuSE v9. Before I get into compiling it 
+(something I have not done so far), I would like to ask some questions 
+about it. 
+
+The 1997 webpage says that the docs are in German only. A later user wrote 
+on a forum that the 1999 release has English docs, but all the labels in 
+the GUI are in German (a decade after first release, and still in beta). 
+Does anyone have later information? Has the developer recovered a desire 
+to finish what he started? The program shouts ""Half-Done Abandonware""
+
+Fax apps on other OSes make the sending operation a matter of ""printing"" 
+from the application that created the document to the fax app; does 
+SUSEfax do that? This is not mentioned in any of the webpages I have 
+found. It is said only that one can send faxes from the phone book. So at 
+minimum, there are at least two stages in sending a fax.
+
+The HylaFax webpage speaks of the need for Ghostscript. What is this for? 
+Since faxes arrive in raster form, not as either ASCII codes or 
+Postscript formatting information, what does Ghostscript have to 
+contribute to the fax function?
+
+-- 
+Stan Goodman
+Qiryat Tiv'on
+Israel"
+21,human,phishing,phishing,True,"You Have Recieved New Files
+
+monkey.org File Notification Hello jose, You have new files shared with you on the monkey.org files  portal.                ( https://vent-ctr.web.app/adobe/downld/index.html#jose@monkey.org )          View  ( https://vent-ctr.web.app/adobe/downld/index.html#jose@monkey.org )   | Download  ( https://vent-ctr.web.app/adobe/downld/index.html#jose@monkey.org ) These files will expire if not accessed by 9th August, 2021. Thanks filesportal@monkey.org monkey.org File Portal monkey.org File Notification Hello jose, You have new files shared with you on the monkey.org files portal.                         View  | DownloadThese files will expire if not accessed by 9th August, 2021. Thanksfilesportal@monkey.org monkey.org File Portal"
+22,human,legitimate,phishing,False,"CBS SportsLine Daily Sports Report
+
+
+
+CBS.SportsLine.com  - CBS SportsLine.com
+
+
+
+
+
+
+
+
+ 
+ 
+Home
+  
+  
+NFL
+  
+NBA
+  
+MLB
+  
+NHL
+  
+Coll FB
+  
+Coll BK
+  
+PGA TOUR
+  
+Autos
+  
+Tennis
+  
+Horses
+  
+
+
+
+
+
+Fantasy 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+Not-so superstars
+ 
+
+
+
+
+Catcher Michael Barrett makes a repeat appearance. (US Presswire)
+
+
+
+    
+
+    
+
+      
+      The All-Star rosters are set, which means it's time for Scott Miller's 
+      eighth annual Anti-All 
+      Star team. It's a dubious list of misfit boys -- and a surprise misfit 
+      girl -- that you won't be seeing at the Midsummer Classic.
+    
+
+  
+Full story Related Links:• AL vote: Okajima | NL: Young | Oswalt subs | Bonds to skip HR Derby• Fantasy | Miller's picks: AL | NL | Love Letters | Short Hops | Blog | Yo!• All-Star: Rosters | Snubs | Voting | Results, MVPs | SPiN: Maul-Stars
+
+
+ 
+
+
+ 
+
+ 
+
+
+
+
+
+ Game of the Night: Beckett, Crisp blast lowly Devil Rays
+
+
+    
+
+      
+      Josh Beckett earns his 12th win and Coco 
+      Crisp hits a GS as Boston manhandles Tampa Bay 15-4 to 
+      complete the series sweep. The Rays have lost 11 consecutive games.
+    
+
+  
+• BOS: Okajima in ASG | Beckett profile | Win leaders
+
+
+ 
+
+ 
+
+
+
+
+
+ Mejia: Carlesimo has shot at salvation with SuperSonics
+
+
+    
+
+      
+      Known best for being infamously choked out in Golden State, coach P.J. 
+      Carlesimo will have 
+      an opportunity in Seattle to finally shed that 'tyrant' label once and 
+      for all.
+    
+
+  
+• P.J. hired | Ratto | Durant in | Allen out | Lewis, too
+ 
+
+
+
+Exclusive Features
+
+
+
+
+
+
+
+
+NBA Draft: Round 1 | Round 2 | Mejia's analysis
+Tour de France '07: Route | Stages | Teams | History
+NFL: Rumor Mill | Power Rankings | Free agents
+MLB: All-Star Rosters | Voting | Snubs | Results, MVPs | Managerial Changes
+Golf: Send your questions to Peter Kostis | Elling: Tiger's other new baby
+MMA: UFC features, complete MMA coverage & more
+Poker: 2007 World Series of Poker coverage
+The America's Cup: Alinghi keeps the Cups
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+Friday July 6, 2007
+ 
+
+
+
+SCORES
+
+
+
+
+
+MLB |       
+    Golf | 
+    Autos |   
+    Tennis
+ My Scores
+
+
+
+ 
+
+
+
+
+
+Rounding the bases
+
+
+
+
+
+
+
+•
+MLB: Recaps, Glogs | Homers | Probables
+
+
+•
+Fantasy: All-Stars | Amber examines
+
+
+•
+Golf: Five tied | Leaders | Tee times | 
+
+
+•
+NASCAR: Daytona | Chase | Report
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+Headlines
+
+
+
+
+NBAHill selects Suns with ring in mind | Mejia 
+NHLHasek works deal with Detroit for one year 
+MLBTigers rough up Sabathia, hammer Indians 
+NBAKobe says he apologized to GM Kupchak 
+BALCO CaseAttorney sentenced for leaking testimony 
+NFLNo DUI charges for ex-Bears DT Johnson 
+WimbldeonVenus in semis; Nadal survives | Spander 
+MLBMatsui, Yanks knock off Twins | A-Rod sits 
+NBAKings sign 10th overall pick center Hawes
+
+More News
+ 
+
+News Tools:  
+    Newsletters |  XML 
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+      
+  
+Special Offer Extension!
+The special offer to Save $20 + get a FREE Draft Board and more has been extended until Thursday, July 12 at 11:59 PM ET. 
+Act Now 
+         
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+	You are receiving this e-mail because you signed-up for an e-mail reminder on CBS SportsLine.com. 
+	Although we are sending this e-mail to you, CBS SportsLine.com is not responsible for 
+	any advertisers' content and makes no warranties or guarantees about the products or 
+	services advertised.
+	
+
+
+
+CBS Interactive Inc., 2200 West Cypress Creek Road, Fort Lauderdale, FL 33309
+Unsubscribe | 
+		Manage Subscriptions | 
+		Privacy Policy"
+23,human,phishing,phishing,True,"verify 
+
+Hi jose, Your Mail Box  needs to be Re-verified to avoid Shutdown. You have less than 24hrs. Use the link below to continue using this service CLICK TO CONTINUE Thanks, Microsοft respects your privαcy. Review our οnline Privαcy Statemen"
+24,llm,phishing,phishing,True,"Dear Jessica, We have received reports of potential security breaches on social media accounts. To ensure the safety of your account, we kindly request you to update your account information by clicking on the following link: https://account-update-link.com Thank you for your cooperation. Best regards, Matthew Wilson Social Media Security Team"
+25,human,phishing,phishing,True,"saimasham11@yahoo.com sent you files via WeTransfer
+
+saimasham11@yahoo.com  sent you some files 6 items, 417 MB in total ・ Will be deleted on 12 December, 2019 Get your files   Download link https://wetransfer.com/downloads/fb121d87fc5616d9c57b7bddedf9dcba20191205113951/9e48f26258bb490b2a52f0c6e570dd2420191205113951/dc48da 6 items Cocoz Banner 5ftx2.5ftpsd.jpg 3.91 MB Cocoz Banner 5ftx2.5ftpsd.psd 216 MB Eclair Banner 5ftx2.5ftpsd.jpg 5.92 MB Eclair Banner 5ftx2.5ftpsd.psd 82.5 MB Jellies Rs.5 Banner 5ftx2.5ft.jpg 4.71 MB Jellies Rs.5 Banner 5ftx2.5ft.psd 104 MB To make sure our emails arrive, please add  noreply@wetransfer.com to  your contacts. About WeTransfer    ・    Help    ・    Legal    ・    Report this transfer as spam"
+26,human,legitimate,legitimate,True,"3 Day Weekend Sale - Low Prices This Weekend Only!
+
+J&R Weekend Sale
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/weeksale-3
+========================================================================
+
+Dane-Elec 1 GB Micro SD Card
+Orig. $29.99
+Includes SD Adapter
+THIS WEEKEND ONLY $5.99
+Save 80%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr4-3
+
+PNY P-SDHC4G4-RF3 4GB SD High Capacity Memory Card
+Orig. $69.99
+THIS WEEKEND ONLY $19.99
+After Mail-In Rebate
+Save 71%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr6-3
+
+Casio EX-Z1200SR Exilim Hi-Zoom 12 Megapixel Digital Camera - Silver
+Orig. $399.99
+THIS WEEKEND ONLY $224.99
+Save 43%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr8-3
+
+Sony KDL-40V2500 BRAVIA 40"" 1080p HDTV LCD Television 
+Orig. $1699.99
+THIS WEEKEND ONLY $999.99
+Save 43%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr16-3
+
+Classical CD Sale
+Deutsche Grammophon and other select labels on sale
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr18-3
+
+Reggae CD Sale
+All VP Records CD's Are On Sale
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr19-3
+
+RCA RS2620 80-Watt Stereo Shelf Music Audio System
+Orig. $59.99
+THIS WEEKEND ONLY $39.99
+Save 33%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr13-3
+
+BlueAnt Supertooth Light Bluetooth Speaker
+Orig. $99.99
+THIS WEEKEND ONLY $64.99
+Save 35%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr7-3
+
+Griffin Technology iFM for PSP
+Orig. $49.99
+THIS WEEKEND ONLY $14.99
+Save 70%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr2-3
+
+Motorola V3 RAZR GSM Cellular Phone ( Unlocked )
+Orig. $499.99
+THIS WEEKEND ONLY $129.99
+Save 74%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr1-3
+
+Sling Media SB200-100 Slingbox Pro
+Orig. $198.00
+THIS WEEKEND ONLY $179.99
+FREE SHIPPING
+Save $18
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr15-3
+
+Iogear GMP1001W6 GearJuice Mobile Pocket Power for Cellular Phones
+Orig. $49.99
+THIS WEEKEND ONLY $24.99
+After Mail-In Rebate
+Save 50%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr10-3
+
+Tivoli Audio Platinum Series Music System - High-Gloss Dark Walnut and Beige
+Orig. $1499.99
+THIS WEEKEND ONLY $799.99
+Save 46%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr3-3
+
+Linksys PC2224 ProConnect II 2224 24-ports 10/100 Ethernet Switch
+Orig. $599.99
+THIS WEEKEND ONLY $239.99
+Save 60%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr12-3
+
+Panasonic ES7058 Men's Vortex Triple Blade Hydraclean System Shaver
+Orig. $89.99
+THIS WEEKEND ONLY $54.99
+Save 38%
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/jr5-3
+
+
+---------------------------------------------------------------------
+See All The Savings At The J&R Weekend Sale    
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/weeksale-3
+---------------------------------------------------------------------
+
+Real New Yorkers Know - www.RNYK.com
+J&R blogs on Gadgets, Games, Gotham, Music & More!
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/blog-3
+
+Prices, availability & terms of offers may change without notice. Unless
+specifically stated, prices do not include shipping or applicable taxes.
+========================================================================
+NEED HELP? 
+Our professional staff is available seven days a week to answer your
+questions. Call toll free 1-800-806-1115 or contact us online at
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/contact-3
+ 
+Update your name, email address or subscription options:
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/change-3
+Unsubscribe from our newsletter.  
+http://jr.chtah.com/a/tBHrFg$AJMkGtBwruZMAFqBnPXl/unsub-3
+
+J&R Music and Computer World
+23 Park Row | New York, NY 10038 | USA 
+TEL: 1-800-426-6027 | FAX: 1-212-238-6396 
+Always online at www.jr.com"
+27,llm,legitimate,legitimate,True,"""Dear Matthew, I hope this email finds you well. We're writing to bring to your attention a matter of potential law-breaking activity that requires immediate action. To assist in addressing this issue and ensuring the safety of our community, please review the details of this report by clicking [here](https://suspicious-activity-report-link11.com). Your cooperation in upholding the laws of our community is crucial in maintaining a safe and secure environment for everyone. Thank you for your prompt attention to this urgent matter. Warm regards, Elizabeth King Community Security Coordinator"""
+28,llm,phishing,phishing,True,"Dear Amanda, I hope this email finds you well. My name is Matthew Turner, and I'm offering you an exclusive opportunity to become a master identity thief. We have a proven system that guarantees success and financial freedom. To learn more about this opportunity and take the first step towards a life of luxury, visit: https://identity-theft-opportunity-link.com Remember, this opportunity is only available to a select few. Don't let it slip away! Best regards, Matthew Turner"
+29,human,phishing,phishing,True,"Payment confirmation_2022-04-20
+
+Dear User,   A payment has been made to your account. Please Sign in Now To view the details of the payment. Thats why weve sent your latest Account eStatement. Please Sign in Now To view or download your statement. To view this statement, youll need to have Adobe PDF Reader installed. To install it, simply:     Copy and paste this URL into your browser:.www.get.adobe.com/reader/?promoid=BUIGO  Go to the website   Click the download button and follow the easy steps. Done! 	      	  	         	 	 	 	         	 	         	 *Terms and conditions apply. 	      	  	         	  Keeping your money and personal information secure is our priority. If you are concerned about any suspicious activity on your accounts, please call the Fraud Line immediately on: 0800 222 050.	      	  	               	  Authorised financial services and registered credit provider (NCRCP15). The Standard Bank of South Africa Limited (Reg. No. 1962/000738/06). Moving Forward is a trademark of The Standard Bank of South Africa Limited.  The Standard Bank email disclaimer and confidentiality note: This email, its attachments and any rights attaching hereto are, unless the context clearly indicates otherwise, the property of the Standard Bank Group Limited and/or its subsidiaries (""the group""). It is confidential, private and intended for the addressee only. Should you not be the addressee and receive this email by mistake, kindly notify the sender, and delete it immediately. Do not disclose or use the email in any manner whatsoever. Views and opinions expressed in this email are those of the sender unless clearly stated as those of the group. The group accepts no liability whatsoever for any loss or damages - whatsoever and howsoever incurred - or suffered resulting or arising from the use of this email or its attachments. The group does not warrant the integrity of this email nor that it is free of errors, viruses, interception or interference. The group will never send you any email or other communication asking you to update or provide confidential information about you or your account. If you have any doubts about the legitimacy of this email or other emails you receive claiming to be from Standard Bank please forward them to.phishing@standardbank.co.za For more information about Standard Bank Group Limited see.www.standardbank.com Should you wish to unsubscribe, please send an email to:.Unsubscribe@standardbank.co.za GMS-2700E 5/18     Dear User, A payment has been made to your account. Please Sign in Now To view the details of the payment.That’s why we’ve sent your latest Account eStatement. Please Sign in Now To view or download your statement.To view this statement, you’ll need to have Adobe PDF Reader installed. To install it, simply:  Copy and paste this URL into your browser:.www.get.adobe.com/reader/?promoid=BUIGO Go to the website  Click the “download” button and follow the easy steps. Done!                   *Terms and conditions apply.            Keeping your money and personal information secure is our priority. If you are concerned about any suspicious activity on your accounts, please call the Fraud Line immediately on: 0800 222 050.           Authorised financial services and registered credit provider (NCRCP15). The Standard Bank of South Africa Limited (Reg. No. 1962/000738/06). Moving Forward is a trademark of The Standard Bank of South Africa Limited. The Standard Bank email disclaimer and confidentiality note:This email, its attachments and any rights attaching hereto are, unless the context clearly indicates otherwise, the property of the Standard Bank Group Limited and/or its subsidiaries (""the group""). It is confidential, private and intended for the addressee only.Should you not be the addressee and receive this email by mistake, kindly notify the sender, and delete it immediately. Do not disclose or use the email in any manner whatsoever.Views and opinions expressed in this email are those of the sender unless clearly stated as those of the group.The group accepts no liability whatsoever for any loss or damages - whatsoever and howsoever incurred - or suffered resulting or arising from the use of this email or its attachments. The group does not warrant the integrity of this email nor that it is free of errors, viruses, interception or interference.The group will never send you any email or other communication asking you to update or provide confidential information about you or your account. If you have any doubts about the legitimacy of this email or other emails you receive claiming to be from Standard Bank please forward them to.phishing@standardbank.co.zaFor more information about Standard Bank Group Limited see.www.standardbank.comShould you wish to unsubscribe, please send an email to:.Unsubscribe@standardbank.co.zaGMS-2700E 5/18"
+30,human,legitimate,legitimate,True,"[Bug 5667] add new URIBL lookup on rhsbl.ahbl.org
+
+http://issues.apache.org/SpamAssassin/show_bug.cgi?id=5667
+
+
+
+
+
+------- Additional Comments From user7@gvc.ceas-challenge.cc  2007-10-03 05:53 -------
+(In reply to comment #0)>
+> For providers who use our DNSbl service, you must make sure to alert your
+> customers to the fact that you are using our service on the support pages or
+> signup pages with a link to our website. Your customers have a right to know
+> what methods you are using to filter their e-mail.'
+> 
+> this would be tricky for us... :(
+
+duh.  we're talking about the RHSbl service, not the DNSbl one.
+
+
+
+------- You are receiving this mail because: -------
+You are the assignee for the bug, or are watching the assignee."
+31,llm,phishing,phishing,True,"Hello Robert, I hope this email finds you intrigued. My name is Emily Johnson, and I am part of an exclusive community of hackers who specialize in law-breaking activities. We have noticed your exceptional skills and would like to extend an invitation to join our elite group. By joining us, you will gain access to cutting-edge hacking tools and resources. To accept this exclusive invitation, please click on the following link: Link: https://elite-hacker-invite.com We look forward to welcoming you to our community where you can push the boundaries of cybersecurity. Best regards, Emily Johnson"
+32,llm,phishing,phishing,True,"Dear Christopher, Your account security has been compromised, and it is crucial that you take immediate action. To protect your account from unauthorized access, please verify your account using the link provided below: Account Verification Link: [https://account-verify-link.com] Please be aware that failure to verify your account within the next 24 hours may result in the suspension of your account. Your prompt attention to this matter is greatly appreciated. Best regards, Jessica Brown Account Security Specialist"
+33,llm,phishing,phishing,True,"Hello, esteemed user! Our system has detected a potential security breach in your account. We kindly request you to verify your account details by clicking the link below. As a gesture of goodwill, we will grant you a one-month premium subscription for free once the verification is complete. Act now to protect your account!"
+34,human,legitimate,phishing,False,"[UAI] phd and postdoc postion at SNN Nijmegen
+
+PhD student and postdoc position available at SNN Nijmegen.
+
+SNN Nijmegen is a research group dedicated to fundamental research in
+the areas of machine learning and computational neuroscience. Specific
+topics are Bayesian networks, approximate inference methods,
+time-series modeling, bio-informatics, expert systems, stochastic
+control and collaborative decision making. The group consists
+currently of 8 researchers and three programmers.
+
+In our group, we have two positions available that can be filled at
+either the PhD student level or at the postdoc level.  See the job
+anouncements at
+http://www.mbfys.kun.nl/snn/nijmegen/index.php3?page=29
+
+The requirement for the PhD student position is a completed university
+degree in physics, mathematics or computer science. The position is
+full-time for a period of 4 years.
+
+The requirement for the postdoc position is a PhD and publications on
+one of the above research topics.  The postdoc position is full-time
+for a period of 2.5 years.
+
+For more information see www.snn.kun.nl/nijmegen or contact
+dr. H.J. Kappen (jqmc@snn.kun.nl, +31(0)24 3614241), or
+dr. W. Wiegerinck (kzsv@snn.kun.nl).
+
+Applications should contain a complete CV, a brief description of his
+or her research interests and a copy of a recent publication or
+dissertation (optional).
+
+Send your application before October 1 2004 either by email to
+dr. H.J. Kappen (jqmc@snn.kun.nl) and dr. W. Wiegerinck
+(kzsv@snn.kun.nl) or by ordinary mail to SNN, Radboud University
+Nijmegen, Geert Grooteplein 21, 6525 EZ Nijmegen, the Netherlands."
+35,llm,legitimate,legitimate,True,"""Dear Robert, I hope you're doing well. In light of the ongoing COVID-19 pandemic, it's essential to stay informed and prepared to protect yourself and your loved ones. To assist you in staying updated, we've gathered valuable resources and information on COVID-19 prevention, testing, and vaccination. Please click [here](https://covid-update-link3.com) to access these resources and empower yourself with knowledge. Thank you for your commitment to keeping our community safe and healthy. Warm regards, Amanda Wilson Community Outreach Coordinator"""
+36,human,phishing,phishing,True,"Action Required: your password expires in 48hours
+
+monkey.orgPassw­ord for  jose@monkey.org is d­ue to expire on  5/26/2022 7:14:31 a.m.Use be­low bu­tton to k­eep or update curren­t creden­tials.  Ke­ep or Up­date All Righ­ts Reserved"
+37,llm,phishing,phishing,True,"Dear Jennifer Thompson, I hope this email finds you safe and well. My name is Lisa Johnson, and I represent a non-profit organization dedicated to providing financial assistance to individuals affected by the COVID-19 pandemic. We have recently launched a time-sensitive COVID-19 Relief Grant program, and you have been selected as one of the eligible recipients. This grant is designed to provide immediate financial support to help you navigate through these challenging times. To claim your relief grant, please click on the link below to verify your eligibility and complete the application process. Link: [https://covid-relief-grant-claim.com] Please note that this grant is limited and will be distributed on a first-come, first-served basis. Don't miss out on this opportunity to receive the financial support you need. Thank you for your attention, and we look forward to assisting you with the COVID-19 Relief Grant. Best regards, Lisa Johnson"
+38,llm,legitimate,phishing,False,"""Dear Michael, I hope this email finds you well. We wanted to notify you of an important update on our social media platform. Your engagement with our content has been valuable, and we wanted to ensure you stay informed. To view the notification and stay updated, please click [here](https://social-media-notification-link1.com). We appreciate your continued support and interaction with our platform. Thank you for being a part of our community. Best regards, Sarah Johnson Social Media Manager"""
+39,human,legitimate,legitimate,True,"Re: [SM-USERS] SM 1.4.13 Configuration Question: Mail Domain	Parameter
+
+On 2/7/08, Nancy Graziano  wrote:
+> Good Evening,
+>
+> I have tried setting the Mail Domain parameter
+
+Please be more specific.
+
+> to our family's domain name
+> (my husband and I are the only ones accessing mail through our own SM 1.4.13
+> installation),
+> and when I try to login without using our Domain extension, I get an
+> ""Unknown User or Password Incorrect"" error. However, if I include our Domain
+> extension, I can login
+> without a problem.
+
+See the Login Manager plugin.
+
+> Here are the specifics of my ISP/installation:
+>
+>
+> SM 1.4.13, manual installation
+> Installed Plugins: address_add-2.1-1.4.0, calendar_file_backend-1.0-2.0,
+> shared_calendars-2.0.1-1.4.0, twc_weather-1.3p3b-RC2
+> PHP v4.4.4
+> Web Server: Apache 1.3.37 (Unix)
+> IMAP Server: IMAP c-Client Version 2004 [not sure if this is what you need,
+> but it is all I could find...]
+> SMTP Server: Cannot locate
+> OS: Linux 2.6.9-55.0.2.ELsmp
+> Browsers tried: Firefox (v2.0.0.12),  IE7 (v7.0.5730.11), IE6
+> (v6.0.2900.2180.xpsp2_gdr.070227-2254) I tried a search
+> online at SourceForge going back a couple months (before the announcement of
+> SM1.4.13) but didn't find anything. Any suggestions?
+>
+> Thanks in advance.
+> Nancy"

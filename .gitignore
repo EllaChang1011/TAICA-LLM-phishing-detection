@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Model files (host on HuggingFace Hub instead)
+models/
+*.gguf
+*.safetensors
+*.pt
+*.bin
+
+# Training checkpoints (large optimizer states)
+training_runs/results*/checkpoint-*/
+
+# LoRA adapters (host on HuggingFace Hub)
+training_runs/results*/lora_adapter*/
+
+# Unsloth auto-generated cache
+unsloth_compiled_cache/
+
+
+# Logs
+logs/
+*.log
+
+# Claude Code workspace
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1358 @@
+[
+  {
+    "text": "Statistical Highlights for 2nd Quarter 2017 Phishing E-mail Reports and Phishing Site Trends   4 Brand-Domain Pairs Measurement Brands & Legitimate Entities Hijacked by E-mail Phishing Attacks Use of Domain Names for Phishing 7-9 Phishing and Identity Theft in Brazil 10-11 Most Targeted Industry Sectors APWG Phishing Trends Report Contributors 1st Quarter Activity January-March 2024 Published 14 May 2024 Unifying the Global Response To Cybercrime PHISHING ACTIVITY TRENDS REPORT",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 1
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 Statistical Highlights Most-Targeted Industry Sectors Phone-Based Phishing Business Email Compromise APWG Phishing Trends Report Contributors About the APWG Little recorded just a few years ago, phone numbers used",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "recorded just a few years ago, phone numbers used for fraud comprised more than 20% of fraud-related assets seen by OpSec in its latest report Phone-based Phishing Growing Unchecked Phishing Report Scope The APWG Phishing Activity Trends Report analyzes phishing attacks and other identity theft techniques, as reported to the APWG by its member companies, its Global Research Partners, through the organization’s",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "obal Research Partners, through the organization’s measures the evolution, proliferation, and propagation of identity theft methods by drawing from the research of our member companies and industry experts. Phishing Defined Phishing is a crime employing both social engineering and technical subterfuge to steal consumers’ personal identity data and financial account credentials. Social engineering",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "financial account credentials. Social engineering schemes prey on unwary victims by fooling them into believing they are dealing with a trusted, legitimate party, such as by using deceptive email addresses and email messages. These are designed to lead consumers to counterfeit Web sites that trick recipients into divulging financial data such as usernames and passwords. Technical subterfuge schemes plant malware onto",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "s. Technical subterfuge schemes plant malware onto computers to steal credentials directly, often using systems that intercept consumers’ account usernames",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "ystems that intercept consumers’ account usernames and passwords or misdirect consumers to counterfeit Web sites. Phishing Activity Trends Summary • Phone-based phishing, directly engaging victims, proliferates unchecked. Phone numbers used for fraud comprised more than 20% of fraud-related assets identified by OpSec in Q1 2024. [p.6] • Phishing using phone calls — so-called voice phishing or “vishing”— is increasing every quarter. [pp. 6-7] • In Q1 2024, APWG observed 963,994 phishing attacks, the lowest quarterly total since Q4 2021. [p. 3] • Social media platforms were the most frequently attacked sector, targeted by 37.4% all phishing attacks in Q1 2024. Banking-segment phishing continued to decline, down to 9.8 percent. [p. 5] • The average wire transfer amount requested in BEC attacks in Q1 2024 was $84,059, up nearly 50% from the prior quarter’s average. [p.7]",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 APWG’s contributing members study the ever-evolving nature and techniques of cybercrime. APWG has two sources of phishing data: phishing emails reported to it by APWG members and by members of the public, and phishing URLs reported by APWG members into the APWG eCrime eXchange. The APWG tracks: •",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "into the APWG eCrime eXchange. The APWG tracks: • Unique phishing sites. This is a primary measure of reported phishing across the globe. This is determined by the unique bases of phishing URLs found in phishing emails reported to APWG’s repository. (A single phishing site may be advertised as thousands of customized URLs, all leading to basically the same destination.) Thus APWG measures reported phishing sites, which is",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "us APWG measures reported phishing sites, which is a more relevant metric than URLs. A synonym for sites is attacks. • Unique phishing e-mails subjects. This counts email lures that have different email subject lines. Some phishing campaigns may use the same subject line but advertise different phishing sites. This metric is a general measure of the variety of phishing attacks, and can be a rough proxy for the amount of phishing taking place. •",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "h proxy for the amount of phishing taking place. • The APWG also counts the number of brands attacked by examining the phishing reports submitted into the APWG eCrime Exchange, and normalizing the spellings of brand names. January February March Number of unique phishing Web sites (attacks) detected 358,107 314,974 290,913 Unique phishing email campaigns 50,837 24,086 41,550 Number of brands targeted by phishing campaigns",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "50 Number of brands targeted by phishing campaigns The APWG observed almost five million phishing attacks over the course of 2023, which was a record year. In the first quarter of 2024, APWG observed 963,994 phishing attacks. This was the lowest quarterly total since 4Q 2021, and far below the 1,624,144 attacks seen in Q1 2023, which was the record high",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "attacks seen in Q1 2023, which was the record high quarter in APWG’s historical observations. Overall, the number of attacks per month has been stable from June 2023 through March 2024. The number of reports received was down, but the number of unique email campaigns was up 64 percent over Q4 2024, suggesting that phishers were diversifying their email subject lines in order to bypass email",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "their email subject lines in order to bypass email filtering. Recently there have also been fewer brand names reported to the APWG. Statistical Highlights for the 1st Quarter 2024",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 In the first quarter of 2024, APWG founding member OpSec Security found that social media platforms were the most frequently attacked sector, representing 37.4 percent all phishing attacks. Phishing against",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "7.4 percent all phishing attacks. Phishing against the Financial Institution (banking) segment continued to fall, from 24.9 percent of all attacks in Q3 2023 to 14 percent in Q4 2023, to 9.8 percent in Q1 2024. Attacks against online payment services (such as PayPal, Venmo, Stripe, and similar companies) were another 7.4 percent of all attacks. “Social Media gave up some market share to the SaaS/Webmail industry, but those two sectors still",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "SaaS/Webmail industry, but those two sectors still represent nearly 60 percent of all detected phishing,” said Matthew Harris, Senior Product Manager, Fraud at OpSec. “We have observed an increased percent of phishing being targeted towards activities that do not require high security: less toward banking and more toward social media accounts, and SAAS/Webmail accounts such as Microsoft Outlook, and Netflix.”",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "accounts such as Microsoft Outlook, and Netflix.” Harris also added: “Lastly, and continuing a trend we have seen for the last 15 consecutive quarters, we're again tracking a strong increase in phone-based fraud, with vishing and smishing detection volumes",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "fraud, with vishing and smishing detection volumes growing by more than 30 percent as compared to the previous quarter.” 100,000 200,000 300,000 400,000 500,000 600,000 700,000 Apr-23 May-23 Jun-23 Jul-23 Aug-23 Sep-23 Oct-23 Nov-23 Dec-23 Jan-24 Feb-24 Mar-24 Phishing Attacks, Q2 2023 - Q1 2024 Most-Targeted Industry Sectors – 1st Quarter 2024",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 OpSec Security offers world-class brand protection solutions. Social Media , 37.6% SAAS / Webmail, 21.0% Financial Institution, 9.8% Payment, 7.2% eCommerce / Retail, 5.4% Logistics / Shipping, 5.0% Other, 10.0% Telecom, 2.0% Crypto, 2.0% MOST-TARGETED INDUSTRIES, 1Q 2024",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 APWG founding member OpSec Security found that the number of phone numbers used to perpetrate fraudulent activities has exploded over the last three years. Phone numbers used for fraud represented",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "ee years. Phone numbers used for fraud represented more than 20 percent of all fraud-related assets that OpSec identified in Q1 2024. OpsSec tallies fraud assets including fraudulent URLs (such as phishing URLs), phone numbers used in frauds, and email accounts used to perpetrate frauds (including those used for BEC attacks, job advertisement frauds, etc.).",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "for BEC attacks, job advertisement frauds, etc.). Phone-based fraud is initiated by different methods. One is voice phishing or vishing -- where fraudsters call potential victims. Another is SMS-based phishing or smishing – in which fraudsters advertise the",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "ng or smishing – in which fraudsters advertise the URLs of phishing sites within SMS (Short Message Service) and Internet-mediated, phone-to-phone text messages. 0% 5% 10% 15% 20% 25% Apr Jun Aug Oct Dec Feb Apr Jun Aug Oct Dec Feb Apr Jun Aug Oct Dec Phone Numbers as a Percent of Total Fraud Assets Detected Phone-Based Phishing, 1st Quarter 2024",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 The most common form of phone-based phishing OpSec has observed is known as hybrid phishing. The typical scam involves sending the victim a fake purchase receipt via email, commonly for a few hundred",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "hase receipt via email, commonly for a few hundred U.S. dollars, which requests that the recipient call a support phone number within a limited amount of time to dispute the charge. This “urgent call to action” is a common social engineering tactic. Once on the phone with the victim, the scammer collects the victim’s personal and financial information, or persuades the victim to send money or gift cards to the scammer.",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "victim to send money or gift cards to the scammer. “At OpSec, we started to see vishing and smishing take off in early 2021,” said Matthew Harris, Senior Product Manager, Fraud at OpSec. “That was likely a result of scammers pivoting from fraud models that have a lower return on investment to methods that have higher ones.” Phishing that uses email lures is being hampered by advanced filtering technologies and sending",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "red by advanced filtering technologies and sending requirements, making it more difficult for scammers to get their emails into victim in-boxes. “Contrast this with phone calls, which go directly to a user with very little filtering,” said Harris. “And with phone scams, the victim only sees an easily spoofable telephone number or caller name. Finally, phone calls are",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "ne number or caller name. Finally, phone calls are more engaging. A live person is calling the victim, interacting them, and has a chance to gain the victim’s trust—or has a chance to alarm and confuse the victim and trick them.” APWG member Fortra tracks the identity theft technique known as “business e-mail compromise” or BEC, which was responsible for $2.9 billion dollars in losses in the U.S. in 2023 according to the FBI’s",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "losses in the U.S. in 2023 according to the FBI’s Internet Crime Complaint Center (IC3). In a BEC attack, a threat actor impersonates an employee, vendor or other trusted party in an email communication and attempts to trick an employee into sending money, privileged information, or some other asset. Fortra examined thousands of BEC attacks attempted during",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "examined thousands of BEC attacks attempted during Q1 2024. Fortra protects organizations against phishing, BEC scams, and other advanced email threats. During the first quarter of 2024, Fortra found gift card scams were once again the most popular scam type, comprising 37.9 percent of the total. Another 29.2 percent of attacks were advance fee fraud scams.",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "2 percent of attacks were advance fee fraud scams. Payroll diversion remained a popular attack type, making up 10.5 percent of attacks. Successful advance fee fraud and payroll diversion scams lead the victim to make a wire transfer to the scammer. Fortra found that the average amount requested in wire transfer BEC attacks in Q1 2024 was $84,059, up",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "re transfer BEC attacks in Q1 2024 was $84,059, up nearly 50 percent from the prior quarter’s average of $56,195. The volume of wire transfer BEC attacks in Q1 2024 decreased by 60 percent compared to the previous quarter. This suggests the bad actors behind BEC wire transfers conducted a smaller number of bigger-money attacks. Business e-Mail Compromise (BEC), 1st Quarter 2024",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 “Nearly 60 percent of malicious messages reaching corporate inboxes in Q1 2024 attempted to steal login credentials, while 40 percent were response-based,” said John Wilson, Senior Fellow, Threat Research at",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "aid John Wilson, Senior Fellow, Threat Research at Fortra. “Less than half a percent of the malicious messages that landed in enterprise mailboxes attempted to deliver malware. These numbers suggest that corporate email filters still struggle to catch credential phishing and response-based attack messages.” “Hybrid vishing, which we rarely saw before 2023, made up 5.6 percent of Fortra’s engagements in the",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "made up 5.6 percent of Fortra’s engagements in the first quarter of 2024,” said Wilson. “The hybrid vishing attacks we track typically begin as an email indicating the recipient has been charged for a product or service. The messages instruct the recipient to call a phone number if they wish to cancel their order and obtain a refund. Norton/LifeLock was the most",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "and obtain a refund. Norton/LifeLock was the most popular brand used as a lure in these attacks, mentioned in 32 percent of the hybrid vishing messages we encountered in Q1 2024. McAfee was the second most popular lure, making up 29 percent of the Q1",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "most popular lure, making up 29 percent of the Q1 attack messages. This was followed by Geek Squad (21%) and PayPal (17%).” NameCheap 36% Other 22% Squarespace 15% Hostinger 11% TUCOWS 8% 1&1 IONOS SE 4% PDR 4% Registrars Used to Register BEC Domains (Q1 2024)",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 Fortra found that 73 percent of BEC attacks in Q1 2024 were launched using a free webmail domain, a slight increase from the 68 percent share observed in the prior quarter. The remaining 27 percent of BEC attacks in",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "uarter. The remaining 27 percent of BEC attacks in Q1 2024 utilized a combination of maliciously registered domains and compromised email accounts. Google was by far the most popular free webmail provider for BEC scammers, accounting for 68 percent of the free webmail accounts used in Q1 2024 BEC scams. Microsoft’s webmail properties powered 17 percent of webmail-based BEC attacks in Q1, followed by a long tail of other webmail providers:",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 Forta's mission is to help organizations increase security maturity while decreasing operational burden. Forta's brands include PhishLabs and Agari. www.fortra.com Illumintel provides intelligence, analysis, due diligence, and public policy advising in the areas of cybersecurity and Internet-based commerce. www.illumintel.com OpSec Security is the leading provider of integrated online protection and on-product authentication solutions for brands and governments. www.opsecsecurity.com",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "for brands and governments. www.opsecsecurity.com The APWG Phishing Activity Trends Report is published by and © the APWG. For info about the APWG, inquiries related to company-provided content in this report, please contact: APWG Secretary General (sellis@opsecsecurityonline.com); Rachel Woodford of Fortra (Agari and PhishLabs) (Rachel.Woodford@fortra.com). Analysis and editing by Greg Aaron, Illumintel Inc., illumintel.com",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "ing by Greg Aaron, Illumintel Inc., illumintel.com Founded in 2003, the Anti-Phishing Working Group (APWG) is a not-for-profit industry association focused on eliminating the identity theft and frauds that result from the growing problem of phishing, crimeware, and e-mail spoofing. Membership is open to financial institutions, online retailers, ISPs, solutions providers,",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "ions, online retailers, ISPs, solutions providers, the law enforcement community, government agencies, multilateral treaty organizations, and NGOs. There are more than 2,200 enterprises worldwide participating in the APWG. Operationally, the APWG conducts its core missions through: APWG, a US-based 501(c)6 organization; the APWG.EU, the institution’s European chapter established in Barcelona in 2013 as a non-profit research",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "shed in Barcelona in 2013 as a non-profit research foundation incorporated in Spain and managed by an independent board; the STOP. THINK. CONNECT. Messaging Convention, Inc., a US-based non-profit 501(c)3 corporation; and the APWG’s applied research secretariat <http://www.ecrimeresearch.org>. APWG Phishing Activity Trends Report Contributors About the APWG",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "Phishing Activity Trends Report 1st Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 1st Quarter 2024 APWG’s directors, managers and research fellows advise: national governments; global governance bodies such as the Commonwealth Parliamentary Association, Organisation for Economic Co-operation and",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "iation, Organisation for Economic Co-operation and Development, International Telecommunications Union and ICANN; hemispheric and global trade groups; and treaty organizations such as the European Commission, the G8 High Technology Crime Subgroup, Council of Europe’s Convention on Cybercrime, United Nations Office of Drugs and Crime, Organization for Security and Cooperation in",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "rime, Organization for Security and Cooperation in Europe, Europol EC3 and the Organization of American States. APWG is a founding member of the steering group of the Commonwealth Cybercrime Initiative at the Commonwealth of Nations. APWG‘s clearinghouses for cybercrime-related data send more than two billion data elements per month to APWG’s members to inform security applications, forensic routines and research programs, helping",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": ", forensic routines and research programs, helping to protection millions of users, software clients, and devices worldwide. APWG‘s STOP. THINK. CONNECT. cybersecurity awareness campaign has officially engaged campaign curators from 26 nations, 13 of which are deployed by cabinet-level ministries, government CERTs and national-scope NGOs. The annual APWG Symposium on Electronic Crime Research, proceedings of which are published by the",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "esearch, proceedings of which are published by the IEEE, attracts scores of papers from leading scientific investigators worldwide. The conference, founded in 2006 by APWG, is the only peer-reviewed conference dedicated exclusively to cybercrime studies.",
+    "source": "q1_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "Statistical Highlights for 2nd Quarter 2017 Phishing E-mail Reports and Phishing Site Trends   4 Brand-Domain Pairs Measurement Brands & Legitimate Entities Hijacked by E-mail Phishing Attacks Use of Domain Names for Phishing 7-9 Phishing and Identity Theft in Brazil 10-11 Most Targeted Industry Sectors APWG Phishing Trends Report Contributors 2nd Quarter Activity April-June 2024 Published 21 August 2024 Unifying the Global Response To Cybercrime PHISHING ACTIVITY TRENDS REPORT",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 1
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 Statistical Highlights Most-Targeted Industry Sectors Business Email Compromise APWG Phishing Trends Report Contributors About the APWG Google, 72.4% Microsoft, 16.3% Other, 6.4% Comcast, 1.8% Verizon, 1.8% Apple, 1.2% FREE WEBMAIL PROVIDERS USED IN BEC ATTACKS, Q2 2024 Phishers Combining Tactics and Resources in Attacks Phishing Report Scope The APWG Phishing Activity Trends Report analyzes",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "The APWG Phishing Activity Trends Report analyzes phishing attacks and other identity theft techniques, as reported to the APWG by its member companies, its Global Research Partners, through the organization’s measures the evolution, proliferation, and propagation of identity theft methods by drawing from the research of our member companies and industry experts. Phishing Defined Phishing is a crime employing both social engineering and",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "g is a crime employing both social engineering and technical subterfuge to steal consumers’ personal identity data and financial account credentials. Social engineering schemes prey on unwary victims by fooling them into believing they are dealing with a trusted, legitimate party, such as by using deceptive email addresses and email messages. These are designed to lead consumers to",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "messages. These are designed to lead consumers to counterfeit Web sites that trick recipients into divulging financial data such as usernames and passwords. Technical subterfuge schemes plant malware onto computers to steal credentials directly, often using systems that intercept consumers’ account usernames",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "ystems that intercept consumers’ account usernames and passwords or misdirect consumers to counterfeit Web sites. Phishing Activity Trends Summary • In Q2 2024, APWG observed 877,536 phishing attacks while the number of reported phishing attacks has remained generally steady. [pp. 3-4] • Phishing via phone calls and text messages is being used with increasing frequency to attack bank customers and payment service users. [p. 5] • Social media platforms were once again the most frequently attacked sector, representing 32.9 percent all phishing attacks. [p. 4] • The average wire transfer amount requested in BEC attacks in Q1 2024 was $89,520, up from the prior quarter. [p. 6] • Google Gmail accounts were used in 72.4 percent of all Business Email Compromise (BEC) scams. [pp. 7-8] Google Gmail accounts were used in 72.4 percent of all Business Email Compromise (BEC) scams. [pp. 7-8]",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 APWG’s contributing members study the ever-evolving nature and techniques of cybercrime. APWG has two sources of phishing data: phishing emails reported to it by APWG members and by members of the",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "ported to it by APWG members and by members of the public, and phishing URLs reported by APWG members into the APWG eCrime eXchange (eCX). The APWG tracks: • Unique phishing sites. This is a primary measure of reported phishing across the globe. This is determined by the unique bases of phishing URLs found in phishing emails reported to APWG’s repository. (A single phishing site may be advertised as thousands of customized URLs, all",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "be advertised as thousands of customized URLs, all leading to basically the same destination.) Thus APWG measures reported phishing sites, which is a more relevant metric than URLs. A synonym for sites is attacks. • Unique phishing e-mails subjects. This counts email lures that have different email subject lines. Some phishing campaigns may use the same subject line but advertise different phishing sites.",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "bject line but advertise different phishing sites. This metric is a general measure of the variety of phishing attacks, and can be a rough proxy for the amount of phishing taking place. • The APWG also counts the number of brands attacked by examining the phishing reports submitted into the APWG eCrime Exchange, and normalizing the spellings of brand names. April May June",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "izing the spellings of brand names. April May June Number of unique phishing Web sites (attacks) detected 318,651 292,428 266,457 Unique phishing email campaigns 31,005 33,874 31,173 Number of brands targeted by phishing campaigns In the first quarter of 2024, APWG observed 963,994 phishing attacks. In the second quarter, the number fell to 877,536.  We suspect that the decrease is due in part to a recent reporting issue: email providers",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "part to a recent reporting issue: email providers have been making it more difficult for users to report phishing to APWG and to other anti-abuse actors and law enforcement authorities. For years, APWG has asked users to forward suspected phishing emails major email providers are now blocking these outbound messages forwarded by the original recipients.",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "und messages forwarded by the original recipients. (Ironically, these providers deliver the phishing emails to their users, but then prevent their users from reporting out the phishing.) The situation suggests the providers are not finding the phishing URLs in the Statistical Highlights for the 1st Quarter 2024",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 emails they are delivering to their users, but are later finding the phishing URLs when the user tried to forward a message. To help get around this issue, APWG is setting up new web forms for users.",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "issue, APWG is setting up new web forms for users. In general, the number of reported phishing attacks appears to have been steady over the last year. Interisle Consulting recently published a global study of phishing that took place from May 2023 to April 2024.  Interisle used the phishing reports made to APWG’s eCrime Exchange, plus reports from OpenPhish, Spamhaus, and PhishTank. Interisle found that year-over-year, the number of phishing",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "found that year-over-year, the number of phishing attacks grew by 50,000, to just under 1.9 million attacks, a slight rise. APWG member OpSec Security recorded a 10 percent increase in URL-based fraud in Q2 2024 versus Q1 2024. In the second quarter of 2024, APWG founding member OpSec Security found that social media platforms were once again the most frequently attacked sector, representing 32.9 percent all phishing attacks. Phish-",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "esenting 32.9 percent all phishing attacks. Phish- ing against the Financial Institution (banking) segment were mostly steady at 10 percent, down from 24.9 percent of all attacks in Q3 2023 and 14 percent in Q4 2023. Attacks against online payment services (such as PayPal, Venmo, Stripe, and similar companies) were also steady, with another 7.5 percent of all attacks.",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "o steady, with another 7.5 percent of all attacks. Matthew Harris, Senior Product Manager, Fraud at OpSec, explained why banking and payment sites are being attacked less frequently. “We have observed an increased share of fraud being targeted towards",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "an increased share of fraud being targeted towards sites that do not require high security, such as social media sites like Facebook and LinkedIn, and SAAS 50,000 100,000 150,000 200,000 250,000 300,000 350,000 400,000 Jul-23 Aug-23 Sep-23 Oct-23 Nov-23 Dec-23 Jan-24 Feb-24 Mar-24 Apr-24 May-24 Jun-24 Reported Phishing Attacks, Q3 2023 - Q2 2024 Most-Targeted Industry Sectors – 2nd Quarter 2024",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 and Webmail accounts such as Microsoft Outlook and Netflix.” Phishing that uses email lures is being hampered by advanced filtering technologies and sending requirements, making it more difficult for scammers to get their emails into victim in-boxes.",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "scammers to get their emails into victim in-boxes. Harris added: “It’s assumed that banks and similar institutions are becoming more difficult targets to phish using traditional email lures.“ Banks require two-factor authentication for online banking, such as codes sent the users’ mobile phones. Without those authentication codes, phishers can’t get into victims’",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "entication codes, phishers can’t get into victims’ online financial accounts. So instead, fraudsters are using phone-based methods to phish bank and payment service users. These are more immediate contact methods, and allow the fraudster to talk victims out of their sensitive information. Phone-based fraud is initiated by different methods. One is",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "ed fraud is initiated by different methods. One is voice phishing or vishing -- where fraudsters call potential victims. Another is SMS-based phishing or smishing – in which fraudsters advertise the URLs of phishing sites within SMS (Short Message Service) and Internet-generated, phone-to-phone text messages.",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "Internet-generated, phone-to-phone text messages. OpSec Security offers world-class brand protection solutions. Social Media, 32.9% SAAS / Webmail, 25.6% Financial Institution, 10.0% Payment, 7.5% eCommerce / Retail, 5.9% Telecom, 3.8% Logistics / Shipping, 3.1% Other, 11.2% MOST-TARGETED INDUSTRIES, Q2 2024",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 APWG member Fortra tracks the identity theft technique known as “business e-mail compromise” or BEC, which was responsible for $2.9 billion dollars in losses in the U.S. in 2023 according to the FBI’s",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "losses in the U.S. in 2023 according to the FBI’s Internet Crime Complaint Center (IC3). In a BEC attack, a threat actor impersonates an employee, vendor or other trusted party in an email communication and attempts to trick an employee into sending money, privileged information, or some other asset. Fortra examined thousands of BEC attacks attempted during",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "examined thousands of BEC attacks attempted during Q2 2024. Fortra protects organizations against phishing, BEC scams, and other advanced email threats. Fortra found that the average amount requested in wire transfer BEC attacks in Q2 2024 was $89,520, up 6.5% from Q1’s average of $84,059. The volume of wire transfer BEC attacks in Q2 2024 decreased by 8.4",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "e transfer BEC attacks in Q2 2024 decreased by 8.4 percent compared to Q1. This suggests the bad actors behind BEC wire transfer attacks did not significantly change their tactics compared to the prior quarter. During the second quarter of 2024, gift card scams were once again the most popular type of scam, comprising 38.1 percent of all attacks that Fortra tracked.  Some 26.1 percent of attacks were advance fee",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "ed.  Some 26.1 percent of attacks were advance fee fraud scams. Payroll diversion remained a popular attack type, making up 7.6 percent in Forta’s tracking. Hybrid vishing, which was rarely seen before 2023, made up 4.9 percent of the cases Fortra tracked. Gift Card scam, 38.1% Advance Fee Fraud, 26.1% Other, 10.3% Spam, 8.5% Payroll Diversion, 7.6% Vishing Scam, 4.9% Loan Scam, 4.5% SCAM TYPES, Q2 2024",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "ing Scam, 4.9% Loan Scam, 4.5% SCAM TYPES, Q2 2024 Business e-Mail Compromise (BEC), 2nd Quarter 2024",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 “The hybrid vishing attacks we track typically begin as an email indicating the recipient has been charged for a product or service,” said John Wilson, Senior Fellow, Threat Research at Fortra. “The messages",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "r Fellow, Threat Research at Fortra. “The messages instruct the recipient to call a phone number if they wish to cancel their order and obtain a refund. In the second quarter of 2024, Norton/LifeLock was the most popular brand used as a lure in these attacks, mentioned in 39 percent of the hybrid vishing messages we encountered in Q2 2024. Geek Squad was the",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "ages we encountered in Q2 2024. Geek Squad was the second-most-used, at 25 percent of attack messages. That was followed by PayPal at 22 percent, and McAfee at 6 percent.” Fraudsters acquired domain name that they used to run their BEC attacks at the following domain name registrars: Fortra found that 72 percent of BEC attacks in Q2 2024 were launched using a free webmail domain.  This",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "4 were launched using a free webmail domain.  This was virtually unchanged from the 73 percent share observed in the prior quarter. The remaining 28 percent of BEC attacks utilized a combination of maliciously registered domains and compromised email accounts. Google’s Gmail was by far the most popular free webmail provider for BEC scammers, used for",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "r free webmail provider for BEC scammers, used for 72.4 percent of the free webmail accounts that scammers set up for BEC scams in Q2 2024. Microsoft’s NameCheap, 40.7% Other, 19.7% Squarespac… TUCOWS, 7.9% Hostinger UAB, 7.2% PDR, 5.9% GoDaddy, 4.1% REGISTRARS USED TO REGISTER BEC DOMAINS, Q2 2024",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 webmail properties powered 16.3 percent of webmail-based BEC attacks in Q2, dwarfing the remaining webmail providers: Fortra notes that 35% of payroll diversion attempts requested the victim’s salary be routed to an account",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "uested the victim’s salary be routed to an account at Green Dot. The 3rd most popular bank for payroll diversions was GoBank, which is also owned by Green Dot. This suggests that Green Dot is doing a poor job of vetting its account holders, in dereliction of its Know Your Customer duties as outlined in FINRA 2090. Google, 72.4% Microsoft, 16.3% Other, 6.4% Comcast, 1.8% Verizon, 1.8% Apple, 1.2% FREE WEBMAIL PROVIDERS USED IN BEC ATTACKS, Q2 2024",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 Forta's mission is to help organizations increase security maturity while decreasing operational burden. Forta's brands include PhishLabs and Agari. www.fortra.com Illumintel provides intelligence, analysis, due diligence, and public policy advising in the areas of cybersecurity and Internet-based commerce. www.illumintel.com OpSec Security is the leading provider of integrated online protection and on-product authentication solutions for brands and governments. www.opsecsecurity.com",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "for brands and governments. www.opsecsecurity.com The APWG Phishing Activity Trends Report is published by and © the APWG. For info about the APWG, inquiries related to company-provided content in this report, please contact: APWG Secretary General (sellis@opsecsecurityonline.com); Rachel Woodford of Fortra (Agari and PhishLabs) (Rachel.Woodford@fortra.com). Analysis and editing by Greg Aaron, Illumintel Inc., illumintel.com",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "ing by Greg Aaron, Illumintel Inc., illumintel.com Founded in 2003, the Anti-Phishing Working Group (APWG) is a not-for-profit industry association focused on eliminating the identity theft and frauds that result from the growing problem of phishing, crimeware, and e-mail spoofing. Membership is open to financial institutions, online retailers, ISPs, solutions providers,",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "ions, online retailers, ISPs, solutions providers, the law enforcement community, government agencies, multilateral treaty organizations, and NGOs. There are more than 2,200 enterprises worldwide participating in the APWG. Operationally, the APWG conducts its core missions through: APWG, a US-based 501(c)6 organization; the APWG.EU, the institution’s European chapter established in Barcelona in 2013 as a non-profit research",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "shed in Barcelona in 2013 as a non-profit research foundation incorporated in Spain and managed by an independent board; the STOP. THINK. CONNECT. Messaging Convention, Inc., a US-based non-profit 501(c)3 corporation; and the APWG’s applied research secretariat <http://www.ecrimeresearch.org>. APWG Phishing Activity Trends Report Contributors About the APWG",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "Phishing Activity Trends Report 2nd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 2nd Quarter 2024 APWG’s directors, managers and research fellows advise: national governments; global governance bodies such as the Commonwealth Parliamentary Association, Organisation for Economic Co-operation and",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "iation, Organisation for Economic Co-operation and Development, International Telecommunications Union and ICANN; hemispheric and global trade groups; and treaty organizations such as the European Commission, the G8 High Technology Crime Subgroup, Council of Europe’s Convention on Cybercrime, United Nations Office of Drugs and Crime, Organization for Security and Cooperation in",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "rime, Organization for Security and Cooperation in Europe, Europol EC3 and the Organization of American States. APWG is a founding member of the steering group of the Commonwealth Cybercrime Initiative at the Commonwealth of Nations. APWG‘s clearinghouses for cybercrime-related data send more than two billion data elements per month to APWG’s members to inform security applications, forensic routines and research programs, helping",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": ", forensic routines and research programs, helping to protection millions of users, software clients, and devices worldwide. APWG‘s STOP. THINK. CONNECT. cybersecurity awareness campaign has officially engaged campaign curators from 26 nations, 13 of which are deployed by cabinet-level ministries, government CERTs and national-scope NGOs. The annual APWG Symposium on Electronic Crime Research, proceedings of which are published by the",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "esearch, proceedings of which are published by the IEEE, attracts scores of papers from leading scientific investigators worldwide. The conference, founded in 2006 by APWG, is the only peer-reviewed conference dedicated exclusively to cybercrime studies.",
+    "source": "q2_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "Statistical Highlights for 2nd Quarter 2017 Phishing E-mail Reports and Phishing Site Trends   4 Brand-Domain Pairs Measurement Brands & Legitimate Entities Hijacked by E-mail Phishing Attacks Use of Domain Names for Phishing 7-9 Phishing and Identity Theft in Brazil 10-11 Most Targeted Industry Sectors APWG Phishing Trends Report Contributors 3rd Quarter Activity July-September 2024 Published 4 December 2024 Unifying the Global Response To Cybercrime PHISHING ACTIVITY TRENDS REPORT",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 1
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 Statistical Highlights Most-Targeted Industry Sectors Business Email Compromise APWG Phishing Trends Report Contributors About the APWG 60,000 70,000 80,000 90,000 00,000 10,000 20,000 30,000 40,000 50,000 Jul-24 Aug-24 Sep-24 Phishing Attacks, 3Q 2024 Scammers Add Personalized Menace to Phishing Attacks Phishing Report Scope The APWG Phishing Activity Trends Report analyzes",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "The APWG Phishing Activity Trends Report analyzes phishing attacks and other identity theft techniques, as reported to the APWG by its member companies, its Global Research Partners, through the organization’s measures the evolution, proliferation, and propagation of identity theft methods by drawing from the research of our member companies and industry experts. Phishing Defined Phishing is a crime employing both social engineering and",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "g is a crime employing both social engineering and technical subterfuge to steal consumers’ personal identity data and financial account credentials. Social engineering schemes prey on unwary victims by fooling them into believing they are dealing with a trusted, legitimate party, such as by using deceptive email addresses and messages, bogus web sites, and deceptive domain names. These are designed to lead consumers to counterfeit Web",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "are designed to lead consumers to counterfeit Web sites that trick recipients into divulging financial data such as usernames and passwords. Technical subterfuge schemes plant malware onto computers to steal",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "fuge schemes plant malware onto computers to steal credentials directly, often using systems that intercept consumers’ account usernames and passwords or misdirect consumers to counterfeit Web sites. Phishing Activity Trends Summary • In Q3 of 2024, APWG observed 932,923 phishing attacks, up from 877,536 in the second quarter. [pp. 3-4] • Scammers are now sending personalized emails that include Google Street View images of targeted marks’ homes. [p. 7] • Social media platforms were once again the most frequently attacked sector, representing 30.5 percent all phishing attacks. [p. 4] • Smishing—phishing advertised via SMS and text messages—increased more than 22 percent in the third quarter. [p. 5] • Gmail accounts were used to perpetrate 83.1 percent of all Business Email Compromise (BEC) scams. [pp. 7-8]",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 APWG’s contributing members study the ever-evolving nature and techniques of cybercrime. APWG has two sources of phishing data: phishing emails reported to it by APWG members and by members of the public, and phishing URLs reported by APWG members into the APWG eCrime eXchange. The APWG tracks: •",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "into the APWG eCrime eXchange. The APWG tracks: • Unique phishing sites. This is a primary measure of reported phishing across the globe. This is determined by the unique bases of phishing URLs found in phishing emails reported to APWG’s repository. (A single phishing site may be advertised as thousands of customized URLs, all leading to basically the same destination.) Thus APWG measures reported phishing sites, which is",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "us APWG measures reported phishing sites, which is a more relevant metric than URLs. A synonym for sites is attacks. • Unique phishing e-mails subjects. This counts email lures that have different email subject lines. Some phishing campaigns may use the same subject line but advertise different phishing sites. This metric is a general measure of the variety of phishing attacks, and can be a rough proxy for the amount of phishing taking place. •",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "h proxy for the amount of phishing taking place. • The APWG also counts the number of brands attacked by examining the phishing reports submitted into the APWG eCrime Exchange, and normalizing the spellings of brand names. July August September Number of unique phishing Web sites (attacks) detected 289,324 301,507 342,092 Unique phishing email campaigns 33,424 27,643 25,358 Number of brands targeted by phishing campaigns",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "58 Number of brands targeted by phishing campaigns In the third quarter of 2024, APWG observed 932,923 phishing attacks, up from 877,536 in the second quarter: Statistical Highlights for the 3rd Quarter 2024",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 The number of reported phish has been in a zone since June 2023, varying between 290,000 and 370,000 attacks per month: Interisle Consulting recently published a global study of phishing that took place from May 2023 to April",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "of phishing that took place from May 2023 to April 2024. Interisle used phishing reports made to APWG’s eCrime Exchange, plus reports from OpenPhish, Spamhaus, and PhishTank. Interisle found that year-over-year, the number of phishing attacks grew by",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "-over-year, the number of phishing attacks grew by 50,000, to just under 1.9 million attacks – a slight rise, and also confirming the stable trend. 260,000 270,000 280,000 290,000 300,000 310,000 320,000 330,000 340,000 350,000 Jul-24 Aug-24 Sep-24 Phishing Attacks, 3Q 2024 100,000 200,000 300,000 400,000 500,000 600,000 700,000 Sep-22 Oct-22 Nov-22 Dec-22 Jan-23 Feb-23 Mar-23 Apr-23 May-23 Jun-23 Jul-23 Aug-23 Sep-23 Oct-23 Nov-23 Dec-23 Jan-24 Feb-24 Mar-24 Apr-24 May-24 Jun-24 Jul-24 Aug-24 Sep-24 Reported Phishing Attacks, Q3 2022 - Q3 2024",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 Email providers have been making it more difficult for users to report phishing to APWG and to other anti-abuse actors and law enforcement authorities. For years, APWG has asked users to forward complaints and testing that some major email providers are now blocking these outbound messages",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "providers are now blocking these outbound messages forwarded by the original recipients. (Ironically, these providers deliver the phishing emails to their users, but then prevent their users from reporting out the phishing.) The situation suggests the providers are not finding the phishing URLs in the emails they are delivering to their users, but are later finding the",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "livering to their users, but are later finding the phishing URLs when the user tried to forward a message. To help get around this issue, APWG is setting up new web forms for users. In the second quarter of 2024, APWG founding member OpSec Security found that social media platforms were once again the most frequently attacked sector, representing 30.5 percent all phishing attacks.",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "r, representing 30.5 percent all phishing attacks. Phishing against the brands of the Financial Institution (banking) represented 13 percent of all recorded attacks, down from 24.9 percent in Q3 2023. Social Media, 30.5% SAAS / Webmail, 21.2% Financial Institution, 13.0% eCommerce / Retail, 8.0% Payment, 5.8% Telecom, 4.9% Logistics / Shipping, 3.1% Travel, 2.6% Cryptocurrency, 2.4% Other, 8.5% MOST-TARGETED SECTORS, Q3 2024 Most-Targeted Industry Sectors – 3rd Quarter 2024",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 Attacks against online payment services (such as PayPal, Venmo, Stripe, and similar companies) were down, with another 5.8 percent of all attacks. Attacks against cryptocurrency exchanges and platforms accounted for 2.4 percent of all attacks in the third quarter.",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "r 2.4 percent of all attacks in the third quarter. Matthew Harris, Senior Product Manager, Fraud at OpSec said that in Q3 the company detected a strong volume increase in vishing: voice phishing, a type of cybercrime where criminals use phone calls to steal personal information from victims. “Vishing incidents in Q3 increased more than 28 percent over Q2",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "dents in Q3 increased more than 28 percent over Q2 volumes. And smishing incidents – phishing advertised via SMS and text messages—increased more than 22 percent,” Harris said. Harris added: “We have recently observed vishing and smishing campaigns that impersonate organizations that are targeted less often, such as local gas and electric companies, and city services such as parking ticket payment systems.”",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "services such as parking ticket payment systems.” OpSec saw traditional URL phishing volume go down. “We believe this is not a sign of an overall industry change, and we expect the trend for traditional email-based phishing to go back up for Q4,” Harris said. OpSec also saw that the number of unique brands targeted has largely remained steady in 2024. OpSec Security offers world-class brand protection solutions.",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "ity offers world-class brand protection solutions. APWG member Fortra tracks the identity theft technique known as “business e-mail compromise” or BEC, which was responsible for $2.9 billion dollars in losses in the U.S. in 2023 according to the FBI’s Internet Crime Complaint Center (IC3). In a BEC attack, a threat actor impersonates an employee, vendor",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "k, a threat actor impersonates an employee, vendor or other trusted party in an email communication and attempts to trick an employee into sending money, privileged information, or some other asset. Fortra examined thousands of BEC attacks attempted during Q3 2024. Fortra protects organizations against phishing, BEC scams, and other advanced email threats.",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "hing, BEC scams, and other advanced email threats. Fortra found that the average amount requested in wire transfer BEC attacks in Q3 2024 was $67,145, down 25 percent from Q2’s average of $89,520. The volume of wire transfer BEC attacks in Q3 2024 decreased by 25.5 percent compared to Q2. Business e-Mail Compromise (BEC), 3rd Quarter 2024",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 During the third quarter of 2024, gift card scams were once again the most popular scam type, comprising 40.4 percent of the total. 29.8 percent of attacks were advance fee fraud scams. Payroll diversion remained",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "dvance fee fraud scams. Payroll diversion remained a popular attack type, making up 6.6  percent of attacks. Extortion scams demanding cryptocurrency as payment made up 2.7 percent of the attacks — a significant uptick from the previous quarter, when just 0.6 percent of attacks involved cryptocurrency. John Wilson, Senior Fellow, Threat Research at Fortra, described a devious new scam technique that",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "ortra, described a devious new scam technique that started in Q3 2024. Extortion scams have been around for years; in them the scammer claims that he has access to embarrassing information about the victim and demands money from them. Wilson said: “In the third quarter of 2024, we saw an alarming new trend in extortion emails. Previous extortion messages tended to be generic. We now see bad actors customizing their threats. Attack emails",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "ad actors customizing their threats. Attack emails we began to see late in Q3 included the recipient's phone number and home address as part of the lure. Many of these messages even contained a Google Street View image of the intended victim's home. The",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "reet View image of the intended victim's home. The use of personal data in the extortion message is clearly meant to scare the victim into compliance with the attacker's demands.” Gift Card, 40.4% Advance Fee Fraud, 29.8% Payroll Diversion, 6.6% Loan Scam, 4.5% Interac, 3.8% Romance Scam, 2.7% Cryptocurrency, 2.7% Other, 9.5% SCAM TYPES, 3Q 2024",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 Fortra found that 70 percent of BEC attacks in Q3 2024 were launched using a free webmail domain. The remaining 30 percent of BEC attacks utilized a combination of maliciously registered domains and",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "combination of maliciously registered domains and compromised email accounts. Google’s Gmail was by far the most popular free webmail provider used by BEC scammers — Gmail was used for 83.1 percent free webmail accounts that scammers set up for BEC scams. This was up from 72.4 percent in Q2 2024. Microsoft’s webmail properties powered 9.5 percent 16.3 percent of webmail-based BEC attacks in Q3, down from 16.3 percent in Q2 2024.",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "attacks in Q3, down from 16.3 percent in Q2 2024. Fraudsters acquired the domain names that they used to run their BEC attacks at the following domain name registrars: Google, 83.1% Microsoft, 9.5% Verizon, 1.7% Other, 5.7% FREE WEBMAIL PROVIDERS USED FOR BEC ATTACKS, Q3 2024",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 Wilson also noted: “Fortra observed a significant increase in the percentage of malware-laden messages reaching end-user inboxes in Q3 2024, with 12.3 percent of threat messages directing the recipient to a",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "nt of threat messages directing the recipient to a malicious payload. The most common malware family observed by Fortra was the Remcos RAT.” Squarespace, 34.1% NameCheap, 23.8% Other, 19.3% Hostinger, 11.7% GoDaddy, 4.5% NameSilo, 2.2% Enom, 2.2% PDR, 2.2% REGISTRARS USED TO REGISTER BEC DOMAINS, Q3 2024",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 Forta's mission is to help organizations increase security maturity while decreasing operational burden. Forta's brands include PhishLabs and Agari. www.fortra.com Illumintel provides intelligence, analysis, due diligence, and public policy advising in the areas of cybersecurity and Internet-based commerce. www.illumintel.com OpSec Security is the leading provider of integrated online protection and on-product authentication solutions for brands and governments. www.opsecsecurity.com",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "for brands and governments. www.opsecsecurity.com The APWG Phishing Activity Trends Report is published by and is © the APWG. For info about the APWG, inquiries related to company-provided content in this report, please contact: APWG Secretary General (sellis@opsecsecurityonline.com); Rachel Woodford of Fortra (Agari and PhishLabs) (Rachel.Woodford@fortra.com). Analysis and editing by Greg Aaron, Illumintel Inc., illumintel.com",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "ing by Greg Aaron, Illumintel Inc., illumintel.com Founded in 2003, the Anti-Phishing Working Group (APWG) is a not-for-profit industry association focused on eliminating the identity theft and frauds that result from the growing problem of phishing, crimeware, and e-mail spoofing. Membership is open to financial institutions, online retailers, ISPs, solutions providers,",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "ions, online retailers, ISPs, solutions providers, the law enforcement community, government agencies, multilateral treaty organizations, and NGOs. There are more than 2,200 enterprises worldwide participating in the APWG. Operationally, the APWG conducts its core missions through: APWG, a US-based 501(c)6 organization; the APWG.EU, the institution’s European chapter established in Barcelona in 2013 as a non-profit research",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "shed in Barcelona in 2013 as a non-profit research foundation incorporated in Spain and managed by an independent board; the STOP. THINK. CONNECT. Messaging Convention, Inc., a US-based non-profit 501(c)3 corporation; and the APWG’s applied research secretariat <http://www.ecrimeresearch.org>. APWG Phishing Activity Trends Report Contributors About the APWG",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "Phishing Activity Trends Report 3rd Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 3rd Quarter 2024 APWG’s directors, managers and research fellows advise: national governments; global governance bodies such as the Commonwealth Parliamentary Association, Organisation for Economic Co-operation and",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "iation, Organisation for Economic Co-operation and Development, International Telecommunications Union and ICANN; hemispheric and global trade groups; and treaty organizations such as the European Commission, the G8 High Technology Crime Subgroup, Council of Europe’s Convention on Cybercrime, United Nations Office of Drugs and Crime, Organization for Security and Cooperation in",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "rime, Organization for Security and Cooperation in Europe, Europol EC3 and the Organization of American States. APWG is a founding member of the steering group of the Commonwealth Cybercrime Initiative at the Commonwealth of Nations. APWG‘s clearinghouses for cybercrime-related data send more than two billion data elements per month to APWG’s members to inform security applications, forensic routines and research programs, helping",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": ", forensic routines and research programs, helping to protection millions of users, software clients, and devices worldwide. APWG‘s STOP. THINK. CONNECT. cybersecurity awareness campaign has officially engaged campaign curators from 26 nations, 13 of which are curated by cabinet-level ministries, government CERTs and national-scope NGOs. The annual APWG Symposium on Electronic Crime Research, proceedings of which are published by the",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "esearch, proceedings of which are published by the IEEE, attracts scores of papers from leading scientific investigators worldwide. The conference, founded in 2006 by APWG, is the only peer-reviewed conference dedicated exclusively to cybercrime studies.",
+    "source": "q3_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "4th Quarter Activity October-December- September 2024 Published 19 March 2025 Unifying the Global Response To Cybercrime PHISHING ACTIVITY TRENDS REPORT",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 1
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 Statistical Highlights for 2nd Quarter 2017 Phishing Trend: Smishing Attacks Toll Operators     4",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "shing Trend: Smishing Attacks Toll Operators     4 SMS Phishing Attacks Toll Operators                   4 - 6 Most Targeted Industry Sectors Business e-Mail Compromise (BEC) Cash Out Methods Registrars Used for BEC Attacks Free Webmail Providers Used by Phishers APWG Phishing Trends Report Contributors Phishing Trends Upward: Toll Road Scams Flood Phones Leveraging new phishing kits and the .TOP gTLD, Chinese phishers are flooding smartphones with SMS-based phishing messages Phishing Activity Trends Summary • In the fourth quarter of 2024, APWG observed 989,123 phishing attacks, up from 877,536 in Q2 and 932,923 in Q3. [pp. 3-4] • Chinese phishers are sending floods of SMS phishing messages, enabled by a new phishing kit and .TOP domain names. [pp. 4-6] • The SAAS/Webmail category was the most-attacked sector, with social media sites close behind. [p. 7] • The average amount requested in wire transfer BEC attacks in Q4 2024 was $128,980—nearly double the third quarter’s average. [p. 8] Phishing Report Scope The APWG Phishing Activity Trends Report analyzes",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "The APWG Phishing Activity Trends Report analyzes phishing attacks and other identity theft techniques, as reported to the APWG by its member companies, its Global Research Partners, through the organization’s measures the evolution, proliferation, and propagation of identity theft methods by drawing from the research of our member companies and industry experts. Phishing Defined Phishing is a crime employing both social engineering and",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "g is a crime employing both social engineering and technical subterfuge to steal consumers’ personal identity data and financial account credentials. Social engineering schemes prey on unwary victims by fooling them into believing they are dealing with a trusted, legitimate party, such as by using deceptive email addresses and messages, bogus web sites, and deceptive domain names. These are designed to lead consumers to counterfeit Web",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "are designed to lead consumers to counterfeit Web sites that trick recipients into divulging financial data such as usernames and passwords. Technical subterfuge schemes plant malware onto computers to steal credentials directly, often using systems that intercept consumers’ account usernames and passwords or misdirect consumers to counterfeit Web sites.",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 2
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 APWG’s contributing members study the ever-evolving nature and techniques of cybercrime. APWG has two sources of phishing data: phishing emails reported to it by APWG members and by members of the public, and phishing URLs reported by APWG members into the APWG eCrime eXchange. The APWG tracks: •",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "into the APWG eCrime eXchange. The APWG tracks: • Unique phishing sites. This is a primary measure of reported phishing across the globe. This is determined by the unique bases of phishing URLs found in phishing emails reported to APWG’s repository. (A single phishing site may be advertised as thousands of customized URLs, all leading to basically the same destination.) Thus APWG measures reported phishing sites, which is",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "us APWG measures reported phishing sites, which is a more relevant metric than URLs. A synonym for sites is attacks. • Unique phishing e-mails subjects. This counts email lures that have different email subject lines. Some phishing campaigns may use the same subject line but advertise different phishing sites. This metric is a general measure of the variety of phishing attacks, and can be a rough proxy for the amount of phishing taking place. •",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "h proxy for the amount of phishing taking place. • The APWG also counts the number of brands attacked by examining the phishing reports submitted into the APWG eCrime Exchange, and normalizing the spellings of brand names. October November December Number of unique phishing Web sites (attacks) detected 345,881 313,288 329,954 Unique phishing email campaigns 28,327 27,668 33,899 Number of brands targeted by phishing campaigns",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "99 Number of brands targeted by phishing campaigns In the fourth quarter of 2024, APWG observed 989,123 phishing attacks, up from 877,536 in Q2 and 932,923 in Q3. Phishing generally declined across the first half of 2024, and then trended upward in the second half of the year. The number of phish in the quarter ranged between 290,000 and 358,000 attacks per month: Statistical Highlights for the 4th Quarter 2024",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 3
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 Residents of the United States are being bombarded with text messages from Chinese phishers, purporting to come from U.S. toll road operators, including the multi-state EZPass system. The messages",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "luding the multi-state EZPass system. The messages warn recipients that they face fines or loss of their driving license if they don’t pay their tolls online. Researchers have found that this “smishing” (SMS phishing) is enabled by an upgraded phishing kit sold in China, which makes it simple to send text messages and launch phishing sites that spoof toll road",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "ges and launch phishing sites that spoof toll road operators in multiple U.S. states. The phone numbers that the phishers send the messages to are usually random—they are sometimes sent to people who do not use toll roads at all, or target users in the wrong",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "se toll roads at all, or target users in the wrong state. Note: Some of the text messages are sent from phone numbers in countries other than China. 50,000 100,000 150,000 200,000 250,000 300,000 350,000 400,000 Reported Phishing Attacks, 2024 Current Phishing Trend: SMS Phishing Attacks Toll Operators",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 4
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 A typical example is: Above: a phishing text message (left), and the mobile web site to which it was linked (right), February 10, 2025. The phishing site was on a .TOP domain name, and the lure message was sent from a phone number apparently",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "re message was sent from a phone number apparently originating a call from a telephone exchange in the Philippines. APWG Senior Research Fellow Greg Aaron notes: “The phishers set up these phishing sites using cheap domain names they register in lesser-known top-level domains such as .TOP, .CYOU, and .XIN. This is",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "vel domains such as .TOP, .CYOU, and .XIN. This is one way to spot these scam messages. The .TOP domain registry is operated in China, and has a notable history of being used by phishers.”",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 5
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 The .TOP Registry also has long-running compliance problems. ICANN issued a breach letter to .TOP Registry in July 2024, citing .TOP's failures to comply with abuse reporting and mitigation requirements,",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "with abuse reporting and mitigation requirements, and as of March 2025 the case is still listed as unresolved on ICANN’s Web site. [ICANN can issue breach letters to contracted parties, Registrars and Registries, as notification of their failure to correct a violation of rules or contract terms with ICANN, an escalation that notifies the contracted party of the possibility of",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "otifies the contracted party of the possibility of de-accreditation.] Many of the domain names are being registered at the Chinese registrar Dominet (HK) Limited.  Dominet was formerly known as Alibaba.com Singapore E-Commerce Private Limited, and was re-named in August 2024, after receiving a breach letter from ICANN for not taking steps to investigate and respond to abuse complaints.",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "ps to investigate and respond to abuse complaints. The real toll operators never ask customers to click a link to pay for tolls. To avoid text scams like this: • Don’t click on any links in, or respond to, unexpected texts. Scammers want you to react quickly— but instead, take time to check it out. • Check to see if the text is legitimate. Reach out to the company using a phone number or website you know is real — don’t use info from the text. •",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "you know is real — don’t use info from the text. • Report (and then delete) suspicious text messages directly to the APWG’s global eCrime eXchange (eCX) to help update alerting/blocking mechanims that protect billions of devices and • APWG member organizations’ responders and researchers are assisted by receiving a copy of any malicious SMS or text messages you receive – for tracking and blocking the sender to reduce future victimizations. •",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "king the sender to reduce future victimizations. • You can also use your phones’ “report junk” option to report unwanted texts in the messaging app, or forward them to 7726 (SPAM). Or, report to IC3.",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 6
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 In the fourth quarter of 2024, APWG founding member OpSec Security found that the SAAS/Webmail category was the most-attacked sector, with 23.3 percent of all phishing attacks. Attacks against social",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "nt of all phishing attacks. Attacks against social media platforms fell to #2, with 22.5 percent of all attacks, down from 30.5 percent in Q3. Phishing against the Financial Institution (banking) segment continued to fall, to 11.9 percent of all attacks, down from 13 percent in Q3 2024, and down from 24.9 percent of all attacks in Q3 2023. APWG contributing member OpSec Security detected a decrease in overall phishing attacks in Q4 as",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "ed a decrease in overall phishing attacks in Q4 as compared to Q3. However, the amount of phishing by phone call (voice phishing, or “vishing”) was generally higher in Q4 than in Q3, except during a lull around the December holidays. OpsSec believe this is a seasonal drop, and that vishing will remain popular. OpSec Security also observed a 30 percent increase in the number of unique brands targeted from Q3 to",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "in the number of unique brands targeted from Q3 to Q4. The number of targeted brands had been steady until the rise in Q4; this might be an indication that scammers are expanding their target scope to increase their return on investment. Matthew Harris, Senior Product Manager, Fraud at OpSec Security, remains concerned about vishing.",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "t OpSec Security, remains concerned about vishing. Harris said: “OpSec has recently deployed new detection mechanisms, and we expect these to bring in SAAS / Webmail, 23.3% Social Media, 22.5% Financial, 11.9% eCommerce / Retail, 10.9% Payment, 7.0% Telecom, 5.7% Logistics / Shipping, 3.7% Travel, 2.4% Crypto, 1.9% Other, 10.7% MOST-TARGETED SECTORS, Q4 2024 Most-Targeted Industry Sectors – 4th Quarter 2024",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 7
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 additional detections in the future, especially fraud being communicated via SMS messages.  We are continuing to see scammers branching out to attack new companies and industries, such as public utilities, car parking meter systems, and bridge toll collection systems.”",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "eter systems, and bridge toll collection systems.” OpSec Security offers world-class brand protection solutions. APWG member Fortra tracks the identity theft technique known as “business e-mail compromise” or BEC, which was responsible for $2.9 billion dollars in losses in the U.S. in 2023 according to the FBI’s Internet Crime Complaint Center (IC3). In a BEC attack, a threat actor impersonates an employee, vendor",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "k, a threat actor impersonates an employee, vendor or other trusted party in an email communication and attempts to trick an employee into sending money, privileged information, or some other asset. Fortra examined thousands of BEC attacks attempted during Q4 2024. Fortra protects organizations against phishing, BEC scams, and other advanced email threats.",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "hing, BEC scams, and other advanced email threats. Fortra found that the average amount requested in wire transfer BEC attacks in Q4 2024 was $128,980, nearly double the third quarter’s average of $67,145. The total number of wire transfer BEC attacks in Q4 decreased by 21 percent compared to the third quarter. During the fourth quarter of 2024, gift card scams were once again the most popular type of scam, making",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "e once again the most popular type of scam, making up 49 percent of the total scam attempts. Scams demanding cryptocurrency as payment made up 12 percent of the attacks—a significant uptick from the previous quarter, when just 2.7 percent of attacks demanded cryptocurrency. John Wilson, Senior Fellow, Threat Research at Forta, said: “The big increase",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "Threat Research at Forta, said: “The big increase in extortion scams that demand cryptocurrency is likely due in part to record-high Bitcoin prices.” Business e-Mail Compromise (BEC), 4th Quarter 2024",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 8
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 Loan scams made up 4 percent of attacks.  A loan scam is a type of advance fee fraud where a bad actor poses as a lender offering low-interest financing. The scammer typically offers large loans for no collateral",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "mer typically offers large loans for no collateral at below-market interest rates; however, the victim must pay various loan origination fees. The scammer will ghost the victim once the upfront fees are paid, and the loan is never funded. Legal action extortion scams made up 3.3 percent of the quarter’s total. These scams present attackers as agents of a national law enforcement agency. The email messages claim the victim is wanted for viewing",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "il messages claim the victim is wanted for viewing CSAM (Child Sexual Abuse Material) online and must immediately pay a fine or face arrest. Google’s Gmail was by far the most popular free webmail provider used by BEC scammers —used for 81 percent of the free webmail accounts set up for BEC scams. Far below that at #2 were Microsoft’s webmail",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "ams. Far below that at #2 were Microsoft’s webmail properties, which were used for just 10 percent of webmail-based BEC attacks in Q4 2024: Gift Card 49% Cryptocurrency 12% Other 12% Payroll Diversion 10% Interac 10% Loan Scam 4% Legal Action Scam 3% BEC CASH-OUT METHODS, Q4 2024",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 9
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 John Wilson, Senior Fellow, Threat Research at Forta, observed: “Fortra notes that Cloudflare was the third-most-popular domain name registrar used by BEC scammers in Q4 2024. This is the first time",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "by BEC scammers in Q4 2024. This is the first time Cloudflare made Fortra's list of top BEC domain registrars.” Gmail 81% Microsoft 10% Other 5% Verizon 2% Comcast 1% World Media 1% FREE WEBMAIL PROVIDERS USED TO MAKE BEC ATTACKS, 4Q 2024 Squarespace 25% NameCheap 22% Other 21% Cloudflare 13% Hostinger 11% Network Solutions 4% NameSilo 4% REGISTRARS USED BY BEC SCAMMERS, 4Q 2024",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 10
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 Forta's mission is to help organizations increase security maturity while decreasing operational burden. Forta's brands include PhishLabs and Agari. www.fortra.com Illumintel provides intelligence, analysis, due diligence, and public policy advising in the areas of cybersecurity and Internet-based commerce. www.illumintel.com OpSec Security is the leading provider of integrated online protection and on-product authentication solutions for brands and governments. www.opsecsecurity.com",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "for brands and governments. www.opsecsecurity.com The APWG Phishing Activity Trends Report is published by and is © the APWG. For info about the APWG, inquiries related to company-provided content in this report, please contact: APWG Secretary General (sellis@opsecsecurityonline.com); Rachel Woodford of Fortra (Agari and PhishLabs) (Rachel.Woodford@fortra.com). Analysis and editing by Greg Aaron, Illumintel Inc., illumintel.com",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "ing by Greg Aaron, Illumintel Inc., illumintel.com Founded in 2003, the Anti-Phishing Working Group (APWG) is a not-for-profit industry association focused on eliminating the identity theft and frauds that result from the growing problem of phishing, crimeware, and e-mail spoofing. Membership is open to financial institutions, online retailers, ISPs, solutions providers,",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "ions, online retailers, ISPs, solutions providers, the law enforcement community, government agencies, multilateral treaty organizations, and NGOs. There are more than 2,200 enterprises worldwide participating in the APWG. Operationally, the APWG conducts its core missions through: APWG, a US-based 501(c)6 organization; the APWG.EU, the institution’s European chapter established in Barcelona in 2013 as a non-profit research",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "shed in Barcelona in 2013 as a non-profit research foundation incorporated in Spain and managed by an independent board; the STOP. THINK. CONNECT. Messaging Convention, Inc., a US-based non-profit 501(c)3 corporation; and the APWG’s applied research secretariat <http://www.ecrimeresearch.org>. APWG Phishing Activity Trends Report Contributors About the APWG",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 11
+  },
+  {
+    "text": "Phishing Activity Trends Report 4th Quarter 2024 w w w . a p w g . o r g  • i n f o @ a p w g . o r g Phishing Activity Trends Report, 4th Quarter 2024 APWG’s directors, managers and research fellows advise: national governments; global governance bodies such as the Commonwealth Parliamentary Association, Organisation for Economic Co-operation and",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 12
+  },
+  {
+    "text": "iation, Organisation for Economic Co-operation and Development, International Telecommunications Union and ICANN; hemispheric and global trade groups; and treaty organizations such as the European Commission, the G8 High Technology Crime Subgroup, Council of Europe’s Convention on Cybercrime, United Nations Office of Drugs and Crime, Organization for Security and Cooperation in",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 12
+  },
+  {
+    "text": "rime, Organization for Security and Cooperation in Europe, Europol EC3 and the Organization of American States. APWG is a founding member of the steering group of the Commonwealth Cybercrime Initiative at the Commonwealth of Nations. APWG‘s clearinghouses for cybercrime-related data send more than two billion data elements per month to APWG’s members to inform security applications, forensic routines and research programs, helping",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 12
+  },
+  {
+    "text": ", forensic routines and research programs, helping to protection millions of users, software clients, and devices worldwide. APWG‘s STOP. THINK. CONNECT. cybersecurity awareness campaign has officially engaged campaign curators from 26 nations, 13 of which are deployed by cabinet-level ministries, government CERTs and national-scope NGOs. The annual APWG Symposium on Electronic Crime Research, proceedings of which are published by the",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 12
+  },
+  {
+    "text": "esearch, proceedings of which are published by the IEEE, attracts scores of papers from leading scientific investigators worldwide. The conference, founded in 2006 by APWG, is the only peer-reviewed conference dedicated exclusively to cybercrime studies.",
+    "source": "q4_2024",
+    "section": "report body",
+    "page": 12
+  },
+  {
+    "text": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems. Spearphishing attachment is a specific variant of spearphishing. Spearphishing attachment is different from other forms of spearphishing in that it employs the use of malware attached to an email. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries attach a file to the spearphishing email and usually rely upon User Execution to gain execution. [1] Spearphishing may also involve social engineering techniques, such as posing as a trusted source.",
+    "source": "MITRE ATT&CK T1566.001 — Phishing:Spearphishing Attachment",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "ng techniques, such as posing as a trusted source. There are many options for the attachment such as Microsoft Office documents, executables, PDFs, or archived files. Upon opening the attachment (and potentially clicking past protections), the adversary's payload exploits a vulnerability or directly executes on the user's system. The text of the spearphishing email usually tries to give a plausible reason why the file should be opened, and may explain how to bypass system protections in order to do so. The email may also contain instructions on how to decrypt an attachment, such as a zip file password, in order to evade email boundary defenses. Adversaries frequently manipulate file extensions and icons in order to make attached executables appear to be document files, or files exploiting one application appear to be a file for a different one.",
+    "source": "MITRE ATT&CK T1566.001 — Phishing:Spearphishing Attachment",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems. Spearphishing with a link is a specific variant of spearphishing. It is different from other forms of spearphishing in that it employs the use of links to download malware contained in email, instead of attaching malicious files to the email itself, to avoid defenses that may inspect email attachments. Spearphishing may also involve social engineering techniques, such as posing as a trusted source.",
+    "source": "MITRE ATT&CK T1566.002 — Phishing:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "ng techniques, such as posing as a trusted source. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this case, the malicious emails contain links. Generally, the links will be accompanied by social engineering text and require the user to actively click or copy and paste a URL into a browser, leveraging User Execution . The visited website may compromise the web browser using an exploit, or the user will be prompted to download applications, documents, zip files, or even executables depending on the pretext for the email in the first place.",
+    "source": "MITRE ATT&CK T1566.002 — Phishing:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "g on the pretext for the email in the first place. Adversaries may also include links that are intended to interact directly with an email reader, including embedded images intended to exploit the end system directly. Additionally, adversaries may use seemingly benign links that abuse special characters to mimic legitimate websites (known as an \"IDN homograph attack\"). [1] URLs may also be obfuscated by taking advantage of quirks in the URL schema, such as the acceptance of integer- or hexadecimal-based hostname formats and the automatic discarding of text before an \"@\" symbol: for example, hxxp://google.com@1157586937 . [2]",
+    "source": "MITRE ATT&CK T1566.002 — Phishing:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "l: for example, hxxp://google.com@1157586937 . [2] Adversaries may also utilize links to perform consent phishing/spearphishing campaigns to Steal Application Access Token s that grant immediate access to the victim environment. For example, a user may be lured into granting adversaries permissions/access via a malicious OAuth 2.0 request URL that when accepted by the user provide permissions/access for malicious applications. [3] [4] These stolen access tokens allow the adversary to perform various actions on behalf of the user via API calls. [4]",
+    "source": "MITRE ATT&CK T1566.002 — Phishing:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "s actions on behalf of the user via API calls. [4] Similarly, malicious links may also target device-based authorization, such as OAuth 2.0 device authorization grant flow which is typically used to authenticate devices without UIs/browsers. Known as \"device code phishing,\" an adversary may send a link that directs the victim to a malicious authorization page where the user is tricked into entering a code/credentials that produces a device token. [5] [6] [7]",
+    "source": "MITRE ATT&CK T1566.002 — Phishing:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "Adversaries may send spearphishing messages via third-party services in an attempt to gain access to victim systems. Spearphishing via service is a specific variant of spearphishing. It is different from other forms of spearphishing in that it employs the use of third party services rather than directly via enterprise email channels.",
+    "source": "MITRE ATT&CK T1566.003 — Phishing:Spearphishing via Service",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "ather than directly via enterprise email channels. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries send messages through various social media services, personal webmail, and other non-enterprise controlled services. [1] These services are more likely to have a less-strict security policy than an enterprise. As with most kinds of spearphishing, the goal is to generate rapport with the target or get the target's interest in some way. Adversaries will create fake social media accounts and message employees for potential job opportunities. Doing so allows a plausible reason for asking about services, policies, and software that's running in an environment. The adversary can then send malicious links or attachments through these services.",
+    "source": "MITRE ATT&CK T1566.003 — Phishing:Spearphishing via Service",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "cious links or attachments through these services. A common example is to build rapport with a target via social media, then send content to a personal webmail service that the target uses on their work computer. This allows an adversary to bypass some email restrictions on the work account, and the target is more likely to open the file since it's something they were expecting. If the payload doesn't work as expected, the adversary can continue normal communications and troubleshoot with the target on how to get it working.",
+    "source": "MITRE ATT&CK T1566.003 — Phishing:Spearphishing via Service",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "Adversaries may use voice communications to ultimately gain access to victim systems. Spearphishing voice is a specific variant of spearphishing. It is different from other forms of spearphishing in that it employs the use of manipulating a user into providing access to systems through a phone call or other forms of voice communications. Spearphishing frequently involves social engineering techniques, such as posing as a trusted source (ex: Impersonation ) and/or creating a sense of urgency or alarm for the recipient.",
+    "source": "MITRE ATT&CK T1566.004 — Phishing:Spearphishing Voice",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "ing a sense of urgency or alarm for the recipient. All forms of phishing are electronically delivered social engineering. In this scenario, adversaries are not directly sending malware to a victim vice relying on User Execution for delivery and execution. For example, victims may receive phishing messages that instruct them to call a phone number where they are directed to visit a malicious URL, download malware, [1] [2] or install adversary-accessible remote management tools ( Remote Access Tools ) onto their computer. [3]",
+    "source": "MITRE ATT&CK T1566.004 — Phishing:Spearphishing Voice",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "s ( Remote Access Tools ) onto their computer. [3] Adversaries may also combine voice phishing with Multi-Factor Authentication Request Generation in order to trick users into divulging MFA credentials or accepting authentication prompts. [4]",
+    "source": "MITRE ATT&CK T1566.004 — Phishing:Spearphishing Voice",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "Adversaries may send phishing messages to gain access to victim systems. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass malware spam campaigns.",
+    "source": "MITRE ATT&CK T1566 — Phishing",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "phishing, such as in mass malware spam campaigns. Adversaries may send victims emails containing malicious attachments or links, typically to execute malicious code on victim systems. Phishing may also be conducted via third-party services, like social media platforms. Phishing may also involve social engineering techniques, such as posing as a trusted source, as well as evasive techniques such as removing or manipulating emails or metadata/headers from compromised accounts being abused to send messages (e.g., Email Hiding Rules ). [1] [2] Another way to accomplish this is by Email Spoofing [3] the identity of the sender, which can be used to fool both the human recipient as well as automated security tools, [4] or by including the intended target as a party to an existing email thread that includes malicious files or links (i.e., \"thread hijacking\"). [5]",
+    "source": "MITRE ATT&CK T1566 — Phishing",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "ous files or links (i.e., \"thread hijacking\"). [5] Victims may also receive phishing messages that instruct them to call a phone number where they are directed to visit a malicious URL, download malware, [6] [7] or install adversary-accessible remote management tools onto their computer (i.e., User Execution ). [8]",
+    "source": "MITRE ATT&CK T1566 — Phishing",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "Adversaries may send spearphishing messages via third-party services to elicit sensitive information that can be used during targeting. Spearphishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Spearphishing for information frequently involves social engineering techniques, such as posing as a source with a reason to collect information (ex: Establish Accounts or Compromise Accounts ) and/or sending multiple, seemingly urgent messages.",
+    "source": "MITRE ATT&CK T1598.001 — Phishing for Information:Spearphishing Service",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "nd/or sending multiple, seemingly urgent messages. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries send messages through various social media services, personal webmail, and other non-enterprise controlled services. [1] These services are more likely to have a less-strict security policy than an enterprise. As with most kinds of spearphishing, the goal is to generate rapport with the target or get the target's interest in some way. Adversaries may create fake social media accounts and message employees for potential job opportunities. Doing so allows a plausible reason for asking about services, policies, and information about their environment. Adversaries may also use information from previous reconnaissance efforts (ex: Social Media or Search Victim-Owned Websites ) to craft persuasive and believable lures.",
+    "source": "MITRE ATT&CK T1598.001 — Phishing for Information:Spearphishing Service",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "Adversaries may send spearphishing messages with a malicious attachment to elicit sensitive information that can be used during targeting. Spearphishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Spearphishing for information frequently involves social engineering techniques, such as posing as a source with a reason to collect information (ex: Establish Accounts or Compromise Accounts ) and/or sending multiple, seemingly urgent messages.",
+    "source": "MITRE ATT&CK T1598.002 — Phishing for Information:Spearphishing Attachment",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "nd/or sending multiple, seemingly urgent messages. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries attach a file to the spearphishing email. In some cases, they may rely upon the recipient populating information, then returning the file. [1] [2] The text of the spearphishing email usually tries to give a plausible reason why the file should be filled-in, such as a request for information from a business associate. In other cases, adversaries may leverage techniques such as HTML Smuggling to harvest user credentials via fake login portals. [3]",
+    "source": "MITRE ATT&CK T1598.002 — Phishing for Information:Spearphishing Attachment",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "rvest user credentials via fake login portals. [3] Adversaries may also use information from previous reconnaissance efforts (ex: Search Open Websites/Domains or Search Victim-Owned Websites ) to craft persuasive and believable lures.",
+    "source": "MITRE ATT&CK T1598.002 — Phishing for Information:Spearphishing Attachment",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "Adversaries may send spearphishing messages with a malicious link to elicit sensitive information that can be used during targeting. Spearphishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Spearphishing for information frequently involves social engineering techniques, such as posing as a source with a reason to collect information (ex: Establish Accounts or Compromise Accounts ) and/or sending multiple, seemingly urgent messages.",
+    "source": "MITRE ATT&CK T1598.003 — Phishing for Information:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "nd/or sending multiple, seemingly urgent messages. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, the malicious emails contain links generally accompanied by social engineering text to coax the user to actively click or copy and paste a URL into a browser. [1] [2] The given website may be a clone of a legitimate site (such as an online or corporate login portal) or may closely resemble a legitimate site in appearance and have a URL containing elements from the real site. URLs may also be obfuscated by taking advantage of quirks in the URL schema, such as the acceptance of integer- or hexadecimal-based hostname formats and the automatic discarding of text before an \"@\" symbol: for example, hxxp://google.com@1157586937 . [3]",
+    "source": "MITRE ATT&CK T1598.003 — Phishing for Information:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "l: for example, hxxp://google.com@1157586937 . [3] Adversaries may also embed \"tracking pixels,\" \"web bugs,\" or \"web beacons\" within phishing messages to verify the receipt of an email, while also potentially profiling and tracking victim information such as IP address. [4] [5] These mechanisms often appear as small images (typically one pixel in size) or otherwise obfuscated objects and are typically delivered as HTML code containing a link to a remote server. [5] [6]",
+    "source": "MITRE ATT&CK T1598.003 — Phishing for Information:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "code containing a link to a remote server. [5] [6] Adversaries may also be able to spoof a complete website using what is known as a \"browser-in-the-browser\" (BitB) attack. By generating a fake browser popup window with an HTML-based address bar that appears to contain a legitimate URL (such as an authentication portal), they may be able to prompt users to enter their credentials while bypassing typical URL verification methods. [7] [8]",
+    "source": "MITRE ATT&CK T1598.003 — Phishing for Information:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "ypassing typical URL verification methods. [7] [8] Adversaries can use phishing kits such as EvilProxy and Evilginx2 to perform adversary-in-the-middle phishing by proxying the connection between the victim and the legitimate website. On a successful login, the victim is redirected to the legitimate website, while the adversary captures their session cookie (i.e., Steal Web Session Cookie ) in addition to their username and password. This may enable the adversary to then bypass MFA via Web Session Cookie . [9]",
+    "source": "MITRE ATT&CK T1598.003 — Phishing for Information:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "ry to then bypass MFA via Web Session Cookie . [9] Adversaries may also send a malicious link in the form of Quick Response (QR) Codes (also known as \"quishing\"). These links may direct a victim to a credential phishing page. [10] By using a QR code, the URL may not be exposed in the email and may thus go undetected by most automated email security scans. [11] These QR codes may be scanned by or delivered directly  to a user’s mobile device (i.e., Phishing ), which may be less secure in several relevant ways. [11] For example, mobile users may not be able to notice minor differences between genuine and credential harvesting websites due to mobile’s smaller form factor.",
+    "source": "MITRE ATT&CK T1598.003 — Phishing for Information:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "ting websites due to mobile’s smaller form factor. From the fake website, information is gathered in web forms and sent to the adversary. Adversaries may also use information from previous reconnaissance efforts (ex: Search Open Websites/Domains or Search Victim-Owned Websites ) to craft persuasive and believable lures.",
+    "source": "MITRE ATT&CK T1598.003 — Phishing for Information:Spearphishing Link",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "Adversaries may send phishing messages to elicit sensitive information that can be used during targeting. Phishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Phishing for information is different from Phishing in that the objective is gathering data from the victim rather than executing malicious code.",
+    "source": "MITRE ATT&CK T1598 — Phishing for Information",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "m the victim rather than executing malicious code. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass credential harvesting campaigns.",
+    "source": "MITRE ATT&CK T1598 — Phishing for Information",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": ", such as in mass credential harvesting campaigns. Adversaries may also try to obtain information directly through the exchange of emails, instant messages, or other electronic conversation means. [1] [2] [3] [4] [5] Victims may also receive phishing messages that direct them to call a phone number where the adversary attempts to collect confidential information. [6]",
+    "source": "MITRE ATT&CK T1598 — Phishing for Information",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "attempts to collect confidential information. [6] Phishing for information frequently involves social engineering techniques, such as posing as a source with a reason to collect information (ex: Establish Accounts or Compromise Accounts ) and/or sending multiple, seemingly urgent messages. Another way to accomplish this is by Email Spoofing [7] the identity of the sender, which can be used to fool both the human recipient as well as automated security tools. [8]",
+    "source": "MITRE ATT&CK T1598 — Phishing for Information",
+    "section": "Description",
+    "page": null
+  },
+  {
+    "text": "recipient as well as automated security tools. [8] Phishing for information may also involve evasive techniques, such as removing or manipulating emails or metadata/headers from compromised accounts being abused to send messages (e.g., Email Hiding Rules ). [9] [10]",
+    "source": "MITRE ATT&CK T1598 — Phishing for Information",
+    "section": "Description",
+    "page": null
+  }
+]

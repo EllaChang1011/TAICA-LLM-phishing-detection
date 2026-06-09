@@ -1,0 +1,282 @@
+[
+  {
+    "index": 0,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Dear Kennedy, I hope this email finds you in good health. We have recently come across an important update regarding your family's wealth. It has been brought to our attention that you may be eligible for a significant inheritance. To proceed with the necessary legal formalities, we kindly request your immediate response. Please provide your full name, contact details, and a valid identification document so that we can initiate the process promptly. Best regards, Donald\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"Inheritance eligibility\", \"Legal formalities\", \"Provide personal information\"],\n  \"urgency_tactics\": \"Immediate response required to proceed with the inheritance process.\",\n  \"impersonation\": \"Impersonation of a legal authority or financial institution.\",\n  \"url_analysis\": \"No suspicious URLs found in the email.\",\n  \"credential_harvesting\": \"Request for personal information such as full name, contact details, and identification documents.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 1,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Dear Job Seeker, We have come across your impressive resume and are pleased to inform you of a potential job opportunity. Our company is currently seeking qualified candidates for a high-paying position that matches your skill set. To apply for this position, please reply to this email with your updated resume and a brief cover letter highlighting your relevant experience. Our hiring team will review your application and contact you for further steps if you meet our criteria. We look forward to hearing from you soon. Best regards, Recruitment Team\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"Potential job opportunity\", \"Please reply to this email with your updated resume and a brief cover letter\"], \"urgency_tactics\": \"We look forward to hearing from you soon\", \"impersonation\": \"Recruitment Team\", \"url_analysis\": \"No suspicious URLs found\", \"credential_harvesting\": \"Yes\", \"final\": \"phishing\", \"risk_score\": 90\n}"
+  },
+  {
+    "index": 2,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "ANALYSIS:\n{\n  \"phishing_indicators\": [\"tax refund\", \"approved and is now ready for claim\", \"secure link\", \"claim your refund\", \"assigned IRS agent\"],\n  \"urgency_tactics\": \"Your refund has been processed accurately and is now available for disbursement.\",\n  \"impersonation\": \"Christopher Taylor IRS Agent\",\n  \"url_analysis\": \"The URL provided appears to be a legitimate IRS website for claiming tax refunds.\",\n  \"credential_harvesting\": \"The email does not explicitly request personal information but encourages the recipient to claim their refund through a secure link.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 3,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "URL: https://www.nabble.com/file/p15361461/15361461.ics\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"squirrelmail 1.4.13\", \"Dovecote\", \"postfix on ubuntu 6.10\", \"autorespond plugin\", \"vacation message\", \"email address\", \"squirrelmail-users mailing list archive at Nabble.com\"],\n  \"urgency_tactics\": \"None\",\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"None\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 5,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "phishing",
+    "correct": false,
+    "response": "______________________________________________\r\nScience CiteTrack: Editors' Choice: Highlights of the recent literature\r\nScience Online Editors' Choice Alert: 319 (5864)\r\nhttp://www.sciencemag.org/content/vol319/issue5864/twil.dtl\n\nJSON:\n{\n  \"phishing_indicators\": [\"CiteTrack\", \"Editors' Choice\", \"Highlights of the recent literature\", \"Science CiteTrack\", \"Science Online Editors' Choice Alert\"],\n  \"urgency_tactics\": \"Current Issue |Previous Issue |Science Express |Science Products |My Science |About theJournal\",\n  \"impersonation\": \"Science\",\n  \"url_analysis\": \"http://www.sciencemag.org/content/vol319/issue5864/twil.dtl\",\n  \"credential_harvesting\": \"Register today:  www.sciencemag.org/webinar\",\n  \"final\": \"phishing\",\n  \"risk_score\": 98\n}"
+  },
+  {
+    "index": 6,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "ANALYSIS:\n{\n  \"phishing_indicators\": [\"HR Director\", \"job opportunity\", \"submit your application\"],\n  \"urgency_tactics\": \"This email doesn't use urgency tactics to pressure the recipient into taking immediate action.\",\n  \"impersonation\": \"The email claims to be from Brian Clark, the HR Director at XYZ Solutions.\",\n  \"url_analysis\": \"The URL in the email, https://career-opportunity-brian.com, appears to be legitimate and related to a career opportunity.\",\n  \"credential_harvesting\": \"The email does not request any personal or sensitive information.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}"
+  },
+  {
+    "index": 7,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "ANALYSIS:\n{\n  \"phishing_indicators\": [\"financial-transaction-confirmation-link7.com\"], \"urgency_tactics\": \"Please review the transaction details by clicking\", \"impersonation\": \"Financial Services Team\", \"url_analysis\": \"The URL 'financial-transaction-confirmation-link7.com' is likely a phishing link designed to capture financial information.\", \"credential_harvesting\": \"This email may be an attempt to confirm a financial transaction and harvest sensitive financial information.\", \"final\": \"phishing\", \"risk_score\": 90\n}"
+  },
+  {
+    "index": 9,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "### EMAIL ANALYSIS ###\n\n{\n  \"phishing_indicators\": [\"None\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"None\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###### END ###"
+  },
+  {
+    "index": 10,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Thank you for your cooperation.\n\n{\n  \"phishing_indicators\": [\"Unusual login attempts notification\", \"Account information verification request\"], \"urgency_tactics\": \"To ensure the security of your account\", \"impersonation\": \"System notification\", \"url_analysis\": \"Suspicious URL associated with account verification\", \"credential_harvesting\": \"Potential for account information collection\", \"final\": \"phishing\", \"risk_score\": 7\n}"
+  },
+  {
+    "index": 11,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "ANALYSIS:\n{\n  \"phishing_indicators\": [\"RSVP link provided\", \"Charity fundraiser invitation\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"The URL appears legitimate and is related to a charity fundraiser event.\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}"
+  },
+  {
+    "index": 13,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "ANALYSIS:\n{\n  \"phishing_indicators\": [\"account security\", \"verify and update your security settings\", \"proactive measures to fortify their account security\", \"sensitive information\", \"protect your sensitive information\", \"reduce the risk of unauthorized access and fraudulent activities\", \"Your prompt attention to this matter is paramount in ensuring the continued safety and confidentiality of your account details.\"],\n  \"urgency_tactics\": \"To maintain the integrity of your account and protect your sensitive information, we strongly encourage you to verify and update your security settings without delay.\",\n  \"impersonation\": \"Christopher Davis Account Security Specialist\",\n  \"url_analysis\": \"The email contains a single link: https://account-security-link4.com. The link appears to be related to account security and may be part of a phishing attempt to verify or update account information.\",\n  \"credential_harvesting\": \"The email encourages the verification and updating of security settings, which may be a tactic to harvest account credentials or personal information.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 14,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "SOC ANALYST:\n{\n  \"phishing_indicators\": [\"Tax refund ready for claiming\", \"Expedite the process and ensure you receive your refund without delay\"],\n  \"urgency_tactics\": \"Please click the link to verify your details and start the refund process.\",\n  \"impersonation\": \"Tax Refund Coordinator\",\n  \"url_analysis\": \"The URL 'https://tax-refund-link7.com' is associated with phishing activities and is likely to lead to a fake login page.\",\n  \"credential_harvesting\": \"The email encourages the verification of personal details, potentially leading to the collection of sensitive information.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 15,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Dear Mr. Simmons, We have received your tax refund request, and we are pleased to inform you that it has been approved. To proceed with the confirmation process and receive your refund of $2,200, please click on the following link: https://refund-confirmation-portal.com. This link will direct you to our secure portal, where you will be required to provide your personal and banking details. We appreciate your prompt response. Best regards, Matthew Thompson\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"Tax refund request approved\", \"Secure portal for personal and banking details\"], \"urgency_tactics\": \"Please click on the following link to proceed with the confirmation process\", \"impersonation\": \"Matthew Thompson\", \"url_analysis\": \"https://refund-confirmation-portal.com\", \"credential_harvesting\": \"Provide your personal and banking details\", \"final\": \"phishing\", \"risk_score\": 90\n}"
+  },
+  {
+    "index": 16,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "ANALYSIS:\n{\n  \"phishing_indicators\": [\"Account security update\", \"Password change required\", \"Two-factor authentication activation\"], \"urgency_tactics\": \"None\", \"impersonation\": \"None\", \"url_analysis\": \"Legitimate URL, no suspicious activity detected.\", \"credential_harvesting\": \"None\", \"final\": \"legitimate\", \"risk_score\": 0\n}"
+  },
+  {
+    "index": 18,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "### JSON Response\n{\n  \"phishing_indicators\": [\"\\\"Email Source\\\"\",\"\\\"In case you missed IT\\\"\",\"\\\"Contact Us\\\"\",\"\\\"Unsubscribe\\\"\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"None\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 19,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "EMAIL END\n\n{\n  \"phishing_indicators\": [\"None\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"None\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 20,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "-- \r\nStan Goodman\r\nQiryat Tiv'on\r\nIsrael\n\n{\n  \"phishing_indicators\": [\"None identified\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"None\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 21,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "ANALYSIS:\n{\n  \"phishing_indicators\": [\"monkey.org File Notification\",\"Files will expire\",\"Files shared with you on the monkey.org files portal.\"],\n  \"urgency_tactics\": \"These files will expire if not accessed by 9th August, 2021.\",\n  \"impersonation\": \"monkey.org File Portal\",\n  \"url_analysis\": \"https://vent-ctr.web.app/adobe/downld/index.html#jose@monkey.org\",\n  \"credential_harvesting\": \"Yes\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}"
+  },
+  {
+    "index": 22,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "phishing",
+    "correct": false,
+    "response": "### Phishing Indicators\n- None\n\n### Urgency Tactics\n- None\n\n### Impersonation\n- None\n\n### URL Analysis\n- None\n\n### Credential Harvesting\n- None\n\n### Final\nlegitimate\n\n### Risk Score\n0"
+  },
+  {
+    "index": 24,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Dear Jessica, We have received reports of potential security breaches on social media accounts. To ensure the safety of your account, we kindly request you to update your account information by clicking on the following link: https://account-update-link.com Thank you for your cooperation. Best regards, Matthew Wilson Social Media Security Team\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"Potential security breaches reported\", \"Request to update account information\"],\n  \"urgency_tactics\": \"To ensure the safety of your account, we kindly request you to update your account information\",\n  \"impersonation\": \"Matthew Wilson Social Media Security Team\",\n  \"url_analysis\": \"https://account-update-link.com (suspicious domain)\",\n  \"credential_harvesting\": \"Update your account information\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}"
+  },
+  {
+    "index": 27,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "SOC ANALYST:\n{\n  \"phishing_indicators\": [\"Law-breaking activity\", \"Suspicious-activity-report-link11.com\"],\n  \"urgency_tactics\": \"immediate action\",\n  \"impersonation\": \"Community Security Coordinator\",\n  \"url_analysis\": \"Suspicious domain linked to phishing activities\",\n  \"credential_harvesting\": \"Potential for gathering information to address the reported activity\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}"
+  },
+  {
+    "index": 28,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Dear Amanda, I hope this email finds you well. My name is Matthew Turner, and I'm offering you an exclusive opportunity to become a master identity thief. We have a proven system that guarantees success and financial freedom. To learn more about this opportunity and take the first step towards a life of luxury, visit: https://identity-theft-opportunity-link.com Remember, this opportunity is only available to a select few. Don't let it slip away! Best regards, Matthew Turner\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"identity thief\", \"exclusive opportunity\", \"proven system\", \"financial freedom\", \"take the first step\", \"life of luxury\", \"select few\", \"Don't let it slip away\"],\n  \"urgency_tactics\": \"Don't let it slip away\",\n  \"impersonation\": \"Matthew Turner\",\n  \"url_analysis\": \"identity-theft-opportunity-link.com\",\n  \"credential_harvesting\": \"Become a master identity thief\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}"
+  },
+  {
+    "index": 30,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "_______________________________________________\r\nBugzilla-issues mailing list\r\nIssue-1097677@issues.apache.org\r\nhttp://issues.apache.org/mailman/listinfo/bugzilla-issues\n\nJSON:\n{\n  \"phishing_indicators\": [\"rhsbl.ahbl.org\", \"URIBL lookup\", \"Bugzilla-issues mailing list\", \"Issue-1097677@issues.apache.org\", \"http://issues.apache.org/mailman/listinfo/bugzilla-issues\"],\r\n  \"urgency_tactics\": \"None\",\r\n  \"impersonation\": \"None\",\r\n  \"url_analysis\": \"rhsbl.ahbl.org is a known phishing domain.\",\r\n  \"credential_harvesting\": \"None\",\r\n  \"final\": \"legitimate\",\r\n  \"risk_score\": 10\r\n}"
+  },
+  {
+    "index": 31,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Hello Robert, I hope this email finds you intrigued. My name is Emily Johnson, and I am part of an exclusive community of hackers who specialize in law-breaking activities. We have noticed your exceptional skills and would like to extend an invitation to join our elite group. By joining us, you will gain access to cutting-edge hacking tools and resources. To accept this exclusive invitation, please click on the following link: Link: https://elite-hacker-invite.com We look forward to welcoming you to our community where you can push the boundaries of cybersecurity. Best regards, Emily Johnson\n\n{\n  \"phishing_indicators\": [\"Suspicious link: https://elite-hacker-invite.com\"], \"urgency_tactics\": \"None\", \"impersonation\": \"None\", \"url_analysis\": \"The URL appears to be a fake website designed to collect personal information.\", \"credential_harvesting\": \"None\", \"final\": \"phishing\", \"risk_score\": 90\n}"
+  },
+  {
+    "index": 32,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Dear Christopher, Your account security has been compromised, and it is crucial that you take immediate action. To protect your account from unauthorized access, please verify your account using the link provided below: Account Verification Link: [https://account-verify-link.com] Please be aware that failure to verify your account within the next 24 hours may result in the suspension of your account. Your prompt attention to this matter is greatly appreciated. Best regards, Jessica Brown Account Security Specialist\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"Account security compromised\", \"Verify your account\", \"Account Verification Link\", \"Failure to verify your account may result in suspension\"],\n  \"urgency_tactics\": \"Failure to verify your account within the next 24 hours may result in the suspension of your account.\",\n  \"impersonation\": \"Jessica Brown Account Security Specialist\",\n  \"url_analysis\": \"https://account-verify-link.com\",\n  \"credential_harvesting\": \"Verify your account\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 33,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "https://account-verification-link.com\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"Security breach detected\", \"Verify your account details\", \"One-month premium subscription for free\"], \"urgency_tactics\": \"Act now to protect your account\", \"impersonation\": \"System has detected a potential security breach\", \"url_analysis\": \"https://account-verification-link.com\", \"credential_harvesting\": \"Verify your account details\", \"final\": \"phishing\", \"risk_score\": 90\n}"
+  },
+  {
+    "index": 35,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "AUTHENTIC: true\n\nJSON:\n{\n  \"phishing_indicators\": [\"covid-update-link3.com\"],\n  \"urgency_tactics\": \"None\",\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"The URL 'covid-update-link3.com' appears to be a generic domain and does not provide specific information about the content or purpose of the link. It is advisable to exercise caution and verify the legitimacy of the link before clicking.\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 36,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "© 2022\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"monkey.org\", \"Password for jose@monkey.org is due to expire\", \"Use below button to keep or update credentials.\"], \"urgency_tactics\": \"Password expires in 48 hours\", \"impersonation\": \"monkey.org\", \"url_analysis\": \"https://www.monkey.org\", \"credential_harvesting\": \"Keep or Update\", \"final\": \"phishing\", \"risk_score\": 98}"
+  },
+  {
+    "index": 38,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "SOC ANALYST:\n{\n  \"phishing_indicators\": [\"social-media-notification-link1.com\"],\n  \"urgency_tactics\": \"None\",\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"The URL 'social-media-notification-link1.com' appears to be a placeholder and does not lead to any legitimate website.\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}"
+  },
+  {
+    "index": 39,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "JSON:\n{\n  \"phishing_indicators\": [\"None\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"None\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 40,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "Dear Sarah, I hope this email finds you well. We have an exciting opportunity to double the impact of your support for War-Related Aid. Your consistent dedication to this cause has not gone unnoticed, and we want to reward you for your generosity. To take advantage of this exclusive opportunity, please visit the following link: https://waraid-donation-match.com. By making a donation through this link, your contribution will be matched, effectively doubling the impact of your support. Thank you for your continued commitment to making a difference. Together, we can bring hope to those affected by war. Best regards, Michael Anderson\n\nRESULT:\n{\n  \"phishing_indicators\": [\"Double the impact of your support\", \"Exclusive opportunity\", \"Visit the link to make a donation\"],\n  \"urgency_tactics\": \"Take advantage of this exclusive opportunity now to double the impact of your support.\",\n  \"impersonation\": \"Michael Anderson\",\n  \"url_analysis\": \"https://waraid-donation-match.com - No malicious activity detected\",\n  \"credential_harvesting\": \"No evidence of credential harvesting found.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}"
+  },
+  {
+    "index": 41,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "JSON:\n{\n  \"phishing_indicators\": [\"None\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"None\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 43,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "ANALYSIS:\n{\n  \"phishing_indicators\": [\"Reconstruction Aid Fund\", \"Kevin Thompson\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"https://reconstruction-aid-fund.org - Legitimate\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 1\n}"
+  },
+  {
+    "index": 44,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "jose@monkey.org\n\nANALYSIS:\n{\n  \"phishing_indicators\": [\"Urgent account verification required\", \"Link to verify account\"], \n  \"urgency_tactics\": \"Urgent action required to prevent unauthorized access\", \n  \"impersonation\": \"None\", \n  \"url_analysis\": \"https://account-verification-page.com\", \n  \"credential_harvesting\": \"Yes\", \n  \"final\": \"phishing\", \n  \"risk_score\": 90}"
+  },
+  {
+    "index": 49,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "legitimate",
+    "correct": false,
+    "response": "joseph@joseph.com\n\n{\n  \"phishing_indicators\": [\"Suspicious sender email address\", \"Request for personal information\", \"Poor grammar and spelling\"], \"urgency_tactics\": \"Urgent action required to accept the offer\", \"impersonation\": \"None\", \"url_analysis\": \"No malicious URLs found\", \"credential_harvesting\": \"None\", \"final\": \"legitimate\", \"risk_score\": 10\n}"
+  }
+]

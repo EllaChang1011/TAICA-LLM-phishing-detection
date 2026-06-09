@@ -1,0 +1,634 @@
+[
+  {
+    "index": 0,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Unsolicited inheritance/wealth notification\", \"Request for sensitive PII and identification documents\", \"Vague sender identity lacking official organizational details\", \"Generic closing without verifiable contact information\"],\n  \"urgency_tactics\": \"Uses phrases such as 'immediate response' and 'promptly' to create artificial pressure and discourage verification.\",\n  \"impersonation\": \"Signs off only as 'Donald' without naming a legitimate company, law firm, or financial institution, implying impersonation of a trusted entity.\",\n  \"url_analysis\": \"No URLs or links are present in the email body; no web destination to verify or flag.\",\n  \"credential_harvesting\": \"Explicitly requests full name, contact details, and valid identification documents, aiming to collect PII for identity theft or financial fraud.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 1,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Generic greeting ('Dear Job Seeker')\", \"No specific company name or domain provided\", \"Request to reply with sensitive documents instead of using a secure application portal\", \"Vague opportunity description and unverified sender\"],\n  \"urgency_tactics\": \"None explicitly stated; relies on generic praise and opportunity appeal rather than time-sensitive pressure.\",\n  \"impersonation\": \"Claims to be a 'Recruitment Team' but lacks a specific company name, official email domain, or verifiable sender information, making legitimacy unverifiable and suspicious.\",\n  \"url_analysis\": \"No URLs present in the provided email text.\",\n  \"credential_harvesting\": \"No direct password request, but aims to harvest personal and professional data (resume/cover letter) via unsecured email reply, which can facilitate identity theft or further social engineering.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 2,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited claim of an approved tax refund\",\n    \"Request to click a link to claim money\",\n    \"Use of a non-government domain (.com instead of .gov)\",\n    \"Lack of official IRS formatting, case numbers, or direct contact information\"\n  ],\n  \"urgency_tactics\": \"Leverages the prospect of immediate financial gain with an 'approved' refund to prompt impulsive action and bypass rational verification.\",\n  \"impersonation\": \"Falsely identifies the sender as 'Christopher Taylor, IRS Agent' to mimic official government authority and bypass skepticism.\",\n  \"url_analysis\": \"The provided URL points to 'tax-refund-christopher.com', a fraudulent public domain. Legitimate IRS communications exclusively use .gov domains. The domain name also incorrectly incorporates the sender's name, indicating a fabricated landing page.\",\n  \"credential_harvesting\": \"Directs the recipient to click a link under the guise of claiming a refund, strongly indicating the destination is a spoofed web form designed to harvest PII, tax return details, or financial account credentials.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 3,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None detected.\",\n  \"impersonation\": \"None detected.\",\n  \"url_analysis\": \"Links to nabble.com, a legitimate mailing list archive service. No suspicious, shortened, or obfuscated URLs detected.\",\n  \"credential_harvesting\": \"None detected.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 4,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Visual spoofing: 'linkedln' uses a lowercase 'l' instead of uppercase 'I'\",\n    \"Excessive and inconsistent whitespace/tabs throughout the body text\",\n    \"Expired timestamp (20/01/2020) indicating a recycled or fabricated template\",\n    \"Duplicate footer content at the end of the email\",\n    \"Lack of specific sender identity or actual file name in the notification\"\n  ],\n  \"urgency_tactics\": \"False expiration date (20/01/2020) is used to induce panic and prompt immediate clicking of the download link before the file 'expires'.\",\n  \"impersonation\": \"Impersonates LinkedIn Corporation by including legitimate-looking legal disclaimers, company registration details, trademark notices, and official branding language to build trust.\",\n  \"url_analysis\": \"No actual URLs are visible in the provided text. The 'Preview / Download' and 'Unsubscribe' buttons would contain obfuscated or spoofed links pointing to malicious infrastructure rather than legitimate linkedin.com domains.\",\n  \"credential_harvesting\": \"High probability. The 'Preview / Download' call-to-action is designed to redirect victims to a spoofed LinkedIn login portal to harvest credentials or trigger a malware download, standard in corporate impersonation campaigns.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 5,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"Standard webinar marketing phrasing ('Time is running out!') used to encourage timely registration, not malicious coercion.\",\n  \"impersonation\": \"Content, branding, and structure align with official AAAS/Science academic newsletters. No evidence of spoofing or domain impersonation.\",\n  \"url_analysis\": \"Hyperlinks direct to www.sciencemag.org, the official and verified domain for Science magazine. No URL shorteners, typosquatting, or suspicious TLDs detected.\",\n  \"credential_harvesting\": \"Call-to-action links to an official webinar registration page. No suspicious login forms, credential prompts, or data exfiltration mechanisms are present in the email body.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 6,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\"Suspicious domain using sender's first name instead of corporate domain\", \"Domain mismatch between claimed company (XYZ Solutions) and link domain (career-opportunity-brian.com)\", \"Unsolicited job offer with generic details\", \"Lack of official corporate branding or contact information\"],\n  \"urgency_tactics\": \"None detected\",\n  \"impersonation\": \"Claims to be HR Director at XYZ Solutions but uses a non-corporate domain, indicating likely identity spoofing or fictitious role\",\n  \"url_analysis\": \"The domain career-opportunity-brian.com is highly suspicious due to the use of a personal name instead of a legitimate corporate domain, lacks brand alignment, and likely hosts a malicious landing page\",\n  \"credential_harvesting\": \"High probability. The link is structured to collect personal information and potentially login credentials under the pretext of a job application\",\n  \"final\": \"phishing\",\n  \"risk_score\": 85\n}"
+  },
+  {
+    "index": 7,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic first-name greeting\",\n    \"Vague sender identity lacking a specific, verifiable institution name\",\n    \"Suspicious domain with generic keywords and random number suffix\",\n    \"Use of standard email template opener ('I hope this email finds you in good health')\",\n    \"Request to click an external link for account verification\"\n  ],\n  \"urgency_tactics\": \"Uses phrases like 'vital for the integrity of our financial systems' and 'prompt attention' to create artificial pressure and bypass logical user scrutiny.\",\n  \"impersonation\": \"Poses as a generic 'Financial Services Team' under the name 'Rachel King' without affiliating with a legitimate, verifiable financial institution, a common tactic in financial phishing campaigns.\",\n  \"url_analysis\": \"The domain 'financial-transaction-confirmation-link7.com' is highly suspicious. It consists of concatenated generic financial keywords and a random number, typical of newly registered phishing domains designed to appear trustworthy while mimicking legitimate financial portals.\",\n  \"credential_harvesting\": \"Directs the recipient to click an external link under the guise of reviewing a transaction, a classic lure intended to redirect to a counterfeit login page or data capture form to steal credentials or financial information.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 8,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"None present\"],\n  \"urgency_tactics\": \"None. The email is a standard technical bug report with no artificial deadlines or pressure tactics.\",\n  \"impersonation\": \"None. The email originates from a legitimate Apache Software Foundation project bug tracker.\",\n  \"url_analysis\": \"The link points to issues.apache.org, the official bug tracking system for Apache projects. The URL matches the bug ID in the subject line and is safe.\",\n  \"credential_harvesting\": \"None. The message contains a technical inquiry and does not request passwords, personal information, or direct users to login portals.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 9,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"No URLs present in the email body.\",\n  \"credential_harvesting\": \"None detected.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 10,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Generic greeting\", \"Unsolicited security alert\", \"Direct link to unverified domain\", \"Lack of sender identification\"],\n  \"urgency_tactics\": \"Claims unusual login attempts to pressure immediate action\",\n  \"impersonation\": \"Vague 'We' implies impersonation of a service provider without specific branding\",\n  \"url_analysis\": \"Suspicious domain 'account-verification-check.com' lacks brand association and uses generic keywords typical of phishing sites\",\n  \"credential_harvesting\": \"Directs user to verify account information via an unverified link, indicating credential harvesting intent\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 11,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Raw placeholders for [Date], [Venue], and URL indicate a draft or mass-templated campaign\",\n    \"Exploits altruism and goodwill typical of charity-themed phishing\",\n    \"Lacks proper organizational branding or verified sender domain information\"\n  ],\n  \"urgency_tactics\": \"Low urgency; relies primarily on emotional manipulation and a soft 'RSVP now' call to action rather than threats or strict deadlines\",\n  \"impersonation\": \"Impersonates 'Amanda Evans' and an unnamed charity organization to exploit donor trust\",\n  \"url_analysis\": \"Suspicious domain pattern using generic keywords ('charity-fundraiser') combined with a name; highly indicative of a phishing link designed to mimic legitimate events\",\n  \"credential_harvesting\": \"Likely; the 'RSVP' URL is a common vector for fake donation/login portals designed to capture credentials or financial information\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 12,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Domain mismatch (crancbsu.com instead of wetransfer.com)\", \"Suspicious third-party domain hosting the download link\", \"Generic and repetitive email body\", \"Use of official branding/footer without verified domain\", \"Expiry date warning\"],\n  \"urgency_tactics\": \"Mentions files will be automatically deleted on a specific date to create pressure and prompt immediate clicking.\",\n  \"impersonation\": \"Impersonates WeTransfer by copying its official layout, terminology, footer links, and support email address.\",\n  \"url_analysis\": \"The provided link uses 'crancbsu.com', which is not affiliated with WeTransfer. Legitimate WeTransfer domains are wetransfer.com, we.tl, or t2m.media. This domain is highly suspicious and likely hosts a phishing or malware landing page.\",\n  \"credential_harvesting\": \"Highly likely. The malicious link is designed to mimic a file download or login portal to steal credentials, capture session tokens, or deliver malware under the guise of a legitimate file transfer.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}"
+  },
+  {
+    "index": 13,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Vague sender identity lacking specific organization branding\",\n    \"Suspicious domain name (account-security-link4.com) using generic keywords and a random number\",\n    \"Fabricated social proof citing unrelated individuals (Justin Hill, Emily Johnson)\",\n    \"Generic department title ('Account Security Specialist') without verifiable company context\",\n    \"Pressure-inducing language designed to bypass scrutiny\"\n  ],\n  \"urgency_tactics\": \"Utilizes time-sensitive phrasing such as 'urgent matter', 'without delay', and 'prompt attention... is paramount' to create artificial pressure and force immediate action before the recipient can verify legitimacy.\",\n  \"impersonation\": \"Poses as a generic account security or support team representative without referencing a specific, legitimate organization, service provider, or verifiable contact channel.\",\n  \"url_analysis\": \"Links to 'account-security-link4.com', a highly suspicious, unbranded domain that mimics security-related terminology but contains no affiliation with any known legitimate entity.\",\n  \"credential_harvesting\": \"Directs the recipient to 'verify and update your security settings', a standard phishing pretext used to redirect victims to a counterfeit login portal for credential theft.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 14,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited claim of tax refund\",\n    \"Suspicious domain name (tax-refund-link7.com)\",\n    \"Request to click a link to verify details\",\n    \"Lack of official government/financial institution branding or sender domain\",\n    \"Generic professional title without verifiable contact information\"\n  ],\n  \"urgency_tactics\": \"Claims the refund is ready and warns of potential delay, urging immediate action to expedite the process and emphasizing that consistent attention to your tax matters is crucial.\",\n  \"impersonation\": \"Appears to impersonate an official tax authority or financial representative, using the title Tax Refund Coordinator without any verifiable government agency affiliation or official email domain.\",\n  \"url_analysis\": \"The domain tax-refund-link7.com is highly suspicious and non-standard for legitimate tax processing. Official tax agencies never use random commercial .com domains for refund verification; it exhibits typical phishing domain patterns with a hyphen and numerical suffix.\",\n  \"credential_harvesting\": \"The call to action directs the recipient to a third-party link to verify your details, a classic technique used to capture sensitive personal information, bank account details, and tax identification numbers on a fraudulent webpage.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 15,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited tax refund offer\",\n    \"Request for sensitive personal and banking details via an external link\",\n    \"Vague sender signature lacking official agency branding or title\",\n    \"Use of a non-governmental .com domain for a government-related matter\"\n  ],\n  \"urgency_tactics\": \"Leverages a financial incentive ($2,200) and phrases like 'proceed with the confirmation process' and 'prompt response' to pressure immediate, unverified action.\",\n  \"impersonation\": \"Mimics a government tax authority or financial agency but uses a generic personal signature without official institutional identification or verified contact details.\",\n  \"url_analysis\": \"The domain 'refund-confirmation-portal.com' is highly suspicious. Legitimate tax refunds are exclusively processed through verified government domains (.gov), not custom commercial URLs.\",\n  \"credential_harvesting\": \"Explicitly directs the user to input personal and banking information on the linked page, confirming the primary objective is to steal financial and identity credentials.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 16,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Suspicious third-party domain not matching claimed organization\",\n    \"Request to update password and enable 2FA via unverified link\",\n    \"Lack of official corporate email domain or verification details\",\n    \"Generic security warning language\"\n  ],\n  \"urgency_tactics\": \"Uses vague but authoritative language about 'important account security updates' to prompt immediate compliance without specifying concrete consequences like account suspension.\",\n  \"impersonation\": \"Poses as an internal Security Analyst from XYZ Corporation to establish false legitimacy, but provides no verifiable corporate contact information or official domain alignment.\",\n  \"url_analysis\": \"Redirects to 'account-security-notice-sarah.com', a non-corporate domain registered with generic security keywords and the sender's first name, strongly indicating a malicious phishing landing page.\",\n  \"credential_harvesting\": \"Directs users to enter their current password and set up two-factor authentication on a third-party site, a standard credential harvesting and MFA token theft technique.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 17,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\"Generic charitable appeal template\", \"Unverified external donation link\", \"Absence of sender domain/authentication details\", \"No official organizational branding or verifiable contact information\"],\n  \"urgency_tactics\": \"None observed; utilizes standard emotional fundraising language without deadlines, threats, or time-sensitive demands.\",\n  \"impersonation\": \"Claims affiliation with the 'Cultural Heritage Preservation Society' but provides no verifiable organizational email domain, official signature block, or third-party verification, suggesting potential spoofing or illegitimate entity.\",\n  \"url_analysis\": \"Links to https://cultural-heritage-preservation.org; domain structure aligns with claimed organization and uses HTTPS, but lacks immediate reputation/WHOIS verification. Requires sandbox analysis to confirm legitimacy and detect typosquatting or recent registration.\",\n  \"credential_harvesting\": \"Targets financial information rather than login credentials, but unverified donation portals are frequently repurposed to harvest credit card numbers, billing addresses, and personal identifiers.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 65\n}"
+  },
+  {
+    "index": 18,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"None\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"Unsubscribe link points to legitimate WhatIs.techtarget.com domain with standard newsletter tracking parameters; no suspicious or obfuscated URLs detected.\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 19,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"None detected\", \"Standard technical development mailing list format\", \"No external actionable links or requests\"],\n  \"urgency_tactics\": \"None detected\",\n  \"impersonation\": \"None detected\",\n  \"url_analysis\": \"Contains only official Python Software Foundation mailing list URLs (mail.python.org/mailman/listinfo/spambayes-dev). No suspicious, shortened, or mismatched domains.\",\n  \"credential_harvesting\": \"None detected\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 20,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None detected\",\n  \"impersonation\": \"None detected\",\n  \"url_analysis\": \"No active or clickable URLs present; only a plain-text reference to a legacy software repository (RPM.PBONE.NET).\",\n  \"credential_harvesting\": \"None detected\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 21,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Typo in subject line ('Recieved' instead of 'Received')\",\n    \"Domain mismatch: claims to be from 'monkey.org' but links point to 'vent-ctr.web.app'\",\n    \"Use of Google Firebase hosting (vent-ctr.web.app), frequently abused for phishing due to anonymous/free setup\",\n    \"URL path '/adobe/downld/' mimics legitimate Adobe services to build false trust\",\n    \"Email body contains duplicated text blocks, indicating a poorly formatted or automated phishing template\",\n    \"Sender address 'filesportal@monkey.org' does not match the actual link domain\"\n  ],\n  \"urgency_tactics\": \"Includes an explicit expiration warning ('These files will expire if not accessed by 9th August, 2021') to pressure the recipient into clicking the link immediately without verifying the sender or link destination.\",\n  \"impersonation\": \"Impersonates a legitimate internal or corporate file-sharing service ('monkey.org File Portal') and leverages the '/adobe/' path in the URL to falsely appear as a trusted Adobe Document Cloud notification.\",\n  \"url_analysis\": \"Actual destination domain: vent-ctr.web.app (Firebase hosting). Path: /adobe/downld/index.html (deceptive Adobe mimicry). Contains email address in URL fragment (#jose@monkey.org) likely used for victim tracking or pre-filling a login form. Complete mismatch with the claimed sender domain 'monkey.org'.\",\n  \"credential_harvesting\": \"High probability. The email is designed to redirect the user to a counterfeit login portal disguised as a file access page to harvest credentials, session tokens, or deploy malware under the guise of 'downloading' files.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 22,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"No suspicious sender address or domain spoofing detected\",\n    \"Standard commercial newsletter layout with consistent branding\",\n    \"Legitimate unsubscribe and privacy policy links in footer\"\n  ],\n  \"urgency_tactics\": \"Promotional deadline for a product purchase extension, not related to account security or credential recovery\",\n  \"impersonation\": \"Identifies as CBS SportsLine.com/CBS Interactive Inc. with consistent historical sports media formatting and corporate address\",\n  \"url_analysis\": \"References to cbs.sportsline.com and standard sports news sections; no obfuscated, shortened, or suspicious external hyperlinks present in the text\",\n  \"credential_harvesting\": \"No login fields, password reset links, or requests for sensitive personal information detected\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 1\n}"
+  },
+  {
+    "index": 23,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Character substitution/typosquatting in brand name (Microsοft, privαcy, οnline)\",\n    \"Poor grammar and truncated text (Statemen)\",\n    \"Generic greeting with lowercase name (Hi jose)\",\n    \"Threat and urgency language (avoid Shutdown, less than 24hrs)\",\n    \"Generic call-to-action with obfuscated link placeholder (CLICK TO CONTINUE)\",\n    \"Suspicious/abusive subject line (verify)\"\n  ],\n  \"urgency_tactics\": \"Uses immediate time pressure ('less than 24hrs') and threat of service termination ('avoid Shutdown') to induce panic and bypass rational scrutiny.\",\n  \"impersonation\": \"Spoofs Microsoft using subtle Unicode character substitutions (Greek omicron/alpha) in 'Microsοft' and 'privαcy' to evade basic text-based filters and appear legitimate.\",\n  \"url_analysis\": \"No direct URL provided, only a generic 'CLICK TO CONTINUE' text link placeholder, indicating obfuscated or hidden malicious URL redirection typical of phishing campaigns.\",\n  \"credential_harvesting\": \"Demands immediate mailbox re-verification under threat of shutdown, a classic social engineering technique designed to trick recipients into entering credentials on a fraudulent login portal.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 24,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Generic sender and department name\", \"Vague threat of security breaches\", \"Requests sensitive account information via unverified link\", \"Lack of official branding or specific company references\"],\n  \"urgency_tactics\": \"Uses fear of account compromise ('potential security breaches') to pressure the recipient into immediate action without verification.\",\n  \"impersonation\": \"Masquerades as a generic 'Social Media Security Team' (Matthew Wilson) without identifying a legitimate platform or providing verifiable contact information.\",\n  \"url_analysis\": \"The URL 'https://account-update-link.com' is a highly suspicious, generic domain that does not belong to any recognized social media service. It lacks proper branding and uses a non-standard TLD structure common in phishing campaigns.\",\n  \"credential_harvesting\": \"Explicitly directs the user to click a link to 'update account information', indicating a direct attempt to collect login credentials or personal data on a fraudulent page.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 25,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Sender uses a generic free email provider (yahoo.com) instead of an official WeTransfer domain\",\n    \"Urgency deadline applied to file access ('Will be deleted on 12 December, 2019')\",\n    \"Large unsolicited file transfer (417 MB) from a personal account\",\n    \"Potential for malware payload disguised as design files (.psd/.jpg)\"\n  ],\n  \"urgency_tactics\": \"Explicit expiration date and file deletion warning to pressure the recipient into clicking the download link immediately without verifying the sender or contents\",\n  \"impersonation\": \"Mimics the layout and tone of an automated WeTransfer notification, but originates from a personal Yahoo account rather than WeTransfer's official corporate or automated email infrastructure\",\n  \"url_analysis\": \"Directs to a legitimate weTransfer.com domain with standard download hash parameters. While the domain is valid, file-sharing platforms are frequently abused to bypass email filters and deliver malicious payloads disguised as harmless documents\",\n  \"credential_harvesting\": \"Not applicable. The link provides a direct file download without requesting login credentials. The primary threat is malware execution upon opening the downloaded files, not credential theft\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 26,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Repetitive limited-time urgency language ('This Weekend Only')\",\n    \"Third-party tracking domain in all URLs (chtah.com)\",\n    \"Generic promotional formatting without personalization\",\n    \"Standard unsubscribe and contact links present\"\n  ],\n  \"urgency_tactics\": \"Standard retail marketing pressure using time-bound offers ('3 Day Weekend Sale', 'This Weekend Only') to drive immediate clicks. Lacks malicious coercion, account suspension threats, or demands typical of phishing campaigns.\",\n  \"impersonation\": \"Claims affiliation with J&R Music and Computer World. The domain jr.chtah.com aligns with known third-party email marketing infrastructure historically used by this retailer. No typosquatting, homograph attacks, or spoofing indicators detected.\",\n  \"url_analysis\": \"All links route through jr.chtah.com, a legitimate email campaign tracking/redirect service. URLs contain standard tracking parameters but direct to retail product pages. No malicious payloads, credential harvesting endpoints, or suspicious IP hosting detected.\",\n  \"credential_harvesting\": \"None detected. The email contains no requests for passwords, PII, or financial information. Links are exclusively for product promotions, unsubscribe management, and general contact.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 1\n}"
+  },
+  {
+    "index": 27,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic sender identity without official organization\",\n    \"Suspicious and keyword-stuffed URL domain\",\n    \"Urgent and threatening language\",\n    \"Vague call to action with external link\",\n    \"Lack of verifiable branding or contact information\"\n  ],\n  \"urgency_tactics\": \"Employs urgent and fear-based language such as 'requires immediate action', 'urgent matter', and references 'law-breaking activity' to pressure the recipient into acting quickly without scrutiny.\",\n  \"impersonation\": \"Falsely claims to be from 'Elizabeth King, Community Security Coordinator' without specifying a legitimate organization, company, or official domain, indicating a fabricated persona.\",\n  \"url_analysis\": \"The hyperlink points to 'suspicious-activity-report-link11.com', a highly suspicious domain with a generic, constructed name designed to mimic official reporting portals. The domain lacks legitimate organizational structure and is likely newly registered or parked for malicious purposes.\",\n  \"credential_harvesting\": \"Highly likely, as directing users to click a suspicious external link to 'review a report' typically leads to a counterfeit login page or data submission form disguised as a community safety portal.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 28,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Explicit mention of illegal activity ('master identity thief')\", \"Guaranteed financial success promise\", \"Lack of legitimate organizational context\", \"Unprofessional and sensationalist language\", \"Suspicious third-party URL\"],\n  \"urgency_tactics\": \"Uses scarcity and fear of missing out ('only available to a select few. Don't let it slip away!') to pressure the recipient into acting quickly without verification.\",\n  \"impersonation\": \"Claims to be a private individual named 'Matthew Turner' with no verifiable affiliation, typical of a fabricated persona used in social engineering.\",\n  \"url_analysis\": \"The domain 'identity-theft-opportunity-link.com' is highly suspicious, utilizing generic keyword stuffing typical of malicious or disposable domains designed to evade filters.\",\n  \"credential_harvesting\": \"The email directs the recipient to an external URL which is highly likely to host a credential harvesting form or malware payload, despite not explicitly requesting details in the body.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 98\n}"
+  },
+  {
+    "index": 29,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic greeting ('Dear User')\",\n    \"Urgent call-to-action ('Sign in Now')\",\n    \"Request to install third-party software to view a bank statement\",\n    \"Link contains affiliate/promo referral ID (promoid=BUIGO)\",\n    \"Missing actual banking login URL in parsed text\",\n    \"Repetitive/missing hyperlink formatting\"\n  ],\n  \"urgency_tactics\": \"Claims an immediate payment event occurred and uses repeated urgent instructions ('Please Sign in Now') to pressure the recipient into acting quickly without verifying the source.\",\n  \"impersonation\": \"Impersonates The Standard Bank of South Africa Limited by copying official trademarks, registration numbers, confidentiality disclaimers, and a fraud hotline number to establish false credibility.\",\n  \"url_analysis\": \"The visible URL points to 'www.get.adobe.com/reader/?promoid=BUIGO'. While the domain is legitimate, the 'promoid' parameter indicates an affiliate marketing link commonly used in spam/adware campaigns. Legitimate banks never require customers to download third-party PDF readers via promotional links to view eStatements; statements are typically delivered as HTML or direct PDF attachments.\",\n  \"credential_harvesting\": \"The repeated 'Sign in Now' CTAs, likely associated with hidden or stripped hyperlinks, indicate a secondary phase intended to redirect users to a counterfeit banking portal to harvest login credentials after the initial Adobe download lure.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 30,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"The URL points to issues.apache.org, the official Apache Software Foundation bug tracking system. It is a legitimate, well-known domain with no malicious indicators.\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 31,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited invitation to join an illegal hacking community\",\n    \"Flattery to lower recipient's skepticism\",\n    \"Suspicious domain unrelated to legitimate cybersecurity firms\",\n    \"Promises of unauthorized tools and law-breaking activities\",\n    \"Generic signature despite claiming exclusive membership\"\n  ],\n  \"urgency_tactics\": \"None detected; relies on curiosity and flattery rather than time-sensitive pressure or threats\",\n  \"impersonation\": \"Claimed sender 'Emily Johnson' and fictional 'elite hacker community' are fabricated with no verifiable organizational affiliation\",\n  \"url_analysis\": \"Link points to 'elite-hacker-invite.com', a highly suspicious unverified domain likely registered for malicious redirection, tracking, or payload delivery\",\n  \"credential_harvesting\": \"High probability; landing page typically demands login credentials or personal data under the guise of membership verification, or serves malware\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 32,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Generic sender title without corporate domain\", \"Suspicious generic URL\", \"Request to click external link for account verification\", \"Lack of official branding or verifiable contact information\", \"Unsolicited security alert\"],\n  \"urgency_tactics\": \"Employs aggressive time pressure ('immediate action', 'within the next 24 hours') and threatens account suspension to compel rapid, unverified compliance.\",\n  \"impersonation\": \"Claims to be an 'Account Security Specialist' named Jessica Brown, impersonating a legitimate service provider or internal IT support team without official corporate branding or email domain.\",\n  \"url_analysis\": \"Links to 'account-verify-link.com', a highly suspicious, keyword-stuffed domain with no legitimate service association. Highly likely hosts a counterfeit login page for data theft.\",\n  \"credential_harvesting\": \"Explicitly directs the recipient to verify their account via a provided URL, a classic phishing technique designed to capture usernames and passwords on a malicious landing page.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 33,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic, impersonal greeting ('esteemed user')\",\n    \"Vague claim of a security breach without account specifics\",\n    \"Unsolicited promise of a free premium subscription as a lure\",\n    \"Reference to a 'link below' without providing the actual URL in the text\",\n    \"Absence of sender identity, branding, or official contact information\"\n  ],\n  \"urgency_tactics\": \"Leverages fear by claiming a 'security breach' and uses directive language ('Act now to protect your account!') to trigger panic, bypass critical thinking, and compel immediate action before verification.\",\n  \"impersonation\": \"Mimics the tone of a legitimate security or SaaS provider notification but intentionally omits specific company details, suggesting spoofing of a generic tech service or subscription platform.\",\n  \"url_analysis\": \"The email references a 'link below' but does not embed the actual URL. In live operations, this would almost certainly be a shortened, masked, or spoofed domain directing to a fraudulent page designed to steal data or distribute malware.\",\n  \"credential_harvesting\": \"Explicitly instructs the recipient to 'verify your account details' via the link, a classic social engineering pretext used to trick users into submitting usernames, passwords, or financial information on a counterfeit login portal.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 34,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Typo in subject line ('postion')\", \"Outdated application deadline (2004)\", \"Use of unencrypted HTTP protocol\", \"Generic academic employment template\"],\n  \"urgency_tactics\": \"References a fixed deadline (October 1, 2004) but lacks explicit threat language, fear-based prompting, or immediate action demands typical of modern phishing.\",\n  \"impersonation\": \"Claims affiliation with academic staff at SNN Nijmegen/Radboud University. The 'kun.nl' domain was historically legitimate for this institution, but sender authentication (SPF/DKIM) cannot be verified from body content alone.\",\n  \"url_analysis\": \"Links direct to historically valid subdomains 'mbfys.kun.nl' and 'snn.kun.nl' for Radboud University. Uses standard HTTP protocol with no URL shortening, IP-based destinations, or suspicious TLDs detected.\",\n  \"credential_harvesting\": \"Does not request passwords, credentials, or financial data. Requests standard academic job application materials (CV, research description, publications).\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 2\n}"
+  },
+  {
+    "index": 35,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Suspicious and non-standard domain name (covid-update-link3.com)\",\n    \"Exploitation of public health crisis for social engineering\",\n    \"Unverified sender identity and lack of official organizational affiliation\",\n    \"Generic greeting and template-like phrasing\"\n  ],\n  \"urgency_tactics\": \"Leverages fear and concern regarding the ongoing COVID-19 pandemic to pressure the recipient into clicking the link quickly without verification or critical thinking.\",\n  \"impersonation\": \"Poses as 'Amanda Wilson, Community Outreach Coordinator', likely impersonating a local health department, HOA, or community organization to build false trust.\",\n  \"url_analysis\": \"The domain 'covid-update-link3.com' does not match any legitimate government, healthcare, or public health organization. It follows a common disposable phishing domain pattern and lacks proper DNS/SSL verification indicators.\",\n  \"credential_harvesting\": \"The link almost certainly redirects to a fraudulent landing page designed to capture login credentials, personal information, or payment details under the false pretext of accessing vaccination or testing resources.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 36,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Obfuscated text with hidden hyphens/zero-width characters used to bypass security filters\",\n    \"Generic and unverified domain 'monkey.org' instead of an official corporate or trusted IT domain\",\n    \"Poor formatting, grammatical errors, and broken spacing typical of automated phishing templates\",\n    \"Lack of official branding, sender display name, or legitimate contact information\"\n  ],\n  \"urgency_tactics\": \"Uses immediate time pressure by stating the password expires in '48hours' and demands action via 'Action Required' to force rapid, unverified clicks.\",\n  \"impersonation\": \"Mimics an internal IT or system password expiration notification but relies on a suspicious, non-corporate domain to deceive the recipient.\",\n  \"url_analysis\": \"No visible URL is provided in the raw text, but it explicitly references a 'button below' which typically contains a disguised malicious link or phishing landing page.\",\n  \"credential_harvesting\": \"Directly prompts the user to 'keep or update current credentials' through an unverified button/link, indicating a clear intent to capture login information.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 37,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Unsolicited grant offer\", \"Generic sender name and unverified organization\", \"Request to click external link for verification\", \"Suspicious domain name lacking official authority\"],\n  \"urgency_tactics\": \"Uses phrases like 'time-sensitive', 'limited', and 'first-come, first-served' to create false scarcity and pressure immediate action without verification.\",\n  \"impersonation\": \"Claims to represent a legitimate non-profit but provides no verifiable organizational name, contact details, or official branding, relying instead on a generic name and pandemic relief context.\",\n  \"url_analysis\": \"The domain 'covid-relief-grant-claim.com' is highly suspicious; legitimate government or nonprofit relief programs use verified .gov or well-established .org domains, and this URL appears designed to mimic official services without authenticity.\",\n  \"credential_harvesting\": \"Directs recipients to a link to 'verify eligibility' and complete an application, a classic social engineering method to harvest personal identifiable information (PII), banking details, or login credentials on a fraudulent page.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 38,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\"Vague sender identity without specific company name\", \"Suspicious generic domain\", \"Unverifiable click-to-action link\", \"Lack of official branding\"],\n  \"urgency_tactics\": \"Low urgency; uses vague 'important update' language without time-sensitive pressure or consequences.\",\n  \"impersonation\": \"Claims affiliation as a 'Social Media Manager' but omits the actual platform name, making identity verification impossible.\",\n  \"url_analysis\": \"Points to 'social-media-notification-link1.com', a non-standard, generic domain not affiliated with any major social media service. Highly suspicious.\",\n  \"credential_harvesting\": \"Likely redirects to a counterfeit login or notification portal designed to capture user credentials.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 85\n}"
+  },
+  {
+    "index": 39,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None detected. The email contains no time-sensitive language, threats, or pressure tactics designed to compel immediate action.\",\n  \"impersonation\": \"None detected. The message appears to be a legitimate mailing list follow-up from an end-user discussing SquirrelMail configuration.\",\n  \"url_analysis\": \"No URLs or attachments are present. References to SourceForge are purely textual and used as a search reference, not as interactive links.\",\n  \"credential_harvesting\": \"None detected. The sender describes a login error but does not request passwords, usernames, or direct the recipient to input credentials anywhere.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 40,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic and unverified organization name 'War-Related Aid'\",\n    \"Use of 'exclusive opportunity' and 'reward' to exploit goodwill\",\n    \"Unsolicited solicitation for financial contribution\",\n    \"Lack of verifiable sender identity or official domain\"\n  ],\n  \"urgency_tactics\": \"Framing the request as an 'exclusive opportunity' to create a fear of missing out (FOMO), though it lacks explicit deadline pressure.\",\n  \"impersonation\": \"Appears to impersonate a charitable entity without official branding, verified contact information, or alignment with known registered nonprofits.\",\n  \"url_analysis\": \"Suspicious domain 'waraid-donation-match.com' exhibits keyword stuffing, lacks a standard charity TLD (.org), and does not correspond to any verified legitimate donation platform.\",\n  \"credential_harvesting\": \"High probability; the link likely directs to a spoofed donation portal designed to harvest credit card information or financial credentials under the pretext of processing a matching gift.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 41,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"No URLs present in the email body.\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 42,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited account cancellation claim\",\n    \"Urgent call-to-action with awkward phrasing\",\n    \"Fabricated source/footer attribution\",\n    \"Inconsistent capitalization and formatting\",\n    \"Hidden/obfuscated URL typical of email rendering tricks\"\n  ],\n  \"urgency_tactics\": \"Exploits fear of account loss by falsely claiming the user requested cancellation, demanding immediate action to prevent deactivation.\",\n  \"impersonation\": \"Spoofs LinkedIn as the sender but lacks official corporate email authentication, proper branding, and standard legal disclaimers. The 'Source: LinkedIn.com' line is a common template forgery.\",\n  \"url_analysis\": \"No visible URL is provided in the raw text, indicating a hidden hyperlink behind a button or anchor text. In this attack pattern, the actual destination would typically be a typosquatted domain (e.g., linkedin-verify.net) designed to mimic LinkedIn's login portal.\",\n  \"credential_harvesting\": \"Aims to direct victims to a fraudulent LinkedIn login page to capture username, password, and potentially MFA tokens under the guise of account recovery.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}"
+  },
+  {
+    "index": 43,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\"Generic/unverifiable organization name\", \"Emotional manipulation and guilt appeal\", \"Direct donation request with unverified external link\", \"Vague operational details and broad mission scope\", \"Lack of verifiable sender identity or organizational credentials\"],\n  \"urgency_tactics\": \"Mild urgency utilizing a gentle prompt ('Please consider making a contribution today') combined with emotional appeals rather than time-sensitive threats or deadlines.\",\n  \"impersonation\": \"Claims affiliation with 'Reconstruction Aid Fund', a highly generic and brandable name easily registered by malicious actors. No evidence of spoofing a known, legitimate charity.\",\n  \"url_analysis\": \"Links to 'https://reconstruction-aid-fund.org'. The domain is generic and lacks recognition of established charitable entities. HTTPS presence does not verify legitimacy. Requires WHOIS lookup and phishing/malware database reputation checks.\",\n  \"credential_harvesting\": \"Directs recipients to a donation portal that likely harvests financial information (credit card/bank details) or login credentials under the guise of a 'secure' charitable transaction.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 7\n}"
+  },
+  {
+    "index": 44,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Urgent tone demanding immediate action\", \"Generic service request without specific company context\", \"Unverified third-party URL\", \"Threat of account compromise\"],\n  \"urgency_tactics\": \"Leverages fear of unauthorized access and demands immediate verification to bypass logical analysis and force hasty decisions.\",\n  \"impersonation\": \"Mimics standard security notifications but lacks specific sender identity, organizational branding, or verifiable reference to a known service provider.\",\n  \"url_analysis\": \"The domain 'account-verification-page.com' is highly generic, non-branded, and structurally typical of disposable phishing infrastructure designed to mimic legitimate login portals.\",\n  \"credential_harvesting\": \"Directs the recipient to an external, unverified link for 'account verification', a classic technique used to deploy fake login pages that capture usernames and passwords.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 45,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Grammar and spelling errors (e.g., 'authomatically')\",\n    \"Use of false urgency and threat of blocked email delivery\",\n    \"Unsolicited offer to upgrade account for 'unlimited storage'\",\n    \"Suspicious sender field with mixed email address and Base64 encoded subject\",\n    \"Lack of verifiable contact information or official branding\"\n  ],\n  \"urgency_tactics\": \"Claims the mailbox is 'almost full' and warns that this will prevent incoming emails from arriving, creating a sense of immediate loss and pressure to act quickly.\",\n  \"impersonation\": \"Impersonates a legitimate webmail control panel (referenced as 'C-Panel') and claims to represent 'monkey.org' to appear as an official system notification.\",\n  \"url_analysis\": \"The email references a placeholder link ('Get More Now →') and the domain 'monkey.org' but does not display a fully qualified URL in the body. It directs the user to a fake upgrade portal, and any embedded URL would likely point to a malicious domain mimicking the claimed organization.\",\n  \"credential_harvesting\": \"Explicitly instructs the recipient to 'sign in with your valid credentials' to supposedly process an automatic account upgrade, which is a classic credential harvesting tactic.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 46,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Malformed URL syntax (http::// and trailing dashes)\",\n    \"Generic 'Support Department' signature without verifiable contact details\",\n    \"Formatting inconsistencies and placeholder/fake domain 'monkey.org'\",\n    \"Urgent call to action combined with vague account status warnings\",\n    \"Missing explicit URL in the login instruction ('...portal here') indicating hidden/deep-link manipulation\"\n  ],\n  \"urgency_tactics\": \"Claims the mailbox is 99-100% full and threatens immediate failure of incoming emails to induce panic and prompt immediate, unverified action.\",\n  \"impersonation\": \"Impersonates an internal IT Support Department and a system-generated server notification to mimic an automated administrative alert.\",\n  \"url_analysis\": \"The provided link 'http:://intranet.monkey.org--' contains a protocol error (double colon), malformed domain structure, and illegal characters, indicating a likely malicious redirect, spoofed intranet page, or placeholder for credential theft.\",\n  \"credential_harvesting\": \"Explicitly instructs the recipient to 'login to your Outlook webmail' and 'Confirm Your Identity' via a provided link, a classic technique used to redirect users to a fraudulent login portal to harvest credentials.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 47,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unrealistic transaction amount ($7,000,000.00BTC) used as bait\",\n    \"Request to reply directly with wallet address and ticket number\",\n    \"Typosquatted/obfuscated domain in subject line (Blckchain ? ..com)\",\n    \"Grammatical errors and awkward phrasing ('Payment Not Rectified')\",\n    \"Legal boilerplate pasted to mimic legitimacy despite unverified sender\"\n  ],\n  \"urgency_tactics\": \"Claims a large pending cryptocurrency payment is stuck and requires immediate reconfirmation, leveraging greed and anxiety to prompt hasty, unverified action.\",\n  \"impersonation\": \"Masquerades as Blockchain.com support using official corporate names and legal disclaimers to appear authentic, despite lacking verifiable sender authentication or domain alignment.\",\n  \"url_analysis\": \"Contains no clickable links in the visible body but uses a typosquatted domain variant in the subject line and lists legitimate blockchain.com legal URLs in the footer to borrow credibility and obscure malicious intent.\",\n  \"credential_harvesting\": \"Seeks to harvest wallet addresses and transaction ticket numbers via email reply, which can be used for wallet enumeration, social engineering escalation, or direct cryptocurrency theft.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 48,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Base64-encoded email subject used to evade simple string filters\",\n    \"Generic greeting ('Dear Customer') instead of personalized name\",\n    \"Poor grammar, awkward phrasing, and duplicate paragraphs in the body\",\n    \"Fake copyright notice ('Netflix Security Services Team')\",\n    \"Lack of proper SPF/DKIM alignment context and suspicious formatting\",\n    \"No legitimate sender address or tracking links provided in the sample\"\n  ],\n  \"urgency_tactics\": \"Employs immediate threat of account termination ('Account Closure', 'deactivation', 'avoid your profile from being disabled') to provoke panic and bypass critical thinking, pushing the recipient to click a link without verification.\",\n  \"impersonation\": \"Masquerades as Netflix Customer Support and 'Netflix Security Services Team' to exploit brand trust and lower recipient suspicion.\",\n  \"url_analysis\": \"No explicit URL is visible in the provided text; the 'Validate Your Netflix' button/link is obfuscated and almost certainly directs to a phishing domain spoofing Netflix's login page to capture credentials.\",\n  \"credential_harvesting\": \"Designed to trick users into submitting their Netflix username and password under the false pretext of 'validating details' to prevent account deactivation.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 49,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "legitimate",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic greeting and vague company reference\",\n    \"Unsolicited business partnership proposal\",\n    \"Lack of sender organizational details or verifiable credentials\",\n    \"Request to contact via direct phone number instead of official corporate channels\"\n  ],\n  \"urgency_tactics\": \"None detected; the message lacks time-sensitive language, deadlines, or pressure tactics.\",\n  \"impersonation\": \"None detected; the sender only provides a first name ('Joseph') without a specific organization, brand, or role to impersonate.\",\n  \"url_analysis\": \"No URLs are present in the email content.\",\n  \"credential_harvesting\": \"No credential harvesting detected; the email requests a reply or phone call rather than login credentials or sensitive data.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 2\n}"
+  },
+  {
+    "index": 50,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic greeting ('Dear Customer') instead of personalized name\",\n    \"Poor grammar, punctuation, and missing spaces (e.g., 'below,Please', 'billingThank', 'RegardsThe')\",\n    \"Repeated body text indicating automated or poorly formatted mass mailing\",\n    \"Claims regarding Apple ID and billing without specific account details or order numbers\",\n    \"Unsolicited request to verify sensitive information via an embedded link\"\n  ],\n  \"urgency_tactics\": \"Implies immediate risk of account suspension or loss of service if the user does not verify their information promptly.\",\n  \"impersonation\": \"Spoofs Apple's official Billing Team to exploit brand trust and authority.\",\n  \"url_analysis\": \"No verifiable URL provided in the prompt; email uses a generic 'click here' call-to-action typically designed to mask malicious redirects or phishing domains.\",\n  \"credential_harvesting\": \"Directs the recipient to click a link to 'verify' account and billing details, a classic tactic used to harvest login credentials and payment information via counterfeit websites.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 51,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Inconsistent numerical claims (subject says 3, body says 9)\",\n    \"Poor grammar and unnatural phrasing ('unreceived emails', 'Rectify Below')\",\n    \"Use of a suspicious and non-standard domain ('monkey.org') for email notifications\",\n    \"Lack of official email provider branding or standard notification format\"\n  ],\n  \"urgency_tactics\": \"Creates false urgency through a specific past timestamp and a direct imperative command ('Rectify Below:') to prompt immediate, unthinking action without verification.\",\n  \"impersonation\": \"Impersonates a generic email system or mailbox storage alert to mimic a legitimate system notification and bypass recipient scrutiny.\",\n  \"url_analysis\": \"No explicit URL is visible in the raw text, but the call-to-action 'View Pending Messages' and 'Source: monkey.org' strongly imply the actual link is embedded or shortened. The domain 'monkey.org' is highly suspicious for an email service and is likely a malicious host for a phishing landing page.\",\n  \"credential_harvesting\": \"Highly probable. The phrasing 'Rectify Below' and 'View Pending Messages' is a classic social engineering lure designed to drive the victim to a fake login portal to capture username and password credentials.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 52,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\"Placeholder '[Company Name]' in body\", \"Suspicious domain 'account-verification-link7.com'\", \"Generic greeting without specific account details or ticket reference\", \"Overuse of security jargon to appear authoritative\"],\n  \"urgency_tactics\": \"Leverages fear and time pressure with phrases like 'urgent matter' and 'immediately' to bypass rational verification and prompt hasty clicking.\",\n  \"impersonation\": \"Poses as an internal IT/Security executive ('Head of Account Security') to exploit trust and authority bias.\",\n  \"url_analysis\": \"The destination domain uses low-entropy generic keywords combined with a numeric suffix, a common pattern for phishing kits. It does not match any legitimate corporate infrastructure.\",\n  \"credential_harvesting\": \"Mandates immediate link interaction for 'verification', a standard pretext for redirecting users to a credential harvesting portal or MFA fatigue attack.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 53,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic anchor text 'Click here' obscuring actual destination\",\n    \"Contradictory instructions ('Click here... After that, open the attachment')\",\n    \"Unprofessional greeting format ('Valued: jose@monkey.org')\",\n    \"Duplicate footer and message body indicating poorly constructed template\",\n    \"Spoofed corporate encryption branding (Proofpoint)\"\n  ],\n  \"urgency_tactics\": \"Imposes a false expiration timestamp ('Click here by 2022-08-23 07:12') to create artificial urgency and pressure the recipient into bypassing standard verification protocols.\",\n  \"impersonation\": \"Mimics legitimate HR/Payroll department notifications and spoofs Proofpoint Secure Message Portal branding to appear as a trusted internal secure messaging system.\",\n  \"url_analysis\": \"The 'Click here' hyperlink is obfuscated and likely redirects to a credential harvesting portal or malware distribution site rather than a legitimate Proofpoint secure message page.\",\n  \"credential_harvesting\": \"Primary vector appears to be a phishing page prompting login credentials for a fake secure portal, with a secondary malicious attachment payload to execute malware on the endpoint.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 54,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None detected\",\n  \"impersonation\": \"None detected\",\n  \"url_analysis\": \"No URLs present\",\n  \"credential_harvesting\": \"None detected\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 55,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic salutation ('Dear Customer')\",\n    \"Poor grammar and spelling ('thats' instead of 'that's', missing 'to')\",\n    \"Duplicate/repetitive email body\",\n    \"Vague hyperlink anchor text ('LOGIN HERE')\",\n    \"Lacks personalization or specific account references\"\n  ],\n  \"urgency_tactics\": \"Uses the word 'immediately' to create a false sense of urgency, pressuring the recipient to act quickly without verifying the sender's authenticity.\",\n  \"impersonation\": \"Claims to be from 'Navy Federal Credit Union' but exhibits multiple signs of spoofing, including generic greetings, unprofessional formatting, and no official branding or contact details.\",\n  \"url_analysis\": \"No actual destination URL is visible, only a masked anchor text ('LOGIN HERE'). This is a standard technique to conceal malicious phishing redirects from the user until clicked.\",\n  \"credential_harvesting\": \"Explicitly instructs the recipient to click a link and log in to 'update profile information', a classic pretext designed to capture banking credentials on a fake login page.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 56,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Clickbait subject line exploiting curiosity gap\",\n    \"Forwarded message format commonly used to bypass email filters\",\n    \"Promotional language with 'fast, easy, and free' claims\",\n    \"Promotion of a defunct legacy service (MSN Messenger)\"\n  ],\n  \"urgency_tactics\": \"None explicitly stated; relies on a curiosity-driven subject line and promises of immediate free access to prompt impulsive clicking.\",\n  \"impersonation\": \"Appears to forward or mimic official MSN Messenger promotional material, but lacks specific executive, vendor, or organizational spoofing indicators in this excerpt.\",\n  \"url_analysis\": \"Directs to http://www.msn.co.uk/messenger; uses insecure HTTP instead of HTTPS and points to a legacy defunct Microsoft service, a pattern consistent with recycled spam or historical phishing campaigns.\",\n  \"credential_harvesting\": \"No explicit credential harvesting forms or requests visible in the snippet, though legacy URLs of this nature are frequently repurposed to host login pages or deliver malware.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 7\n}"
+  },
+  {
+    "index": 57,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Generic greeting ('Attention:')\", \"Obfuscated link anchor text ('Click-Here')\", \"Poor grammar and formatting\", \"Promise of a 'free' upgrade\", \"Vague sender identity ('Email Administrator')\", \"Lack of verifiable authentication or ticket/reference numbers\"],\n  \"urgency_tactics\": \"Warns that mailbox storage has reached 99% and threatens immediate loss of email data if the user does not act quickly, creating fear and prompting hasty, unverified clicks.\",\n  \"impersonation\": \"Pretends to be an 'Email Administrator' or system notification to appear authoritative, but lacks specific organizational branding, department names, or legitimate support channels.\",\n  \"url_analysis\": \"Contains the generic anchor text 'Click-Here', a well-known phishing technique used to mask the actual destination URL. Legitimate email service providers display the full domain or use authenticated buttons, not hidden generic text links.\",\n  \"credential_harvesting\": \"High probability. The 'free storage upgrade' pretext is a classic luring method designed to direct victims to a spoofed login portal where credentials will be captured upon entry.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 58,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Suspicious third-party domain (account-verification-link8.com) lacking brand legitimacy\",\n    \"Vague organizational context (no company name or service provider identified)\",\n    \"Use of false social proof (naming random users Justin Hill and Emily Johnson)\",\n    \"Generic professional title (Account Security Specialist) used to build false authority\",\n    \"Mail-merged personalization (Dear Jessica) masking a broad campaign\"\n  ],\n  \"urgency_tactics\": \"Employs time-sensitive language ('verifying your account promptly', 'prompt action') paired with a fear-based threat ('protect your personal information from unauthorized access') to pressure the recipient into immediate action without verifying the sender's legitimacy.\",\n  \"impersonation\": \"Poses as an 'Account Security Specialist' named Rachel Clark representing an unspecified organization, leveraging a standard corporate support role to appear trustworthy while omitting any verifiable company identity or official branding.\",\n  \"url_analysis\": \"The link points to 'account-verification-link8.com', a highly suspicious domain. It uses generic keywords combined with a random number, typical of newly registered or low-reputation domains designed to mimic official verification portals. The domain lacks brand association, has no HTTPS certificate validation visible, and is a strong indicator of a malicious infrastructure.\",\n  \"credential_harvesting\": \"The email directs the recipient to click a link labeled for 'account verification', a classic pretext that typically routes users to a cloned login page designed to capture credentials, session tokens, or sensitive personal data.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 59,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited reward/lure offering a $10,000 shopping spree\",\n    \"Request for personal information without legitimate organizational context\",\n    \"Unverified sender identity using a generic personal name\",\n    \"Use of high-pressure sales and scam-typical phrasing\"\n  ],\n  \"urgency_tactics\": \"Claims the offer expires in 24 hours to pressure immediate action\",\n  \"impersonation\": \"Lacks legitimate corporate branding and uses a generic personal name without verifiable affiliation\",\n  \"url_analysis\": \"Domain 'shopping-spree-claim.com' is suspicious, uses common scam keywords, and has no ties to legitimate retailers\",\n  \"credential_harvesting\": \"Explicitly instructs recipients to click the link and provide personal information, indicating data collection intent\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 60,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\"Unsolicited invoice request lacking specific details (amount, invoice number, dates)\", \"Generic sender identity without a verifiable corporate email domain or company name\", \"Suspicious URL with generic naming and numeric suffix\", \"Fabricated social proof mentioning unrelated client names\", \"Vague threat of account disruption\"],\n  \"urgency_tactics\": \"Demands immediate action by threatening service disruption and account closure to pressure the recipient into bypassing standard verification procedures.\",\n  \"impersonation\": \"Claims to represent an 'Accounts Receivable' department under the name David Thompson, but lacks official corporate branding, domain alignment, or legitimate contact information, indicating spoofed impersonation.\",\n  \"url_analysis\": \"Redirects to 'invoice-payment-link3.com', a non-branded, suspicious domain inconsistent with legitimate business payment portals, highly indicative of a malicious landing page.\",\n  \"credential_harvesting\": \"High likelihood; the generic payment link is structured to capture financial credentials, login details, or payment information under the guise of settling an outstanding balance.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 61,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic greeting ('Dear customer,') instead of personalized name\",\n    \"Poor grammar and syntax errors ('payment has been failed', 'due a missing information')\",\n    \"Mangled formatting, repetitive text blocks, and stray characters/numbers\",\n    \"Unprofessional sign-off ('Maria depay' with missing space after comma and lowercase 'd')\",\n    \"Vague organizational context with no specific company branding or verifiable sender identity\"\n  ],\n  \"urgency_tactics\": \"Creates false urgency by claiming a failed monthly payment and threatening service interruption to pressure immediate action without verification\",\n  \"impersonation\": \"Poses as a generic billing department or customer service team without identifying a legitimate company, domain, or official contact channel\",\n  \"url_analysis\": \"Contains a hyperlink button ('Update your details') that is not visible in raw text but inherently directs to an unverified, likely spoofed domain designed to mimic a legitimate payment portal\",\n  \"credential_harvesting\": \"Explicitly instructs the recipient to click a link to 'verify' and 'update' payment details, a classic technique for harvesting financial credentials, card numbers, and login information\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 62,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Generic greeting and filler opening\", \"Unsolicited invoice request with vague sender details\", \"Lack of specific company branding or contact information\", \"Request to click an unverified link for payment\", \"Non-descript domain name\"],\n  \"urgency_tactics\": \"Uses threat of service disruption to pressure the recipient into acting immediately without verification\",\n  \"impersonation\": \"Mimics a vendor or billing department but lacks legitimate corporate identification, signature, or verifiable sender identity\",\n  \"url_analysis\": \"The domain 'invoice-payment-link.com' is generic, unbranded, and highly suspicious for a financial transaction, indicating a likely spoofed or malicious landing page\",\n  \"credential_harvesting\": \"The link likely directs to a fake payment portal designed to harvest credit card details, login credentials, or corporate financial data\",\n  \"final\": \"phishing\",\n  \"risk_score\": 92\n}"
+  },
+  {
+    "index": 63,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None detected. The email lacks time-sensitive language, threats, or pressure tactics.\",\n  \"impersonation\": \"None detected. Appears to be a genuine technical community mailing list or forum post discussing specific hardware compatibility.\",\n  \"url_analysis\": \"No URLs or attachments are present in the provided content.\",\n  \"credential_harvesting\": \"None detected. The email contains no requests for login credentials, passwords, or sensitive personal information.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 64,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic greeting without verified sender identity\",\n    \"Unsolicited request to verify sensitive account details via external link\",\n    \"Vague organizational references and unverified sender authority\",\n    \"Domain name does not match any known financial institution or the claimed 'XYZ Corporation'\"\n  ],\n  \"urgency_tactics\": \"Employs high-pressure language including 'critical financial transaction', 'immediate attention', and 'prompt attention' to force rapid action and bypass standard verification procedures.\",\n  \"impersonation\": \"Claims the title of 'Head of Financial Security' at 'XYZ Corporation' to exploit perceived organizational authority, while providing no verifiable contact information or official corporate email domain.\",\n  \"url_analysis\": \"Links to 'secure-transaction-verification.com', a generic third-party domain not affiliated with the claimed company. The domain uses common phishing keywords and lacks legitimate corporate branding or DNS records matching XYZ Corporation.\",\n  \"credential_harvesting\": \"Directs the recipient to click an external URL to 'verify account details', a classic technique designed to capture login credentials, financial information, or multi-factor authentication codes.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 65,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"Links point to a historical Python developer blog and official Python mailing list archive. No obfuscation, domain spoofing, or suspicious TLDs detected. Context aligns with a 2007 technical mailing list discussion.\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 66,
+    "label": "phishing",
+    "source": "human",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Missing personalized greeting with stray comma ('Hello ,')\",\n    \"Entire message body is duplicated verbatim indicating low-effort template\",\n    \"Vague sender and sign-off ('The Mailbox Team') lacking specific corporate brand or domain\",\n    \"No visible or verifiable URLs present in the plain text\",\n    \"Generic technical justification ('automated programs') instead of specific account alerts\",\n    \"Suspicious contextual email address ('jose@monkey.org')\"\n  ],\n  \"urgency_tactics\": \"Imposes immediate communication restriction ('To continue sending messages') to pressure the recipient into acting quickly without verifying the request\",\n  \"impersonation\": \"Pretends to be a generic email infrastructure or support team without a legitimate organizational identity or verifiable brand\",\n  \"url_analysis\": \"No clickable links are visible in the provided text; typical of stripped/plain-text phishing or indicates links are hidden in HTML/headers, requiring raw inspection to verify legitimacy\",\n  \"credential_harvesting\": \"Directly instructs the recipient to 'sign in and validate your account', a classic credential harvesting pretext designed to capture login credentials on a fake portal\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 67,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Generic greeting 'Dear User'\",\n    \"Vague platform upgrade claim without specific context\",\n    \"Generic sign-off 'The Account Management Team'\",\n    \"Urgency and fear tactics regarding restricted access\"\n  ],\n  \"urgency_tactics\": \"Threatens limited functionality and restricted access to services if the user fails to act immediately, creating pressure to click without verification.\",\n  \"impersonation\": \"Mimics Amazon Prime customer support/account team to exploit brand trust, but originates from a non-official domain.\",\n  \"url_analysis\": \"The domain 'amazon-prime-account-recovery.com' is unaffiliated with Amazon, uses hyphens to mimic a legitimate service, and is a classic phishing URL designed to look authentic.\",\n  \"credential_harvesting\": \"The call-to-action to 'update account settings' via an external link strongly indicates a redirect to a fraudulent login page designed to steal credentials.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 95\n}"
+  },
+  {
+    "index": 68,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"None detected. The email contains a calm, technical discussion about mail server configuration with no time-sensitive language, threats, or pressure tactics.\",\n  \"impersonation\": \"None. The email appears to be a standard technical mailing list or forum exchange between system administrators discussing Postfix/Unix mail forwarding mechanisms.\",\n  \"url_analysis\": \"No URLs are present in the email content.\",\n  \"credential_harvesting\": \"None. There are no requests for passwords, sensitive data, login prompts, or suspicious authentication links.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 0\n}"
+  },
+  {
+    "index": 69,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unverified and generic sender identity\",\n    \"Unrealistic financial promises and vague value proposition\",\n    \"Use of generic greeting despite knowing first name\",\n    \"Lack of institutional branding or verifiable contact information\",\n    \"Suspicious, keyword-stuffed domain name\"\n  ],\n  \"urgency_tactics\": \"Phrases like 'Don't let this chance slip away' and 'Take the first step now' are used to pressure the recipient into acting immediately without due diligence or verification.\",\n  \"impersonation\": \"No specific financial institution is named, but the email impersonates a legitimate financial advisor or exclusive investment platform without providing verifiable credentials, company affiliation, or regulatory disclosures.\",\n  \"url_analysis\": \"The URL 'https://financial-success-path.com' features a generic, keyword-stuffed domain typical of newly registered scam sites. It lacks branding of any known financial entity, has no regulatory or trust indicators, and is highly likely a malicious or fraudulent landing page.\",\n  \"credential_harvesting\": \"The email likely directs users to a fake investment portal or data collection form designed to harvest personal information, financial details, or payment credentials under the guise of a 'financial opportunity'.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 70,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Overly flattering and unrealistic investment promises\",\n    \"Exclusivity and scarcity language targeting elite individuals\",\n    \"Unverifiable sender identity without organizational branding\",\n    \"Suspicious generic domain name\",\n    \"Lack of professional email authentication or institutional context\"\n  ],\n  \"urgency_tactics\": \"Uses artificial scarcity and time pressure with phrases like 'time-sensitive' and 'spots are filling up quickly' to bypass rational decision-making and prompt immediate action.\",\n  \"impersonation\": \"Claims to be from 'Richard Thompson' but lacks a legitimate corporate domain or verifiable institutional affiliation, typical of investment fraud and rogue advisor impersonation.\",\n  \"url_analysis\": \"Links to 'https://exclusive-investment-link.com', a generic, placeholder-style domain that does not match any known financial institution. Legitimate firms use authenticated, branded URLs for secure client communications.\",\n  \"credential_harvesting\": \"The link directs recipients to a landing page likely designed to collect sensitive personal, financial, or login credentials under the guise of accessing a prospectus or exclusive account.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 71,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Vague sender identity with no company branding or email domain\",\n    \"Request to click an unverified external link for account verification\",\n    \"Generic signature with personal name but no official contact or support ticket reference\",\n    \"Unprofessional URL formatting with brackets\"\n  ],\n  \"urgency_tactics\": \"Uses high-pressure language such as 'urgent matter' and 'immediate attention', coupled with a threat of account suspension within 48 hours to bypass critical thinking and force rapid action.\",\n  \"impersonation\": \"Claims to represent a generic 'Customer Support Representative' named Robert Johnson without specifying a legitimate organization, relying on authority and trust rather than verifiable brand identity.\",\n  \"url_analysis\": \"The link 'verify-secure-link.com' uses legitimacy-inducing keywords but does not match any known legitimate service. The domain is highly generic, likely newly registered, and commonly used in credential harvesting campaigns.\",\n  \"credential_harvesting\": \"Directs the recipient to an unverified verification page under the pretext of account security, a classic phishing mechanism designed to capture login credentials, multi-factor tokens, or personal data.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 72,
+    "label": "legitimate",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": false,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Vague reference to unspecified financial activity\",\n    \"Absence of specific sender organization or official corporate domain\",\n    \"Suspicious, non-branded URL domain\",\n    \"Generic sender signature lacking verifiable credentials or contact details\"\n  ],\n  \"urgency_tactics\": \"Uses high-pressure language such as 'crucial for maintaining security' and 'prompt attention' to pressure the recipient into acting quickly without verifying the request's legitimacy.\",\n  \"impersonation\": \"Poses as an 'Account Security Specialist' named Timothy Nelson from an unnamed organization, attempting to mimic official support channels without providing verifiable corporate affiliation.\",\n  \"url_analysis\": \"The hyperlink directs to 'verify-financial-activity-link8.com', a generic, unbranded domain that does not belong to any known financial institution or service provider, strongly indicating a malicious or spoofed landing page.\",\n  \"credential_harvesting\": \"Directs the recipient to click a link to 'confirm authenticity', a classic phishing technique used to route victims to a fake login portal designed to capture credentials or sensitive financial information.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 73,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited vacation deal link\",\n    \"Domain name mismatched with email context\",\n    \"Use of well-known brand name to build false trust\",\n    \"Social engineering via claimed personal acquaintance\"\n  ],\n  \"urgency_tactics\": \"Mild pressure using phrases like 'perfect opportunity' and 'Let's make it happen', but primarily relies on the enticing offer and malicious link rather than explicit time-sensitive threats.\",\n  \"impersonation\": \"Claims affiliation with a personal contact ('Rufus'), likely exploiting a compromised personal email account or spoofed name to lower recipient skepticism.\",\n  \"url_analysis\": \"The provided URL 'twitter-verification-page.net' is malicious. It employs brand impersonation by using a recognizable trademark in a non-official domain extension (.net) to bypass user scrutiny and redirect to a fraudulent landing page.\",\n  \"credential_harvesting\": \"Definite. The domain name explicitly mimics a 'verification page' for a major platform, indicating the destination will prompt for login credentials, likely for Twitter/X or a related service, under the guise of booking or account validation.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 74,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Urgent security alert regarding suspicious activity\",\n    \"Request to click an external link to verify account information\",\n    \"Domain mismatch: link points to account-security-verification.com instead of official bank domain\",\n    \"Lack of specific account identifiers or case numbers\",\n    \"Unverified sender signature\"\n  ],\n  \"urgency_tactics\": \"Uses fear and time pressure by claiming 'suspicious activity' and 'critical security alert' to force immediate action without verification.\",\n  \"impersonation\": \"Impersonates a Security Manager from 'Secure Banking Corporation' to establish false authority and trust.\",\n  \"url_analysis\": \"The provided URL is hosted on a third-party domain unrelated to any legitimate financial institution, designed to mimic a security portal for malicious purposes.\",\n  \"credential_harvesting\": \"Explicitly directs the recipient to click a link to 'verify your account information,' a classic technique to capture login credentials and sensitive financial data.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  },
+  {
+    "index": 75,
+    "label": "legitimate",
+    "source": "human",
+    "pred": "legitimate",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"None identified\",\n    \"Standard subscription digest format\",\n    \"Explicit third-party service disclosure (GovDelivery on behalf of LOC)\"\n  ],\n  \"urgency_tactics\": \"None detected. Standard informational and subscription management messaging without pressure, threats, or time-sensitive language.\",\n  \"impersonation\": \"None detected. Email is transparently sent by GovDelivery, Inc. on behalf of the Library of Congress with full organizational and contact disclosure.\",\n  \"url_analysis\": \"All links direct to expected and historically legitimate domains (classificationweb.net, service.govdelivery.com, loc.gov). No obfuscation, typosquatting, or suspicious redirects. Note: Links use HTTP, which aligns with the 2008 timestamp rather than modern HTTPS standards.\",\n  \"credential_harvesting\": \"No credential harvesting detected. Instructs users to manage subscriptions via a legitimate third-party service portal, not a fraudulent login page.\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 1\n}"
+  },
+  {
+    "index": 76,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\"Generic salutation\", \"Vague and unverifiable company name ('Kiddily')\", \"Use of personal phone number instead of corporate contact\", \"Lack of professional email signature or official domain\", \"Template-like business development language\"],\n  \"urgency_tactics\": \"None detected\",\n  \"impersonation\": \"No specific entity or executive impersonated; relies on a generic B2B partnership pretext\",\n  \"url_analysis\": \"No URLs present in the email body\",\n  \"credential_harvesting\": \"No malicious links, login portals, or direct credential requests detected\",\n  \"final\": \"phishing\",\n  \"risk_score\": 7\n}"
+  },
+  {
+    "index": 77,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited communication regarding a high-demand medical program\",\n    \"Use of a generic, non-official domain for vaccine registration\",\n    \"Lack of verifiable organizational branding, official government/health agency affiliation, or secure contact details\",\n    \"Template-style promotional language designed to appear authoritative but lacking institutional legitimacy\"\n  ],\n  \"urgency_tactics\": \"The email heavily employs scarcity and time-pressure tactics, including phrases like 'limited slots available,' 'limited time only,' and 'cannot guarantee availability after the deadline,' to compel immediate action and bypass recipient verification.\",\n  \"impersonation\": \"The sender claims to be 'Dr. Jennifer Anderson' and implies affiliation with an official COVID-19 vaccination program, impersonating a medical professional and legitimate health authority without credible institutional backing or verifiable credentials.\",\n  \"url_analysis\": \"The URL 'https://covid-vaccine-registration.com' uses a generic public .com domain rather than an official government (.gov) or recognized health organization (.org) domain. This is a strong indicator of a newly registered malicious domain crafted to mimic legitimate vaccination portals.\",\n  \"credential_harvesting\": \"The call-to-action directs recipients to click a link to 'secure a slot,' which is a common phishing vector designed to host a counterfeit registration form that harvests personal, medical, or financial information under false pretenses.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 8\n}"
+  },
+  {
+    "index": 78,
+    "label": "phishing",
+    "source": "llm",
+    "pred": "phishing",
+    "correct": true,
+    "response": "{\n  \"phishing_indicators\": [\n    \"Unsolicited invitation to an unverified organization\",\n    \"Use of flattery and grooming language to build false rapport\",\n    \"Request for secrecy to prevent third-party verification\",\n    \"Lack of verifiable sender identity or organizational branding\",\n    \"Suspiciously named domain implying illicit activity\"\n  ],\n  \"urgency_tactics\": \"Exploits false scarcity and exclusivity by claiming the invitation is 'highly exclusive' and reserved for 'the best of the best' to pressure quick action without due diligence.\",\n  \"impersonation\": \"Falsely claims affiliation with 'Elite Hackers Club' using a generic name and unverified sender address (sarah.thompson@elitehackers.com) with no proof of legitimacy or official verification channels.\",\n  \"url_analysis\": \"https://elite-hackers-club.com - Highly suspicious domain mimicking a professional community, likely unregistered or newly created, and designed to host a malicious or credential-stealing landing page.\",\n  \"credential_harvesting\": \"Directs the victim to click an external link to 'access a private platform', a classic setup for deploying a fake login portal designed to steal credentials, MFA tokens, or install malware upon entry.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 9\n}"
+  }
+]

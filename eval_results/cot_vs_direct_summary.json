@@ -1,0 +1,29 @@
+{
+  "model": "phishing-detector-14b",
+  "n_samples": 400,
+  "direct": {
+    "accuracy": 0.8675,
+    "precision": 0.8075313807531381,
+    "recall": 0.965,
+    "f1": 0.8792710706150342,
+    "per_category": {
+      "human-phishing": 0.94,
+      "human-legitimate": 0.57,
+      "llm-phishing": 0.99,
+      "llm-legitimate": 0.97
+    }
+  },
+  "cot": {
+    "accuracy": 0.8325,
+    "precision": 0.7587548638132295,
+    "recall": 0.975,
+    "f1": 0.8533916849015317,
+    "per_category": {
+      "human-phishing": 0.98,
+      "human-legitimate": 0.99,
+      "llm-phishing": 0.97,
+      "llm-legitimate": 0.39
+    }
+  },
+  "agreement": 0.705
+}
