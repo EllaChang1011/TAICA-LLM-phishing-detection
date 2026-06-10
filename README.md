@@ -48,9 +48,9 @@ Split: 80% train / 10% val / 10% test (stratified).
 | Metric | Baseline | Fine-tuned |
 |---|---|---|
 | Accuracy | 50% | **88.75%** |
-| Precision | — | 0.833 |
-| Recall | — | 0.970 |
-| F1-Score | — | 0.896 |
+| Precision | 0.500 | 0.833 |
+| Recall | 1.000 | 0.970 |
+| F1-Score | 0.667 | 0.896 |
 
 Per-category accuracy:
 
@@ -196,9 +196,9 @@ python scripts/build_rag_chroma.py
 | 指標 | Baseline | Fine-tuned |
 |---|---|---|
 | Accuracy | 50% | **88.75%** |
-| Precision | — | 0.833 |
-| Recall | — | 0.970 |
-| F1-Score | — | 0.896 |
+| Precision | 0.500 | 0.833 |
+| Recall | 1.000 | 0.970 |
+| F1-Score | 0.667 | 0.896 |
 
 各類別準確率：
 
