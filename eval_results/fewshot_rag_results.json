@@ -1,0 +1,4834 @@
+{
+  "summary": {
+    "model": "phishing-detector-14b",
+    "k": 3,
+    "n_samples": 400,
+    "plain": {
+      "accuracy": 0.8825,
+      "precision": 0.8283261802575107,
+      "recall": 0.965,
+      "f1": 0.8914549653579676,
+      "per_category": {
+        "human-phishing": 0.93,
+        "human-legitimate": 0.6,
+        "llm-phishing": 1.0,
+        "llm-legitimate": 1.0
+      }
+    },
+    "fewshot": {
+      "accuracy": 0.72,
+      "precision": 0.8235294117647058,
+      "recall": 0.56,
+      "f1": 0.6666666666666666,
+      "per_category": {
+        "human-phishing": 0.5,
+        "human-legitimate": 0.76,
+        "llm-phishing": 0.62,
+        "llm-legitimate": 1.0
+      }
+    },
+    "agreement": 0.6875
+  },
+  "details": [
+    {
+      "index": 0,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 1,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 2,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 3,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 4,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 5,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 6,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 7,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 8,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 9,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 10,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 11,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 12,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 13,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 14,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 15,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 16,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 17,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 18,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 19,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 20,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 21,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 22,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 23,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 24,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 25,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 26,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 27,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 28,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 29,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 30,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 31,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 32,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 33,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 34,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 35,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 36,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 37,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 38,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 39,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 40,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 41,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 42,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 43,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 44,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 45,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 46,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 47,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 48,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 49,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 50,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 51,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 52,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 53,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 54,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 55,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 56,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 57,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 58,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 59,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 60,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 61,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 62,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 63,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 64,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 65,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 66,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 67,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 68,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 69,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 70,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 71,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 72,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 73,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 74,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 75,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 76,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 77,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 78,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 79,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 80,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 81,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 82,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 83,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 84,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 85,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 86,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 87,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 88,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 89,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 90,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 91,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 92,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 93,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 94,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 95,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 96,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 97,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 98,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 99,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 100,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 101,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 102,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 103,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 104,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 105,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 106,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 107,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 108,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 109,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 110,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 111,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 112,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 113,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 114,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 115,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 116,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 117,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 118,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 119,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 120,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 121,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 122,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 123,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 124,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 125,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 126,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 127,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 128,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 129,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 130,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 131,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 132,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 133,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 134,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 135,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 136,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 137,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 138,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 139,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 140,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 141,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 142,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 143,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 144,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 145,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 146,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 147,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 148,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 149,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 150,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 151,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 152,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 153,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 154,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 155,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 156,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 157,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 158,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 159,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 160,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 161,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 162,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 163,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 164,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 165,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 166,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 167,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 168,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 169,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 170,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 171,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 172,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 173,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 174,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 175,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 176,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 177,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 178,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 179,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 180,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 181,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 182,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 183,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 184,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 185,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 186,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 187,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 188,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 189,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 190,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 191,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 192,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 193,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 194,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 195,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 196,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 197,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 198,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 199,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 200,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 201,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 202,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 203,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 204,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 205,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 206,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 207,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 208,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 209,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 210,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 211,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 212,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 213,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 214,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 215,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 216,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 217,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 218,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 219,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 220,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 221,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 222,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 223,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 224,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 225,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 226,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 227,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 228,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 229,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 230,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 231,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 232,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 233,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 234,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 235,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 236,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 237,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 238,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 239,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 240,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 241,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 242,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 243,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 244,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 245,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 246,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 247,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 248,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 249,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 250,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 251,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 252,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 253,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 254,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 255,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 256,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 257,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 258,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 259,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 260,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 261,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 262,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 263,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 264,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 265,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 266,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 267,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 268,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 269,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 270,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 271,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 272,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 273,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 274,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 275,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 276,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 277,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 278,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 279,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 280,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 281,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 282,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 283,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 284,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 285,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 286,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 287,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 288,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 289,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 290,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 291,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 292,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 293,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 294,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 295,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 296,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 297,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 298,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 299,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 300,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 301,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 302,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 303,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 304,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 305,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 306,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 307,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 308,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 309,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 310,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 311,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 312,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 313,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 314,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 315,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 316,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 317,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 318,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 319,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 320,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 321,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 322,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 323,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 324,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 325,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 326,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 327,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 328,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 329,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 330,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 331,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 332,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 333,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 334,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 335,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 336,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 337,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 338,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 339,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 340,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 341,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 342,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 343,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 344,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 345,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 346,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 347,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 348,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 349,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 350,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 351,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 352,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 353,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 354,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 355,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 356,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 357,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 358,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 359,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 360,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 361,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 362,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 363,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 364,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 365,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 366,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 367,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 368,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 369,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 370,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 371,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 372,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 373,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 374,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 375,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 376,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 377,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 378,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 379,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 380,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 381,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 382,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 383,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 384,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 385,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 386,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 387,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 388,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 389,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 390,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 391,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 392,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 393,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 394,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 395,
+      "source": "llm",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 396,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "legitimate"
+      ]
+    },
+    {
+      "index": 397,
+      "source": "human",
+      "true_label": "legitimate",
+      "pred_plain": "legitimate",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "legitimate",
+        "legitimate",
+        "phishing"
+      ]
+    },
+    {
+      "index": 398,
+      "source": "llm",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "legitimate",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    },
+    {
+      "index": 399,
+      "source": "human",
+      "true_label": "phishing",
+      "pred_plain": "phishing",
+      "pred_fewshot": "phishing",
+      "fewshot_labels": [
+        "phishing",
+        "phishing",
+        "phishing"
+      ]
+    }
+  ]
+}

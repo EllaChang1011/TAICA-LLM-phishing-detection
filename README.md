@@ -130,10 +130,10 @@ Sources: APWG quarterly phishing trend reports (PDF) + MITRE ATT&CK phishing tec
 
 ```bash
 # 1. Extract text and chunk semantically → knowledge_base/chunks.json
-python scripts/build_rag_chunks.py
+python scripts/build_rag_chunks_threat_intel.py
 
 # 2. Embed with BAAI/bge-large-en-v1.5 and write to ChromaDB → demo/chroma_db/
-python scripts/build_rag_chroma.py
+python scripts/build_rag_chroma_threat_intel.py
 ```
 
 ### Scripts
@@ -145,8 +145,10 @@ python scripts/build_rag_chroma.py
 | `scripts/baseline.py` / `evaluate.py` | Baseline / fine-tuned model evaluation |
 | `scripts/cot_evaluate.py` | Chain-of-Thought evaluation |
 | `scripts/export_gguf.py` | Export to GGUF for Ollama |
-| `scripts/build_rag_chunks.py` | RAG text extraction and chunking |
-| `scripts/build_rag_chroma.py` | RAG embedding and ChromaDB construction |
+| `scripts/build_rag_chunks_threat_intel.py` | RAG text extraction and chunking (threat-intel knowledge base) |
+| `scripts/build_rag_chroma_threat_intel.py` | RAG embedding and ChromaDB construction (threat-intel knowledge base) |
+| `scripts/build_rag_chroma_examples.py` | Embed labeled training emails into ChromaDB for few-shot exemplar RAG |
+| `scripts/fewshot_rag_eval.py` | Evaluate plain vs few-shot exemplar-RAG direct classification |
 
 > All scripts use paths relative to the project root. Run them as `python scripts/train.py` from the root directory.
 
@@ -276,10 +278,10 @@ python scripts/build_rag_chroma.py
 
 ```bash
 # 1. 文字提取與語意分塊 → knowledge_base/chunks.json
-python scripts/build_rag_chunks.py
+python scripts/build_rag_chunks_threat_intel.py
 
 # 2. Embedding（BAAI/bge-large-en-v1.5）並寫入 ChromaDB → demo/chroma_db/
-python scripts/build_rag_chroma.py
+python scripts/build_rag_chroma_threat_intel.py
 ```
 
 ### 主要腳本
@@ -291,7 +293,9 @@ python scripts/build_rag_chroma.py
 | `scripts/baseline.py` / `evaluate.py` | Baseline / 微調模型分類評估 |
 | `scripts/cot_evaluate.py` | Chain-of-Thought 模式評估 |
 | `scripts/export_gguf.py` | 匯出 GGUF 供 Ollama 使用 |
-| `scripts/build_rag_chunks.py` | RAG 知識庫文字提取與分塊 |
-| `scripts/build_rag_chroma.py` | RAG 向量化並建立 ChromaDB |
+| `scripts/build_rag_chunks_threat_intel.py` | RAG 知識庫文字提取與分塊（威脅情報知識庫） |
+| `scripts/build_rag_chroma_threat_intel.py` | RAG 向量化並建立 ChromaDB（威脅情報知識庫） |
+| `scripts/build_rag_chroma_examples.py` | 將標註過的訓練郵件向量化，供 few-shot 範例檢索 RAG 使用 |
+| `scripts/fewshot_rag_eval.py` | 評估「純分類」vs「few-shot 範例檢索 RAG」分類效果 |
 
 > 上述腳本內使用相對路徑，請從**專案根目錄**執行，例如 `python scripts/train.py`。
