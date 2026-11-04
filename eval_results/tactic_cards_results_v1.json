@@ -1,0 +1,1140 @@
+{
+  "summary": {
+    "n_emails": 20,
+    "parse_errors": {
+      "old": 1,
+      "new": 0
+    },
+    "new_picks_total": 50,
+    "new_picks_rejected": 1,
+    "new_rejected_unknown_id": 1,
+    "new_rejected_evidence_not_found": 0,
+    "legit_tagged": {
+      "n_legit": 10,
+      "old_has_phishing_indicators": 6,
+      "old_final_phishing": 6,
+      "new_has_tactic": 5
+    }
+  },
+  "results": [
+    {
+      "test_index": 309,
+      "label": "phishing",
+      "source": "human",
+      "email": "RE:Deactivation Request\n\nAdmin                   Notification    We received a Mail-Box delete request                         notification                         from jose@monkey.org   moments                         ago, was this from you?.Cancel                         this Action  Thanks,The Email Team     This                   mandatory service announcement is                   notify [-email-]   about                   all the important       changes.",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"account verification requests\"],\n  \"urgency_tactics\": \"deactivation request\",\n  \"impersonation\": \"monkey.org\",\n  \"url_analysis\": \"https://admin.monkey.org, https://login.monkey.org\",\n  \"credential_harvesting\": \"jose@monkey.org\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account verification requests"
+          ],
+          "urgency_tactics": "deactivation request",
+          "impersonation": "monkey.org",
+          "url_analysis": "https://admin.monkey.org, https://login.monkey.org",
+          "credential_harvesting": "jose@monkey.org",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"impersonation\",\n    \"evidence\": \"Admin                   Notification   \"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Admin                   Notification   \"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"We received a Mail-Box delete request\"\n    }\n  ],\n  \"summary\": \"郵件提醒帳號刪除請求\"\n}",
+        "report": {
+          "lure": {
+            "id": "impersonation",
+            "evidence": "Admin                   Notification   "
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "Admin                   Notification   "
+            },
+            {
+              "id": "urgency",
+              "evidence": "We received a Mail-Box delete request"
+            }
+          ],
+          "summary": "郵件提醒帳號刪除請求"
+        },
+        "verified": {
+          "lure": null,
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "Admin                   Notification   ",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "We received a Mail-Box delete request",
+              "score": 1.0
+            }
+          ],
+          "summary": "郵件提醒帳號刪除請求",
+          "rejected": [
+            {
+              "kind": "lure",
+              "pick": {
+                "id": "impersonation",
+                "evidence": "Admin                   Notification   "
+              },
+              "reason": "unknown_id"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "test_index": 53,
+      "label": "phishing",
+      "source": "human",
+      "email": "New Paystub Encrypted Message\n\nValued: jose@monkey.org       This is a secure message.    Click here by 2022-08-23 07:12 (CDT-4) to read your message. After that, open the attachment.    More Info    Disclaimer: This email and its content are confidential and intended solely for the use of the addressee. Please notify the sender if you have received this email in error or simply delete it.    Secured by Proofpoint Encryption, Copyright © 2009-2022 Proofpoint, Inc. All rights reserved. Valued: jose@monkey.org This is a secure message. Click here by 2022-08-23 07:12 (CDT-4) to read your message.After that, open the attachment. More Info Disclaimer: This email and its content are confidential and intended solely for the use of the addressee. Please notify the sender if you have received this email in error or simply delete it. Secured by Proofpoint Encryption, Copyright © 2009-2022 Proofpoint, Inc. All rights reserved.",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\"],\n  \"urgency_tactics\": \"Click here by 2022-08-23 07:12 (CDT-4) to read your message.\",\n  \"impersonation\": \"Valued: jose@monkey.org\",\n  \"url_analysis\": \"https://secure-message.proofpoint.com/redirect?token=5f7575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757",
+        "parse_error": true
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"file_share\",\n    \"evidence\": \"Click here by 2022-08-23 07:12 (CDT-4) to read your message.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"attachment\",\n      \"evidence\": \"After that, open the attachment.\"\n    }\n  ],\n  \"summary\": \"加密訊息附件下載提醒\"\n}",
+        "report": {
+          "lure": {
+            "id": "file_share",
+            "evidence": "Click here by 2022-08-23 07:12 (CDT-4) to read your message."
+          },
+          "techniques": [
+            {
+              "id": "attachment",
+              "evidence": "After that, open the attachment."
+            }
+          ],
+          "summary": "加密訊息附件下載提醒"
+        },
+        "verified": {
+          "lure": {
+            "id": "file_share",
+            "evidence": "Click here by 2022-08-23 07:12 (CDT-4) to read your message.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "attachment",
+              "evidence": "After that, open the attachment.",
+              "score": 1.0
+            }
+          ],
+          "summary": "加密訊息附件下載提醒",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 23,
+      "label": "phishing",
+      "source": "human",
+      "email": "verify \n\nHi jose, Your Mail Box  needs to be Re-verified to avoid Shutdown. You have less than 24hrs. Use the link below to continue using this service CLICK TO CONTINUE Thanks, Microsοft respects your privαcy. Review our οnline Privαcy Statemen",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"account verification requests\"],\n  \"urgency_tactics\": \"avoid Shutdown. You have less than 24hrs.\",\n  \"impersonation\": \"Microsοft\",\n  \"url_analysis\": \"https://www.google.com, https://www.facebook.com\",\n  \"credential_harvesting\": \"Use the link below to continue using this service\",\n  \"final\": \"phishing\",\r\n  \"risk_score\": 80\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account verification requests"
+          ],
+          "urgency_tactics": "avoid Shutdown. You have less than 24hrs.",
+          "impersonation": "Microsοft",
+          "url_analysis": "https://www.google.com, https://www.facebook.com",
+          "credential_harvesting": "Use the link below to continue using this service",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"account_expiry\",\n    \"evidence\": \"Your Mail Box  needs to be Re-verified\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Use the link below to continue using this service\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"You have less than 24hrs.\"\n    }\n  ],\n  \"summary\": \"郵箱需要重新驗證以避免關閉\"\n}",
+        "report": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Your Mail Box  needs to be Re-verified"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Use the link below to continue using this service"
+            },
+            {
+              "id": "urgency",
+              "evidence": "You have less than 24hrs."
+            }
+          ],
+          "summary": "郵箱需要重新驗證以避免關閉"
+        },
+        "verified": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Your Mail Box  needs to be Re-verified",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Use the link below to continue using this service",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "You have less than 24hrs.",
+              "score": 1.0
+            }
+          ],
+          "summary": "郵箱需要重新驗證以避免關閉",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 361,
+      "label": "phishing",
+      "source": "human",
+      "email": "having some trouble with your billing information N 1164285\n\nPlease update your details. We're having some trouble with your current billing information. We'll try again, but in the meantime you may want to update your payment details. UPDATE YOUR DETAILS   ON NETFLIX",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"account verification requests\"],\n  \"urgency_tactics\": \"Please update your details. We're having some trouble with your current billing information. We'll try again, but in the meantime you may want to update your payment details.\",\n  \"impersonation\": \"ON NETFLIX\",\n  \"url_analysis\": \"https://www.netflix.com/https://www.netflix.com/\",\n  \"credential_harvesting\": \"Please update your details. We're having some trouble with your current billing information. We'll try again, but in the meantime you may want to update your payment details.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 70\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account verification requests"
+          ],
+          "urgency_tactics": "Please update your details. We're having some trouble with your current billing information. We'll try again, but in the meantime you may want to update your payment details.",
+          "impersonation": "ON NETFLIX",
+          "url_analysis": "https://www.netflix.com/https://www.netflix.com/",
+          "credential_harvesting": "Please update your details. We're having some trouble with your current billing information. We'll try again, but in the meantime you may want to update your payment details.",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"billing_problem\",\n    \"evidence\": \"Please update your details.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"UPDATE YOUR DETAILS   ON NETFLIX\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"ON NETFLIX\"\n    }\n  ],\n  \"summary\": \"更新您的帳戶資訊\"\n}",
+        "report": {
+          "lure": {
+            "id": "billing_problem",
+            "evidence": "Please update your details."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "UPDATE YOUR DETAILS   ON NETFLIX"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "ON NETFLIX"
+            }
+          ],
+          "summary": "更新您的帳戶資訊"
+        },
+        "verified": {
+          "lure": {
+            "id": "billing_problem",
+            "evidence": "Please update your details.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "UPDATE YOUR DETAILS   ON NETFLIX",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "ON NETFLIX",
+              "score": 1.0
+            }
+          ],
+          "summary": "更新您的帳戶資訊",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 149,
+      "label": "phishing",
+      "source": "human",
+      "email": "Jeanette.rodriguez@mcft.com sent you Product Sample and Specifications.pdf via WeTransfer\n\ntest  This transfer expires on 2022-08-25    jeanette.rodriguez@mcft.com sent you Product Sample and Specifications.pdf   5 items, 200 MB in total ・ Expires on 15 December, 2022 Product Sample and Specifications. Kindly find attached product sample, product order and company specifications Thanks & Regards, Ms. Jeanette Rodriguez MCFT Trading LLC  Get your files      Download link https://wetransfer.com/downloads/2ddd705c3f9194e81aad04deb30acee820220818123211/ d4c5b6a979dc7e842a4fffbb31f076cf20220818123235/46fe24  5 items Product Sample 1.pdf 9 MB Product Sample 2.pdf 8 MB Sample 1 video.mp4 33 MB Sample 2 video.mp4 109 MB Specifications.pdf 41 MB To make sure our emails arrive, please add noreply@wetransfer.com  to your contacts. About WeTransfer   ・   Help   ・   Legal   ・   Report this transfer as spam",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\"],\n  \"urgency_tactics\": \"This transfer expires on 2022-08-25\",\n  \"impersonation\": \"Jeanette.rodriguez@mcft.com\",\n  \"url_analysis\": \"https://wetransfer.com/downloads/2ddd705c3f9194e81aad04deb30acee820220818123211/d4c5b6a979dc7e842a4fffbb31f076cf20220818123235/46fe24\",\n  \"credential_harvesting\": \"No\",\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links"
+          ],
+          "urgency_tactics": "This transfer expires on 2022-08-25",
+          "impersonation": "Jeanette.rodriguez@mcft.com",
+          "url_analysis": "https://wetransfer.com/downloads/2ddd705c3f9194e81aad04deb30acee820220818123211/d4c5b6a979dc7e842a4fffbb31f076cf20220818123235/46fe24",
+          "credential_harvesting": "No",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"file_share\",\n    \"evidence\": \"Kindly find attached product sample, product order and company specifications\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"attachment\",\n      \"evidence\": \"Product Sample and Specifications. Kindly find attached product sample, product order and company specifications\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Ms. Jeanette Rodriguez MCFT Trading LLC\"\n    }\n  ],\n  \"summary\": \"附件文件傳送郵件\"\n}",
+        "report": {
+          "lure": {
+            "id": "file_share",
+            "evidence": "Kindly find attached product sample, product order and company specifications"
+          },
+          "techniques": [
+            {
+              "id": "attachment",
+              "evidence": "Product Sample and Specifications. Kindly find attached product sample, product order and company specifications"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Ms. Jeanette Rodriguez MCFT Trading LLC"
+            }
+          ],
+          "summary": "附件文件傳送郵件"
+        },
+        "verified": {
+          "lure": {
+            "id": "file_share",
+            "evidence": "Kindly find attached product sample, product order and company specifications",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "attachment",
+              "evidence": "Product Sample and Specifications. Kindly find attached product sample, product order and company specifications",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Ms. Jeanette Rodriguez MCFT Trading LLC",
+              "score": 1.0
+            }
+          ],
+          "summary": "附件文件傳送郵件",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 108,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear Antonio, Important Notice: Your Subscription Has Lapsed! Renew Now to Regain Access to Premium Features. To renew your subscription, click the link below and enter your updated payment information. Renew Your Subscription: https://www.livejournal.com Your continued support helps us provide you with the best possible experience. Thank you for renewing your subscription promptly! Best regards, Groupon",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"Suspicious link\", \"Account verification request\"],\n  \"urgency_tactics\": \"Renew Your Subscription\",\n  \"impersonation\": \"Groupon\",\n  \"url_analysis\": \"https://www.livejournal.com\",\n  \"credential_harvesting\": \"Enter your updated payment information\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "Suspicious link",
+            "Account verification request"
+          ],
+          "urgency_tactics": "Renew Your Subscription",
+          "impersonation": "Groupon",
+          "url_analysis": "https://www.livejournal.com",
+          "credential_harvesting": "Enter your updated payment information",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"billing_problem\",\n    \"evidence\": \"Renew Your Subscription: https://www.livejournal.com\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Renew Your Subscription: https://www.livejournal.com\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Groupon\"\n    }\n  ],\n  \"summary\": \"Groupon要求續訂訂閱\"\n}",
+        "report": {
+          "lure": {
+            "id": "billing_problem",
+            "evidence": "Renew Your Subscription: https://www.livejournal.com"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Renew Your Subscription: https://www.livejournal.com"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Groupon"
+            }
+          ],
+          "summary": "Groupon要求續訂訂閱"
+        },
+        "verified": {
+          "lure": {
+            "id": "billing_problem",
+            "evidence": "Renew Your Subscription: https://www.livejournal.com",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Renew Your Subscription: https://www.livejournal.com",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Groupon",
+              "score": 1.0
+            }
+          ],
+          "summary": "Groupon要求續訂訂閱",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 95,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear Christopher, I hope this email finds you well. Your commitment to War-Related Aid has been truly remarkable, and we are grateful for your ongoing support. Today, I want to share an exciting opportunity to multiply your impact and bring a ray of hope to those affected by war. For a limited time, every donation made to War-Related Aid will be matched, effectively doubling the impact of your support. This means that your contribution will go even further in providing critical resources, medical aid, education, and other life-saving assistance to war-torn regions. To take advantage of this incredible opportunity and multiply your impact, please visit the following link: https://waraid-multiplyimpact-donate.com. Your contribution, no matter the amount, will make a significant difference in the lives of countless individuals and communities. Thank you for your consistent dedication and compassion. Together, we can bring light to the darkest corners and create a better future for all. With heartfelt appreciation, Samantha Lewis",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\n    \"suspicious links\",\n    \"financial scams\"\n  ],\n  \"urgency_tactics\": \"limited time\",\n  \"impersonation\": \"none\",\n  \"url_analysis\": \"https://waraid-multiplyimpact-donate.com\",\n  \"credential_harvesting\": \"none\",\n  \"final\": \"phishing\",\n  \"risk_score\": 70\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "financial scams"
+          ],
+          "urgency_tactics": "limited time",
+          "impersonation": "none",
+          "url_analysis": "https://waraid-multiplyimpact-donate.com",
+          "credential_harvesting": "none",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"charity\",\n    \"evidence\": \"Your commitment to War-Related Aid has been truly remarkable\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Samantha Lewis\"\n    },\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"please visit the following link: https://waraid-multiplyimpact-donate.com\"\n    }\n  ],\n  \"summary\": \"戰爭相關援助的募捐郵件\"\n}",
+        "report": {
+          "lure": {
+            "id": "charity",
+            "evidence": "Your commitment to War-Related Aid has been truly remarkable"
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "Samantha Lewis"
+            },
+            {
+              "id": "malicious_link",
+              "evidence": "please visit the following link: https://waraid-multiplyimpact-donate.com"
+            }
+          ],
+          "summary": "戰爭相關援助的募捐郵件"
+        },
+        "verified": {
+          "lure": {
+            "id": "charity",
+            "evidence": "Your commitment to War-Related Aid has been truly remarkable",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "Samantha Lewis",
+              "score": 1.0
+            },
+            {
+              "id": "malicious_link",
+              "evidence": "please visit the following link: https://waraid-multiplyimpact-donate.com",
+              "score": 1.0
+            }
+          ],
+          "summary": "戰爭相關援助的募捐郵件",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 69,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear Samantha, My name is Ethan Wilson, and I wanted to share an incredible financial opportunity with you. This exclusive offer has the potential to unlock your financial success and provide you with the life you've always dreamed of. Countless individuals have already taken advantage of this opportunity and have achieved extraordinary results. Don't let this chance slip away. Click on the following link to discover your path to financial success: https://financial-success-path.com Remember, success is the result of taking action. Take the first step now and unlock your financial potential. Warm regards, Ethan Wilson",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"financial scams\"],\r\n  \"urgency_tactics\": \"Don't let this chance slip away\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"https://financial-success-path.com\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "financial scams"
+          ],
+          "urgency_tactics": "Don't let this chance slip away",
+          "impersonation": "",
+          "url_analysis": "https://financial-success-path.com",
+          "credential_harvesting": "",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"This exclusive offer has the potential to unlock your financial success\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"Click on the following link to discover your path to financial success: https://financial-success-path.com\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"My name is Ethan Wilson\"\n    }\n  ],\n  \"summary\": \"此電子郵件提供一個財務成功機會，並附有連結。\"\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "This exclusive offer has the potential to unlock your financial success"
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "Click on the following link to discover your path to financial success: https://financial-success-path.com"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "My name is Ethan Wilson"
+            }
+          ],
+          "summary": "此電子郵件提供一個財務成功機會，並附有連結。"
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "This exclusive offer has the potential to unlock your financial success",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "Click on the following link to discover your path to financial success: https://financial-success-path.com",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "My name is Ethan Wilson",
+              "score": 1.0
+            }
+          ],
+          "summary": "此電子郵件提供一個財務成功機會，並附有連結。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 387,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear Michael, I hope this email finds you in good health. My name is Jennifer Anderson, and I represent the War Relief Fund, an organization dedicated to rebuilding lives affected by war. We urgently need your support to provide essential aid and resources to war-torn areas. Over the past few months, we have witnessed the devastating impact of war on innocent civilians. Homes have been destroyed, families torn apart, and communities shattered. Together, we can make a difference and bring hope to those who need it the most. To donate and help rebuild lives, please visit our secure donation page at https://war-relief-fund-donation.com. Every contribution, no matter how small, will go a long way in providing food, shelter, and medical assistance to those in need. Thank you for your generosity and compassion. Warm regards, Jennifer Anderson",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"financial scams\"],\n  \"urgency_tactics\": \"urgent need for support to provide essential aid and resources\",\n  \"impersonation\": \"impersonation of Jennifer Anderson\",\n  \"url_analysis\": \"https://war-relief-fund-donation.com\",\n  \"credential_harvesting\": \"no credential harvesting detected\",\n  \"final\": \"phishing\",\n  \"risk_score\": 75\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "financial scams"
+          ],
+          "urgency_tactics": "urgent need for support to provide essential aid and resources",
+          "impersonation": "impersonation of Jennifer Anderson",
+          "url_analysis": "https://war-relief-fund-donation.com",
+          "credential_harvesting": "no credential harvesting detected",
+          "final": "phishing",
+          "risk_score": 75
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"charity\",\n    \"evidence\": \"War Relief Fund, an organization dedicated to rebuilding lives affected by war.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"payment_request\",\n      \"evidence\": \"To donate and help rebuild lives, please visit our secure donation page at https://war-relief-fund-donation.com.\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Jennifer Anderson\"\n    }\n  ],\n  \"summary\": \"戰爭援助基金會請求捐款幫助戰區重建。\"\n}",
+        "report": {
+          "lure": {
+            "id": "charity",
+            "evidence": "War Relief Fund, an organization dedicated to rebuilding lives affected by war."
+          },
+          "techniques": [
+            {
+              "id": "payment_request",
+              "evidence": "To donate and help rebuild lives, please visit our secure donation page at https://war-relief-fund-donation.com."
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Jennifer Anderson"
+            }
+          ],
+          "summary": "戰爭援助基金會請求捐款幫助戰區重建。"
+        },
+        "verified": {
+          "lure": {
+            "id": "charity",
+            "evidence": "War Relief Fund, an organization dedicated to rebuilding lives affected by war.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "payment_request",
+              "evidence": "To donate and help rebuild lives, please visit our secure donation page at https://war-relief-fund-donation.com.",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Jennifer Anderson",
+              "score": 1.0
+            }
+          ],
+          "summary": "戰爭援助基金會請求捐款幫助戰區重建。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 59,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear David, Your luck has taken a turn for the better! You have been selected to receive a free shopping spree worth $10,000. To indulge in this ultimate shopping experience, click on the link below and provide us with your information: Claim Your Shopping Spree Now: https://shopping-spree-claim.com Act fast, David! This offer is only available for the next 24 hours. Don't miss out on this extraordinary opportunity to shop till you drop! Warm wishes, Jessica Miller",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"suspicious links\", \"credential requests\"],\r\n  \"urgency_tactics\": \"Act fast, David! This offer is only available for the next 24 hours.\",\r\n  \"impersonation\": \"Jessica Miller\",\r\n  \"url_analysis\": \"https://shopping-spree-claim.com\",\r\n  \"credential_harvesting\": \"provide us with your information\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 80\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "credential requests"
+          ],
+          "urgency_tactics": "Act fast, David! This offer is only available for the next 24 hours.",
+          "impersonation": "Jessica Miller",
+          "url_analysis": "https://shopping-spree-claim.com",
+          "credential_harvesting": "provide us with your information",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"You have been selected to receive a free shopping spree worth $10,000.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"reply_with_info\",\n      \"evidence\": \"To indulge in this ultimate shopping experience, click on the link below and provide us with your information:\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"This offer is only available for the next 24 hours.\"\n    }\n  ],\n  \"summary\": \"免費購物活動，僅限24小時\"\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "You have been selected to receive a free shopping spree worth $10,000."
+          },
+          "techniques": [
+            {
+              "id": "reply_with_info",
+              "evidence": "To indulge in this ultimate shopping experience, click on the link below and provide us with your information:"
+            },
+            {
+              "id": "urgency",
+              "evidence": "This offer is only available for the next 24 hours."
+            }
+          ],
+          "summary": "免費購物活動，僅限24小時"
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "You have been selected to receive a free shopping spree worth $10,000.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "reply_with_info",
+              "evidence": "To indulge in this ultimate shopping experience, click on the link below and provide us with your information:",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "This offer is only available for the next 24 hours.",
+              "score": 1.0
+            }
+          ],
+          "summary": "免費購物活動，僅限24小時",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 356,
+      "label": "legitimate",
+      "source": "human",
+      "email": "Britney Spears, the Rolling Stones, the 2008 Grammy Awards and more\n\n\r\n\r\n\r\nRolling Stone Email\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\t\t\t(You are receiving this e-mail because you subscribed to the RS Weekly Newsletter. For e-mail list removal information see bottom of e-mail.)\r\n\t\t\t\t\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\t\tFebruary 8, 2008\r\n\t\t\t\t\r\n\r\nSubscribe to RollingStone Magazineand get 4 free issues\r\n\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\t\tLenny Kravitz\r\n\t\t\t\t\t\t\t\t\r\n\"Are You Gonna Go My Way\" (Live)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t♦ \t2008 Grammy Awards: Photos, Live Blog and More \r\n\t\t\t\t\t\t\t\t\t\t\t♦Bonnaroo and SXSW Announce 2008 Lineups Featuring Pearl Jam, Metallica, R.E.M., More\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t♦The Rolling Stones Premiere Scorsese Documentary in Berlin\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t♦\r\n\r\nAvril Lavigne to Give Everyone the Bird on Spring Trek \r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t♦ Billie Joe Armstrong Revives Pinhead Gunpowder\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \t\t\t\t\r\n\t\t\t\r\n\t\t♦\r\nAmy Winehouse's Teachers Discuss Her Teenage Years\r\n\r\n♦John Mayer Dons Borat Thong Aboard Maiden Mayercraft Carrier \r\n\t\t\t\t\t\t\t\t\t♦Hot Chip Turn the Beat Around in New York\r\n\t\t\t\t\t\t\t\t\t♦\r\nNew Music Report: Jack Johnson, Hot Chip\r\n\t\t\t\t\t\t\t♦Breaking Artist: Beach House\r\n\t\t♦Peter Travers Reviews \"The Hottie and the Nottie, \"Fool's Gold\", More\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t♦ Random Notes: Madonna, John Mayer, the Rolling Stones and More\r\n\t\t\t\t\t\t\t\t\t\t♦ Backstage with Kid Rock: An Exclusive Look at the \"Rock N' Roll Revival\" Tour \r\n\t\t\t♦ Britney Spears' Life in Photos: A Comprehensive Timeline of the Star's Rise and Fall\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t♦ Clive Davis' Biggest Hits: The Legendary Record Man's Most Famous Signees\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n♦ \"Let It Bleed\": Behind the Rolling Stones' 1969 U.S. Tour\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMichael Jackson - \"Thriller 25th Anniversary Edition\" - \r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n   \r\n\r\nRay Davies - \"Working Man's Café\" -     \r\n\r\n\r\n\"Fool's Gold\" - No Stars\r\n\t\t\t\t\t\t\t\t\r\n\"Vince Vaughn's Wild West Comedy Show\" - \r\n\t\t\t\t\t\t\t\t\t\t\t\t  \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBecome a Member of the Board\r\n\t\t\t\tRolling Stone is giving you the chance to be heard. The Rolling Stone Sounding Board is currently holding an open call for music and pop culture enthusiasts to take our online survey and let us know what you think.  All you have to do is join \"the Board,\" and by doing so we'll send you updates on our upcoming events and contests/sweepstakes, and give you a chance to win cool prizes that will give you a taste of the rock star life.\r\n\t\t\t\tTo sign up, go to www.rssoundingboard.com\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRollingStone.com sent this email to you because dvqne@earthlink.net is registered for the RollingStone.com Weekly Newsletter.  \r\nIf you no longer want to receive any commercial emails from RollingStone.com, please click here to unsubscribe.\r\nHave questions regarding your newsletter subscription or our email privacy policy?  \r\nContact us at: Email Privacy Policy Group, RealNetworks, Inc., P.O. Box 91123, Seattle, WA 98111-9223 or \r\nclick here to read our Privacy Policy.\r\n© 2007 RealNetworks, Inc. Patents pending. All rights reserved. RealNetworks, Real, RealPlayer, RealRhapsody, RealAudio, RealVideo, RealOne, and the Real logo are trademarks and registered trademarks of RealNetworks, Inc.\r\n© 2007 RollingStone.com All other trademarks are property of their respective owners.",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"https://www.rollingsone.com, https://www.realnetworks.com\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "https://www.rollingsone.com, https://www.realnetworks.com",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": [],\n  \"summary\": \"Rolling Stone Email\"\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": [],
+          "summary": "Rolling Stone Email"
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "Rolling Stone Email",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 379,
+      "label": "legitimate",
+      "source": "human",
+      "email": "Article contribution letter for \"The Open Artificial Intelligence\tJournal\"\n\n \r\n\r\n \r\n\r\n\r\n\t\r\n\t\t \r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n\r\n\r\n\r\n\r\n                    The Open Artificial Intelligence Journal\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n  \r\n                \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nThursday, November 08, 2007\r\n\r\n \r\n\r\nDr. T. Meyer\r\n\r\nIIMS\r\n\r\nMassey University Auckland\r\n\r\nNew Zealand\r\n\r\n \r\n\r\nDear Dr. Meyer\r\n\r\n \r\n\r\nBentham Science Publishers have gained a longstanding international\r\nreputation for their excellent standards and top quality science\r\npublications. Many journals published by Bentham Science Publishers have\r\nreceived high impact factors in their respective fields. For the current\r\nlist of publications, please visit www.bentham.org. Seven Nobel Laureates\r\nhave endorsed a number of Bentham Science's journals; please read their\r\nquotes at www.bentham.org/Nobel.htm \r\n\r\n \r\n\r\nThe publishers are now undertaking a new publication venture by launching a\r\nnumber of Open Access journals in 2007, devoted to various disciplines in\r\nthe fields of science and technology.  \r\n\r\n \r\n\r\nOpen Access Journals are freely accessible via the Internet for immediate\r\nworldwide, open access to the full text of articles, serving the best\r\ninterests of the scientific community. All interested readers can read,\r\ndownload and/or print open access articles at no cost. There is no\r\nsubscription fee for Open Access journals.  The modest open access\r\npublication costs are usually covered by the author's institution or\r\nresearch funds. Moreover, authors who publish in our Open Access journals\r\nretain the copyright of their article. Open Access journals are no different\r\nfrom traditional subscription-based journals; they undergo the same\r\npeer-review process and quality control as any other scholarly journal.\r\n\r\n \r\n\r\nThe Open Artificial Intelligence Journal is an Open Access online journal,\r\nwhich publishes research articles, reviews and letters in all areas of\r\nartificial intelligence. Please visit the journal's homepage and\r\nInstructions for Authors for article submission at the following website\r\nwww.bentham.org/open/toaij \r\n\r\n \r\n\r\nThe journal aims to provide the most complete and reliable source of\r\ninformation on current developments in the field. The emphasis will be on\r\npublishing quality articles rapidly and making them freely available to the\r\nresearchers worldwide. All published articles will be deposited immediately\r\nupon publication in at least one widely and internationally recognized open\r\naccess repository. The published open access articles will be indexed by\r\nGoogle and Google Scholar, thereby assuring their massive international\r\nexposure. Moreover, similar to all open access publications, the articles\r\nwill also receive high citations.\r\n\r\n \r\n\r\nThe journal is essential reading for scientists and researchers who wish to\r\nkeep up-to-date with the latest developments in the field. The publishers\r\nare confident of the journal's rapid success. \r\n\r\n \r\n\r\nIn this connection, I would like to invite you to submit a research article,\r\nreview article or short communication/letter article to The Open Artificial\r\nIntelligence Journal.\r\n\r\n \r\n\r\nIn case you are interested in submitting an article to this Open Access\r\njournal, please refer to either the journal's Instructions for Authors (the\r\njournal's website is stated above) or alternatively contact us by e-mail at\r\nlbtvp@benthamscience.org or iggccz@benthamscience.org  for submission\r\nguidelines.\r\n\r\n \r\n\r\nThank you in advance for your consideration to submit an article to our Open\r\nAccess journal.\r\n\r\n \r\n\r\nWe look forward to hearing from you soon.\r\n\r\n \r\n\r\nWith kind regards,        \r\n\r\n \r\n\r\nYours sincerely,\r\n\r\n \r\n\r\nMatthew Honan, PhD            \r\n\r\nEditorial Director \r\n\r\nBentham Science Publishers\r\n\r\n \r\n\r\n \r\n\r\n-----------------------------------------------\r\n\r\nThis is not a spam message, and has been sent to you because of your\r\neminence in the field. If , however, you do not want to receive any\r\nemail/offer/invitation in future from Bentham Science,  then your email\r\naddress will be excluded from our all emailing lists by clicking here",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"Article submission invitation\", \"Open Access Journal promotion\"],\n  \"urgency_tactics\": \"None\",\n  \"impersonation\": \"None\",\n  \"url_analysis\": \"https://www.bentham.org/open/toaij, https://www.bentham.org\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [
+            "Article submission invitation",
+            "Open Access Journal promotion"
+          ],
+          "urgency_tactics": "None",
+          "impersonation": "None",
+          "url_analysis": "https://www.bentham.org/open/toaij, https://www.bentham.org",
+          "credential_harvesting": "None",
+          "final": "phishing",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": [],\n  \"summary\": \"期刊投稿邀請\"\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": [],
+          "summary": "期刊投稿邀請"
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "期刊投稿邀請",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 305,
+      "label": "legitimate",
+      "source": "human",
+      "email": "Re: Getting ? in spam scores.\n\nPlease, resist the urge to top post and including unnecessary full\r\nquotes. This also makes answering questions much easier...\r\n\r\n\r\nOn Fri, 2008-02-08 at 16:45 -0800, fchan wrote:\r\n> Thank you. I have check my DNS and it appears to resolve the link \r\n> correctly.\r\n\r\nWhat link? The spample does not show any. Also, the DNS queries relevant\r\nfor SA are those to the various blacklists. By default including URI as\r\nwell as IP blacklists.\r\n\r\nAnyway, you can't prove the non-existence of a DNS issue, by one\r\nsuccessful query. So we now know that it works at least sometimes. Good,\r\nwe pretty much knew that before. ;)\r\n\r\n\r\n> It is just annoying, I think less than 1% of all messages, \r\n> are getting this and I'm checking if there is something I can do to \r\n> solve this.\r\n> Here is a sample message that is causing this:\r\n\r\nThe sample is incomplete...\r\n\r\n\r\n> Received: (qmail 7689 invoked by uid 501); 8 Feb 2008 01:58:00 -0800\r\n> Received: from 87.18.202.233 by s1.molsci.org (envelope-from \r\n> , uid 509) with \r\n> qmail-scanner-2.01st\r\n>       (clamdscan: 0.92/5545. spamassassin: 3.2.4. perlscan: 2.01st.\r\n>       Clear:RC:0(87.18.202.233):SA:0(?/?):.\r\n>       Processed in 50.059824 secs); 08 Feb 2008 09:58:00 -0000\r\n> X-Spam-Status: No, hits=? required=?\r\n\r\nDid you try asking qmail-scanner folks already? That is not the default\r\nSA header.\r\n\r\n\r\n[ snip ]\r\n> Another thing is when I do a sa-learn --spam of this message I get \r\n> this message \"Learned tokens from 0 message(s) (1 message(s) \r\n> examined)\". Why I cannot get sa-learn to learn from this message also.\r\n\r\nBecause it has been (auto?) learned before?\r\n\r\n\r\n> >  > Wed, 06 Feb 2008 09:16:41 PST:18972: clamdscan: finished scan in 0.011407 secs\r\n> >  > Wed, 06 Feb 2008 09:17:26 PST:18972: SA: finished scan in 45.026522\r\n> >  > secs - hits=?/?\r\n> >\r\n> >Does that mean qmail-scanner forced further processing due to the\r\n> >timeout, without actually waiting for SA to finish? (Despite the success\r\n> >suggesting phrase...)\r\n\r\nSo?  Hey, I'm not a qmail-scanner guy, that was not meant as a\r\nrhetorical question. ;)\r\n\r\n> >>  Wed, 06 Feb 2008 09:17:26 PST:18972: p_s: finished scan in 0.020737 secs\r\n> >>  Wed, 06 Feb 2008 09:17:26 PST:18972: ini_sc: finished scan of\r\n> >>  \"/var/spool/qmailscan/tmp/s1.molsci.org120231820076418972\"\r\n> >>\r\n> >>  I have set timeout on qmailscanner for spamc to 45 seconds. Why are,\r\n> >>  what I guess, links causing this.\r\n> >\r\n> >Are you positive this is related to links?  SA queries URI blacklists.\r\n> >Is it possible you have a DNS issue by any chance?\r\n\r\nNow, are you really positive about that, or not?\r\n\r\n  guenther\r\n\r\n\r\n-- \r\nchar *t=\"\\\\10pse\\\\0r\\\\0dtu\\\\0.@ghno\\\\x4e\\\\xc8\\\\x79\\\\xf4\\\\xab\\\\x51\\\\x8a\\\\x10\\\\xf4\\\\xf4\\\\xc4\";\r\nmain(){ char h,m=h=*t++,*x=t+2*h,c,i,l=*x,s=0; for (i=0;i>=1)||!t[s+h]){ putchar(t[s]);h=m;s=0; }}}",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": [],\n  \"summary\": \"郵件內容正常，無任何可疑行為。\"\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": [],
+          "summary": "郵件內容正常，無任何可疑行為。"
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "郵件內容正常，無任何可疑行為。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 39,
+      "label": "legitimate",
+      "source": "human",
+      "email": "Re: [SM-USERS] SM 1.4.13 Configuration Question: Mail Domain\tParameter\n\nOn 2/7/08, Nancy Graziano  wrote:\r\n> Good Evening,\r\n>\r\n> I have tried setting the Mail Domain parameter\r\n\r\nPlease be more specific.\r\n\r\n> to our family's domain name\r\n> (my husband and I are the only ones accessing mail through our own SM 1.4.13\r\n> installation),\r\n> and when I try to login without using our Domain extension, I get an\r\n> \"Unknown User or Password Incorrect\" error. However, if I include our Domain\r\n> extension, I can login\r\n> without a problem.\r\n\r\nSee the Login Manager plugin.\r\n\r\n> Here are the specifics of my ISP/installation:\r\n>\r\n>\r\n> SM 1.4.13, manual installation\r\n> Installed Plugins: address_add-2.1-1.4.0, calendar_file_backend-1.0-2.0,\r\n> shared_calendars-2.0.1-1.4.0, twc_weather-1.3p3b-RC2\r\n> PHP v4.4.4\r\n> Web Server: Apache 1.3.37 (Unix)\r\n> IMAP Server: IMAP c-Client Version 2004 [not sure if this is what you need,\r\n> but it is all I could find...]\r\n> SMTP Server: Cannot locate\r\n> OS: Linux 2.6.9-55.0.2.ELsmp\r\n> Browsers tried: Firefox (v2.0.0.12),  IE7 (v7.0.5730.11), IE6\r\n> (v6.0.2900.2180.xpsp2_gdr.070227-2254) I tried a search\r\n> online at SourceForge going back a couple months (before the announcement of\r\n> SM1.4.13) but didn't find anything. Any suggestions?\r\n>\r\n> Thanks in advance.\r\n> Nancy",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": [],\n  \"summary\": \"郵件內容為正常技術支援與討論\"\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": [],
+          "summary": "郵件內容為正常技術支援與討論"
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "郵件內容為正常技術支援與討論",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 321,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Ms. Amanda Thompson, I hope this email finds you excited because you're a winner! Congratulations on being selected as one of the lucky winners in our sweepstakes! Your entry has been chosen, and you've won an amazing prize. Click on the link below to claim your winnings and let the celebration begin: [https://sweepstakes-winner-brian.com] Thank you for your participation and support. Best regards, Brian Clark Sweepstakes Manager\"",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"suspicious links\", \"account verification requests\"],\r\n  \"urgency_tactics\": \"Congratulations on being selected as one of the lucky winners\",\r\n  \"impersonation\": \"Sweepstakes Manager\",\r\n  \"url_analysis\": \"https://sweepstakes-winner-brian.com\",\r\n  \"credential_harvesting\": \"Claim your winnings\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 75\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account verification requests"
+          ],
+          "urgency_tactics": "Congratulations on being selected as one of the lucky winners",
+          "impersonation": "Sweepstakes Manager",
+          "url_analysis": "https://sweepstakes-winner-brian.com",
+          "credential_harvesting": "Claim your winnings",
+          "final": "phishing",
+          "risk_score": 75
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"Congratulations on being selected as one of the lucky winners in our sweepstakes!\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Click on the link below to claim your winnings and let the celebration begin:\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Brian Clark Sweepstakes Manager\"\n    }\n  ],\n  \"summary\": \"此郵件聲稱收件人中獎，並提供一個鏈接以聲稱獎金。\"\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Congratulations on being selected as one of the lucky winners in our sweepstakes!"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Click on the link below to claim your winnings and let the celebration begin:"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Brian Clark Sweepstakes Manager"
+            }
+          ],
+          "summary": "此郵件聲稱收件人中獎，並提供一個鏈接以聲稱獎金。"
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Congratulations on being selected as one of the lucky winners in our sweepstakes!",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Click on the link below to claim your winnings and let the celebration begin:",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Brian Clark Sweepstakes Manager",
+              "score": 1.0
+            }
+          ],
+          "summary": "此郵件聲稱收件人中獎，並提供一個鏈接以聲稱獎金。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 225,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Olivia, I hope this email finds you in good spirits. We're excited to invite you to our upcoming charity fashion show benefiting women's shelters in our community. Experience the latest fashion trends while supporting initiatives to empower and uplift women in need. To reserve your tickets and learn more about the event, please visit [here](https://charity-fashion-show-link9.com). Previous attendees, including Matthew Rodriguez and Amanda Hill, have helped provide essential resources and support to women rebuilding their lives. Your attendance will make a meaningful difference in the lives of those we serve. Thank you for considering our invitation. We look forward to seeing you at the fashion show! Warm regards, Rachel Clark Event Coordinator\"",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"https://charity-fashion-show-link9.com\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "https://charity-fashion-show-link9.com",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 10
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"charity\",\n    \"evidence\": \"benefiting women's shelters in our community.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Event Coordinator\"\n    },\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"please visit [here](https://charity-fashion-show-link9.com).\"\n    }\n  ],\n  \"summary\": \"邀請參與慈善時裝秀，支持婦女庇護所。\"\n}",
+        "report": {
+          "lure": {
+            "id": "charity",
+            "evidence": "benefiting women's shelters in our community."
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "Event Coordinator"
+            },
+            {
+              "id": "malicious_link",
+              "evidence": "please visit [here](https://charity-fashion-show-link9.com)."
+            }
+          ],
+          "summary": "邀請參與慈善時裝秀，支持婦女庇護所。"
+        },
+        "verified": {
+          "lure": {
+            "id": "charity",
+            "evidence": "benefiting women's shelters in our community.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "Event Coordinator",
+              "score": 1.0
+            },
+            {
+              "id": "malicious_link",
+              "evidence": "please visit [here](https://charity-fashion-show-link9.com).",
+              "score": 1.0
+            }
+          ],
+          "summary": "邀請參與慈善時裝秀，支持婦女庇護所。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 13,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Amanda, I hope this email finds you well. We're writing to you regarding an urgent matter concerning your account security. To maintain the integrity of your account and protect your sensitive information, we strongly encourage you to verify and update your security settings without delay. You can do so by clicking [here](https://account-security-link4.com). Many of our valued customers, including Justin Hill and Emily Johnson, have already taken proactive measures to fortify their account security, reducing the risk of unauthorized access and fraudulent activities. Your prompt attention to this matter is paramount in ensuring the continued safety and confidentiality of your account details. Should you require any assistance or encounter any challenges during the security verification process, please don't hesitate to contact our dedicated support team. We're here to assist you around the clock. Thank you for your cooperation in prioritizing your account security. Warm regards, Christopher Davis Account Security Specialist\"",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\n    \"account security\",\n    \"verify and update your security settings\"\n  ],\n  \"urgency_tactics\": \"urgent matter\",\n  \"impersonation\": \"Account Security Specialist\",\n  \"url_analysis\": \"https://account-security-link4.com\",\n  \"credential_harvesting\": \"update your security settings\",\n  \"final\": \"phishing\",\n  \"risk_score\": 75\n}",
+        "report": {
+          "phishing_indicators": [
+            "account security",
+            "verify and update your security settings"
+          ],
+          "urgency_tactics": "urgent matter",
+          "impersonation": "Account Security Specialist",
+          "url_analysis": "https://account-security-link4.com",
+          "credential_harvesting": "update your security settings",
+          "final": "phishing",
+          "risk_score": 75
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"security_alert\",\n    \"evidence\": \"To maintain the integrity of your account and protect your sensitive information\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"click [here](https://account-security-link4.com)\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Christopher Davis Account Security Specialist\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"proactive measures to fortify their account security, reducing the risk of unauthorized access\"\n    }\n  ],\n  \"summary\": \"此郵件提醒用戶更新帳戶安全設定，並提供驗證連結。\"\n}",
+        "report": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "To maintain the integrity of your account and protect your sensitive information"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "click [here](https://account-security-link4.com)"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Christopher Davis Account Security Specialist"
+            },
+            {
+              "id": "urgency",
+              "evidence": "proactive measures to fortify their account security, reducing the risk of unauthorized access"
+            }
+          ],
+          "summary": "此郵件提醒用戶更新帳戶安全設定，並提供驗證連結。"
+        },
+        "verified": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "To maintain the integrity of your account and protect your sensitive information",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "click [here](https://account-security-link4.com)",
+              "score": 0.96
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Christopher Davis Account Security Specialist",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "proactive measures to fortify their account security, reducing the risk of unauthorized access",
+              "score": 1.0
+            }
+          ],
+          "summary": "此郵件提醒用戶更新帳戶安全設定，並提供驗證連結。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 11,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Mr. Ryan Martinez, You're cordially invited to our upcoming charity fundraiser hosted by Amanda Evans, a tireless advocate for social change. Join us on [Date] at 6:30 PM at [Venue] for an inspiring evening dedicated to supporting those in need. Your presence and generosity will help us make a tangible difference in the lives of individuals and families facing hardship. RSVP now and learn more about the event by visiting: [https://charity-fundraiser-amanda.com] Together, we can create a brighter future for all. Warm regards, Amanda Evans\"",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"charity fundraiser\", \"RSVP now\"],\n  \"urgency_tactics\": \"Join us on [Date] at 6:30 PM at [Venue] for an inspiring evening dedicated to supporting those in need.\",\n  \"impersonation\": \"Amanda Evans, a tireless advocate for social change.\",\n  \"url_analysis\": \"https://charity-fundraiser-amanda.com\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [
+            "charity fundraiser",
+            "RSVP now"
+          ],
+          "urgency_tactics": "Join us on [Date] at 6:30 PM at [Venue] for an inspiring evening dedicated to supporting those in need.",
+          "impersonation": "Amanda Evans, a tireless advocate for social change.",
+          "url_analysis": "https://charity-fundraiser-amanda.com",
+          "credential_harvesting": "None",
+          "final": "phishing",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"charity\",\n    \"evidence\": \"You're cordially invited to our upcoming charity fundraiser hosted by Amanda Evans\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"hosted by Amanda Evans, a tireless advocate for social change\"\n    },\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"RSVP now and learn more about the event by visiting: [https://charity-fundraiser-amanda.com]\"\n    }\n  ],\n  \"summary\": \"慈善籌款會邀請函\"\n}",
+        "report": {
+          "lure": {
+            "id": "charity",
+            "evidence": "You're cordially invited to our upcoming charity fundraiser hosted by Amanda Evans"
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "hosted by Amanda Evans, a tireless advocate for social change"
+            },
+            {
+              "id": "credential_link",
+              "evidence": "RSVP now and learn more about the event by visiting: [https://charity-fundraiser-amanda.com]"
+            }
+          ],
+          "summary": "慈善籌款會邀請函"
+        },
+        "verified": {
+          "lure": {
+            "id": "charity",
+            "evidence": "You're cordially invited to our upcoming charity fundraiser hosted by Amanda Evans",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "hosted by Amanda Evans, a tireless advocate for social change",
+              "score": 1.0
+            },
+            {
+              "id": "credential_link",
+              "evidence": "RSVP now and learn more about the event by visiting: [https://charity-fundraiser-amanda.com]",
+              "score": 1.0
+            }
+          ],
+          "summary": "慈善籌款會邀請函",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 43,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Ms. Michelle Rodriguez, I trust this email finds you well. My name is Kevin Thompson, and I'm reaching out on behalf of the Reconstruction Aid Fund. In the aftermath of conflict, communities lay in ruins, with homes destroyed, infrastructure damaged, and livelihoods lost. The path to recovery is long and arduous, but with your support, we can help rebuild war-torn communities and restore hope for a better future. Your donation can fund reconstruction projects such as rebuilding homes, restoring schools and hospitals, and revitalizing local economies. Together, we can empower communities to rebuild stronger and more resilient than before. Please consider making a contribution today to support our reconstruction efforts in war-affected regions. You can donate securely online at [Link: https://reconstruction-aid-fund.org]. Thank you for your generosity and compassion in helping us make a difference. Warm regards, Kevin Thompson Reconstruction Aid Fund\"",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\n    \"suspicious links\",\n    \"financial scams\"\n  ],\n  \"urgency_tactics\": \"path to recovery is long and arduous\",\n  \"impersonation\": \"Kevin Thompson Reconstruction Aid Fund\",\n  \"url_analysis\": \"https://reconstruction-aid-fund.org\",\n  \"credential_harvesting\": \"none\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "financial scams"
+          ],
+          "urgency_tactics": "path to recovery is long and arduous",
+          "impersonation": "Kevin Thompson Reconstruction Aid Fund",
+          "url_analysis": "https://reconstruction-aid-fund.org",
+          "credential_harvesting": "none",
+          "final": "phishing",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"charity\",\n    \"evidence\": \"Reconstruction Aid Fund\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"donate securely online at [Link: https://reconstruction-aid-fund.org]\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Kevin Thompson Reconstruction Aid Fund\"\n    }\n  ],\n  \"summary\": \"戰後重建援助基金會請求捐款以幫助戰區社區重建。\"\n}",
+        "report": {
+          "lure": {
+            "id": "charity",
+            "evidence": "Reconstruction Aid Fund"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "donate securely online at [Link: https://reconstruction-aid-fund.org]"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Kevin Thompson Reconstruction Aid Fund"
+            }
+          ],
+          "summary": "戰後重建援助基金會請求捐款以幫助戰區社區重建。"
+        },
+        "verified": {
+          "lure": {
+            "id": "charity",
+            "evidence": "Reconstruction Aid Fund",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "donate securely online at [Link: https://reconstruction-aid-fund.org]",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Kevin Thompson Reconstruction Aid Fund",
+              "score": 1.0
+            }
+          ],
+          "summary": "戰後重建援助基金會請求捐款以幫助戰區社區重建。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "test_index": 104,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Mr. Christopher Brown, I hope this email finds you well. My name is Jessica Martinez, and I represent the Neighborhood Beautification Committee in [Your Town]. Graffiti vandalism has been on the rise in our neighborhood, detracting from its beauty and sense of community pride. It is imperative that we take action to address this issue promptly. If you encounter any instances of graffiti or have information about individuals responsible for vandalizing public or private property, please report it through our online graffiti reporting platform: [Link: https://graffiti-reporting-tool.com] Your cooperation is vital in preserving the aesthetics and integrity of our neighborhood. Together, we can combat vandalism and maintain a clean and welcoming environment for all residents. Thank you for your commitment to our community's well-being. Best regards, Jessica Martinez Neighborhood Beautification Committee\"",
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"reporting platform\"],\n  \"urgency_tactics\": \"detracting from its beauty and sense of community pride\",\n  \"impersonation\": \"Jessica Martinez\",\n  \"url_analysis\": \"https://graffiti-reporting-tool.com\",\n  \"credential_harvesting\": \"report it through our online graffiti reporting platform\",\n  \"final\": \"phishing\",\n  \"risk_score\": 60\n}",
+        "report": {
+          "phishing_indicators": [
+            "reporting platform"
+          ],
+          "urgency_tactics": "detracting from its beauty and sense of community pride",
+          "impersonation": "Jessica Martinez",
+          "url_analysis": "https://graffiti-reporting-tool.com",
+          "credential_harvesting": "report it through our online graffiti reporting platform",
+          "final": "phishing",
+          "risk_score": 60
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": [],\n  \"summary\": \"社區美化委員會請居民協助處理塗鴉問題\"\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": [],
+          "summary": "社區美化委員會請居民協助處理塗鴉問題"
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "社區美化委員會請居民協助處理塗鴉問題",
+          "rejected": []
+        }
+      }
+    }
+  ]
+}

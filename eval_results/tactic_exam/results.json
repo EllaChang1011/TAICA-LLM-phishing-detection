@@ -1,0 +1,2743 @@
+{
+  "summary": {
+    "n_emails": 48,
+    "n_scored": 48,
+    "n_excluded": 0,
+    "lure_accuracy": 0.708,
+    "technique_precision": 0.615,
+    "technique_recall": 0.533,
+    "technique_f1": 0.571,
+    "login_lure_confusions": 3,
+    "no_tactic_emails": 19,
+    "no_tactic_emails_tagged_new": 6,
+    "no_tactic_emails_flagged_old": 5,
+    "picks_total": 101,
+    "picks_fabricated_evidence": 2,
+    "parse_errors_new": 0,
+    "ran_at": "2026-11-05T01:28:17"
+  },
+  "results": [
+    {
+      "gold": {
+        "exam_id": "E01",
+        "test_index": 64,
+        "lure": "security_alert",
+        "techniques": [
+          "credential_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"suspicious links\", \"financial scams\"],\r\n  \"urgency_tactics\": \"immediate attention\",\r\n  \"impersonation\": \"Head of Financial Security\",\r\n  \"url_analysis\": \"https://secure-transaction-verification.com\",\r\n  \"credential_harvesting\": \"verify your account details\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 80\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "financial scams"
+          ],
+          "urgency_tactics": "immediate attention",
+          "impersonation": "Head of Financial Security",
+          "url_analysis": "https://secure-transaction-verification.com",
+          "credential_harvesting": "verify your account details",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"security_alert\",\n    \"evidence\": \"As the Head of Financial Security at our esteemed organization\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"click on the following link and verify your account details\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Head of Financial Security XYZ Corporation\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "As the Head of Financial Security at our esteemed organization"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "click on the following link and verify your account details"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Head of Financial Security XYZ Corporation"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "As the Head of Financial Security at our esteemed organization",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "click on the following link and verify your account details",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Head of Financial Security XYZ Corporation",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「安全警告」為藉口，搭配帶連結騙取帳密、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E02",
+        "test_index": 373,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"legitimate\",\r\n  \"risk_score\": 10\r\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 10
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E03",
+        "test_index": 239,
+        "lure": "mailbox_error",
+        "techniques": [
+          "malicious_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\n    \"Failed to deliver\",\n    \"Stucked emails will be deleted automatically from the system\"\n  ],\n  \"urgency_tactics\": \"Stucked emails will be deleted automatically from the system\",\n  \"impersonation\": \"monkey.org Email server\",\n  \"url_analysis\": \"https://www.monkey.org\",\n  \"credential_harvesting\": \"Retrieve 14 Emails\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "Failed to deliver",
+            "Stucked emails will be deleted automatically from the system"
+          ],
+          "urgency_tactics": "Stucked emails will be deleted automatically from the system",
+          "impersonation": "monkey.org Email server",
+          "url_analysis": "https://www.monkey.org",
+          "credential_harvesting": "Retrieve 14 Emails",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"mailbox_error\",\n    \"evidence\": \"Incoming (14) Important Emails Failed to be delivered to\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Retrieve 14 Emails\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "mailbox_error",
+            "evidence": "Incoming (14) Important Emails Failed to be delivered to"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Retrieve 14 Emails"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "mailbox_error",
+            "evidence": "Incoming (14) Important Emails Failed to be delivered to",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Retrieve 14 Emails",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「信箱錯誤」為藉口，搭配帶連結騙取帳密。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E04",
+        "test_index": 40,
+        "lure": "charity",
+        "techniques": [
+          "malicious_link",
+          "payment_request"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\"],\n  \"urgency_tactics\": \"exclusive opportunity\",\n  \"impersonation\": \"Michael Anderson\",\n  \"url_analysis\": \"https://waraid-donation-match.com\",\n  \"credential_harvesting\": \"make a donation\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links"
+          ],
+          "urgency_tactics": "exclusive opportunity",
+          "impersonation": "Michael Anderson",
+          "url_analysis": "https://waraid-donation-match.com",
+          "credential_harvesting": "make a donation",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"Your consistent dedication to this cause has not gone unnoticed\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"To take advantage of this exclusive opportunity, please visit the following link\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Your consistent dedication to this cause has not gone unnoticed"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "To take advantage of this exclusive opportunity, please visit the following link"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Your consistent dedication to this cause has not gone unnoticed",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "To take advantage of this exclusive opportunity, please visit the following link",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配帶連結騙取帳密。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E05",
+        "test_index": 141,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"http://jobs.perl.org/job/3728, http://www.epsilon.com/\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "http://jobs.perl.org/job/3728, http://www.epsilon.com/",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 10
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E06",
+        "test_index": 124,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E07",
+        "test_index": 344,
+        "lure": "reward_curiosity",
+        "techniques": [
+          "malicious_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"tax refund\", \"last chance\", \"claim your refund\", \"before the deadline passes\"],\n  \"urgency_tactics\": \"last chance to claim your refund before the deadline passes\",\n  \"impersonation\": \"Jonathan Lee\",\n  \"url_analysis\": \"https://lastchanceclaimyourrefund.com/sarahjohnson\",\n  \"credential_harvesting\": \"claim your refund\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "tax refund",
+            "last chance",
+            "claim your refund",
+            "before the deadline passes"
+          ],
+          "urgency_tactics": "last chance to claim your refund before the deadline passes",
+          "impersonation": "Jonathan Lee",
+          "url_analysis": "https://lastchanceclaimyourrefund.com/sarahjohnson",
+          "credential_harvesting": "claim your refund",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"Don't let this opportunity slip away\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"Click here to claim your tax refund before it's too late: [https://lastchanceclaimyourrefund.com/sarahjohnson]\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Don't let this opportunity slip away"
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "Click here to claim your tax refund before it's too late: [https://lastchanceclaimyourrefund.com/sarahjohnson]"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Don't let this opportunity slip away",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "Click here to claim your tax refund before it's too late: [https://lastchanceclaimyourrefund.com/sarahjohnson]",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E08",
+        "test_index": 112,
+        "lure": "reward_curiosity",
+        "techniques": [
+          "malicious_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"job offer\", \"limited time\"],\r\n  \"urgency_tactics\": \"limited time\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"https://dreamcareer-link123.com\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 75\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "job offer",
+            "limited time"
+          ],
+          "urgency_tactics": "limited time",
+          "impersonation": "",
+          "url_analysis": "https://dreamcareer-link123.com",
+          "credential_harvesting": "",
+          "final": "phishing",
+          "risk_score": 75
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"Are you ready to take a leap forward in your career?\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"To seize this golden opportunity and embark on your dream career, click on the link below:\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"This job offer is only available for a limited time.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Are you ready to take a leap forward in your career?"
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To seize this golden opportunity and embark on your dream career, click on the link below:"
+            },
+            {
+              "id": "urgency",
+              "evidence": "This job offer is only available for a limited time."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Are you ready to take a leap forward in your career?",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To seize this golden opportunity and embark on your dream career, click on the link below:",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "This job offer is only available for a limited time.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結、製造急迫或恐懼。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E09",
+        "test_index": 247,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"http://www.worldscinet.com/nmnc.html\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "http://www.worldscinet.com/nmnc.html",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E10",
+        "test_index": 240,
+        "lure": "legal_threat",
+        "techniques": [
+          "credential_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"account verification requests\", \"financial scams\", \"urgent security warnings\", \"impersonation\"],\n  \"urgency_tactics\": \"urgent message regarding COVID-19 contact tracing\",\n  \"impersonation\": \"impersonation\",\n  \"url_analysis\": \"https://covid-contact-tracing-alert.com\",\n  \"credential_harvesting\": \"credential harvesting\",\n  \"final\": \"phishing\",\r\n  \"risk_score\": 90\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account verification requests",
+            "financial scams",
+            "urgent security warnings",
+            "impersonation"
+          ],
+          "urgency_tactics": "urgent message regarding COVID-19 contact tracing",
+          "impersonation": "impersonation",
+          "url_analysis": "https://covid-contact-tracing-alert.com",
+          "credential_harvesting": "credential harvesting",
+          "final": "phishing",
+          "risk_score": 90
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"security_alert\",\n    \"evidence\": \"This is an urgent message regarding COVID-19 contact tracing.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Please click on the link below to complete the contact tracing process and provide us with the necessary information for further investigation.\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"It is crucial that you take immediate action.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "This is an urgent message regarding COVID-19 contact tracing."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Please click on the link below to complete the contact tracing process and provide us with the necessary information for further investigation."
+            },
+            {
+              "id": "urgency",
+              "evidence": "It is crucial that you take immediate action."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "This is an urgent message regarding COVID-19 contact tracing.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Please click on the link below to complete the contact tracing process and provide us with the necessary information for further investigation.",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "It is crucial that you take immediate action.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「安全警告」為藉口，搭配帶連結騙取帳密、製造急迫或恐懼。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E11",
+        "test_index": 275,
+        "lure": "account_expiry",
+        "techniques": [
+          "credential_link",
+          "urgency",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"account de-activation\", \"update your account\"],\r\n  \"urgency_tactics\": \"E-mail would be blocked from sending and receiving emails\",\r\n  \"impersonation\": \"monkey.org Admin\",\r\n  \"url_analysis\": \"https://www.monkey.org\",\r\n  \"credential_harvesting\": \"update your account\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 80\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "account de-activation",
+            "update your account"
+          ],
+          "urgency_tactics": "E-mail would be blocked from sending and receiving emails",
+          "impersonation": "monkey.org Admin",
+          "url_analysis": "https://www.monkey.org",
+          "credential_harvesting": "update your account",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"account_expiry\",\n    \"evidence\": \"Your E-mail jose@monkey.org would be blocked from sending and receiving emails.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Please click YES, to update it,\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Kind Regardsmonkey.org Admin\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Your E-mail jose@monkey.org would be blocked from sending and receiving emails."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Please click YES, to update it,"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Kind Regardsmonkey.org Admin"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Your E-mail jose@monkey.org would be blocked from sending and receiving emails.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Please click YES, to update it,",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Kind Regardsmonkey.org Admin",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「帳號到期」為藉口，搭配帶連結騙取帳密、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E12",
+        "test_index": 319,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [],\r\n  \"urgency_tactics\": \"\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"https://new-perspectives-webinar-link1.com\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"legitimate\",\r\n  \"risk_score\": 20\r\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "https://new-perspectives-webinar-link1.com",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"Explore new perspectives and ideas with us.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"Click [here](https://new-perspectives-webinar-link1.com) to reserve your spot\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Explore new perspectives and ideas with us."
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "Click [here](https://new-perspectives-webinar-link1.com) to reserve your spot"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Explore new perspectives and ideas with us.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "Click [here](https://new-perspectives-webinar-link1.com) to reserve your spot",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E13",
+        "test_index": 130,
+        "lure": "account_expiry",
+        "techniques": [
+          "credential_link",
+          "urgency",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"account verification requests\"],\n  \"urgency_tactics\": \"Failure to verify your Email address withing 24hrs of receiving this message indicates that the email address; jose@monkey.org is inactive, hence we would be deleting it on our monkey.org server\",\n  \"impersonation\": \"monkey.org domain is experiencing some service interruptions such as email deliverability and spam prevention. We would like to verify if this Email address: jose@monkey.org is active on our monkey.org as we are working on fixing this problems.\",\n  \"url_analysis\": \"https://www.monkey.org\",\n  \"credential_harvesting\": \"Complete Verification\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account verification requests"
+          ],
+          "urgency_tactics": "Failure to verify your Email address withing 24hrs of receiving this message indicates that the email address; jose@monkey.org is inactive, hence we would be deleting it on our monkey.org server",
+          "impersonation": "monkey.org domain is experiencing some service interruptions such as email deliverability and spam prevention. We would like to verify if this Email address: jose@monkey.org is active on our monkey.org as we are working on fixing this problems.",
+          "url_analysis": "https://www.monkey.org",
+          "credential_harvesting": "Complete Verification",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"account_expiry\",\n    \"evidence\": \"monkey.org domain is experiencing some service interruptions such as email deliverability and spam prevention.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Complete Verification\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"Failure to verify your Email address withing 24hrs of receiving this message indicates that the email address; jose@monkey.org is inactive, hence we would be deleting it on our monkey.org server .\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "monkey.org domain is experiencing some service interruptions such as email deliverability and spam prevention."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Complete Verification"
+            },
+            {
+              "id": "urgency",
+              "evidence": "Failure to verify your Email address withing 24hrs of receiving this message indicates that the email address; jose@monkey.org is inactive, hence we would be deleting it on our monkey.org server ."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "monkey.org domain is experiencing some service interruptions such as email deliverability and spam prevention.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Complete Verification",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "Failure to verify your Email address withing 24hrs of receiving this message indicates that the email address; jose@monkey.org is inactive, hence we would be deleting it on our monkey.org server .",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「帳號到期」為藉口，搭配帶連結騙取帳密、製造急迫或恐懼。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E14",
+        "test_index": 288,
+        "lure": "account_expiry",
+        "techniques": [
+          "credential_link",
+          "urgency",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"account verification requests\", \"suspension threat\", \"login page link\"],\n  \"urgency_tactics\": \"Verify your account within 24 hours\",\n  \"impersonation\": \"Microsoft\",\n  \"url_analysis\": \"https://login.microsoftonline.com\",\n  \"credential_harvesting\": \"Verify your account\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}",
+        "report": {
+          "phishing_indicators": [
+            "account verification requests",
+            "suspension threat",
+            "login page link"
+          ],
+          "urgency_tactics": "Verify your account within 24 hours",
+          "impersonation": "Microsoft",
+          "url_analysis": "https://login.microsoftonline.com",
+          "credential_harvesting": "Verify your account",
+          "final": "phishing",
+          "risk_score": 90
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"account_expiry\",\n    \"evidence\": \"Your account has exceeded its limit and needs to be verified\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Click on the button bellow to update your account\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"if not verified within 24 hours, we shall suspend your account\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Your account has exceeded its limit and needs to be verified"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Click on the button bellow to update your account"
+            },
+            {
+              "id": "urgency",
+              "evidence": "if not verified within 24 hours, we shall suspend your account"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Your account has exceeded its limit and needs to be verified",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Click on the button bellow to update your account",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "if not verified within 24 hours, we shall suspend your account",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「帳號到期」為藉口，搭配帶連結騙取帳密、製造急迫或恐懼。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E15",
+        "test_index": 290,
+        "lure": "file_share",
+        "techniques": [
+          "malicious_link",
+          "urgency",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\"],\n  \"urgency_tactics\": \"Document would be deleted off our server when unchecked after 48 Hours.\",\n  \"impersonation\": \"Onedrive Team\",\n  \"url_analysis\": \"https://onedrive.live.com/?authuser=0&id=OneDrive-Auth&cid=0\",\n  \"credential_harvesting\": \"Click on the button to view the shared Document\",\n  \"final\": \"phishing\",\n  \"risk_score\": 70\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links"
+          ],
+          "urgency_tactics": "Document would be deleted off our server when unchecked after 48 Hours.",
+          "impersonation": "Onedrive Team",
+          "url_analysis": "https://onedrive.live.com/?authuser=0&id=OneDrive-Auth&cid=0",
+          "credential_harvesting": "Click on the button to view the shared Document",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"file_share\",\n    \"evidence\": \"A document titled \\\"Proposal\\\" has been shared with you on Onedrive.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Click on the button to view the shared Document\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"Document would be deleted off our server when unchecked after 48 Hours.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "file_share",
+            "evidence": "A document titled \"Proposal\" has been shared with you on Onedrive."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Click on the button to view the shared Document"
+            },
+            {
+              "id": "urgency",
+              "evidence": "Document would be deleted off our server when unchecked after 48 Hours."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "file_share",
+            "evidence": "A document titled \"Proposal\" has been shared with you on Onedrive.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Click on the button to view the shared Document",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "Document would be deleted off our server when unchecked after 48 Hours.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「檔案分享」為藉口，搭配帶連結騙取帳密、製造急迫或恐懼。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E16",
+        "test_index": 276,
+        "lure": "account_expiry",
+        "techniques": [
+          "credential_link",
+          "urgency",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"password has expired\"],\n  \"urgency_tactics\": \"password is set to expire in 2 day(s)\",\n  \"impersonation\": \"monkey.org\",\n  \"url_analysis\": \"https://monkey.org/keep-my-password https://monkey.org/support\",\n  \"credential_harvesting\": \"keep my password\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "password has expired"
+          ],
+          "urgency_tactics": "password is set to expire in 2 day(s)",
+          "impersonation": "monkey.org",
+          "url_analysis": "https://monkey.org/keep-my-password https://monkey.org/support",
+          "credential_harvesting": "keep my password",
+          "final": "phishing",
+          "risk_score": 90
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"account_expiry\",\n    \"evidence\": \"Your password has expired.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Keep My Password\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"monkey.org\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Your password has expired."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Keep My Password"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "monkey.org"
+            }
+          ]
+        },
+        "verified": {
+          "lure": null,
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "monkey.org",
+              "score": 1.0
+            }
+          ],
+          "summary": "誘餌無法確認，搭配假冒身分。",
+          "rejected": [
+            {
+              "kind": "lure",
+              "pick": {
+                "id": "account_expiry",
+                "evidence": "Your password has expired."
+              },
+              "reason": "evidence_not_found",
+              "score": 0.897
+            },
+            {
+              "kind": "technique",
+              "pick": {
+                "id": "credential_link",
+                "evidence": "Keep My Password"
+              },
+              "reason": "evidence_not_found",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E17",
+        "test_index": 151,
+        "lure": "reward_curiosity",
+        "techniques": [
+          "malicious_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"tax refund opportunity\", \"eligible for a significant tax refund\"],\r\n  \"urgency_tactics\": \"limited-time offer\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"https://refund-claim-link-1.com\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "tax refund opportunity",
+            "eligible for a significant tax refund"
+          ],
+          "urgency_tactics": "limited-time offer",
+          "impersonation": "",
+          "url_analysis": "https://refund-claim-link-1.com",
+          "credential_harvesting": "",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"I wanted to inform you about an urgent tax refund opportunity that you don't want to miss.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"To claim your refund, simply click on the following link: [https://refund-claim-link-1.com](https://refund-claim-link-1.com)\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"Don't miss out on this limited-time offer! Act fast, as this refund will only be available for a short period.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "I wanted to inform you about an urgent tax refund opportunity that you don't want to miss."
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To claim your refund, simply click on the following link: [https://refund-claim-link-1.com](https://refund-claim-link-1.com)"
+            },
+            {
+              "id": "urgency",
+              "evidence": "Don't miss out on this limited-time offer! Act fast, as this refund will only be available for a short period."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "I wanted to inform you about an urgent tax refund opportunity that you don't want to miss.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To claim your refund, simply click on the following link: [https://refund-claim-link-1.com](https://refund-claim-link-1.com)",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "Don't miss out on this limited-time offer! Act fast, as this refund will only be available for a short period.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結、製造急迫或恐懼。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E18",
+        "test_index": 323,
+        "lure": "reward_curiosity",
+        "techniques": [
+          "malicious_link"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"prize claim\", \"lottery draw\"],\n  \"urgency_tactics\": \"Claim your prize today!\",\n  \"impersonation\": \"Amanda Hill Lottery Coordinator\",\n  \"url_analysis\": \"https://prize-claim-link11.com\",\n  \"credential_harvesting\": \"None\",\n  \"final\": \"phishing\",\n  \"risk_score\": 75\n}",
+        "report": {
+          "phishing_indicators": [
+            "prize claim",
+            "lottery draw"
+          ],
+          "urgency_tactics": "Claim your prize today!",
+          "impersonation": "Amanda Hill Lottery Coordinator",
+          "url_analysis": "https://prize-claim-link11.com",
+          "credential_harvesting": "None",
+          "final": "phishing",
+          "risk_score": 75
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"Congratulations! To claim your prize and see what you've won\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"click [here](https://prize-claim-link11.com)\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Congratulations! To claim your prize and see what you've won"
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "click [here](https://prize-claim-link11.com)"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "Congratulations! To claim your prize and see what you've won",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "click [here](https://prize-claim-link11.com)",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E19",
+        "test_index": 335,
+        "lure": "mailbox_error",
+        "techniques": [
+          "malicious_link",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"account verification requests\"],\n  \"urgency_tactics\": \"E-mail Sync Failure\",\n  \"impersonation\": \"Email Admin\",\n  \"url_analysis\": \"https://webmail.monkey.org, https://webmail.monkey.org\",\n  \"credential_harvesting\": \"Download pending emails\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account verification requests"
+          ],
+          "urgency_tactics": "E-mail Sync Failure",
+          "impersonation": "Email Admin",
+          "url_analysis": "https://webmail.monkey.org, https://webmail.monkey.org",
+          "credential_harvesting": "Download pending emails",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"mailbox_error\",\n    \"evidence\": \"E-mail Sync for your E-mailbox as failed and you have [11] pending messages on the mail queue.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Preview Emails Now\"\n    },\n    {\n      \"id\": \"urgency\",\n      \"evidence\": \"E-mail Sync for your E-mailbox as failed and you have [11] pending messages on the mail queue.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "mailbox_error",
+            "evidence": "E-mail Sync for your E-mailbox as failed and you have [11] pending messages on the mail queue."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Preview Emails Now"
+            },
+            {
+              "id": "urgency",
+              "evidence": "E-mail Sync for your E-mailbox as failed and you have [11] pending messages on the mail queue."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "mailbox_error",
+            "evidence": "E-mail Sync for your E-mailbox as failed and you have [11] pending messages on the mail queue.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Preview Emails Now",
+              "score": 1.0
+            },
+            {
+              "id": "urgency",
+              "evidence": "E-mail Sync for your E-mailbox as failed and you have [11] pending messages on the mail queue.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「信箱錯誤」為藉口，搭配帶連結騙取帳密、製造急迫或恐懼。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E20",
+        "test_index": 202,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E21",
+        "test_index": 159,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\n    \"career opportunity\"\n  ],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"https://job-opportunity-christopher.com\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [
+            "career opportunity"
+          ],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "https://job-opportunity-christopher.com",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"I hope this email finds you in good spirits.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"To learn more about this opportunity and to apply, please click on the link below:\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "I hope this email finds you in good spirits."
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To learn more about this opportunity and to apply, please click on the link below:"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "I hope this email finds you in good spirits.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To learn more about this opportunity and to apply, please click on the link below:",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E22",
+        "test_index": 61,
+        "lure": "billing_problem",
+        "techniques": [
+          "credential_link"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"financial scams\"],\n  \"urgency_tactics\": \"urgent action required\",\n  \"impersonation\": \"impersonation of a trusted entity\",\n  \"url_analysis\": \"https://www.paypal.com, https://www.paypal.com\",\n  \"credential_harvesting\": \"request for personal information\",\n  \"final\": \"phishing\",\n  \"risk_score\": 90\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "financial scams"
+          ],
+          "urgency_tactics": "urgent action required",
+          "impersonation": "impersonation of a trusted entity",
+          "url_analysis": "https://www.paypal.com, https://www.paypal.com",
+          "credential_harvesting": "request for personal information",
+          "final": "phishing",
+          "risk_score": 90
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"billing_problem\",\n    \"evidence\": \"Please note that, your monthly payment has been failed.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Update your details\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Maria depay\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "billing_problem",
+            "evidence": "Please note that, your monthly payment has been failed."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Update your details"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Maria depay"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "billing_problem",
+            "evidence": "Please note that, your monthly payment has been failed.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Update your details",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Maria depay",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「帳單付款」為藉口，搭配帶連結騙取帳密、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E23",
+        "test_index": 179,
+        "lure": "invoice_overdue",
+        "techniques": [
+          "payment_request",
+          "malicious_link"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"suspicious links\", \"financial scams\"],\r\n  \"urgency_tactics\": \"prompt payment\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"https://payment-request-link6.com\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "financial scams"
+          ],
+          "urgency_tactics": "prompt payment",
+          "impersonation": "",
+          "url_analysis": "https://payment-request-link6.com",
+          "credential_harvesting": "",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"invoice_overdue\",\n    \"evidence\": \"This is a gentle reminder regarding the outstanding invoice that requires your attention.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"payment_request\",\n      \"evidence\": \"To settle the invoice, please click [here](https://payment-request-link6.com) and follow the instructions provided.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "invoice_overdue",
+            "evidence": "This is a gentle reminder regarding the outstanding invoice that requires your attention."
+          },
+          "techniques": [
+            {
+              "id": "payment_request",
+              "evidence": "To settle the invoice, please click [here](https://payment-request-link6.com) and follow the instructions provided."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "invoice_overdue",
+            "evidence": "This is a gentle reminder regarding the outstanding invoice that requires your attention.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "payment_request",
+              "evidence": "To settle the invoice, please click [here](https://payment-request-link6.com) and follow the instructions provided.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「發票催款」為藉口，搭配要求付款。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E24",
+        "test_index": 372,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E25",
+        "test_index": 291,
+        "lure": "account_expiry",
+        "techniques": [
+          "reply_with_info"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"password update request\"],\n  \"urgency_tactics\": \"update your account password\",\n  \"impersonation\": \"Security Team\",\n  \"url_analysis\": \"none\",\n  \"credential_harvesting\": \"reply to this email with your current account password and the new password you would like to set\",\n  \"final\": \"phishing\",\n  \"risk_score\": 70\n}",
+        "report": {
+          "phishing_indicators": [
+            "password update request"
+          ],
+          "urgency_tactics": "update your account password",
+          "impersonation": "Security Team",
+          "url_analysis": "none",
+          "credential_harvesting": "reply to this email with your current account password and the new password you would like to set",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"security_alert\",\n    \"evidence\": \"As part of our ongoing commitment to maintaining the security of our systems\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"reply_with_info\",\n      \"evidence\": \"Please reply to this email with your current account password and the new password you would like to set.\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Security Team\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "As part of our ongoing commitment to maintaining the security of our systems"
+          },
+          "techniques": [
+            {
+              "id": "reply_with_info",
+              "evidence": "Please reply to this email with your current account password and the new password you would like to set."
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Security Team"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "As part of our ongoing commitment to maintaining the security of our systems",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "reply_with_info",
+              "evidence": "Please reply to this email with your current account password and the new password you would like to set.",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Security Team",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「安全警告」為藉口，搭配要求回信提供資料、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E26",
+        "test_index": 0,
+        "lure": "reward_curiosity",
+        "techniques": [
+          "reply_with_info",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"inheritance claims\"],\r\n  \"urgency_tactics\": \"immediate response\",\r\n  \"impersonation\": \"no impersonation\",\r\n  \"url_analysis\": \"no suspicious URLs found\",\r\n  \"credential_harvesting\": \"no credential harvesting\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "inheritance claims"
+          ],
+          "urgency_tactics": "immediate response",
+          "impersonation": "no impersonation",
+          "url_analysis": "no suspicious URLs found",
+          "credential_harvesting": "no credential harvesting",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"you may be eligible for a significant inheritance\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"reply_with_info\",\n      \"evidence\": \"Please provide your full name, contact details, and a valid identification document\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "you may be eligible for a significant inheritance"
+          },
+          "techniques": [
+            {
+              "id": "reply_with_info",
+              "evidence": "Please provide your full name, contact details, and a valid identification document"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "you may be eligible for a significant inheritance",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "reply_with_info",
+              "evidence": "Please provide your full name, contact details, and a valid identification document",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配要求回信提供資料。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E27",
+        "test_index": 393,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\"],\n  \"urgency_tactics\": \"exclusive invitation\",\n  \"impersonation\": \"Jessica Bennett\",\n  \"url_analysis\": [\"https://waraid-webinar.com\"],\n  \"credential_harvesting\": \"none\",\n  \"final\": \"phishing\",\n  \"risk_score\": 70\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links"
+          ],
+          "urgency_tactics": "exclusive invitation",
+          "impersonation": "Jessica Bennett",
+          "url_analysis": [
+            "https://waraid-webinar.com"
+          ],
+          "credential_harvesting": "none",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"charity\",\n    \"evidence\": \"provide critical aid to war victims\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"War-Related Aid Organization\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "charity",
+            "evidence": "provide critical aid to war victims"
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "War-Related Aid Organization"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "charity",
+            "evidence": "provide critical aid to war victims",
+            "score": 0.932
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "War-Related Aid Organization",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「慈善捐款」為藉口，搭配假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E28",
+        "test_index": 316,
+        "lure": "security_alert",
+        "techniques": [
+          "credential_link",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"account verification requests\"],\n  \"urgency_tactics\": \"We could not complete your request to make a purchase with your card for your security.\",\n  \"impersonation\": \"American Express Customer Care\",\n  \"url_analysis\": \"https://www.monkey.org, https://www.monkey.org\",\n  \"credential_harvesting\": \"Use card credentials to confirm your account ownership.\",\n  \"final\": \"phishing\",\r\n  \"risk_score\": 80\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account verification requests"
+          ],
+          "urgency_tactics": "We could not complete your request to make a purchase with your card for your security.",
+          "impersonation": "American Express Customer Care",
+          "url_analysis": "https://www.monkey.org, https://www.monkey.org",
+          "credential_harvesting": "Use card credentials to confirm your account ownership.",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"security_alert\",\n    \"evidence\": \"Fraud Alert !\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"American Express®\"\n    },\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"To sign in please go to My Account page.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "Fraud Alert !"
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "American Express®"
+            },
+            {
+              "id": "credential_link",
+              "evidence": "To sign in please go to My Account page."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "Fraud Alert !",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "impersonation",
+              "evidence": "American Express®",
+              "score": 1.0
+            },
+            {
+              "id": "credential_link",
+              "evidence": "To sign in please go to My Account page.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「安全警告」為藉口，搭配假冒身分、帶連結騙取帳密。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E29",
+        "test_index": 209,
+        "lure": "reward_curiosity",
+        "techniques": [
+          "malicious_link"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"suspicious links\"],\r\n  \"urgency_tactics\": \"seize this extraordinary opportunity\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"https://adventure-awaits-link.com\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links"
+          ],
+          "urgency_tactics": "seize this extraordinary opportunity",
+          "impersonation": "",
+          "url_analysis": "https://adventure-awaits-link.com",
+          "credential_harvesting": "",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\nOkay, let's take a look at this email. The user is a cybersecurity SOC analyst, so I need to be precise about the phishing tactics used.\n\nFirst, the LURES section. The email mentions an \"once-in-a-lifetime deal\" and \"exclusive offer,\" which sounds like a reward or curiosity bait. The lure.id should be \"reward_curiosity.\" The evidence is the line \"I recently discovered a once-in-a-lifetime deal that I believe aligns perfectly with your daring spirit.\"\n\nNext, the TECHNIQUES. The email includes a link: \"To unlock the details of this exclusive offer, click on the following link: https://adventure-awaits-link.com.\" That's a malicious_link. The evidence here is the link itself. There's no mention of credentials, payment, or impersonation, so other techniques aren't applicable here.\n\nI need to make sure I'm not missing any other tactics. The email doesn't ask for personal information or use urgency, so those aren't present. No attachments or impersonation either. Just the reward lure and the malicious link.\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"I recently discovered a once-in-a-lifetime deal that I believe aligns perfectly with your daring spirit.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"To unlock the details of this exclusive offer, click on the following link: https://adventure-awaits-link.com\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "I recently discovered a once-in-a-lifetime deal that I believe aligns perfectly with your daring spirit."
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To unlock the details of this exclusive offer, click on the following link: https://adventure-awaits-link.com"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "I recently discovered a once-in-a-lifetime deal that I believe aligns perfectly with your daring spirit.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To unlock the details of this exclusive offer, click on the following link: https://adventure-awaits-link.com",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E30",
+        "test_index": 388,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 10
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E31",
+        "test_index": 265,
+        "lure": "reward_curiosity",
+        "techniques": [
+          "malicious_link"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"job offer\", \"exclusive position\", \"competitive compensation\", \"excellent benefits\"],\n  \"urgency_tactics\": \"Don't let this incredible opportunity slip through your fingers.\",\n  \"impersonation\": \"Jennifer Anderson Recruitment Specialist, Talent Connect\",\n  \"url_analysis\": \"https://joboffer-connect.com\",\n  \"credential_harvesting\": \"Please visit our official website to learn more about this enticing job offer.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "job offer",
+            "exclusive position",
+            "competitive compensation",
+            "excellent benefits"
+          ],
+          "urgency_tactics": "Don't let this incredible opportunity slip through your fingers.",
+          "impersonation": "Jennifer Anderson Recruitment Specialist, Talent Connect",
+          "url_analysis": "https://joboffer-connect.com",
+          "credential_harvesting": "Please visit our official website to learn more about this enticing job offer.",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"My name is Jennifer Anderson, and I represent Talent Connect, a leading recruitment agency.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"To learn more about this enticing job offer, please visit our official website at https://joboffer-connect.com.\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Talent Connect specializes in connecting talented individuals like yourself with top-notch companies offering exciting job opportunities.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "My name is Jennifer Anderson, and I represent Talent Connect, a leading recruitment agency."
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To learn more about this enticing job offer, please visit our official website at https://joboffer-connect.com."
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Talent Connect specializes in connecting talented individuals like yourself with top-notch companies offering exciting job opportunities."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "My name is Jennifer Anderson, and I represent Talent Connect, a leading recruitment agency.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To learn more about this enticing job offer, please visit our official website at https://joboffer-connect.com.",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Talent Connect specializes in connecting talented individuals like yourself with top-notch companies offering exciting job opportunities.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E32",
+        "test_index": 204,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 10
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E33",
+        "test_index": 52,
+        "lure": "account_expiry",
+        "techniques": [
+          "credential_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"account verification is pending\"],\r\n  \"urgency_tactics\": \"complete the verification process immediately\",\r\n  \"impersonation\": \"Head of Account Security\",\r\n  \"url_analysis\": \"https://account-verification-link7.com\",\r\n  \"credential_harvesting\": \"complete the verification process\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "account verification is pending"
+          ],
+          "urgency_tactics": "complete the verification process immediately",
+          "impersonation": "Head of Account Security",
+          "url_analysis": "https://account-verification-link7.com",
+          "credential_harvesting": "complete the verification process",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"security_alert\",\n    \"evidence\": \"It has come to our attention that your account verification is pending.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"To ensure the security and confidentiality of your account, I kindly request you to complete the verification process immediately by clicking on the following link:\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Head of Account Security [Company Name]\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "It has come to our attention that your account verification is pending."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "To ensure the security and confidentiality of your account, I kindly request you to complete the verification process immediately by clicking on the following link:"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Head of Account Security [Company Name]"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "It has come to our attention that your account verification is pending.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "To ensure the security and confidentiality of your account, I kindly request you to complete the verification process immediately by clicking on the following link:",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Head of Account Security [Company Name]",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「安全警告」為藉口，搭配帶連結騙取帳密、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E34",
+        "test_index": 299,
+        "lure": "security_alert",
+        "techniques": [
+          "credential_link",
+          "urgency",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious links\", \"account suspension\"],\n  \"urgency_tactics\": \"Login from a new device or location\",\n  \"impersonation\": \"Binance\",\n  \"url_analysis\": \"https://login.binance.com\",\n  \"credential_harvesting\": \"jose@monkey.org\",\n  \"final\": \"phishing\",\r\n  \"risk_score\": 90\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "account suspension"
+          ],
+          "urgency_tactics": "Login from a new device or location",
+          "impersonation": "Binance",
+          "url_analysis": "https://login.binance.com",
+          "credential_harvesting": "jose@monkey.org",
+          "final": "phishing",
+          "risk_score": 90
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"account_expiry\",\n    \"evidence\": \"We noticed your Binance account jose@monkey.org was accessed from a new IP address.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Kindly visit the button below to re-activate\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Binance.com\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "We noticed your Binance account jose@monkey.org was accessed from a new IP address."
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Kindly visit the button below to re-activate"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Binance.com"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "We noticed your Binance account jose@monkey.org was accessed from a new IP address.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Kindly visit the button below to re-activate",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Binance.com",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「帳號到期」為藉口，搭配帶連結騙取帳密、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E35",
+        "test_index": 226,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E36",
+        "test_index": 223,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 10
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E37",
+        "test_index": 5,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"http://www.sciencemag.org/content/vol319/issue5864/twil.dtl\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 10\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "http://www.sciencemag.org/content/vol319/issue5864/twil.dtl",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 10
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E38",
+        "test_index": 55,
+        "lure": "account_expiry",
+        "techniques": [
+          "credential_link",
+          "urgency",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"suspicious links\", \"impersonation\"],\r\n  \"urgency_tactics\": \"profile information immediately\",\r\n  \"impersonation\": \"Navy Federal Credit Union\",\r\n  \"url_analysis\": \"login\",\r\n  \"credential_harvesting\": \"update profile information\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 80\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links",
+            "impersonation"
+          ],
+          "urgency_tactics": "profile information immediately",
+          "impersonation": "Navy Federal Credit Union",
+          "url_analysis": "login",
+          "credential_harvesting": "update profile information",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"account_expiry\",\n    \"evidence\": \"Our record indicates thats your profile with us is outdated\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"LOGIN HERE to update profile information\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Navy Federal Credit Union\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Our record indicates thats your profile with us is outdated"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "LOGIN HERE to update profile information"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Navy Federal Credit Union"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Our record indicates thats your profile with us is outdated",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "LOGIN HERE to update profile information",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Navy Federal Credit Union",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「帳號到期」為藉口，搭配帶連結騙取帳密、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E39",
+        "test_index": 267,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E40",
+        "test_index": 192,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [],\n  \"urgency_tactics\": \"\",\n  \"impersonation\": \"\",\n  \"url_analysis\": \"http://blogs.sun.com/bblfish/entry/my_bloomin_friends,http://xmlns.com/foaf/spec/#term_mbox_sha1sum\",\n  \"credential_harvesting\": \"\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [],
+          "urgency_tactics": "",
+          "impersonation": "",
+          "url_analysis": "http://blogs.sun.com/bblfish/entry/my_bloomin_friends,http://xmlns.com/foaf/spec/#term_mbox_sha1sum",
+          "credential_harvesting": "",
+          "final": "legitimate",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E41",
+        "test_index": 87,
+        "lure": "reward_curiosity",
+        "techniques": [
+          "malicious_link"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"suspicious links\"],\r\n  \"urgency_tactics\": \"claim your prize today\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"https://prize-claim-link8.com\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links"
+          ],
+          "urgency_tactics": "claim your prize today",
+          "impersonation": "",
+          "url_analysis": "https://prize-claim-link8.com",
+          "credential_harvesting": "",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"We're thrilled to inform you that you're a winner in our recent prize giveaway!\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"To claim your prize and see what you've won, please click here.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "We're thrilled to inform you that you're a winner in our recent prize giveaway!"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "To claim your prize and see what you've won, please click here."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "We're thrilled to inform you that you're a winner in our recent prize giveaway!",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "To claim your prize and see what you've won, please click here.",
+              "score": 0.95
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配帶連結騙取帳密。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E42",
+        "test_index": 49,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"business opportunity\", \"collaboration\", \"potential partners\"],\n  \"urgency_tactics\": \"none\",\n  \"impersonation\": \"none\",\n  \"url_analysis\": \"none\",\n  \"credential_harvesting\": \"none\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [
+            "business opportunity",
+            "collaboration",
+            "potential partners"
+          ],
+          "urgency_tactics": "none",
+          "impersonation": "none",
+          "url_analysis": "none",
+          "credential_harvesting": "none",
+          "final": "phishing",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"We are looking for potential partners to collaborate on exciting new projects.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"reply_with_info\",\n      \"evidence\": \"If you're interested in exploring this opportunity further, please reply to this email or contact me directly at +14353873756.\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "We are looking for potential partners to collaborate on exciting new projects."
+          },
+          "techniques": [
+            {
+              "id": "reply_with_info",
+              "evidence": "If you're interested in exploring this opportunity further, please reply to this email or contact me directly at +14353873756."
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "We are looking for potential partners to collaborate on exciting new projects.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "reply_with_info",
+              "evidence": "If you're interested in exploring this opportunity further, please reply to this email or contact me directly at +14353873756.",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配要求回信提供資料。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E43",
+        "test_index": 182,
+        "lure": "account_expiry",
+        "techniques": [
+          "malicious_link",
+          "urgency",
+          "impersonation"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\r\n    \"suspicious links\"\r\n  ],\r\n  \"urgency_tactics\": \"exceeded its Stοrage Capacity οn   28,10,2019 , Click below to free up space and add more 25GB free quota to avoid email data loss\",\r\n  \"impersonation\": \"Admin_monkey.org \",\r\n  \"url_analysis\": \"https://www.monkey.org\",\r\n  \"credential_harvesting\": \"Upgrade your monkey.org Quota! Attention : jose Your jose@monkey.org Has exceeded its Stοrage Capacity οn   28,10,2019 , Click below to free up space and add more 25GB free quota to avoid email data loss Upgrade Now Admin_monkey.org \",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 90\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious links"
+          ],
+          "urgency_tactics": "exceeded its Stοrage Capacity οn   28,10,2019 , Click below to free up space and add more 25GB free quota to avoid email data loss",
+          "impersonation": "Admin_monkey.org ",
+          "url_analysis": "https://www.monkey.org",
+          "credential_harvesting": "Upgrade your monkey.org Quota! Attention : jose Your jose@monkey.org Has exceeded its Stοrage Capacity οn   28,10,2019 , Click below to free up space and add more 25GB free quota to avoid email data loss Upgrade Now Admin_monkey.org ",
+          "final": "phishing",
+          "risk_score": 90
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"account_expiry\",\n    \"evidence\": \"Upgrade your monkey.org Quota!\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"Click below to free up space and add more 25GB free quota\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"Admin_monkey.org\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Upgrade your monkey.org Quota!"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Click below to free up space and add more 25GB free quota"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Admin_monkey.org"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "account_expiry",
+            "evidence": "Upgrade your monkey.org Quota!",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "Click below to free up space and add more 25GB free quota",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "Admin_monkey.org",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「帳號到期」為藉口，搭配帶連結騙取帳密、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E44",
+        "test_index": 303,
+        "lure": "security_alert",
+        "techniques": [
+          "credential_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"suspicious activity\", \"compromised\", \"log into your account\", \"change your password\"],\n  \"urgency_tactics\": \"We urgently request that you log into your account at the earliest convenience and change your password to a secure one.\",\n  \"impersonation\": \"We have detected suspicious activity on your bank account and we believe that your account has been compromised.\",\n  \"url_analysis\": \"https://www.bank.com/login, https://www.bank.com/change-password\",\n  \"credential_harvesting\": \"Please follow the link below to log in and take necessary action.\",\n  \"final\": \"phishing\",\n  \"risk_score\": 80\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious activity",
+            "compromised",
+            "log into your account",
+            "change your password"
+          ],
+          "urgency_tactics": "We urgently request that you log into your account at the earliest convenience and change your password to a secure one.",
+          "impersonation": "We have detected suspicious activity on your bank account and we believe that your account has been compromised.",
+          "url_analysis": "https://www.bank.com/login, https://www.bank.com/change-password",
+          "credential_harvesting": "Please follow the link below to log in and take necessary action.",
+          "final": "phishing",
+          "risk_score": 80
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"security_alert\",\n    \"evidence\": \"We have detected suspicious activity on your bank account\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"follow the link below to log in and take necessary action\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "We have detected suspicious activity on your bank account"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "follow the link below to log in and take necessary action"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "We have detected suspicious activity on your bank account",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "follow the link below to log in and take necessary action",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「安全警告」為藉口，搭配帶連結騙取帳密。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E45",
+        "test_index": 295,
+        "lure": "security_alert",
+        "techniques": [
+          "credential_link"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"account security settings\", \"update your account security settings\"],\n  \"urgency_tactics\": \"To ensure the safety of your personal information, we recommend reviewing and updating your account security settings.\",\n  \"impersonation\": \"Account Security Specialist\",\n  \"url_analysis\": \"https://account-security-emily.com\",\n  \"credential_harvesting\": \"update your account security settings\",\n  \"final\": \"phishing\",\n  \"risk_score\": 75\n}",
+        "report": {
+          "phishing_indicators": [
+            "account security settings",
+            "update your account security settings"
+          ],
+          "urgency_tactics": "To ensure the safety of your personal information, we recommend reviewing and updating your account security settings.",
+          "impersonation": "Account Security Specialist",
+          "url_analysis": "https://account-security-emily.com",
+          "credential_harvesting": "update your account security settings",
+          "final": "phishing",
+          "risk_score": 75
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"none\",\n    \"evidence\": \"\"\n  },\n  \"techniques\": []\n}",
+        "report": {
+          "lure": {
+            "id": "none",
+            "evidence": ""
+          },
+          "techniques": []
+        },
+        "verified": {
+          "lure": {
+            "id": "none",
+            "evidence": "",
+            "score": null
+          },
+          "techniques": [],
+          "summary": "未發現可疑招數。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E46",
+        "test_index": 266,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"phishing_indicators\": [\"job opportunity\", \"apply\"],\n  \"urgency_tactics\": \"none\",\n  \"impersonation\": \"none\",\n  \"url_analysis\": \"https://job-opportunity-david.com\",\n  \"credential_harvesting\": \"none\",\n  \"final\": \"legitimate\",\n  \"risk_score\": 20\n}",
+        "report": {
+          "phishing_indicators": [
+            "job opportunity",
+            "apply"
+          ],
+          "urgency_tactics": "none",
+          "impersonation": "none",
+          "url_analysis": "https://job-opportunity-david.com",
+          "credential_harvesting": "none",
+          "final": "phishing",
+          "risk_score": 20
+        }
+      },
+      "new": {
+        "raw": "<think>\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"reward_curiosity\",\n    \"evidence\": \"I'm reaching out to you because I came across your impressive profile and wanted to share an exciting job opportunity with you.\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"malicious_link\",\n      \"evidence\": \"To learn more about this exciting opportunity and to apply, please click on the link below:\"\n    },\n    {\n      \"id\": \"impersonation\",\n      \"evidence\": \"David Brown Talent Acquisition Specialist XYZ Enterprises\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "I'm reaching out to you because I came across your impressive profile and wanted to share an exciting job opportunity with you."
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To learn more about this exciting opportunity and to apply, please click on the link below:"
+            },
+            {
+              "id": "impersonation",
+              "evidence": "David Brown Talent Acquisition Specialist XYZ Enterprises"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "reward_curiosity",
+            "evidence": "I'm reaching out to you because I came across your impressive profile and wanted to share an exciting job opportunity with you.",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "malicious_link",
+              "evidence": "To learn more about this exciting opportunity and to apply, please click on the link below:",
+              "score": 1.0
+            },
+            {
+              "id": "impersonation",
+              "evidence": "David Brown Talent Acquisition Specialist XYZ Enterprises",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「利誘／好奇」為藉口，搭配誘導點擊連結、假冒身分。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E47",
+        "test_index": 156,
+        "lure": "none",
+        "techniques": [],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"suspicious activity report\"],\r\n  \"urgency_tactics\": \"Please review the details of this report\",\r\n  \"impersonation\": \"Community Watch Coordinator\",\r\n  \"url_analysis\": \"suspicious-activity-report-link9.com\",\r\n  \"credential_harvesting\": \"none\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 70\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "suspicious activity report"
+          ],
+          "urgency_tactics": "Please review the details of this report",
+          "impersonation": "Community Watch Coordinator",
+          "url_analysis": "suspicious-activity-report-link9.com",
+          "credential_harvesting": "none",
+          "final": "phishing",
+          "risk_score": 70
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"security_alert\",\n    \"evidence\": \"potential law-breaking activity in our community\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"please review the details of this report by clicking [here](https://suspicious-activity-report-link9.com)\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "potential law-breaking activity in our community"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "please review the details of this report by clicking [here](https://suspicious-activity-report-link9.com)"
+            }
+          ]
+        },
+        "verified": {
+          "lure": {
+            "id": "security_alert",
+            "evidence": "potential law-breaking activity in our community",
+            "score": 1.0
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "please review the details of this report by clicking [here](https://suspicious-activity-report-link9.com)",
+              "score": 1.0
+            }
+          ],
+          "summary": "以「安全警告」為藉口，搭配帶連結騙取帳密。",
+          "rejected": []
+        }
+      }
+    },
+    {
+      "gold": {
+        "exam_id": "E48",
+        "test_index": 60,
+        "lure": "invoice_overdue",
+        "techniques": [
+          "payment_request",
+          "malicious_link",
+          "urgency"
+        ],
+        "exclude": false
+      },
+      "old": {
+        "raw": "<think>\n\n</think>\n\n{\r\n  \"phishing_indicators\": [\"unpaid invoice\", \"immediate attention\", \"prevent any disruptions to your account\"],\r\n  \"urgency_tactics\": \"immediate attention\",\r\n  \"impersonation\": \"\",\r\n  \"url_analysis\": \"https://invoice-payment-link3.com\",\r\n  \"credential_harvesting\": \"\",\r\n  \"final\": \"phishing\",\r\n  \"risk_score\": 75\r\n}",
+        "report": {
+          "phishing_indicators": [
+            "unpaid invoice",
+            "immediate attention",
+            "prevent any disruptions to your account"
+          ],
+          "urgency_tactics": "immediate attention",
+          "impersonation": "",
+          "url_analysis": "https://invoice-payment-link3.com",
+          "credential_harvesting": "",
+          "final": "phishing",
+          "risk_score": 75
+        }
+      },
+      "new": {
+        "raw": "<think>\n\n</think>\n\n{\n  \"lure\": {\n    \"id\": \"payment_request\",\n    \"evidence\": \"to proceed with the payment and prevent any disruptions to your account\"\n  },\n  \"techniques\": [\n    {\n      \"id\": \"credential_link\",\n      \"evidence\": \"click [here](https://invoice-payment-link3.com)\"\n    }\n  ]\n}",
+        "report": {
+          "lure": {
+            "id": "payment_request",
+            "evidence": "to proceed with the payment and prevent any disruptions to your account"
+          },
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "click [here](https://invoice-payment-link3.com)"
+            }
+          ]
+        },
+        "verified": {
+          "lure": null,
+          "techniques": [
+            {
+              "id": "credential_link",
+              "evidence": "click [here](https://invoice-payment-link3.com)",
+              "score": 1.0
+            }
+          ],
+          "summary": "誘餌無法確認，搭配帶連結騙取帳密。",
+          "rejected": [
+            {
+              "kind": "lure",
+              "pick": {
+                "id": "payment_request",
+                "evidence": "to proceed with the payment and prevent any disruptions to your account"
+              },
+              "reason": "unknown_id"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
