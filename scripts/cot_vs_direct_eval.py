@@ -24,8 +24,8 @@ from pathlib import Path
 import requests
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "demo"))
-from CoT_Module import build_cot_prompt, enforce_consistency
+sys.path.insert(0, str(Path(__file__).parent))
+from legacy_cot import build_cot_prompt, enforce_consistency
 
 OLLAMA_URL          = "http://localhost:11434/api/generate"
 MODEL_NAME          = "phishing-detector-14b"

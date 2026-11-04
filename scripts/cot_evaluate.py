@@ -23,8 +23,8 @@ from sklearn.metrics import (
     confusion_matrix, classification_report,
 )
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "demo"))
-from CoT_Module import build_cot_prompt
+sys.path.insert(0, str(Path(__file__).parent))
+from legacy_cot import build_cot_prompt
 
 # ── Config ────────────────────────────────────────────────────────────────────
 TEST_PATH    = "data/test/data.json"

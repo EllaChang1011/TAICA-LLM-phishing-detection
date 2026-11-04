@@ -25,6 +25,7 @@ from tactic_cards_eval import TEST_PATH, sample_emails  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "demo"))
 from CoT_Module import load_tactics  # noqa: E402
+from alert_rag import EMBEDDING_MODEL, QUERY_PREFIX, index_text  # noqa: E402,F401  (shared with the demo)
 
 ALERTS_PATH  = Path("knowledge_base/scam_alerts.json")
 OUT_DIR      = Path("eval_results/alert_rag")
@@ -132,10 +133,6 @@ def parse_answers() -> list[dict]:
     return answers
 
 
-EMBEDDING_MODEL = "BAAI/bge-large-en-v1.5"
-# bge-v1.5 query instruction for retrieval (passages are embedded without it)
-QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
-INDEX_TOKEN_BUDGET = 256     # rules.md section 3: title + leading paragraphs up to 256 tokens
 TOP_K = 3
 THRESHOLDS = [round(0.50 + 0.025 * i, 3) for i in range(13)]   # 0.50 .. 0.80
 QUERIES = {
@@ -144,17 +141,6 @@ QUERIES = {
     "C": "誘餌說明＋證據原句",
     "D": "正確誘餌說明（人工標註）",
 }
-
-
-def index_text(alert: dict, tokenizer) -> str:
-    """Title + leading paragraphs until the token budget; never cut mid-paragraph."""
-    text = alert["title"]
-    for para in [p for p in alert["text"].split("\n\n") if p.strip()]:
-        candidate = f"{text}\n\n{para}"
-        if text != alert["title"] and len(tokenizer(candidate)["input_ids"]) > INDEX_TOKEN_BUDGET:
-            break
-        text = candidate
-    return text
 
 
 def lure_query(lure_id: str | None, cards: dict) -> str | None:

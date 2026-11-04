@@ -24,9 +24,11 @@ from pathlib import Path
 
 import requests
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from legacy_cot import build_cot_prompt, enforce_consistency  # noqa: E402
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "demo"))
-from CoT_Module import (build_cot_prompt, build_tactic_prompt, enforce_consistency,  # noqa: E402
-                        extract_json, load_tactics, verify_tactic_report)
+from CoT_Module import build_tactic_prompt, extract_json, load_tactics, verify_tactic_report  # noqa: E402
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL_NAME = "phishing-detector-14b"
