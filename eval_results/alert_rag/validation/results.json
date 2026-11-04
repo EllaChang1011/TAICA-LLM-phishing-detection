@@ -1,0 +1,1936 @@
+{
+  "summary": {
+    "ran_at": "2026-11-05T02:32:08",
+    "threshold": 0.6,
+    "random": {
+      "any_hit": [
+        2,
+        8
+      ],
+      "specific_hit": [
+        2,
+        4
+      ],
+      "no_alert_ok": [
+        5,
+        6
+      ]
+    },
+    "targeted": {
+      "any_hit": [
+        7,
+        10
+      ],
+      "specific_hit": [
+        7,
+        10
+      ],
+      "no_alert_ok": [
+        0,
+        0
+      ]
+    },
+    "random_no_threshold": {
+      "any_hit": [
+        6,
+        8
+      ],
+      "specific_hit": [
+        4,
+        4
+      ],
+      "no_alert_ok": [
+        3,
+        6
+      ]
+    },
+    "targeted_no_threshold": {
+      "any_hit": [
+        9,
+        10
+      ],
+      "specific_hit": [
+        8,
+        10
+      ],
+      "no_alert_ok": [
+        0,
+        0
+      ]
+    }
+  },
+  "results": [
+    {
+      "gold": {
+        "rid": "V01",
+        "group": "random",
+        "val_index": 281,
+        "lure": "reward_curiosity",
+        "specific": [],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author"
+      },
+      "pred_lure": "reward_curiosity",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A01",
+            "score": 0.5704
+          },
+          {
+            "ref": "A12",
+            "score": 0.5689
+          },
+          {
+            "ref": "A13",
+            "score": 0.5581
+          },
+          {
+            "ref": "A11",
+            "score": 0.5526
+          },
+          {
+            "ref": "A14",
+            "score": 0.535
+          },
+          {
+            "ref": "A03",
+            "score": 0.5272
+          },
+          {
+            "ref": "A04",
+            "score": 0.523
+          },
+          {
+            "ref": "A15",
+            "score": 0.5138
+          },
+          {
+            "ref": "A19",
+            "score": 0.5128
+          },
+          {
+            "ref": "A09",
+            "score": 0.5022
+          },
+          {
+            "ref": "A08",
+            "score": 0.5022
+          },
+          {
+            "ref": "A05",
+            "score": 0.4993
+          },
+          {
+            "ref": "A20",
+            "score": 0.497
+          },
+          {
+            "ref": "A06",
+            "score": 0.496
+          },
+          {
+            "ref": "A07",
+            "score": 0.4918
+          },
+          {
+            "ref": "A17",
+            "score": 0.4916
+          },
+          {
+            "ref": "A16",
+            "score": 0.4909
+          },
+          {
+            "ref": "A22",
+            "score": 0.4851
+          },
+          {
+            "ref": "A18",
+            "score": 0.48
+          },
+          {
+            "ref": "A10",
+            "score": 0.4785
+          },
+          {
+            "ref": "A21",
+            "score": 0.4779
+          },
+          {
+            "ref": "A23",
+            "score": 0.4716
+          },
+          {
+            "ref": "A02",
+            "score": 0.4602
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "V02",
+        "group": "random",
+        "val_index": 85,
+        "lure": "none",
+        "specific": [],
+        "general": [],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "none",
+      "rankings": {
+        "final": null
+      }
+    },
+    {
+      "gold": {
+        "rid": "V03",
+        "group": "random",
+        "val_index": 319,
+        "lure": "charity",
+        "specific": [
+          "A19",
+          "A20"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "charity",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A19",
+            "score": 0.5567
+          },
+          {
+            "ref": "A20",
+            "score": 0.5345
+          },
+          {
+            "ref": "A01",
+            "score": 0.5335
+          },
+          {
+            "ref": "A11",
+            "score": 0.5014
+          },
+          {
+            "ref": "A15",
+            "score": 0.4809
+          },
+          {
+            "ref": "A14",
+            "score": 0.4776
+          },
+          {
+            "ref": "A17",
+            "score": 0.4775
+          },
+          {
+            "ref": "A04",
+            "score": 0.4764
+          },
+          {
+            "ref": "A08",
+            "score": 0.4712
+          },
+          {
+            "ref": "A12",
+            "score": 0.4656
+          },
+          {
+            "ref": "A16",
+            "score": 0.4649
+          },
+          {
+            "ref": "A03",
+            "score": 0.4638
+          },
+          {
+            "ref": "A13",
+            "score": 0.461
+          },
+          {
+            "ref": "A09",
+            "score": 0.4518
+          },
+          {
+            "ref": "A10",
+            "score": 0.4508
+          },
+          {
+            "ref": "A21",
+            "score": 0.4437
+          },
+          {
+            "ref": "A05",
+            "score": 0.4434
+          },
+          {
+            "ref": "A07",
+            "score": 0.4427
+          },
+          {
+            "ref": "A22",
+            "score": 0.4419
+          },
+          {
+            "ref": "A02",
+            "score": 0.4418
+          },
+          {
+            "ref": "A18",
+            "score": 0.4366
+          },
+          {
+            "ref": "A06",
+            "score": 0.4227
+          },
+          {
+            "ref": "A23",
+            "score": 0.4223
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "V04",
+        "group": "random",
+        "val_index": 226,
+        "lure": "security_alert",
+        "specific": [
+          "A02"
+        ],
+        "general": [
+          "A03",
+          "A11"
+        ],
+        "labeled_by": "claude+author"
+      },
+      "pred_lure": "account_expiry",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A11",
+            "score": 0.5855
+          },
+          {
+            "ref": "A02",
+            "score": 0.5773
+          },
+          {
+            "ref": "A05",
+            "score": 0.5697
+          },
+          {
+            "ref": "A09",
+            "score": 0.5662
+          },
+          {
+            "ref": "A04",
+            "score": 0.5608
+          },
+          {
+            "ref": "A08",
+            "score": 0.5593
+          },
+          {
+            "ref": "A01",
+            "score": 0.5453
+          },
+          {
+            "ref": "A03",
+            "score": 0.5339
+          },
+          {
+            "ref": "A14",
+            "score": 0.5218
+          },
+          {
+            "ref": "A07",
+            "score": 0.5153
+          },
+          {
+            "ref": "A17",
+            "score": 0.5142
+          },
+          {
+            "ref": "A15",
+            "score": 0.5139
+          },
+          {
+            "ref": "A19",
+            "score": 0.5115
+          },
+          {
+            "ref": "A18",
+            "score": 0.5097
+          },
+          {
+            "ref": "A06",
+            "score": 0.5003
+          },
+          {
+            "ref": "A21",
+            "score": 0.4927
+          },
+          {
+            "ref": "A10",
+            "score": 0.4916
+          },
+          {
+            "ref": "A22",
+            "score": 0.4879
+          },
+          {
+            "ref": "A23",
+            "score": 0.4764
+          },
+          {
+            "ref": "A16",
+            "score": 0.4757
+          },
+          {
+            "ref": "A20",
+            "score": 0.4618
+          },
+          {
+            "ref": "A13",
+            "score": 0.4551
+          },
+          {
+            "ref": "A12",
+            "score": 0.4438
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "V05",
+        "group": "random",
+        "val_index": 84,
+        "lure": "none",
+        "specific": [],
+        "general": [],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "none",
+      "rankings": {
+        "final": null
+      }
+    },
+    {
+      "gold": {
+        "rid": "V06",
+        "group": "random",
+        "val_index": 266,
+        "lure": "security_alert",
+        "specific": [],
+        "general": [
+          "A03",
+          "A11"
+        ],
+        "labeled_by": "claude+author"
+      },
+      "pred_lure": "none",
+      "rankings": {
+        "final": null
+      }
+    },
+    {
+      "gold": {
+        "rid": "V07",
+        "group": "random",
+        "val_index": 246,
+        "lure": "charity",
+        "specific": [
+          "A19",
+          "A20"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "reward_curiosity",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A19",
+            "score": 0.6106
+          },
+          {
+            "ref": "A20",
+            "score": 0.5966
+          },
+          {
+            "ref": "A04",
+            "score": 0.5726
+          },
+          {
+            "ref": "A11",
+            "score": 0.5363
+          },
+          {
+            "ref": "A15",
+            "score": 0.5214
+          },
+          {
+            "ref": "A01",
+            "score": 0.5128
+          },
+          {
+            "ref": "A14",
+            "score": 0.5109
+          },
+          {
+            "ref": "A08",
+            "score": 0.5102
+          },
+          {
+            "ref": "A02",
+            "score": 0.5052
+          },
+          {
+            "ref": "A09",
+            "score": 0.5044
+          },
+          {
+            "ref": "A23",
+            "score": 0.4954
+          },
+          {
+            "ref": "A03",
+            "score": 0.4953
+          },
+          {
+            "ref": "A16",
+            "score": 0.4948
+          },
+          {
+            "ref": "A06",
+            "score": 0.4891
+          },
+          {
+            "ref": "A17",
+            "score": 0.4755
+          },
+          {
+            "ref": "A21",
+            "score": 0.4745
+          },
+          {
+            "ref": "A22",
+            "score": 0.4724
+          },
+          {
+            "ref": "A10",
+            "score": 0.465
+          },
+          {
+            "ref": "A12",
+            "score": 0.4564
+          },
+          {
+            "ref": "A05",
+            "score": 0.4499
+          },
+          {
+            "ref": "A18",
+            "score": 0.4464
+          },
+          {
+            "ref": "A07",
+            "score": 0.4457
+          },
+          {
+            "ref": "A13",
+            "score": 0.444
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "V08",
+        "group": "random",
+        "val_index": 273,
+        "lure": "account_expiry",
+        "specific": [],
+        "general": [
+          "A03",
+          "A11"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "account_expiry",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A02",
+            "score": 0.5939
+          },
+          {
+            "ref": "A11",
+            "score": 0.5836
+          },
+          {
+            "ref": "A01",
+            "score": 0.581
+          },
+          {
+            "ref": "A04",
+            "score": 0.5731
+          },
+          {
+            "ref": "A09",
+            "score": 0.573
+          },
+          {
+            "ref": "A05",
+            "score": 0.5608
+          },
+          {
+            "ref": "A08",
+            "score": 0.547
+          },
+          {
+            "ref": "A15",
+            "score": 0.5467
+          },
+          {
+            "ref": "A14",
+            "score": 0.5437
+          },
+          {
+            "ref": "A03",
+            "score": 0.5254
+          },
+          {
+            "ref": "A06",
+            "score": 0.5206
+          },
+          {
+            "ref": "A17",
+            "score": 0.5122
+          },
+          {
+            "ref": "A10",
+            "score": 0.5094
+          },
+          {
+            "ref": "A22",
+            "score": 0.5073
+          },
+          {
+            "ref": "A19",
+            "score": 0.5068
+          },
+          {
+            "ref": "A21",
+            "score": 0.5038
+          },
+          {
+            "ref": "A16",
+            "score": 0.4685
+          },
+          {
+            "ref": "A23",
+            "score": 0.4678
+          },
+          {
+            "ref": "A20",
+            "score": 0.4569
+          },
+          {
+            "ref": "A18",
+            "score": 0.4567
+          },
+          {
+            "ref": "A07",
+            "score": 0.4565
+          },
+          {
+            "ref": "A13",
+            "score": 0.4468
+          },
+          {
+            "ref": "A12",
+            "score": 0.4422
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "V09",
+        "group": "random",
+        "val_index": 235,
+        "lure": "mailbox_error",
+        "specific": [],
+        "general": [
+          "A03",
+          "A11"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "mailbox_error",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A04",
+            "score": 0.6149
+          },
+          {
+            "ref": "A02",
+            "score": 0.6123
+          },
+          {
+            "ref": "A11",
+            "score": 0.5983
+          },
+          {
+            "ref": "A09",
+            "score": 0.5772
+          },
+          {
+            "ref": "A08",
+            "score": 0.5747
+          },
+          {
+            "ref": "A06",
+            "score": 0.5711
+          },
+          {
+            "ref": "A05",
+            "score": 0.5597
+          },
+          {
+            "ref": "A01",
+            "score": 0.5586
+          },
+          {
+            "ref": "A03",
+            "score": 0.555
+          },
+          {
+            "ref": "A15",
+            "score": 0.5489
+          },
+          {
+            "ref": "A19",
+            "score": 0.5352
+          },
+          {
+            "ref": "A14",
+            "score": 0.5336
+          },
+          {
+            "ref": "A10",
+            "score": 0.5238
+          },
+          {
+            "ref": "A22",
+            "score": 0.5177
+          },
+          {
+            "ref": "A21",
+            "score": 0.4993
+          },
+          {
+            "ref": "A16",
+            "score": 0.4974
+          },
+          {
+            "ref": "A20",
+            "score": 0.4972
+          },
+          {
+            "ref": "A17",
+            "score": 0.4969
+          },
+          {
+            "ref": "A23",
+            "score": 0.492
+          },
+          {
+            "ref": "A18",
+            "score": 0.491
+          },
+          {
+            "ref": "A07",
+            "score": 0.4882
+          },
+          {
+            "ref": "A13",
+            "score": 0.453
+          },
+          {
+            "ref": "A12",
+            "score": 0.4508
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "V10",
+        "group": "random",
+        "val_index": 233,
+        "lure": "reward_curiosity",
+        "specific": [
+          "A12",
+          "A13"
+        ],
+        "general": [
+          "A03",
+          "A11"
+        ],
+        "labeled_by": "claude+author"
+      },
+      "pred_lure": "reward_curiosity",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A13",
+            "score": 0.6669
+          },
+          {
+            "ref": "A01",
+            "score": 0.6623
+          },
+          {
+            "ref": "A11",
+            "score": 0.6309
+          },
+          {
+            "ref": "A12",
+            "score": 0.6264
+          },
+          {
+            "ref": "A14",
+            "score": 0.617
+          },
+          {
+            "ref": "A05",
+            "score": 0.5979
+          },
+          {
+            "ref": "A03",
+            "score": 0.5975
+          },
+          {
+            "ref": "A15",
+            "score": 0.5937
+          },
+          {
+            "ref": "A09",
+            "score": 0.5872
+          },
+          {
+            "ref": "A04",
+            "score": 0.5859
+          },
+          {
+            "ref": "A22",
+            "score": 0.5788
+          },
+          {
+            "ref": "A21",
+            "score": 0.5741
+          },
+          {
+            "ref": "A17",
+            "score": 0.5737
+          },
+          {
+            "ref": "A08",
+            "score": 0.5735
+          },
+          {
+            "ref": "A02",
+            "score": 0.5682
+          },
+          {
+            "ref": "A06",
+            "score": 0.568
+          },
+          {
+            "ref": "A07",
+            "score": 0.5521
+          },
+          {
+            "ref": "A16",
+            "score": 0.5491
+          },
+          {
+            "ref": "A18",
+            "score": 0.5372
+          },
+          {
+            "ref": "A19",
+            "score": 0.5347
+          },
+          {
+            "ref": "A10",
+            "score": 0.5334
+          },
+          {
+            "ref": "A20",
+            "score": 0.5223
+          },
+          {
+            "ref": "A23",
+            "score": 0.5041
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W01",
+        "group": "targeted",
+        "val_index": 223,
+        "lure": "parcel_fee",
+        "specific": [
+          "A06",
+          "A07",
+          "A08"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "parcel_fee",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A08",
+            "score": 0.6046
+          },
+          {
+            "ref": "A21",
+            "score": 0.571
+          },
+          {
+            "ref": "A22",
+            "score": 0.5607
+          },
+          {
+            "ref": "A06",
+            "score": 0.5606
+          },
+          {
+            "ref": "A12",
+            "score": 0.5337
+          },
+          {
+            "ref": "A10",
+            "score": 0.5274
+          },
+          {
+            "ref": "A02",
+            "score": 0.5208
+          },
+          {
+            "ref": "A11",
+            "score": 0.5182
+          },
+          {
+            "ref": "A23",
+            "score": 0.4928
+          },
+          {
+            "ref": "A19",
+            "score": 0.4892
+          },
+          {
+            "ref": "A15",
+            "score": 0.4852
+          },
+          {
+            "ref": "A17",
+            "score": 0.4835
+          },
+          {
+            "ref": "A03",
+            "score": 0.4788
+          },
+          {
+            "ref": "A09",
+            "score": 0.4786
+          },
+          {
+            "ref": "A07",
+            "score": 0.4784
+          },
+          {
+            "ref": "A14",
+            "score": 0.4739
+          },
+          {
+            "ref": "A04",
+            "score": 0.4737
+          },
+          {
+            "ref": "A05",
+            "score": 0.4655
+          },
+          {
+            "ref": "A20",
+            "score": 0.4646
+          },
+          {
+            "ref": "A13",
+            "score": 0.4576
+          },
+          {
+            "ref": "A01",
+            "score": 0.4506
+          },
+          {
+            "ref": "A16",
+            "score": 0.4342
+          },
+          {
+            "ref": "A18",
+            "score": 0.4223
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W02",
+        "group": "targeted",
+        "val_index": 138,
+        "lure": "parcel_fee",
+        "specific": [
+          "A06",
+          "A07",
+          "A08"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "parcel_fee",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A08",
+            "score": 0.6422
+          },
+          {
+            "ref": "A06",
+            "score": 0.6054
+          },
+          {
+            "ref": "A11",
+            "score": 0.5478
+          },
+          {
+            "ref": "A04",
+            "score": 0.5435
+          },
+          {
+            "ref": "A03",
+            "score": 0.5407
+          },
+          {
+            "ref": "A02",
+            "score": 0.5089
+          },
+          {
+            "ref": "A05",
+            "score": 0.4979
+          },
+          {
+            "ref": "A22",
+            "score": 0.4858
+          },
+          {
+            "ref": "A21",
+            "score": 0.4858
+          },
+          {
+            "ref": "A16",
+            "score": 0.4839
+          },
+          {
+            "ref": "A09",
+            "score": 0.4786
+          },
+          {
+            "ref": "A15",
+            "score": 0.4712
+          },
+          {
+            "ref": "A19",
+            "score": 0.4687
+          },
+          {
+            "ref": "A12",
+            "score": 0.4636
+          },
+          {
+            "ref": "A01",
+            "score": 0.4608
+          },
+          {
+            "ref": "A10",
+            "score": 0.4597
+          },
+          {
+            "ref": "A07",
+            "score": 0.4579
+          },
+          {
+            "ref": "A13",
+            "score": 0.4577
+          },
+          {
+            "ref": "A14",
+            "score": 0.4527
+          },
+          {
+            "ref": "A23",
+            "score": 0.4487
+          },
+          {
+            "ref": "A20",
+            "score": 0.4386
+          },
+          {
+            "ref": "A17",
+            "score": 0.4356
+          },
+          {
+            "ref": "A18",
+            "score": 0.4076
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W03",
+        "group": "targeted",
+        "val_index": 98,
+        "lure": "invoice_overdue",
+        "specific": [
+          "A09",
+          "A10"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "invoice_overdue",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A02",
+            "score": 0.6241
+          },
+          {
+            "ref": "A09",
+            "score": 0.6238
+          },
+          {
+            "ref": "A11",
+            "score": 0.6195
+          },
+          {
+            "ref": "A10",
+            "score": 0.6157
+          },
+          {
+            "ref": "A08",
+            "score": 0.6149
+          },
+          {
+            "ref": "A03",
+            "score": 0.6032
+          },
+          {
+            "ref": "A04",
+            "score": 0.5909
+          },
+          {
+            "ref": "A21",
+            "score": 0.5778
+          },
+          {
+            "ref": "A14",
+            "score": 0.5712
+          },
+          {
+            "ref": "A15",
+            "score": 0.5697
+          },
+          {
+            "ref": "A01",
+            "score": 0.5681
+          },
+          {
+            "ref": "A06",
+            "score": 0.567
+          },
+          {
+            "ref": "A22",
+            "score": 0.565
+          },
+          {
+            "ref": "A05",
+            "score": 0.5608
+          },
+          {
+            "ref": "A16",
+            "score": 0.5392
+          },
+          {
+            "ref": "A17",
+            "score": 0.5352
+          },
+          {
+            "ref": "A23",
+            "score": 0.5238
+          },
+          {
+            "ref": "A19",
+            "score": 0.514
+          },
+          {
+            "ref": "A12",
+            "score": 0.5114
+          },
+          {
+            "ref": "A20",
+            "score": 0.5081
+          },
+          {
+            "ref": "A07",
+            "score": 0.4973
+          },
+          {
+            "ref": "A13",
+            "score": 0.4675
+          },
+          {
+            "ref": "A18",
+            "score": 0.4627
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W04",
+        "group": "targeted",
+        "val_index": 58,
+        "lure": "reward_curiosity",
+        "specific": [
+          "A12",
+          "A13"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "reward_curiosity",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A13",
+            "score": 0.6709
+          },
+          {
+            "ref": "A12",
+            "score": 0.6537
+          },
+          {
+            "ref": "A18",
+            "score": 0.6076
+          },
+          {
+            "ref": "A19",
+            "score": 0.576
+          },
+          {
+            "ref": "A11",
+            "score": 0.572
+          },
+          {
+            "ref": "A14",
+            "score": 0.566
+          },
+          {
+            "ref": "A21",
+            "score": 0.558
+          },
+          {
+            "ref": "A20",
+            "score": 0.5466
+          },
+          {
+            "ref": "A22",
+            "score": 0.5453
+          },
+          {
+            "ref": "A02",
+            "score": 0.5449
+          },
+          {
+            "ref": "A01",
+            "score": 0.541
+          },
+          {
+            "ref": "A15",
+            "score": 0.5407
+          },
+          {
+            "ref": "A04",
+            "score": 0.5287
+          },
+          {
+            "ref": "A07",
+            "score": 0.5273
+          },
+          {
+            "ref": "A17",
+            "score": 0.5232
+          },
+          {
+            "ref": "A16",
+            "score": 0.5213
+          },
+          {
+            "ref": "A03",
+            "score": 0.5181
+          },
+          {
+            "ref": "A09",
+            "score": 0.5152
+          },
+          {
+            "ref": "A08",
+            "score": 0.512
+          },
+          {
+            "ref": "A10",
+            "score": 0.5087
+          },
+          {
+            "ref": "A05",
+            "score": 0.5081
+          },
+          {
+            "ref": "A06",
+            "score": 0.4812
+          },
+          {
+            "ref": "A23",
+            "score": 0.444
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W05",
+        "group": "targeted",
+        "val_index": 155,
+        "lure": "reward_curiosity",
+        "specific": [
+          "A14",
+          "A15"
+        ],
+        "general": [
+          "A03",
+          "A11"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": null,
+      "rankings": {
+        "final": null
+      }
+    },
+    {
+      "gold": {
+        "rid": "W06",
+        "group": "targeted",
+        "val_index": 74,
+        "lure": "reward_curiosity",
+        "specific": [
+          "A16",
+          "A17"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "reward_curiosity",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A17",
+            "score": 0.6615
+          },
+          {
+            "ref": "A16",
+            "score": 0.5972
+          },
+          {
+            "ref": "A11",
+            "score": 0.5672
+          },
+          {
+            "ref": "A04",
+            "score": 0.5641
+          },
+          {
+            "ref": "A08",
+            "score": 0.5408
+          },
+          {
+            "ref": "A03",
+            "score": 0.5358
+          },
+          {
+            "ref": "A01",
+            "score": 0.5331
+          },
+          {
+            "ref": "A15",
+            "score": 0.5284
+          },
+          {
+            "ref": "A10",
+            "score": 0.5276
+          },
+          {
+            "ref": "A06",
+            "score": 0.5182
+          },
+          {
+            "ref": "A02",
+            "score": 0.5181
+          },
+          {
+            "ref": "A14",
+            "score": 0.5173
+          },
+          {
+            "ref": "A09",
+            "score": 0.5158
+          },
+          {
+            "ref": "A23",
+            "score": 0.5148
+          },
+          {
+            "ref": "A19",
+            "score": 0.4839
+          },
+          {
+            "ref": "A18",
+            "score": 0.4811
+          },
+          {
+            "ref": "A07",
+            "score": 0.481
+          },
+          {
+            "ref": "A05",
+            "score": 0.48
+          },
+          {
+            "ref": "A22",
+            "score": 0.4768
+          },
+          {
+            "ref": "A21",
+            "score": 0.4546
+          },
+          {
+            "ref": "A20",
+            "score": 0.454
+          },
+          {
+            "ref": "A12",
+            "score": 0.4449
+          },
+          {
+            "ref": "A13",
+            "score": 0.4233
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W07",
+        "group": "targeted",
+        "val_index": 390,
+        "lure": "reward_curiosity",
+        "specific": [
+          "A18"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "reward_curiosity",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A18",
+            "score": 0.5852
+          },
+          {
+            "ref": "A11",
+            "score": 0.5836
+          },
+          {
+            "ref": "A16",
+            "score": 0.578
+          },
+          {
+            "ref": "A04",
+            "score": 0.5702
+          },
+          {
+            "ref": "A17",
+            "score": 0.5659
+          },
+          {
+            "ref": "A03",
+            "score": 0.5614
+          },
+          {
+            "ref": "A14",
+            "score": 0.5584
+          },
+          {
+            "ref": "A15",
+            "score": 0.5571
+          },
+          {
+            "ref": "A02",
+            "score": 0.5565
+          },
+          {
+            "ref": "A09",
+            "score": 0.5436
+          },
+          {
+            "ref": "A01",
+            "score": 0.5335
+          },
+          {
+            "ref": "A05",
+            "score": 0.5331
+          },
+          {
+            "ref": "A19",
+            "score": 0.5169
+          },
+          {
+            "ref": "A06",
+            "score": 0.5162
+          },
+          {
+            "ref": "A10",
+            "score": 0.511
+          },
+          {
+            "ref": "A20",
+            "score": 0.5098
+          },
+          {
+            "ref": "A07",
+            "score": 0.5095
+          },
+          {
+            "ref": "A08",
+            "score": 0.5006
+          },
+          {
+            "ref": "A23",
+            "score": 0.4791
+          },
+          {
+            "ref": "A21",
+            "score": 0.4723
+          },
+          {
+            "ref": "A13",
+            "score": 0.4719
+          },
+          {
+            "ref": "A22",
+            "score": 0.4643
+          },
+          {
+            "ref": "A12",
+            "score": 0.4596
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W08",
+        "group": "targeted",
+        "val_index": 18,
+        "lure": "charity",
+        "specific": [
+          "A19",
+          "A20"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "reward_curiosity",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A19",
+            "score": 0.6614
+          },
+          {
+            "ref": "A20",
+            "score": 0.6434
+          },
+          {
+            "ref": "A04",
+            "score": 0.5766
+          },
+          {
+            "ref": "A01",
+            "score": 0.5649
+          },
+          {
+            "ref": "A11",
+            "score": 0.5635
+          },
+          {
+            "ref": "A16",
+            "score": 0.5398
+          },
+          {
+            "ref": "A17",
+            "score": 0.5382
+          },
+          {
+            "ref": "A14",
+            "score": 0.5337
+          },
+          {
+            "ref": "A15",
+            "score": 0.5308
+          },
+          {
+            "ref": "A09",
+            "score": 0.5232
+          },
+          {
+            "ref": "A03",
+            "score": 0.5223
+          },
+          {
+            "ref": "A18",
+            "score": 0.5208
+          },
+          {
+            "ref": "A13",
+            "score": 0.5143
+          },
+          {
+            "ref": "A21",
+            "score": 0.5108
+          },
+          {
+            "ref": "A02",
+            "score": 0.5105
+          },
+          {
+            "ref": "A08",
+            "score": 0.5097
+          },
+          {
+            "ref": "A06",
+            "score": 0.5084
+          },
+          {
+            "ref": "A12",
+            "score": 0.5072
+          },
+          {
+            "ref": "A05",
+            "score": 0.4999
+          },
+          {
+            "ref": "A23",
+            "score": 0.4991
+          },
+          {
+            "ref": "A07",
+            "score": 0.497
+          },
+          {
+            "ref": "A10",
+            "score": 0.4924
+          },
+          {
+            "ref": "A22",
+            "score": 0.4882
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W09",
+        "group": "targeted",
+        "val_index": 32,
+        "lure": "legal_threat",
+        "specific": [
+          "A21",
+          "A22"
+        ],
+        "general": [
+          "A03"
+        ],
+        "labeled_by": "claude+author"
+      },
+      "pred_lure": "legal_threat",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A11",
+            "score": 0.6158
+          },
+          {
+            "ref": "A03",
+            "score": 0.5937
+          },
+          {
+            "ref": "A01",
+            "score": 0.5879
+          },
+          {
+            "ref": "A04",
+            "score": 0.5788
+          },
+          {
+            "ref": "A22",
+            "score": 0.5713
+          },
+          {
+            "ref": "A17",
+            "score": 0.5691
+          },
+          {
+            "ref": "A09",
+            "score": 0.5664
+          },
+          {
+            "ref": "A14",
+            "score": 0.5617
+          },
+          {
+            "ref": "A05",
+            "score": 0.5611
+          },
+          {
+            "ref": "A15",
+            "score": 0.558
+          },
+          {
+            "ref": "A06",
+            "score": 0.5532
+          },
+          {
+            "ref": "A02",
+            "score": 0.5513
+          },
+          {
+            "ref": "A23",
+            "score": 0.5489
+          },
+          {
+            "ref": "A19",
+            "score": 0.5384
+          },
+          {
+            "ref": "A16",
+            "score": 0.5383
+          },
+          {
+            "ref": "A20",
+            "score": 0.534
+          },
+          {
+            "ref": "A21",
+            "score": 0.5335
+          },
+          {
+            "ref": "A12",
+            "score": 0.5286
+          },
+          {
+            "ref": "A13",
+            "score": 0.5219
+          },
+          {
+            "ref": "A18",
+            "score": 0.5208
+          },
+          {
+            "ref": "A10",
+            "score": 0.5171
+          },
+          {
+            "ref": "A07",
+            "score": 0.5147
+          },
+          {
+            "ref": "A08",
+            "score": 0.509
+          }
+        ]
+      }
+    },
+    {
+      "gold": {
+        "rid": "W10",
+        "group": "targeted",
+        "val_index": 49,
+        "lure": "billing_problem",
+        "specific": [
+          "A05"
+        ],
+        "general": [
+          "A03",
+          "A11"
+        ],
+        "labeled_by": "claude+author(未逐封)"
+      },
+      "pred_lure": "billing_problem",
+      "rankings": {
+        "final": [
+          {
+            "ref": "A05",
+            "score": 0.6744
+          },
+          {
+            "ref": "A11",
+            "score": 0.6586
+          },
+          {
+            "ref": "A02",
+            "score": 0.5893
+          },
+          {
+            "ref": "A09",
+            "score": 0.5823
+          },
+          {
+            "ref": "A04",
+            "score": 0.5748
+          },
+          {
+            "ref": "A08",
+            "score": 0.5744
+          },
+          {
+            "ref": "A03",
+            "score": 0.5688
+          },
+          {
+            "ref": "A01",
+            "score": 0.5593
+          },
+          {
+            "ref": "A06",
+            "score": 0.5534
+          },
+          {
+            "ref": "A22",
+            "score": 0.5465
+          },
+          {
+            "ref": "A21",
+            "score": 0.546
+          },
+          {
+            "ref": "A10",
+            "score": 0.5277
+          },
+          {
+            "ref": "A14",
+            "score": 0.5024
+          },
+          {
+            "ref": "A17",
+            "score": 0.497
+          },
+          {
+            "ref": "A15",
+            "score": 0.4881
+          },
+          {
+            "ref": "A19",
+            "score": 0.4881
+          },
+          {
+            "ref": "A23",
+            "score": 0.4793
+          },
+          {
+            "ref": "A07",
+            "score": 0.4728
+          },
+          {
+            "ref": "A20",
+            "score": 0.4625
+          },
+          {
+            "ref": "A16",
+            "score": 0.4602
+          },
+          {
+            "ref": "A12",
+            "score": 0.4506
+          },
+          {
+            "ref": "A18",
+            "score": 0.4455
+          },
+          {
+            "ref": "A13",
+            "score": 0.4276
+          }
+        ]
+      }
+    }
+  ]
+}
