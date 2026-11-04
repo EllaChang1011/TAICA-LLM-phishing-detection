@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "notes": "Derived by manually reading 70 phishing emails from data/train (see docs/tactics_sample.md). Lures = the pretext the email uses. Techniques = how the attacker tries to get something from the reader; MITRE ATT&CK IDs are attached at this layer. Techniques with no ATT&CK equivalent have mitre = null. Keywords are filtered with scripts/tactic_keyword_stats.py: a phrase is kept only if >= 90% of training emails containing it are phishing (and it appears in >= 2 phishing emails), so common words like 'free' or 'invoice' do not nudge the model on legitimate emails.",
+  "lures": [
+    {
+      "id": "none",
+      "name": "沒有可疑招數",
+      "name_en": "No suspicious tactic",
+      "description": "The email makes no deceptive request: no pressure, no request for credentials, payment, or personal data, no suspicious link. Ordinary business, personal, or newsletter content.",
+      "keywords": []
+    },
+    {
+      "id": "account_expiry",
+      "name": "帳號到期",
+      "name_en": "Account expiry / suspension",
+      "description": "Claims the reader's account or password is about to expire, be suspended, or be terminated for an administrative reason (expiry, quota, upgrade, ownership confirmation), and asks them to confirm or validate. If the email mentions suspicious or unusual activity, choose security_alert instead. If the problem is about messages not being delivered, choose mailbox_error instead.",
+      "keywords": [
+        "password will expire",
+        "account will be suspended",
+        "will expire within",
+        "confirm ownership",
+        "validate your email",
+        "keep same password",
+        "upgrade your account",
+        "your account will be"
+      ]
+    },
+    {
+      "id": "security_alert",
+      "name": "安全警告",
+      "name_en": "Security alert",
+      "description": "Claims unusual sign-in, suspicious activity, or a security breach was detected, and asks the reader to verify or secure the account. Choose this whenever suspicious activity is mentioned, even if the email also threatens suspension.",
+      "keywords": [
+        "unusual activity",
+        "unusual sign-in",
+        "security breach",
+        "temporarily restricted",
+        "account has been limited"
+      ]
+    },
+    {
+      "id": "billing_problem",
+      "name": "帳單付款",
+      "name_en": "Billing / payment failure",
+      "description": "Claims a subscription or card payment for a consumer service failed or the membership is on hold, and asks the reader to update payment details. For a business invoice, choose invoice_overdue instead.",
+      "keywords": [
+        "trouble with your current billing information",
+        "update your payment details",
+        "account is on hold",
+        "update default card"
+      ]
+    },
+    {
+      "id": "parcel_fee",
+      "name": "包裹運費",
+      "name_en": "Parcel delivery fee",
+      "description": "Claims a parcel is held and a small shipping or customs fee must be paid or the package will be returned.",
+      "keywords": [
+        "parcel number",
+        "your package is stopped",
+        "shipping cost have not been paid",
+        "package will be returned",
+        "confirm the shipping fee",
+        "pay fees"
+      ]
+    },
+    {
+      "id": "file_share",
+      "name": "檔案分享",
+      "name_en": "Shared file / document",
+      "description": "Claims a file, document, contract, statement, or fax has been shared or attached and must be opened, viewed, or downloaded.",
+      "keywords": [
+        "you just received some files",
+        "has been shared with you",
+        "download files",
+        "view documents",
+        "will be deleted on"
+      ]
+    },
+    {
+      "id": "mailbox_error",
+      "name": "信箱錯誤",
+      "name_en": "Mailbox error / pending messages",
+      "description": "Claims incoming emails are queued, blocked, or failed to sync because of a server error, and asks the reader to log in or re-authenticate to release them. Choose this when the problem is about messages rather than the account itself.",
+      "keywords": [
+        "incoming messages are queued",
+        "pending messages",
+        "pending delivery",
+        "synchronization was unsuccessful",
+        "stopped processing incoming emails",
+        "recover messages",
+        "re-authenticated",
+        "release pending"
+      ]
+    },
+    {
+      "id": "invoice_overdue",
+      "name": "發票催款",
+      "name_en": "Overdue invoice",
+      "description": "Claims an invoice is overdue or unpaid and asks the reader to settle or confirm payment, often without naming the invoice or the vendor clearly.",
+      "keywords": [
+        "overdue payment"
+      ]
+    },
+    {
+      "id": "reward_curiosity",
+      "name": "利誘／好奇",
+      "name_en": "Reward or curiosity bait",
+      "description": "Offers something attractive (prize, tax refund, investment, discount, job, free content) or teases something interesting (secret trick, article, adventure) to get the reader to click or respond.",
+      "keywords": [
+        "you have won",
+        "lucky draw",
+        "financial opportunity",
+        "work-from-home",
+        "life-changing",
+        "financial freedom"
+      ]
+    },
+    {
+      "id": "charity",
+      "name": "慈善捐款",
+      "name_en": "Charity donation",
+      "description": "Asks for a donation to a charity, relief fund, or cause, often with emotional appeals and a donation link.",
+      "keywords": [
+        "relief fund",
+        "war relief",
+        "secure donation page"
+      ]
+    },
+    {
+      "id": "legal_threat",
+      "name": "法律恐嚇",
+      "name_en": "Legal / authority threat",
+      "description": "Claims the reader faces arrest, a lawsuit, a fine, or an official investigation, and must act to avoid it.",
+      "keywords": [
+        "warrant",
+        "legal action"
+      ]
+    }
+  ],
+  "techniques": [
+    {
+      "id": "credential_link",
+      "name": "帶連結騙取帳密",
+      "name_en": "Link to credential or data harvesting page",
+      "description": "Provides a link or button leading to a page that asks for a password, login, card number, or bank details (e.g. 'verify your account', 'log in', 'update your payment details'). Donation, registration, RSVP, and article links are NOT this; use malicious_link.",
+      "keywords": [
+        "click the link below to verify",
+        "login here",
+        "update my account",
+        "validate now"
+      ],
+      "mitre": {
+        "id": "T1598.003",
+        "name": "Phishing for Information: Spearphishing Link"
+      }
+    },
+    {
+      "id": "malicious_link",
+      "name": "誘導點擊連結",
+      "name_en": "Link to click (non-credential)",
+      "description": "Provides a link to click for a prize, offer, article, donation, event, or job, without asking for a password or card number on that page.",
+      "keywords": [
+        "click on the following link"
+      ],
+      "mitre": {
+        "id": "T1566.002",
+        "name": "Phishing: Spearphishing Link"
+      }
+    },
+    {
+      "id": "attachment",
+      "name": "附件",
+      "name_en": "Attachment",
+      "description": "Asks the reader to open or download an attached file.",
+      "keywords": [
+        "open the attachment"
+      ],
+      "mitre": {
+        "id": "T1566.001",
+        "name": "Phishing: Spearphishing Attachment"
+      }
+    },
+    {
+      "id": "reply_with_info",
+      "name": "要求回信提供資料",
+      "name_en": "Reply with personal information",
+      "description": "Asks the reader to reply directly with personal details (name, contact, bank information) instead of clicking a link.",
+      "keywords": [
+        "reply to this email with"
+      ],
+      "mitre": {
+        "id": "T1598",
+        "name": "Phishing for Information"
+      }
+    },
+    {
+      "id": "impersonation",
+      "name": "假冒身分",
+      "name_en": "Impersonation",
+      "description": "Pretends to be a specific well-known brand, bank, or government agency (PayPal, Netflix, IRS, a post office), or the reader's own IT department or mail administrator. A sender simply signing with their own name or job title is NOT impersonation. Quote the line that names the impersonated organization.",
+      "keywords": [
+        "PayPal",
+        "Netflix",
+        "post office"
+      ],
+      "mitre": {
+        "id": "T1656",
+        "name": "Impersonation"
+      }
+    },
+    {
+      "id": "urgency",
+      "name": "製造急迫或恐懼",
+      "name_en": "Urgency or fear",
+      "description": "Sets a short deadline or threatens a loss (suspension, deletion, returned parcel, arrest) to push the reader to act without thinking.",
+      "keywords": [
+        "within 24 hours",
+        "expires today",
+        "last reminder",
+        "failure to do so"
+      ],
+      "mitre": null
+    },
+    {
+      "id": "payment_request",
+      "name": "要求付款",
+      "name_en": "Payment request",
+      "description": "Asks the reader to pay a fee, invoice, or donation.",
+      "keywords": [
+        "pay fees"
+      ],
+      "mitre": null
+    }
+  ]
+}
