@@ -1,22 +1,11 @@
 import streamlit as st
-import requests
 import os
 
-from CoT_Module import (build_tactic_prompt, extract_json, find_homoglyph_words, load_tactics,
-                        verify_tactic_report)
+from CoT_Module import load_tactics
 from alert_rag import ALERTS_PATH, EMBEDDING_MODEL, THRESHOLD, AlertIndex
-
-OLLAMA_BASE_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-OLLAMA_URL = f"{OLLAMA_BASE_URL}/api/generate"
-MODEL_NAME = os.environ.get("MODEL_NAME", "phishing-detector-14b")
+from pipeline import ADVICE_MODEL, MAX_ANALYSIS_CHARS, MODEL_NAME, run_pipeline
 
 EMBED_DEVICE = os.environ.get("EMBED_DEVICE", "cuda")
-MAX_ANALYSIS_CHARS = 6000
-
-# Repetition penalties stay on for classification (unchanged), but are off for the
-# tactic analysis: they push the model to paraphrase, which breaks verbatim quotes.
-CLASSIFY_OPTIONS = {"temperature": 0.0, "num_predict": 16, "repeat_penalty": 1.5, "frequency_penalty": 0.5}
-TACTIC_OPTIONS = {"temperature": 0.0, "num_predict": 1024}
 
 
 @st.cache_resource
@@ -33,50 +22,6 @@ def load_alert_index():
 @st.cache_resource
 def load_tactic_cards():
     return load_tactics()
-
-
-def call_ollama(prompt, options):
-    try:
-        response = requests.post(
-            OLLAMA_URL,
-            json={"model": MODEL_NAME, "prompt": prompt, "stream": False, "options": options},
-            timeout=120
-        )
-        return response.json().get("response", "")
-    except requests.exceptions.ConnectionError:
-        return "ERROR: 無法連線到 Ollama，請確認是否正在執行。"
-    except Exception as e:
-        return f"ERROR: {str(e)}"
-
-
-def classify_email(email_text):
-    prompt = f"""/no_think
-Classify the following email as phishing or legitimate. Reply with a single word: phishing or legitimate.
-
-### Email:
-{email_text}
-
-### Classification:
-"""
-
-    result = call_ollama(prompt, CLASSIFY_OPTIONS)
-    result_lower = result.lower().strip()
-
-    if "phishing" in result_lower:
-        return "phishing"
-    elif "legitimate" in result_lower:
-        return "legitimate"
-    else:
-        return "phishing"  # safer default for security tasks
-
-
-def analyze_tactics(email_text, tactics):
-    """Explanation only — never changes the classification."""
-    raw = call_ollama(build_tactic_prompt(email_text, tactics), TACTIC_OPTIONS)
-    report = extract_json(raw)
-    if report is None:
-        return {"raw_output": raw, "parse_error": True}
-    return {**verify_tactic_report(report, email_text, tactics), "raw_output": raw}
 
 
 def render_tactics(analysis):
@@ -125,6 +70,34 @@ def render_alerts(alerts, skipped):
                 st.markdown(a["text"].split("\n\n")[0])
 
 
+def render_advice(advice, classification):
+    st.subheader("🧭 該怎麼辦")
+    st.caption("只根據上面顯示的 FTC 警示產生，每句都標出處。出處已自動檢查：每句都對得到警示原文；"
+               "但中文說法是否忠實沒有自動檢查，請以警示原文為準。")
+    if advice.get("parse_error"):
+        st.warning("模型輸出格式異常，無法產生建議。")
+        return
+    if classification == "legitimate":
+        st.info("分類模型判定為正常郵件；如果這封信不是你預期會收到的，可參考以下建議。")
+    match = advice["match"]
+    if match:
+        st.markdown(f"**相同手法**：{match['text']}　（出處：[{match['alert_title']}]({match['alert_url']})）")
+    if advice["advice"]:
+        st.markdown("\n".join(f"- {a['text']}　（出處：[{a['alert_title']}]({a['alert_url']})）"
+                               for a in advice["advice"]))
+    elif not match:
+        st.info("沒有通過出處檢查的建議。")
+    with st.expander("查看引用的原文"):
+        if match:
+            st.markdown(f"- 信中原句：「{match['email_quote']}」\n- 警示原句（{match['alert']}）：「{match['alert_quote']}」")
+        for a in advice["advice"]:
+            st.markdown(f"- {a['alert']}：「{a['quote']}」")
+        if advice["rejected"]:
+            st.caption(f"沒有通過出處檢查而被丟掉的句子：{len(advice['rejected'])} 句")
+            for x in advice["rejected"]:
+                st.markdown(f"  - `{x['reason']}`：{x['item']}")
+
+
 st.set_page_config(
     page_title="釣魚郵件偵測系統",
     page_icon="🛡️",
@@ -132,14 +105,15 @@ st.set_page_config(
 )
 
 st.title("🛡️ 釣魚郵件偵測系統")
-st.caption("Fine-tuned Qwen3-14B 分類 + 招數卡分析 + FTC 詐騙警示檢索")
+st.caption("Fine-tuned Qwen3-14B 分類 + 招數卡分析 + FTC 詐騙警示檢索與建議生成")
 
 alert_index = load_alert_index()
 tactics = load_tactic_cards()
 
 with st.sidebar:
     st.header("系統資訊")
-    st.markdown(f"**分類模型**: `{MODEL_NAME}`")
+    st.markdown(f"**分類 / 招數分析**: `{MODEL_NAME}`")
+    st.markdown(f"**建議生成**: `{ADVICE_MODEL}`")
     st.markdown(f"**招數卡**: 誘餌 {len(tactics['lures'])} 張、手法 {len(tactics['techniques'])} 張")
     st.divider()
     st.markdown("### 詐騙警示")
@@ -160,25 +134,10 @@ if email_input and len(email_input) > MAX_ANALYSIS_CHARS:
 analyze_btn = st.button("🔍 開始分析", type="primary")
 
 if analyze_btn and email_input.strip():
-    analysis_text = email_input[:MAX_ANALYSIS_CHARS]
-
-    # ── Step 1: 分類（只有這一步決定判定結果）─────────────────────────────────
-    with st.spinner("分類中..."):
-        classification = classify_email(email_input)
-
-    # ── Step 2: 招數分析（只負責解釋）──────────────────────────────────────────
-    with st.spinner("分析招數..."):
-        analysis = analyze_tactics(analysis_text, tactics)
-
-    # ── Step 3: 詐騙警示（只有招數分析明確判斷 none 才不查）────────────────────
-    lure_is_none = (not analysis.get("parse_error")) and analysis["lure"] is not None \
-        and analysis["lure"]["id"] == "none"
-    alerts = None
-    if not lure_is_none and alert_index is not None:
-        with st.spinner("搜尋詐騙警示..."):
-            alerts = alert_index.search(analysis_text)
-
-    homoglyphs = find_homoglyph_words(email_input)
+    with st.spinner("分析中（分類 → 招數分析 → 詐騙警示 → 建議）..."):
+        result = run_pipeline(email_input, tactics, alert_index)
+    classification, analysis, alerts = result["classification"], result["analysis"], result["alerts"]
+    homoglyphs = result["homoglyphs"]
 
     # ── 判定結果 ──────────────────────────────────────────────────────────────
     st.divider()
@@ -188,11 +147,9 @@ if analyze_btn and email_input.strip():
         st.success("✅ 判定結果：**正常郵件 (Legitimate)**")
     st.caption("判定只由微調的分類模型決定；下方的招數分析與詐騙警示只用來解釋，不會改變判定。")
 
-    has_tactic = (not analysis.get("parse_error")) and (
-        (analysis["lure"] is not None and analysis["lure"]["id"] != "none") or bool(analysis["techniques"]))
-    if classification == "phishing" and not analysis.get("parse_error") and not has_tactic:
+    if result["phishing_without_tactic"]:
         st.warning("⚠️ 判斷與分析不一致：分類模型判定為釣魚，但招數分析沒有找到可疑招數。建議人工確認。")
-    if classification == "legitimate" and (has_tactic or alerts):
+    if result["legit_with_tactic"]:
         st.warning("⚠️ 判斷與分析不一致：分類模型判定為正常郵件，但招數分析找到可疑招數或相關警示。建議人工確認。")
 
     if homoglyphs:
@@ -212,7 +169,10 @@ if analyze_btn and email_input.strip():
 
     # ── 詐騙警示 ──────────────────────────────────────────────────────────────
     st.divider()
-    render_alerts(alerts, skipped=lure_is_none)
+    render_alerts(alerts, skipped=result["lure_is_none"])
+    if result["advice"] is not None:
+        st.divider()
+        render_advice(result["advice"], classification)
 
     with st.expander("查看模型原始輸出"):
         st.code(analysis.get("raw_output", ""))
