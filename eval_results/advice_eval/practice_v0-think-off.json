@@ -1,0 +1,589 @@
+{
+  "meta": {
+    "tag": "v0-think-off",
+    "commit": "23b4c1a (demo/ has uncommitted changes)",
+    "model": "qwen3:14b",
+    "options": {
+      "temperature": 0.0,
+      "num_predict": 1500,
+      "num_ctx": 8192
+    }
+  },
+  "cases": [
+    {
+      "id": "P01",
+      "split": "test",
+      "index": 17,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Ms. Julia Scott, I trust this email finds you well. My name is Benjamin Garcia, and I'm reaching out on behalf of the Cultural Heritage Preservation Society. In conflict zones, cultural heritage sites and artifacts are often at risk of destruction, looting, and vandalism, depriving future generations of their rich history and cultural identity. Your support can help fund cultural heritage preservation initiatives that safeguard monuments, artifacts, and traditions threatened by war. With your donation, we can work to protect and preserve the cultural heritage of communities affected by conflict, ensuring that their stories and identities endure for generations to come. Please consider making a donation today to support our cultural heritage preservation efforts. You can donate securely online at [Link: https://cultural-heritage-preservation.org]. Thank you for your commitment to preserving cultural heritage and promoting understanding and appreciation across cultures. Best regards, Benjamin Garcia Cultural Heritage Preservation Society\"",
+      "classification": "legitimate",
+      "alerts": [
+        [
+          "A20",
+          0.608
+        ],
+        [
+          "A19",
+          0.605
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A20",
+          "email_quote": "Please consider making a donation today to support our cultural heritage preservation efforts.",
+          "alert_quote": "Donate to charities you know and trust with a proven track record with responding to a humanitarian crisis.",
+          "text": "這封電子郵件使用了與A20相同的詐騙手法，即利用當前的國際衝突事件，誘導讀者向一個聲稱致力於文化遺產保護的組織捐款，但未提供足夠的證據證明其可信度。",
+          "alert_title": "Safely donating in response to the Israel-Gaza crisis",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2023/10/safely-donating-response-israel-gaza-crisis"
+        },
+        "advice": [
+          {
+            "alert": "A20",
+            "quote": "Donate to charities you know and trust with a proven track record with responding to a humanitarian crisis.",
+            "text": "應選擇自己熟悉且有良好記錄的慈善機構進行捐款，以確保資金真正用於幫助有需要的人。",
+            "alert_title": "Safely donating in response to the Israel-Gaza crisis",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2023/10/safely-donating-response-israel-gaza-crisis"
+          },
+          {
+            "alert": "A20",
+            "quote": "Don’t donate to anyone who insists you pay by cash, gift card, wiring money, or cryptocurrency.",
+            "text": "如果有人堅持要求以現金、禮品卡、電匯或加密貨幣付款，應提高警覺，因為這通常是詐騙者的徵兆。",
+            "alert_title": "Safely donating in response to the Israel-Gaza crisis",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2023/10/safely-donating-response-israel-gaza-crisis"
+          }
+        ],
+        "rejected": [
+          {
+            "kind": "advice",
+            "item": {
+              "alert": "A19",
+              "quote": "Confirm the number before you text to donate. Go straight to the charity to confirm the number.",
+              "text": "在進行捐款前，應直接聯繫慈善機構確認聯絡方式，以避免被偽裝的詐騙者利用。"
+            },
+            "reason": "quote_not_in_alert",
+            "score": 0.574
+          }
+        ],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A20\",\n    \"email_quote\": \"Please consider making a donation today to support our cultural heritage preservation efforts.\",\n    \"alert_quote\": \"Donate to charities you know and trust with a proven track record with responding to a humanitarian crisis.\",\n    \"text\": \"這封電子郵件使用了與A20相同的詐騙手法，即利用當前的國際衝突事件，誘導讀者向一個聲稱致力於文化遺產保護的組織捐款，但未提供足夠的證據證明其可信度。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A20\",\n      \"quote\": \"Donate to charities you know and trust with a proven track record with responding to a humanitarian crisis.\",\n      \"text\": \"應選擇自己熟悉且有良好記錄的慈善機構進行捐款，以確保資金真正用於幫助有需要的人。\"\n    },\n    {\n      \"alert\": \"A20\",\n      \"quote\": \"Don’t donate to anyone who insists you pay by cash, gift card, wiring money, or cryptocurrency.\",\n      \"text\": \"如果有人堅持要求以現金、禮品卡、電匯或加密貨幣付款，應提高警覺，因為這通常是詐騙者的徵兆。\"\n    },\n    {\n      \"alert\": \"A19\",\n      \"quote\": \"Confirm the number before you text to donate. Go straight to the charity to confirm the number.\",\n      \"text\": \"在進行捐款前，應直接聯繫慈善機構確認聯絡方式，以避免被偽裝的詐騙者利用。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 6.9
+    },
+    {
+      "id": "P02",
+      "split": "test",
+      "index": 48,
+      "label": "phishing",
+      "source": "human",
+      "email": "=?UTF-8?B?TmV0ZmxpeCBBbGVydDpQbGVhc2UgQ29uZmlybSBZb3VyIFtOZXRmbGl4XSBQcm9maWxlLg==?=\n\nDear Customer  Netflix Account Closure! -  09/05/2020   Your profile has been listed for deactivation due to incomplete account update.  To continue using your account Click the button below to validate your details with us       Validate Your Netflix \t     and avoid your profile from being disabled    Thank you,  Customer Support     ©2020 Netflix Security  Services Team.   Dear Customer   Dear Customer Netflix Account Closure! -  09/05/2020 Your profile has been listed for deactivation due to incomplete account update. To continue using your account Click the button below to validate your details  with us Validate Your Netflix and avoid your profile from being disabled Thank you, Customer Support  ©2020 Netflix Security  Services Team.",
+      "classification": "legitimate",
+      "alerts": [
+        [
+          "A05",
+          0.671
+        ],
+        [
+          "A11",
+          0.621
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A05",
+          "email_quote": "Your profile has been listed for deactivation due to incomplete account update.",
+          "alert_quote": "The email claims the user’s account is on hold because Netflix is “having some trouble with your current billing information” and invites the user to click on a link to update their payment method.",
+          "text": "這封郵件使用與A05相同的詐騙手法，聲稱帳戶因未完成更新而將被停用，並引導點擊連結。",
+          "alert_title": "Netflix phishing scam: Don’t take the bait",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2018/12/netflix-phishing-scam-dont-take-bait"
+        },
+        "advice": [
+          {
+            "alert": "A05",
+            "quote": "Check it out. If you have concerns about the email, contact the company directly. But look up their phone number or website yourself.",
+            "text": "應直接聯繫公司，但需自行查找正確的電話號碼或網站，以避免接觸詐騙者。",
+            "alert_title": "Netflix phishing scam: Don’t take the bait",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2018/12/netflix-phishing-scam-dont-take-bait"
+          },
+          {
+            "alert": "A11",
+            "quote": "Don’t click on any links in unexpected emails or texts.",
+            "text": "不應點擊任何來自可疑郵件或簡訊的連結。",
+            "alert_title": "Don’t take the bait on phishing scams",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2024/09/dont-take-bait-phishing-scams"
+          }
+        ],
+        "rejected": [
+          {
+            "kind": "advice",
+            "item": {
+              "alert": "A05",
+              "quote": "Report phishing emails. Forward them to spam@uce.gov ... and to reportphishing@apwg.org.",
+              "text": "應將詐騙郵件轉寄至spam@uce.gov和reportphishing@apwg.org。"
+            },
+            "reason": "quote_not_in_alert",
+            "score": 0.766
+          }
+        ],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A05\",\n    \"email_quote\": \"Your profile has been listed for deactivation due to incomplete account update.\",\n    \"alert_quote\": \"The email claims the user’s account is on hold because Netflix is “having some trouble with your current billing information” and invites the user to click on a link to update their payment method.\",\n    \"text\": \"這封郵件使用與A05相同的詐騙手法，聲稱帳戶因未完成更新而將被停用，並引導點擊連結。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A05\",\n      \"quote\": \"Check it out. If you have concerns about the email, contact the company directly. But look up their phone number or website yourself.\",\n      \"text\": \"應直接聯繫公司，但需自行查找正確的電話號碼或網站，以避免接觸詐騙者。\"\n    },\n    {\n      \"alert\": \"A11\",\n      \"quote\": \"Don’t click on any links in unexpected emails or texts.\",\n      \"text\": \"不應點擊任何來自可疑郵件或簡訊的連結。\"\n    },\n    {\n      \"alert\": \"A05\",\n      \"quote\": \"Report phishing emails. Forward them to spam@uce.gov ... and to reportphishing@apwg.org.\",\n      \"text\": \"應將詐騙郵件轉寄至spam@uce.gov和reportphishing@apwg.org。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 4.4
+    },
+    {
+      "id": "P03",
+      "split": "test",
+      "index": 60,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Emily, I hope this email finds you well. We're reaching out to remind you about an unpaid invoice that requires your immediate attention. To proceed with the payment and prevent any disruptions to your account, please click [here](https://invoice-payment-link3.com). Many of our clients, including Rachel Clark and Matthew Clark, have already fulfilled their payment obligations, ensuring smooth business operations. Your timely payment is crucial in maintaining our business relationship and ensuring continued access to our services. If you have any questions or need assistance, please don't hesitate to contact our accounts team. Thank you for your prompt action on this matter. Best regards, David Thompson Accounts Receivable\"",
+      "classification": "legitimate",
+      "alerts": [
+        [
+          "A10",
+          0.651
+        ],
+        [
+          "A11",
+          0.628
+        ],
+        [
+          "A02",
+          0.622
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A10",
+          "email_quote": "We're reaching out to remind you about an unpaid invoice that requires your immediate attention.",
+          "alert_quote": "Scammers know this too and send fake invoices to businesses for products or services they never ordered in the hopes they’ll pay up.",
+          "text": "這封電子郵件使用與A10相同的詐騙手法，即偽造發票以誘使收件人付款。",
+          "alert_title": "Run a small business? Pay your bills, not scammers",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+        },
+        "advice": [
+          {
+            "alert": "A10",
+            "quote": "Ask your staff to check all invoices closely. Make sure your company’s procedures are clear for approving purchases and invoices from vendors you actually work with.",
+            "text": "應仔細檢查所有發票，並確保公司對批准與實際合作供應商的發票有明確的程序。",
+            "alert_title": "Run a small business? Pay your bills, not scammers",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+          },
+          {
+            "alert": "A10",
+            "quote": "Forward phishing emails to the Anti-Phishing Working Group at reportphishing@apwg.org. And report phishing attempts, fake invoices, and other scams to the FTC at ReportFraud.ftc.gov.",
+            "text": "應將釣魚郵件轉寄至reportphishing@apwg.org，並向FTC報告釣魚行為、偽造發票及其他詐騙行為。",
+            "alert_title": "Run a small business? Pay your bills, not scammers",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+          },
+          {
+            "alert": "A11",
+            "quote": "Don’t click on any links in unexpected emails or texts.",
+            "text": "不要點擊任何來自意外郵件或簡訊中的連結。",
+            "alert_title": "Don’t take the bait on phishing scams",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2024/09/dont-take-bait-phishing-scams"
+          }
+        ],
+        "rejected": [],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A10\",\n    \"email_quote\": \"We're reaching out to remind you about an unpaid invoice that requires your immediate attention.\",\n    \"alert_quote\": \"Scammers know this too and send fake invoices to businesses for products or services they never ordered in the hopes they’ll pay up.\",\n    \"text\": \"這封電子郵件使用與A10相同的詐騙手法，即偽造發票以誘使收件人付款。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A10\",\n      \"quote\": \"Ask your staff to check all invoices closely. Make sure your company’s procedures are clear for approving purchases and invoices from vendors you actually work with.\",\n      \"text\": \"應仔細檢查所有發票，並確保公司對批准與實際合作供應商的發票有明確的程序。\"\n    },\n    {\n      \"alert\": \"A10\",\n      \"quote\": \"Forward phishing emails to the Anti-Phishing Working Group at reportphishing@apwg.org. And report phishing attempts, fake invoices, and other scams to the FTC at ReportFraud.ftc.gov.\",\n      \"text\": \"應將釣魚郵件轉寄至reportphishing@apwg.org，並向FTC報告釣魚行為、偽造發票及其他詐騙行為。\"\n    },\n    {\n      \"alert\": \"A11\",\n      \"quote\": \"Don’t click on any links in unexpected emails or texts.\",\n      \"text\": \"不要點擊任何來自意外郵件或簡訊中的連結。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 4.6
+    },
+    {
+      "id": "P04",
+      "split": "test",
+      "index": 62,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear David, We hope this email finds you in good health. We are writing to inform you that there is an outstanding payment for invoice #54321. To avoid any disruptions, please make the payment by clicking on the following link: https://invoice-payment-link.com If you have any questions or concerns, please do not hesitate to contact us. Best regards, Jessica Collins",
+      "classification": "phishing",
+      "alerts": [
+        [
+          "A09",
+          0.635
+        ],
+        [
+          "A10",
+          0.631
+        ],
+        [
+          "A02",
+          0.623
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A10",
+          "email_quote": "We are writing to inform you that there is an outstanding payment for invoice #54321.",
+          "alert_quote": "Scammers know this too and send fake invoices to businesses for products or services they never ordered in the hopes they’ll pay up.",
+          "text": "這封電子郵件使用了與A10相同的詐騙手法，即偽造發票以誘使收件人付款。",
+          "alert_title": "Run a small business? Pay your bills, not scammers",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+        },
+        "advice": [
+          {
+            "alert": "A10",
+            "quote": "Ask your staff to check all invoices closely. Make sure your company’s procedures are clear for approving purchases and invoices from vendors you actually work with.",
+            "text": "應仔細檢查所有發票，並確保公司對批准採購和來自實際合作供應商的發票有明確的程序。",
+            "alert_title": "Run a small business? Pay your bills, not scammers",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+          },
+          {
+            "alert": "A10",
+            "quote": "Forward phishing emails to the Anti-Phishing Working Group at reportphishing@apwg.org. And report phishing attempts, fake invoices, and other scams to the FTC at ReportFraud.ftc.gov.",
+            "text": "應將釣魚郵件轉發至反釣魚工作組，並向FTC報告釣魚行為、偽造發票和其他詐騙行為。",
+            "alert_title": "Run a small business? Pay your bills, not scammers",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+          },
+          {
+            "alert": "A09",
+            "quote": "Be suspicious if a business, government agency, or organization asks you to click on a link that then asks for your username or password or other personal data. Instead, type in the web address for the organization or call them.",
+            "text": "如果某機構要求你點擊連結以輸入帳號密碼或其他個人資料，應懷疑是詐騙，並直接輸入該機構的網址或撥打官方電話。",
+            "alert_title": "Phishers send fake invoices",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2018/02/phishers-send-fake-invoices"
+          }
+        ],
+        "rejected": [],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A10\",\n    \"email_quote\": \"We are writing to inform you that there is an outstanding payment for invoice #54321.\",\n    \"alert_quote\": \"Scammers know this too and send fake invoices to businesses for products or services they never ordered in the hopes they’ll pay up.\",\n    \"text\": \"這封電子郵件使用了與A10相同的詐騙手法，即偽造發票以誘使收件人付款。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A10\",\n      \"quote\": \"Ask your staff to check all invoices closely. Make sure your company’s procedures are clear for approving purchases and invoices from vendors you actually work with.\",\n      \"text\": \"應仔細檢查所有發票，並確保公司對批准採購和來自實際合作供應商的發票有明確的程序。\"\n    },\n    {\n      \"alert\": \"A10\",\n      \"quote\": \"Forward phishing emails to the Anti-Phishing Working Group at reportphishing@apwg.org. And report phishing attempts, fake invoices, and other scams to the FTC at ReportFraud.ftc.gov.\",\n      \"text\": \"應將釣魚郵件轉發至反釣魚工作組，並向FTC報告釣魚行為、偽造發票和其他詐騙行為。\"\n    },\n    {\n      \"alert\": \"A09\",\n      \"quote\": \"Be suspicious if a business, government agency, or organization asks you to click on a link that then asks for your username or password or other personal data. Instead, type in the web address for the organization or call them.\",\n      \"text\": \"如果某機構要求你點擊連結以輸入帳號密碼或其他個人資料，應懷疑是詐騙，並直接輸入該機構的網址或撥打官方電話。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 5.4
+    },
+    {
+      "id": "P05",
+      "split": "test",
+      "index": 78,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Hey Michael, I've been following your online presence for quite some time now, and I must say, I'm impressed with your skills. I recently discovered an exclusive community of elite hackers, and I believe you have what it takes to join us. To access our private platform and connect with fellow hackers, click on the link below: https://elite-hackers-club.com. This is a unique opportunity to learn from the best in the industry and take your hacking skills to the next level. Remember, this invitation is highly exclusive, so keep it confidential. We only want the best of the best. If you have any questions or need assistance, feel free to reach out to me at sarah.thompson@elitehackers.com. Looking forward to welcoming you to the club! Best regards, Sarah Thompson Elite Hackers Club",
+      "classification": "phishing",
+      "alerts": [
+        [
+          "A01",
+          0.622
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A01",
+          "email_quote": "To access our private platform and connect with fellow hackers, click on the link below: https://elite-hackers-club.com.",
+          "alert_quote": "These fake invitations ask for your email login credentials or a special pass code to open them, but don’t do it.",
+          "text": "此電子郵件使用與A01相同的詐騙手法，偽裝成邀請函誘導點擊連結，實際上是 phishing 釣魚詐騙。",
+          "alert_title": "Asked to enter your email address and password to open a party invite? That’s a scam",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+        },
+        "advice": [
+          {
+            "alert": "A01",
+            "quote": "If you get an unexpected invitation like this, resist the urge to click. Instead, check with the host to make sure it’s real.",
+            "text": "收到類似此電子郵件的意外邀請時，應避免點擊連結，並直接與主辦人確認是否為真實邀請。",
+            "alert_title": "Asked to enter your email address and password to open a party invite? That’s a scam",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+          },
+          {
+            "alert": "A01",
+            "quote": "Keep security software updated. Set your computer software to update automatically so it will deal with any new security threats. Update your phone's software regularly, too.",
+            "text": "應保持電腦和手機的安全軟體更新，以自動處理任何新的安全威脅。",
+            "alert_title": "Asked to enter your email address and password to open a party invite? That’s a scam",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+          },
+          {
+            "alert": "A01",
+            "quote": "Use two-factor authentication. Taking extra steps to verify who you are makes it harder for scammers to log into your accounts if they get your username and password.",
+            "text": "應啟用雙因素驗證，以增加帳號安全性，防止詐騙者在取得帳號資訊後登入。",
+            "alert_title": "Asked to enter your email address and password to open a party invite? That’s a scam",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+          }
+        ],
+        "rejected": [],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A01\",\n    \"email_quote\": \"To access our private platform and connect with fellow hackers, click on the link below: https://elite-hackers-club.com.\",\n    \"alert_quote\": \"These fake invitations ask for your email login credentials or a special pass code to open them, but don’t do it.\",\n    \"text\": \"此電子郵件使用與A01相同的詐騙手法，偽裝成邀請函誘導點擊連結，實際上是 phishing 釣魚詐騙。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A01\",\n      \"quote\": \"If you get an unexpected invitation like this, resist the urge to click. Instead, check with the host to make sure it’s real.\",\n      \"text\": \"收到類似此電子郵件的意外邀請時，應避免點擊連結，並直接與主辦人確認是否為真實邀請。\"\n    },\n    {\n      \"alert\": \"A01\",\n      \"quote\": \"Keep security software updated. Set your computer software to update automatically so it will deal with any new security threats. Update your phone's software regularly, too.\",\n      \"text\": \"應保持電腦和手機的安全軟體更新，以自動處理任何新的安全威脅。\"\n    },\n    {\n      \"alert\": \"A01\",\n      \"quote\": \"Use two-factor authentication. Taking extra steps to verify who you are makes it harder for scammers to log into your accounts if they get your username and password.\",\n      \"text\": \"應啟用雙因素驗證，以增加帳號安全性，防止詐騙者在取得帳號資訊後登入。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 4.7
+    },
+    {
+      "id": "P06",
+      "split": "test",
+      "index": 137,
+      "label": "phishing",
+      "source": "human",
+      "email": "Upgrade Your Mail Box\n\nYour jose@monkey.org Account version is outdated,Follow the link below and accept our new terms and conditionsfor new improvements on your account. Failure to Upgrade to the newest monkey.org Clicks website now will resultto a permanent account closure        Upgrade Now Thanks,monkey.org",
+      "classification": "phishing",
+      "alerts": [
+        [
+          "A04",
+          0.605
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A04",
+          "email_quote": "Failure to Upgrade to the newest monkey.org Clicks website now will resultto a permanent account closure",
+          "alert_quote": "Scammers often create phishing emails designed to trick you into clicking a link. Their goal? Steal your personal information or install malware on your device.",
+          "text": "這封郵件使用了與A04相同的詐騙手法，透過威脅帳號關閉來誘導點擊連結。",
+          "alert_title": "Are you really out of Cloud storage or is that message a scam?",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2025/07/are-you-really-out-cloud-storage-or-message-scam"
+        },
+        "advice": [
+          {
+            "alert": "A04",
+            "quote": "If you don’t even have cloud storage with the company emailing you, that’s the best clue that the message as a phishing scam you can report and delete.",
+            "text": "如果讀者從未使用過郵件中提到的雲端存儲服務，這是一個明顯的詐騙跡象，應立即刪除並報告。",
+            "alert_title": "Are you really out of Cloud storage or is that message a scam?",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2025/07/are-you-really-out-cloud-storage-or-message-scam"
+          },
+          {
+            "alert": "A04",
+            "quote": "But if the message comes from a company you do use for cloud storage, contact them directly. But don’t click the link in the message. Instead, use a number or website you know to be real — or log into your cloud account to see if you really need more cloud space.",
+            "text": "如果讀者確實使用該公司的雲端存儲服務，應直接聯繫該公司，不要點擊郵件中的連結，而是透過已知的官方網站或帳號登入確認是否需要升級。",
+            "alert_title": "Are you really out of Cloud storage or is that message a scam?",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2025/07/are-you-really-out-cloud-storage-or-message-scam"
+          },
+          {
+            "alert": "A04",
+            "quote": "If you suspect a phishing scam: Forward the email to the Anti-Phishing Working Group at reportphishing@apwg.org.",
+            "text": "如果懷疑是詐騙郵件，應將郵件轉寄至反詐騙工作組的 reportphishing@apwg.org。",
+            "alert_title": "Are you really out of Cloud storage or is that message a scam?",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2025/07/are-you-really-out-cloud-storage-or-message-scam"
+          }
+        ],
+        "rejected": [],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A04\",\n    \"email_quote\": \"Failure to Upgrade to the newest monkey.org Clicks website now will resultto a permanent account closure\",\n    \"alert_quote\": \"Scammers often create phishing emails designed to trick you into clicking a link. Their goal? Steal your personal information or install malware on your device.\",\n    \"text\": \"這封郵件使用了與A04相同的詐騙手法，透過威脅帳號關閉來誘導點擊連結。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A04\",\n      \"quote\": \"If you don’t even have cloud storage with the company emailing you, that’s the best clue that the message as a phishing scam you can report and delete.\",\n      \"text\": \"如果讀者從未使用過郵件中提到的雲端存儲服務，這是一個明顯的詐騙跡象，應立即刪除並報告。\"\n    },\n    {\n      \"alert\": \"A04\",\n      \"quote\": \"But if the message comes from a company you do use for cloud storage, contact them directly. But don’t click the link in the message. Instead, use a number or website you know to be real — or log into your cloud account to see if you really need more cloud space.\",\n      \"text\": \"如果讀者確實使用該公司的雲端存儲服務，應直接聯繫該公司，不要點擊郵件中的連結，而是透過已知的官方網站或帳號登入確認是否需要升級。\"\n    },\n    {\n      \"alert\": \"A04\",\n      \"quote\": \"If you suspect a phishing scam: Forward the email to the Anti-Phishing Working Group at reportphishing@apwg.org.\",\n      \"text\": \"如果懷疑是詐騙郵件，應將郵件轉寄至反詐騙工作組的 reportphishing@apwg.org。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 5.3
+    },
+    {
+      "id": "P07",
+      "split": "test",
+      "index": 151,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear Jessica, I hope this email finds you well. I wanted to inform you about an urgent tax refund opportunity that you don't want to miss. Our records indicate that you are eligible for a significant tax refund. To claim your refund, simply click on the following link: [https://refund-claim-link-1.com](https://refund-claim-link-1.com) Don't miss out on this limited-time offer! Act fast, as this refund will only be available for a short period. Remember, the earlier you claim, the sooner you'll receive your refund. Warm regards, David Thompson",
+      "classification": "phishing",
+      "alerts": [
+        [
+          "A14",
+          0.744
+        ],
+        [
+          "A15",
+          0.715
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A14",
+          "email_quote": "To claim your refund, simply click on the following link: [https://refund-claim-link-1.com](https://refund-claim-link-1.com)",
+          "alert_quote": "To verify your identity and send you money, they ask you to click a link to enter details like your Social Security and bank account numbers — but it’s a phishing scam.",
+          "text": "這封電子郵件使用了與A14相同的詐騙手法，透過要求點擊連結來竊取個人資料。",
+          "alert_title": "That text or email about your “tax refund” is a scam",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/01/text-or-email-about-your-tax-refund-scam"
+        },
+        "advice": [
+          {
+            "alert": "A14",
+            "quote": "Know that the real IRS and state tax offices won’t reach out by text, email, or on social media to get your information. Only scammers will.",
+            "text": "知道真正的國稅局和州稅務機構不會透過簡訊、電子郵件或社交媒體來索取您的資訊，只有詐騙者才會這樣做。",
+            "alert_title": "That text or email about your “tax refund” is a scam",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/01/text-or-email-about-your-tax-refund-scam"
+          },
+          {
+            "alert": "A14",
+            "quote": "Don’t respond or click any links. To check the status of a pending tax refund, never use the link from the message. Instead, visit USA.gov to learn how to find out if you’re really getting a federal or state tax refund.",
+            "text": "不要回應或點擊任何連結。要查詢待處理的稅款退還狀態，永遠不要使用訊息中的連結，而是前往USA.gov了解是否真的獲得聯邦或州稅款退還。",
+            "alert_title": "That text or email about your “tax refund” is a scam",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/01/text-or-email-about-your-tax-refund-scam"
+          },
+          {
+            "alert": "A15",
+            "quote": "Never click on any links, which can put malware on your computer or phone, letting scammers steal from you.",
+            "text": "永遠不要點擊任何連結，這可能會在您的電腦或手機上安裝惡意軟體，讓詐騙者竊取您的資訊。",
+            "alert_title": "The IRS doesn't send tax refunds by email or text",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2024/01/irs-doesnt-send-tax-refunds-email-or-text"
+          }
+        ],
+        "rejected": [],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A14\",\n    \"email_quote\": \"To claim your refund, simply click on the following link: [https://refund-claim-link-1.com](https://refund-claim-link-1.com)\",\n    \"alert_quote\": \"To verify your identity and send you money, they ask you to click a link to enter details like your Social Security and bank account numbers — but it’s a phishing scam.\",\n    \"text\": \"這封電子郵件使用了與A14相同的詐騙手法，透過要求點擊連結來竊取個人資料。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A14\",\n      \"quote\": \"Know that the real IRS and state tax offices won’t reach out by text, email, or on social media to get your information. Only scammers will.\",\n      \"text\": \"知道真正的國稅局和州稅務機構不會透過簡訊、電子郵件或社交媒體來索取您的資訊，只有詐騙者才會這樣做。\"\n    },\n    {\n      \"alert\": \"A14\",\n      \"quote\": \"Don’t respond or click any links. To check the status of a pending tax refund, never use the link from the message. Instead, visit USA.gov to learn how to find out if you’re really getting a federal or state tax refund.\",\n      \"text\": \"不要回應或點擊任何連結。要查詢待處理的稅款退還狀態，永遠不要使用訊息中的連結，而是前往USA.gov了解是否真的獲得聯邦或州稅款退還。\"\n    },\n    {\n      \"alert\": \"A15\",\n      \"quote\": \"Never click on any links, which can put malware on your computer or phone, letting scammers steal from you.\",\n      \"text\": \"永遠不要點擊任何連結，這可能會在您的電腦或手機上安裝惡意軟體，讓詐騙者竊取您的資訊。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 5.8
+    },
+    {
+      "id": "P08",
+      "split": "test",
+      "index": 167,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear John, Congratulations! You have been selected as the lucky winner of our Ultimate Vacation Getaway! Your jaw-dropping prize includes an all-expenses-paid trip to a luxurious resort in the Caribbean. To claim your prize, simply click on the following link and provide us with your contact details: Claim Your Prize Now: https://ultimate-vacation-claim.com Act quickly, as this exclusive offer expires in 48 hours. Don't miss out on this once-in-a-lifetime opportunity! Best regards, Emily Johnson",
+      "classification": "phishing",
+      "alerts": [
+        [
+          "A13",
+          0.617
+        ],
+        [
+          "A12",
+          0.613
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A12",
+          "email_quote": "To claim your prize, simply click on the following link and provide us with your contact details: Claim Your Prize Now: https://ultimate-vacation-claim.com",
+          "alert_quote": "You get a call or a text saying you’ve won thousands (or even millions) of dollars, a car, a fancy watch — or maybe all three! You don’t remember entering a contest, but free stuff sounds good.",
+          "text": "這封電子郵件使用了與A12相同的詐騙手法，即聲稱中獎並要求點擊連結提供個人資料。",
+          "alert_title": "Don’t pay for a prize (scam)",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2025/06/dont-pay-prize-scam"
+        },
+        "advice": [
+          {
+            "alert": "A12",
+            "quote": "Real prizes are free. If there’s a charge, it’s a scam.",
+            "text": "真正的獎品是免費的。如果有收費，那就是詐騙。",
+            "alert_title": "Don’t pay for a prize (scam)",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2025/06/dont-pay-prize-scam"
+          },
+          {
+            "alert": "A12",
+            "quote": "Scammers tell you to act NOW. They’ll say it’s a limited offer and try to rush you.",
+            "text": "詐騙者會告訴你現在就要行動，他們會說這是有限的優惠並試圖催促你。",
+            "alert_title": "Don’t pay for a prize (scam)",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2025/06/dont-pay-prize-scam"
+          },
+          {
+            "alert": "A13",
+            "quote": "Don’t pay to get a prize. Real prizes are free. Anyone who asks you to pay a fee for 'taxes,' 'shipping and handling charges,' or 'processing fees' to get your prize, is a scammer.",
+            "text": "不要支付費用來獲得獎品。真正的獎品是免費的。任何要求你支付稅費、運費或處理費來獲得獎品的人都是詐騙者。",
+            "alert_title": "Are you really the lucky winner? Spot the prize scams",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2023/04/are-you-really-lucky-winner-spot-prize-scams"
+          }
+        ],
+        "rejected": [],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A12\",\n    \"email_quote\": \"To claim your prize, simply click on the following link and provide us with your contact details: Claim Your Prize Now: https://ultimate-vacation-claim.com\",\n    \"alert_quote\": \"You get a call or a text saying you’ve won thousands (or even millions) of dollars, a car, a fancy watch — or maybe all three! You don’t remember entering a contest, but free stuff sounds good.\",\n    \"text\": \"這封電子郵件使用了與A12相同的詐騙手法，即聲稱中獎並要求點擊連結提供個人資料。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A12\",\n      \"quote\": \"Real prizes are free. If there’s a charge, it’s a scam.\",\n      \"text\": \"真正的獎品是免費的。如果有收費，那就是詐騙。\"\n    },\n    {\n      \"alert\": \"A12\",\n      \"quote\": \"Scammers tell you to act NOW. They’ll say it’s a limited offer and try to rush you.\",\n      \"text\": \"詐騙者會告訴你現在就要行動，他們會說這是有限的優惠並試圖催促你。\"\n    },\n    {\n      \"alert\": \"A13\",\n      \"quote\": \"Don’t pay to get a prize. Real prizes are free. Anyone who asks you to pay a fee for 'taxes,' 'shipping and handling charges,' or 'processing fees' to get your prize, is a scammer.\",\n      \"text\": \"不要支付費用來獲得獎品。真正的獎品是免費的。任何要求你支付稅費、運費或處理費來獲得獎品的人都是詐騙者。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 5.3
+    },
+    {
+      "id": "P09",
+      "split": "test",
+      "index": 329,
+      "label": "legitimate",
+      "source": "llm",
+      "email": "\"Dear Sarah, I hope this email finds you well. This is Lauren Thompson, reaching out with an urgent message regarding our upcoming charity event, [Charity Event Name]. Tickets are selling fast, and we're quickly approaching full capacity. Don't miss this opportunity to be part of an evening dedicated to making a positive impact in our community. Secure your spot now by clicking here: [https://urgentreservationcharityevent.com/sarahjohnson] Your support is invaluable, Sarah. Thank you for considering this invitation. Warm regards, Lauren Thompson\"",
+      "classification": "legitimate",
+      "alerts": [
+        [
+          "A01",
+          0.614
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A01",
+          "email_quote": "Secure your spot now by clicking here: [https://urgentreservationcharityevent.com/sarahjohnson]",
+          "alert_quote": "These fake invitations ask for your email login credentials or a special pass code to open them, but don’t do it.",
+          "text": "這封電郵使用了與A01相同的詐騙手法，透過偽裝成活動邀請來誘導用戶點擊連結。",
+          "alert_title": "Asked to enter your email address and password to open a party invite? That’s a scam",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+        },
+        "advice": [
+          {
+            "alert": "A01",
+            "quote": "If you get an unexpected invitation like this, resist the urge to click. Instead, check with the host to make sure it’s real.",
+            "text": "如果收到這樣的意外邀請，應避免點擊連結，並直接與主辦人確認邀請是否真實。",
+            "alert_title": "Asked to enter your email address and password to open a party invite? That’s a scam",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+          },
+          {
+            "alert": "A01",
+            "quote": "Keep security software updated. Set your computer software to update automatically so it will deal with any new security threats. Update your phone's software regularly, too.",
+            "text": "應保持安全軟體更新，並設定電腦和手機軟體自動更新，以應對新出現的安全威脅。",
+            "alert_title": "Asked to enter your email address and password to open a party invite? That’s a scam",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+          },
+          {
+            "alert": "A01",
+            "quote": "Use two-factor authentication. Taking extra steps to verify who you are makes it harder for scammers to log into your accounts if they get your username and password.",
+            "text": "應啟用雙因素驗證，這樣即使詐騙者取得您的帳號和密碼，也較難登入您的帳戶。",
+            "alert_title": "Asked to enter your email address and password to open a party invite? That’s a scam",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+          }
+        ],
+        "rejected": [],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A01\",\n    \"email_quote\": \"Secure your spot now by clicking here: [https://urgentreservationcharityevent.com/sarahjohnson]\",\n    \"alert_quote\": \"These fake invitations ask for your email login credentials or a special pass code to open them, but don’t do it.\",\n    \"text\": \"這封電郵使用了與A01相同的詐騙手法，透過偽裝成活動邀請來誘導用戶點擊連結。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A01\",\n      \"quote\": \"If you get an unexpected invitation like this, resist the urge to click. Instead, check with the host to make sure it’s real.\",\n      \"text\": \"如果收到這樣的意外邀請，應避免點擊連結，並直接與主辦人確認邀請是否真實。\"\n    },\n    {\n      \"alert\": \"A01\",\n      \"quote\": \"Keep security software updated. Set your computer software to update automatically so it will deal with any new security threats. Update your phone's software regularly, too.\",\n      \"text\": \"應保持安全軟體更新，並設定電腦和手機軟體自動更新，以應對新出現的安全威脅。\"\n    },\n    {\n      \"alert\": \"A01\",\n      \"quote\": \"Use two-factor authentication. Taking extra steps to verify who you are makes it harder for scammers to log into your accounts if they get your username and password.\",\n      \"text\": \"應啟用雙因素驗證，這樣即使詐騙者取得您的帳號和密碼，也較難登入您的帳戶。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 4.5
+    },
+    {
+      "id": "P10",
+      "split": "test",
+      "index": 398,
+      "label": "phishing",
+      "source": "llm",
+      "email": "Dear Alex, We regret to inform you that there has been suspicious activity detected on your account. In order to protect your account from unauthorized access, we kindly request you to verify your account information immediately. To proceed with the verification process, please click on the following link: https://www.paypal.com/signin. Failure to verify your account within the next 24 hours will result in temporary suspension or permanent closure of your account. We highly recommend that you act promptly to avoid any inconvenience. Please note that this email is automated and replies to this address will not be monitored. If you require any assistance, please visit our official website or contact our customer support team directly. Thank you for your cooperation. Sincerely, Frank , PayPal",
+      "classification": "phishing",
+      "alerts": [
+        [
+          "A02",
+          0.737
+        ],
+        [
+          "A11",
+          0.704
+        ],
+        [
+          "A09",
+          0.647
+        ]
+      ],
+      "advice": {
+        "match": {
+          "alert": "A11",
+          "email_quote": "We regret to inform you that there has been suspicious activity detected on your account. In order to protect your account from unauthorized access, we kindly request you to verify your account information immediately.",
+          "alert_quote": "Have you ever gotten a text or email warning you that something is wrong with an account online? Maybe it says your streaming account is about to be suspended unless you respond quickly. It might even have a link that will supposedly fix your account’s problems.",
+          "text": "這封郵件使用了與A11相同的詐騙手法，聲稱帳戶有異常活動，並要求立即驗證帳戶資訊。",
+          "alert_title": "Don’t take the bait on phishing scams",
+          "alert_url": "https://consumer.ftc.gov/consumer-alerts/2024/09/dont-take-bait-phishing-scams"
+        },
+        "advice": [
+          {
+            "alert": "A11",
+            "quote": "Don’t click on any links in unexpected emails or texts.",
+            "text": "不要點擊任何來自不預期郵件或簡訊中的連結。",
+            "alert_title": "Don’t take the bait on phishing scams",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2024/09/dont-take-bait-phishing-scams"
+          },
+          {
+            "alert": "A11",
+            "quote": "If you’re concerned, contact the company directly using a link you already use or a phone number you know is correct.",
+            "text": "如有疑慮，請直接使用您已知的連結或正確的電話號碼聯繫公司。",
+            "alert_title": "Don’t take the bait on phishing scams",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2024/09/dont-take-bait-phishing-scams"
+          },
+          {
+            "alert": "A02",
+            "quote": "Most unexpected emails saying to act quickly, click a link, or call a number are phishing scams.",
+            "text": "大多數要求立即行動、點擊連結或撥打電話的意外郵件都是釣魚詐騙。",
+            "alert_title": "Those urgent emails from MetaMask and PayPal are phishing scams",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2023/05/those-urgent-emails-metamask-paypal-are-phishing-scams"
+          },
+          {
+            "alert": "A09",
+            "quote": "Be suspicious if a business, government agency, or organization asks you to click on a link that then asks for your username or password or other personal data.",
+            "text": "如果企業、政府機構或組織要求您點擊連結並要求您輸入用戶名、密碼或其他個人資料，請提高警覺。",
+            "alert_title": "Phishers send fake invoices",
+            "alert_url": "https://consumer.ftc.gov/consumer-alerts/2018/02/phishers-send-fake-invoices"
+          }
+        ],
+        "rejected": [],
+        "parse_error": null,
+        "raw_output": "{\n  \"match\": {\n    \"alert\": \"A11\",\n    \"email_quote\": \"We regret to inform you that there has been suspicious activity detected on your account. In order to protect your account from unauthorized access, we kindly request you to verify your account information immediately.\",\n    \"alert_quote\": \"Have you ever gotten a text or email warning you that something is wrong with an account online? Maybe it says your streaming account is about to be suspended unless you respond quickly. It might even have a link that will supposedly fix your account’s problems.\",\n    \"text\": \"這封郵件使用了與A11相同的詐騙手法，聲稱帳戶有異常活動，並要求立即驗證帳戶資訊。\"\n  },\n  \"advice\": [\n    {\n      \"alert\": \"A11\",\n      \"quote\": \"Don’t click on any links in unexpected emails or texts.\",\n      \"text\": \"不要點擊任何來自不預期郵件或簡訊中的連結。\"\n    },\n    {\n      \"alert\": \"A11\",\n      \"quote\": \"If you’re concerned, contact the company directly using a link you already use or a phone number you know is correct.\",\n      \"text\": \"如有疑慮，請直接使用您已知的連結或正確的電話號碼聯繫公司。\"\n    },\n    {\n      \"alert\": \"A02\",\n      \"quote\": \"Most unexpected emails saying to act quickly, click a link, or call a number are phishing scams.\",\n      \"text\": \"大多數要求立即行動、點擊連結或撥打電話的意外郵件都是釣魚詐騙。\"\n    },\n    {\n      \"alert\": \"A09\",\n      \"quote\": \"Be suspicious if a business, government agency, or organization asks you to click on a link that then asks for your username or password or other personal data.\",\n      \"text\": \"如果企業、政府機構或組織要求您點擊連結並要求您輸入用戶名、密碼或其他個人資料，請提高警覺。\"\n    }\n  ]\n}"
+      },
+      "seconds_advice": 5.6
+    }
+  ]
+}
