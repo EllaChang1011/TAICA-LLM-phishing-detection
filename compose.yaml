@@ -1,0 +1,31 @@
+services:
+  demo:
+    build: .
+    image: phishing-demo:latest
+
+    # host 上的 Ollama 只監聽 127.0.0.1，所以直接共用宿主機網路最省事。
+    # 這樣容器裡的 localhost:11434 就是 host 的 Ollama，
+    # Streamlit 也直接開在 host 的 8501（不需要 ports 對應）。
+    network_mode: host
+
+    environment:
+      OLLAMA_URL: http://localhost:11434
+      MODEL_NAME: phishing-detector-14b    # 分類 + 招數分析
+      ADVICE_MODEL: qwen3:14b              # 建議生成；兩個都要先在 host 上 ollama pull / create
+      EMBED_DEVICE: cpu          # 容器內沒有 GPU，embedding 走 CPU
+      # bge-large 已在建 image 時下載好（見 Dockerfile），不需要 volume
+
+# ── 可攜版（macOS / Windows，或想把服務隔離開來時用）────────────────────────
+# 先讓 Ollama 監聽對外位址：
+#     sudo systemctl edit ollama
+#     [Service]
+#     Environment="OLLAMA_HOST=0.0.0.0"
+#     sudo systemctl restart ollama
+# 然後把上面的 network_mode 換成下面三段：
+#
+#     ports:
+#       - "8501:8501"
+#     extra_hosts:
+#       - "host.docker.internal:host-gateway"   # Linux 上必要
+#     environment:
+#       OLLAMA_URL: http://host.docker.internal:11434

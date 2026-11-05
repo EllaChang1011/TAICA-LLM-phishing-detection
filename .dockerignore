@@ -1,0 +1,26 @@
+# 大檔案：絕對不要送進 build context
+.venv/
+models/
+training_runs/
+unsloth_compiled_cache/
+data/
+knowledge_base/
+!knowledge_base/scam_alerts.json
+eval_results/
+figures/
+logs/
+*.gguf
+*.safetensors
+
+# 版控與雜項
+.git/
+.gitignore
+.claude/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.log
+docs/
+scripts/
+README.md
+uv.lock
