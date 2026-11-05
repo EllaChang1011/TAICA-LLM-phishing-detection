@@ -37,13 +37,20 @@ TACTIC_OPTIONS = {"temperature": 0.0, "num_predict": 1024, "num_ctx": NUM_CTX}
 ADVICE_OPTIONS = {"temperature": 0.0, "num_predict": 1500, "num_ctx": NUM_CTX}
 
 
-def call_ollama(prompt, options, model=MODEL_NAME, timeout=120):
+# Ollama unloads a model after 5 idle minutes by default; keep both demo models
+# resident longer so the first email after a pause is not slowed by reloading.
+KEEP_ALIVE = os.environ.get("OLLAMA_KEEP_ALIVE_DEMO", "30m")
+
+
+def call_ollama(prompt, options, model=MODEL_NAME, timeout=120, think=None):
+    payload = {"model": model, "prompt": prompt, "stream": False, "options": options, "keep_alive": KEEP_ALIVE}
+    if think is not None:
+        # qwen3:14b ignores "/no_think" in the prompt and thinks anyway; the thinking
+        # tokens use up num_predict and the answer comes back empty or cut off.
+        # Only send this to models with the thinking capability (others may reject it).
+        payload["think"] = think
     try:
-        response = requests.post(
-            OLLAMA_URL,
-            json={"model": model, "prompt": prompt, "stream": False, "options": options},
-            timeout=timeout
-        )
+        response = requests.post(OLLAMA_URL, json=payload, timeout=timeout)
         return response.json().get("response", "")
     except requests.exceptions.ConnectionError:
         return "ERROR: 無法連線到 Ollama，請確認是否正在執行。"
@@ -109,7 +116,8 @@ def run_pipeline(email_text, tactics, alert_index, with_advice=True):
         start = time.time()
         # generous timeout: the first call may have to load the second model
         advice = generate_advice(analysis_text, alerts,
-                                 lambda prompt: call_ollama(prompt, ADVICE_OPTIONS, model=ADVICE_MODEL, timeout=300))
+                                 lambda prompt: call_ollama(prompt, ADVICE_OPTIONS, model=ADVICE_MODEL,
+                                                            timeout=300, think=False))
         timings["advice"] = time.time() - start
 
     return {
