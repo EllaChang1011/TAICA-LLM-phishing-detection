@@ -5,8 +5,8 @@ prompt. This exam set is sampled from the rest of the test split, hand-labeled
 once, and run ONCE at the end — its numbers are the official result.
 
 Usage:
-  python scripts/tactic_exam.py build    # sample emails, write the answer sheet to label
-  python scripts/tactic_exam.py run      # after labeling: run the model once and score it
+  python scripts/demo_eval/tactic_exam.py build    # sample emails, write the answer sheet to label
+  python scripts/demo_eval/tactic_exam.py run      # after labeling: run the model once and score it
 
 Files (eval_results/tactic_exam/):
   answers.md      answer sheet — fill in lure / techniques / exclude for every email
@@ -26,7 +26,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tactic_cards_eval import TEST_PATH, run_new, run_old, sample_emails  # noqa: E402
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "demo"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "demo"))
 from CoT_Module import load_tactics  # noqa: E402
 
 EXAM_DIR     = Path("eval_results/tactic_exam")

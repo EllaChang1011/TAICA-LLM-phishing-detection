@@ -1,7 +1,7 @@
 """Evaluate the advice-generation step (rules: eval_results/advice_eval/rules.md).
 
-    .venv/bin/python scripts/advice_eval.py practice --tag v0   # P01-P10, may be re-run after prompt edits
-    .venv/bin/python scripts/advice_eval.py validate            # G01-G20, runs ONCE
+    .venv/bin/python scripts/demo_eval/advice_eval.py practice --tag v0   # P01-P10, may be re-run after prompt edits
+    .venv/bin/python scripts/demo_eval/advice_eval.py validate            # G01-G20, runs ONCE
 
 Both run demo/pipeline.run_pipeline() with advice on, exactly as the demo does, and
 write a labelling sheet that shows the email, each displayed sentence and its quotes,
@@ -15,7 +15,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "demo"))
 from alert_rag import EMBEDDING_MODEL, AlertIndex  # noqa: E402
 from CoT_Module import load_tactics  # noqa: E402

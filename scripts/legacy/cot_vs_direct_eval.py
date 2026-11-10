@@ -4,11 +4,11 @@ Compare direct classification (with /no_think) vs CoT + enforce_consistency
 on the phishing email test set.
 
 Usage:
-  python scripts/cot_vs_direct_eval.py               # CoT without RAG
-  python scripts/cot_vs_direct_eval.py --rag         # CoT with RAG threat intel
-  python scripts/cot_vs_direct_eval.py --limit 40    # quick sanity check
+  python scripts/legacy/cot_vs_direct_eval.py               # CoT without RAG
+  python scripts/legacy/cot_vs_direct_eval.py --rag         # CoT with RAG threat intel
+  python scripts/legacy/cot_vs_direct_eval.py --limit 40    # quick sanity check
 
-Output (saved to eval_results/):
+Output (saved to eval_results/legacy/):
   cot_vs_direct_results.json      / cot_vs_direct_rag_results.json
   cot_vs_direct_summary.json      / cot_vs_direct_rag_summary.json
 """
@@ -30,8 +30,8 @@ from legacy_cot import build_cot_prompt, enforce_consistency
 OLLAMA_URL          = "http://localhost:11434/api/generate"
 MODEL_NAME          = "phishing-detector-14b"
 TEST_PATH           = "data/test/data.json"
-OUT_DIR             = Path("eval_results")
-CHROMA_DB_PATH      = "demo/chroma_db"
+OUT_DIR             = Path("eval_results/legacy")
+CHROMA_DB_PATH      = "knowledge_base/chroma_db"
 EMBEDDING_MODEL     = "BAAI/bge-large-en-v1.5"
 
 DIRECT_PROMPT = """/no_think

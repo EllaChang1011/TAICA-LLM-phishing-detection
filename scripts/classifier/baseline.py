@@ -157,7 +157,7 @@ def main():
     metrics = compute_metrics(results)
     print_summary(metrics)
 
-    out_dir = Path("eval_results")
+    out_dir = Path("eval_results/classifier")
     out_dir.mkdir(exist_ok=True)
 
     output = {
@@ -169,14 +169,14 @@ def main():
     }
     with open(out_dir / "baseline_results.json", "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
-    print("\nSaved → eval_results/baseline_results.json")
+    print("\nSaved → eval_results/classifier/baseline_results.json")
 
     fields = ["email_id", "source", "true_label", "predicted_label", "correct", "text"]
     with open(out_dir / "baseline_results.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(results)
-    print("Saved → eval_results/baseline_results.csv")
+    print("Saved → eval_results/classifier/baseline_results.csv")
 
 
 if __name__ == "__main__":

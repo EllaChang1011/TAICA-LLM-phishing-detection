@@ -4,7 +4,7 @@ Not an evaluation — a side-by-side for reading, to decide which model to use
 before building a proper practice / held-out test.
 
 Usage:
-  python scripts/advice_trial.py
+  python scripts/demo_eval/advice_trial.py
 
 Output: eval_results/advice_trial/trial.md and trial.json
 """
@@ -17,7 +17,7 @@ from pathlib import Path
 
 import requests
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "demo"))
 from advice import generate_advice  # noqa: E402
 from alert_rag import EMBEDDING_MODEL, AlertIndex  # noqa: E402

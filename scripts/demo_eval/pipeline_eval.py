@@ -10,8 +10,8 @@ practice set, the 30-email alert practice set), so the tactic/alert numbers
 here are not fully held-out; the per-subset breakdown in the report shows this.
 
 Usage:
-  python scripts/pipeline_eval.py            # all 400 (resumes if interrupted)
-  python scripts/pipeline_eval.py --limit 5  # quick check
+  python scripts/demo_eval/pipeline_eval.py            # all 400 (resumes if interrupted)
+  python scripts/demo_eval/pipeline_eval.py --limit 5  # quick check
 
 Outputs (eval_results/pipeline/):
   results.jsonl   one line per email (appended as it runs)
@@ -26,9 +26,9 @@ import time
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "demo"))
-sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT / "scripts" / "demo_eval"))
 from alert_rag import EMBEDDING_MODEL, THRESHOLD, AlertIndex  # noqa: E402
 from CoT_Module import load_tactics  # noqa: E402
 from pipeline import MODEL_NAME, run_pipeline  # noqa: E402

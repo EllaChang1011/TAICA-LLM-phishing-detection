@@ -12,7 +12,7 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 
 CHUNKS_PATH = Path("knowledge_base/chunks.json")
-CHROMA_DB_PATH = "./demo/chroma_db"
+CHROMA_DB_PATH = "knowledge_base/chroma_db"
 EMBEDDING_MODEL_NAME = "BAAI/bge-large-en-v1.5"
 BATCH_SIZE = 32
 

@@ -4,8 +4,8 @@ phrase that is common in legitimate mail (e.g. "free") nudges the model to tag
 legitimate emails. Only phrases that are almost exclusive to phishing are kept.
 
 Usage:
-  python scripts/tactic_keyword_stats.py                    # all keywords in demo/tactics.json
-  python scripts/tactic_keyword_stats.py "invoice is overdue" "relief fund"   # candidate phrases
+  python scripts/demo_eval/tactic_keyword_stats.py                    # all keywords in demo/tactics.json
+  python scripts/demo_eval/tactic_keyword_stats.py "invoice is overdue" "relief fund"   # candidate phrases
 """
 
 import json

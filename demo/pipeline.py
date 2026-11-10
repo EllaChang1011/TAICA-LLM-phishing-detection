@@ -1,5 +1,5 @@
 """The demo's analysis pipeline, without any Streamlit code, so the demo and
-scripts/pipeline_eval.py run exactly the same logic.
+scripts/demo_eval/pipeline_eval.py run exactly the same logic.
 
 1. classify   — fine-tuned model; the only step that decides the verdict
 2. tactics    — tactic cards + verified evidence (explanation only)
@@ -24,7 +24,7 @@ MODEL_NAME = os.environ.get("MODEL_NAME", "phishing-detector-14b")
 ADVICE_MODEL = os.environ.get("ADVICE_MODEL", "qwen3:14b")
 MAX_ANALYSIS_CHARS = 6000
 
-# Same options as scripts/evaluate.py, so the demo runs the evaluated setting. (The old
+# Same options as scripts/classifier/evaluate.py, so the demo runs the evaluated setting. (The old
 # demo added repeat/frequency penalties, which cost 0.75 points on the test split.)
 # num_ctx: Ollama's default context here is 32768 tokens (~14 GB per 14B model), so the
 # classifier and the generation model could not both stay on a 24 GB GPU and were

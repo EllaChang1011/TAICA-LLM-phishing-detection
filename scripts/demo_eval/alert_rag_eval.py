@@ -4,8 +4,8 @@ Rules (grading levels, what "no alert" means, how long alerts are embedded) are
 fixed in eval_results/alert_rag/rules.md, written before labeling.
 
 Usage:
-  python scripts/alert_rag_eval.py build   # sample 20 test emails, write the answer sheet
-  python scripts/alert_rag_eval.py run     # after labeling: compare queries A / B / C / D
+  python scripts/demo_eval/alert_rag_eval.py build   # sample 20 test emails, write the answer sheet
+  python scripts/demo_eval/alert_rag_eval.py run     # after labeling: compare queries A / B / C / D
 
 Files (eval_results/alert_rag/):
   answers.md     answer sheet — lure / specific / general alerts per email
@@ -23,7 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tactic_cards_eval import TEST_PATH, sample_emails  # noqa: E402
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "demo"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "demo"))
 from CoT_Module import load_tactics  # noqa: E402
 from alert_rag import EMBEDDING_MODEL, QUERY_PREFIX, index_text  # noqa: E402,F401  (shared with the demo)
 

@@ -172,7 +172,7 @@ def main():
 
         # checkpoint after every sample
         out_stem = f"cot_{args.mode}"
-        out_dir = Path("eval_results")
+        out_dir = Path("eval_results/legacy")
         out_dir.mkdir(exist_ok=True)
         (out_dir / f"{out_stem}_details.json").write_text(
             json.dumps(details, indent=2, ensure_ascii=False))
@@ -211,12 +211,12 @@ def main():
     print(classification_report(y_true, y_pred, target_names=["legitimate", "phishing"]))
 
     out_stem = f"cot_{args.mode}"
-    out_dir = Path("eval_results")
+    out_dir = Path("eval_results/legacy")
     out_dir.mkdir(exist_ok=True)
     (out_dir / f"{out_stem}_metrics.json").write_text(json.dumps(metrics, indent=2))
     (out_dir / f"{out_stem}_details.json").write_text(
         json.dumps(details, indent=2, ensure_ascii=False))
-    print(f"Saved: eval_results/{out_stem}_metrics.json  eval_results/{out_stem}_details.json")
+    print(f"Saved: eval_results/legacy/{out_stem}_metrics.json  eval_results/legacy/{out_stem}_details.json")
 
 
 

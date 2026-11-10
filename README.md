@@ -24,11 +24,17 @@ All three results are displayed in the Streamlit UI.
 
 ```
 .
-├── demo/            Streamlit demo (app.py, CoT_Module.py, chroma_db/)
-├── scripts/         Training, evaluation, export, RAG scripts
-├── data/            Train / val / test splits + raw archive
-├── knowledge_base/  RAG sources (APWG PDFs, MITRE ATT&CK pages, chunks.json)
-├── eval_results/    Evaluation outputs (baseline / fine-tuned / CoT, json, csv)
+├── demo/                  Streamlit demo: app.py (UI), pipeline.py, CoT_Module.py (tactic cards),
+│                          alert_rag.py (FTC alerts), advice.py, tactics.json
+├── scripts/
+│   ├── classifier/        Data prep, QLoRA training, GGUF export, baseline / fine-tuned evaluation
+│   ├── demo_eval/         Build + evaluate the demo steps (tactic cards, alert RAG, advice, full pipeline)
+│   └── legacy/            Earlier CoT and APWG/MITRE RAG experiments (no longer in the demo)
+├── data/                  Train / val / test splits + raw archive
+├── knowledge_base/        scam_alerts.json (used by the demo); APWG / MITRE sources + chroma_db/ (legacy)
+├── eval_results/          One folder per experiment, matching scripts/: classifier/, legacy/,
+│                          tactic_cards/, tactic_exam/, alert_rag/, advice_trial/, advice_eval/, pipeline/
+├── tests/                 Unit tests (python -m unittest discover tests)
 ├── figures/         Training loss curves, confusion matrices
 ├── training_runs/   Training metrics (model weights hosted on HuggingFace)
 └── docs/            Error analysis
@@ -114,7 +120,7 @@ See [docs/error_analysis.md](docs/error_analysis.md) for detailed error analysis
    uv pip install .
    ```
 
-3. The RAG knowledge base (`demo/chroma_db/`) is included in the repo — no rebuild needed.  
+3. The RAG knowledge base (`knowledge_base/chroma_db/`) is included in the repo — no rebuild needed.  
    To rebuild from scratch, see **Rebuild RAG Knowledge Base** below.
 
 4. Launch:
@@ -130,27 +136,27 @@ Sources: APWG quarterly phishing trend reports (PDF) + MITRE ATT&CK phishing tec
 
 ```bash
 # 1. Extract text and chunk semantically → knowledge_base/chunks.json
-python scripts/build_rag_chunks_threat_intel.py
+python scripts/legacy/build_rag_chunks_threat_intel.py
 
-# 2. Embed with BAAI/bge-large-en-v1.5 and write to ChromaDB → demo/chroma_db/
-python scripts/build_rag_chroma_threat_intel.py
+# 2. Embed with BAAI/bge-large-en-v1.5 and write to ChromaDB → knowledge_base/chroma_db/
+python scripts/legacy/build_rag_chroma_threat_intel.py
 ```
 
 ### Scripts
 
 | Script | Purpose |
 |---|---|
-| `scripts/data_preparation.py` | Data preprocessing and splitting |
-| `scripts/train.py` | QLoRA fine-tuning |
-| `scripts/baseline.py` / `evaluate.py` | Baseline / fine-tuned model evaluation |
-| `scripts/cot_evaluate.py` | Chain-of-Thought evaluation |
-| `scripts/export_gguf.py` | Export to GGUF for Ollama |
-| `scripts/build_rag_chunks_threat_intel.py` | RAG text extraction and chunking (threat-intel knowledge base) |
-| `scripts/build_rag_chroma_threat_intel.py` | RAG embedding and ChromaDB construction (threat-intel knowledge base) |
-| `scripts/build_rag_chroma_examples.py` | Embed labeled training emails into ChromaDB for few-shot exemplar RAG |
-| `scripts/fewshot_rag_eval.py` | Evaluate plain vs few-shot exemplar-RAG direct classification |
+| `scripts/classifier/data_preparation.py` | Data preprocessing and splitting |
+| `scripts/classifier/train.py` | QLoRA fine-tuning |
+| `scripts/classifier/baseline.py` / `evaluate.py` | Baseline / fine-tuned model evaluation |
+| `scripts/legacy/cot_evaluate.py` | Chain-of-Thought evaluation |
+| `scripts/classifier/export_gguf.py` | Export to GGUF for Ollama |
+| `scripts/legacy/build_rag_chunks_threat_intel.py` | RAG text extraction and chunking (threat-intel knowledge base) |
+| `scripts/legacy/build_rag_chroma_threat_intel.py` | RAG embedding and ChromaDB construction (threat-intel knowledge base) |
+| `scripts/legacy/build_rag_chroma_examples.py` | Embed labeled training emails into ChromaDB for few-shot exemplar RAG |
+| `scripts/legacy/fewshot_rag_eval.py` | Evaluate plain vs few-shot exemplar-RAG direct classification |
 
-> All scripts use paths relative to the project root. Run them as `python scripts/train.py` from the root directory.
+> All scripts use paths relative to the project root. Run them as `python scripts/classifier/train.py` from the root directory.
 
 ---
 
@@ -174,11 +180,17 @@ python scripts/build_rag_chroma_threat_intel.py
 
 ```
 .
-├── demo/                  Streamlit demo（app.py、CoT_Module.py、chroma_db/）
-├── scripts/               訓練、評估、匯出、RAG 建置腳本
+├── demo/                  Streamlit demo：app.py（介面）、pipeline.py（流程）、CoT_Module.py（招數卡）、
+│                          alert_rag.py（FTC 詐騙警示）、advice.py（建議生成）、tactics.json
+├── scripts/
+│   ├── classifier/        資料前處理、QLoRA 訓練、匯出 GGUF、baseline / 微調模型評估
+│   ├── demo_eval/         demo 各步驟的建置與評測（招數卡、警示 RAG、建議生成、整條流程）
+│   └── legacy/            早期的 CoT 與 APWG/MITRE RAG 實驗（demo 已不使用）
 ├── data/                  訓練/驗證/測試資料集（train, val, test, archive）
-├── knowledge_base/        RAG 知識庫來源（APWG 報告 PDF、MITRE ATT&CK 頁面、chunks.json）
-├── eval_results/          各項評估結果（baseline / fine-tuned / CoT，json、csv）
+├── knowledge_base/        scam_alerts.json（demo 使用）；APWG / MITRE 來源與 chroma_db/（舊實驗）
+├── eval_results/          每個實驗一個資料夾，對應 scripts/：classifier/、legacy/、
+│                          tactic_cards/、tactic_exam/、alert_rag/、advice_trial/、advice_eval/、pipeline/
+├── tests/                 單元測試（python -m unittest discover tests）
 ├── figures/               訓練曲線、混淆矩陣等圖表
 ├── training_runs/         訓練紀錄（模型權重在 HuggingFace）
 └── docs/                  專案文件（錯誤分析）
@@ -262,7 +274,7 @@ python scripts/build_rag_chroma_threat_intel.py
    uv pip install .
    ```
 
-3. RAG 知識庫（`demo/chroma_db/`）已包含在 repo 中，無需重建。  
+3. RAG 知識庫（`knowledge_base/chroma_db/`）已包含在 repo 中，無需重建。  
    若要從頭重建，參考下方「重建 RAG 知識庫」。
 
 4. 執行：
@@ -278,24 +290,24 @@ python scripts/build_rag_chroma_threat_intel.py
 
 ```bash
 # 1. 文字提取與語意分塊 → knowledge_base/chunks.json
-python scripts/build_rag_chunks_threat_intel.py
+python scripts/legacy/build_rag_chunks_threat_intel.py
 
-# 2. Embedding（BAAI/bge-large-en-v1.5）並寫入 ChromaDB → demo/chroma_db/
-python scripts/build_rag_chroma_threat_intel.py
+# 2. Embedding（BAAI/bge-large-en-v1.5）並寫入 ChromaDB → knowledge_base/chroma_db/
+python scripts/legacy/build_rag_chroma_threat_intel.py
 ```
 
 ### 主要腳本
 
 | 腳本 | 用途 |
 |---|---|
-| `scripts/data_preparation.py` | 資料前處理與切分 |
-| `scripts/train.py` | QLoRA 微調訓練 |
-| `scripts/baseline.py` / `evaluate.py` | Baseline / 微調模型分類評估 |
-| `scripts/cot_evaluate.py` | Chain-of-Thought 模式評估 |
-| `scripts/export_gguf.py` | 匯出 GGUF 供 Ollama 使用 |
-| `scripts/build_rag_chunks_threat_intel.py` | RAG 知識庫文字提取與分塊（威脅情報知識庫） |
-| `scripts/build_rag_chroma_threat_intel.py` | RAG 向量化並建立 ChromaDB（威脅情報知識庫） |
-| `scripts/build_rag_chroma_examples.py` | 將標註過的訓練郵件向量化，供 few-shot 範例檢索 RAG 使用 |
-| `scripts/fewshot_rag_eval.py` | 評估「純分類」vs「few-shot 範例檢索 RAG」分類效果 |
+| `scripts/classifier/data_preparation.py` | 資料前處理與切分 |
+| `scripts/classifier/train.py` | QLoRA 微調訓練 |
+| `scripts/classifier/baseline.py` / `evaluate.py` | Baseline / 微調模型分類評估 |
+| `scripts/legacy/cot_evaluate.py` | Chain-of-Thought 模式評估 |
+| `scripts/classifier/export_gguf.py` | 匯出 GGUF 供 Ollama 使用 |
+| `scripts/legacy/build_rag_chunks_threat_intel.py` | RAG 知識庫文字提取與分塊（威脅情報知識庫） |
+| `scripts/legacy/build_rag_chroma_threat_intel.py` | RAG 向量化並建立 ChromaDB（威脅情報知識庫） |
+| `scripts/legacy/build_rag_chroma_examples.py` | 將標註過的訓練郵件向量化，供 few-shot 範例檢索 RAG 使用 |
+| `scripts/legacy/fewshot_rag_eval.py` | 評估「純分類」vs「few-shot 範例檢索 RAG」分類效果 |
 
-> 上述腳本內使用相對路徑，請從**專案根目錄**執行，例如 `python scripts/train.py`。
+> 上述腳本內使用相對路徑，請從**專案根目錄**執行，例如 `python scripts/classifier/train.py`。

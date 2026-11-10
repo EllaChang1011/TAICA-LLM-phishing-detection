@@ -7,10 +7,10 @@ Checks three things:
   3. Are legitimate emails tagged with tactics?   -> automatic
 
 Usage:
-  python scripts/tactic_cards_eval.py              # 20 emails (10 phishing / 10 legitimate)
-  python scripts/tactic_cards_eval.py --limit 2    # quick sanity check
+  python scripts/demo_eval/tactic_cards_eval.py              # 20 emails (10 phishing / 10 legitimate)
+  python scripts/demo_eval/tactic_cards_eval.py --limit 2    # quick sanity check
 
-Outputs (eval_results/):
+Outputs (eval_results/tactic_cards/):
   tactic_cards_results.json   raw outputs of both versions
   tactic_cards_review.md      side-by-side report for manual review
 """
@@ -24,16 +24,16 @@ from pathlib import Path
 
 import requests
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "legacy"))
 from legacy_cot import build_cot_prompt, enforce_consistency  # noqa: E402
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "demo"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "demo"))
 from CoT_Module import build_tactic_prompt, extract_json, load_tactics, verify_tactic_report  # noqa: E402
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL_NAME = "phishing-detector-14b"
 TEST_PATH  = Path("data/test/data.json")
-OUT_DIR    = Path("eval_results")
+OUT_DIR    = Path("eval_results/tactic_cards")
 SEED       = 42
 
 # (label, source) -> count. More LLM-written legitimate emails: that is where the

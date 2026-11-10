@@ -168,7 +168,7 @@ RAG 檢索到的是關於「釣魚攻擊手法」的通用描述（例如 "spear
 
 ### 額外實驗：Few-shot 範例檢索 RAG
 
-除了「威脅情報文件」式的 RAG，我們也測試了另一種設計：將訓練集 3,200 筆**帶標籤的郵件**向量化存入獨立的 ChromaDB collection（`phishing_examples`），分類時檢索 k=3 筆最相似的範例郵件（含標籤），以 few-shot 形式注入分類 prompt（[scripts/build_rag_chroma_examples.py](../scripts/build_rag_chroma_examples.py)、[scripts/fewshot_rag_eval.py](../scripts/fewshot_rag_eval.py)）。
+除了「威脅情報文件」式的 RAG，我們也測試了另一種設計：將訓練集 3,200 筆**帶標籤的郵件**向量化存入獨立的 ChromaDB collection（`phishing_examples`），分類時檢索 k=3 筆最相似的範例郵件（含標籤），以 few-shot 形式注入分類 prompt（[scripts/legacy/build_rag_chroma_examples.py](../scripts/legacy/build_rag_chroma_examples.py)、[scripts/legacy/fewshot_rag_eval.py](../scripts/legacy/fewshot_rag_eval.py)）。
 
 **結果（400 筆測試集）**：
 

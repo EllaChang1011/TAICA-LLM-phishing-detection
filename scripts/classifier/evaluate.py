@@ -32,7 +32,7 @@ from sklearn.metrics import (
 OLLAMA_URL      = "http://localhost:11434/api/generate"
 FINETUNED_MODEL = "phishing-detector-14b"
 TEST_PATH       = "data/test/data.json"
-BASELINE_PATH   = "eval_results/baseline_results.json"
+BASELINE_PATH   = "eval_results/classifier/baseline_results.json"
 
 INFERENCE_PROMPT = """/no_think
 Classify the following email as phishing or legitimate. Reply with a single word: phishing or legitimate.
@@ -333,7 +333,7 @@ def main():
     print_summary(metrics, baseline)
 
     # ── Save all outputs ──────────────────────────────────────────────────────
-    out_dir = Path("eval_results")
+    out_dir = Path("eval_results/classifier")
     out_dir.mkdir(exist_ok=True)
 
     result_data = {
@@ -345,7 +345,7 @@ def main():
     }
     with open(out_dir / "evaluation_results.json", "w") as f:
         json.dump(result_data, f, indent=2)
-    print("\nSaved → eval_results/evaluation_results.json")
+    print("\nSaved → eval_results/classifier/evaluation_results.json")
 
     save_predictions_csv(results, str(out_dir / "predictions.csv"))
     plot_confusion_matrix(metrics["y_true"], metrics["y_pred"], str(out_dir / "confusion_matrix.png"))

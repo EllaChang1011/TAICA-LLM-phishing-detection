@@ -6,8 +6,8 @@ The setting was chosen after looking at the practice set (alert_rag_eval.py):
 This script checks it ONCE on emails from the val split that no experiment has used.
 
 Usage:
-  python scripts/alert_rag_validate.py build   # write the answer sheet
-  python scripts/alert_rag_validate.py run     # after labeling: run the frozen setting once
+  python scripts/demo_eval/alert_rag_validate.py build   # write the answer sheet
+  python scripts/demo_eval/alert_rag_validate.py run     # after labeling: run the frozen setting once
 
 Files (eval_results/alert_rag/validation/):
   answers.md, results.json, report.md
@@ -25,7 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from alert_rag_eval import (ALERTS_PATH, EMBEDDING_MODEL, GENERAL_ALERTS, QUERY_PREFIX,  # noqa: E402
                             TOP_K, frac, index_text, score_group)
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "demo"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "demo"))
 from CoT_Module import load_tactics  # noqa: E402
 
 VAL_PATH     = Path("data/val/data.json")

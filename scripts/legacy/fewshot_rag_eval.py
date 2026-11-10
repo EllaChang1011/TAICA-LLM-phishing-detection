@@ -9,11 +9,11 @@ build_rag_chroma_examples.py) and injects them as in-context examples into the
 classification prompt.
 
 Usage:
-  python scripts/fewshot_rag_eval.py               # all 400 emails
-  python scripts/fewshot_rag_eval.py --limit 40    # quick sanity check
-  python scripts/fewshot_rag_eval.py --k 5         # number of few-shot examples (default 3)
+  python scripts/legacy/fewshot_rag_eval.py               # all 400 emails
+  python scripts/legacy/fewshot_rag_eval.py --limit 40    # quick sanity check
+  python scripts/legacy/fewshot_rag_eval.py --k 5         # number of few-shot examples (default 3)
 
-Output (saved to eval_results/):
+Output (saved to eval_results/legacy/):
   fewshot_rag_results.json
   fewshot_rag_summary.json
 """
@@ -30,8 +30,8 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 OLLAMA_URL      = "http://localhost:11434/api/generate"
 MODEL_NAME      = "phishing-detector-14b"
 TEST_PATH       = "data/test/data.json"
-OUT_DIR         = Path("eval_results")
-CHROMA_DB_PATH  = "demo/chroma_db"
+OUT_DIR         = Path("eval_results/legacy")
+CHROMA_DB_PATH  = "knowledge_base/chroma_db"
 EMBEDDING_MODEL = "BAAI/bge-large-en-v1.5"
 
 PLAIN_PROMPT_TEMPLATE = """/no_think

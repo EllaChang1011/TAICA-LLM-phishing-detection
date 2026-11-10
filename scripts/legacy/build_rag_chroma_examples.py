@@ -5,7 +5,7 @@ This is the "few-shot exemplar" RAG design — an alternative to the threat-inte
 RAG (build_rag_chroma_threat_intel.py). Instead of retrieving general phishing
 documentation, this retrieves the k most similar LABELED training emails and
 injects them as in-context examples into the classification prompt
-(see scripts/fewshot_rag_eval.py).
+(see scripts/legacy/fewshot_rag_eval.py).
 """
 
 import json
@@ -15,7 +15,7 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 
 TRAIN_PATH = Path("data/train/data.json")
-CHROMA_DB_PATH = "./demo/chroma_db"
+CHROMA_DB_PATH = "knowledge_base/chroma_db"
 EMBEDDING_MODEL_NAME = "BAAI/bge-large-en-v1.5"
 BATCH_SIZE = 32
 
