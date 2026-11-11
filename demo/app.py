@@ -150,7 +150,8 @@ if analyze_btn and email_input.strip():
     if result["phishing_without_tactic"]:
         st.warning("⚠️ 判斷與分析不一致：分類模型判定為釣魚，但招數分析沒有找到可疑招數。建議人工確認。")
     if result["legit_with_tactic"]:
-        st.warning("⚠️ 判斷與分析不一致：分類模型判定為正常郵件，但招數分析找到可疑招數或相關警示。建議人工確認。")
+        # milder wording: catches every missed phishing email on the test split, but most hits are legitimate mail
+        st.info("ℹ️ 這封信有類似詐騙的寫法，請留意。")
 
     if homoglyphs:
         st.warning("🔤 **這封信用了外型相近的字元來偽裝**：以下單字混用了英文字母和外型相同的西里爾／希臘字母，"
