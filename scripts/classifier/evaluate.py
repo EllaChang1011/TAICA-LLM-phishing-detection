@@ -10,6 +10,7 @@ Outputs:
   error_analysis.md        — misclassification analysis
 """
 
+import argparse
 import csv
 import json
 import re
@@ -65,10 +66,15 @@ def extract_label(text: str) -> str:
     return "phishing"   # safer default for security tasks
 
 
+RAW = False  # set by --raw
+
+
 def query_ollama(prompt: str) -> str:
+    if RAW:  # send the training format as-is: no chat template, no /no_think
+        prompt = prompt.removeprefix("/no_think\n")
     resp = requests.post(
         OLLAMA_URL,
-        json={"model": FINETUNED_MODEL, "prompt": prompt, "stream": False,
+        json={"model": FINETUNED_MODEL, "prompt": prompt, "stream": False, "raw": RAW,
               "options": {"temperature": 0, "num_predict": 16}},
         timeout=60,
     )
@@ -309,6 +315,15 @@ def print_summary(metrics: dict, baseline: dict | None):
 
 
 def main():
+    global FINETUNED_MODEL, RAW
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model", default=FINETUNED_MODEL)
+    ap.add_argument("--test", default=TEST_PATH)
+    ap.add_argument("--out", default="eval_results/classifier")
+    ap.add_argument("--raw", action="store_true", help="skip the chat template (matches the training format)")
+    args = ap.parse_args()
+    FINETUNED_MODEL, RAW = args.model, args.raw  # read by query_ollama
+
     try:
         requests.get("http://localhost:11434", timeout=5).raise_for_status()
     except Exception:
@@ -316,7 +331,7 @@ def main():
 
     print(f"Model : {FINETUNED_MODEL} (Ollama, fine-tuned)")
 
-    with open(TEST_PATH, encoding="utf-8") as f:
+    with open(args.test, encoding="utf-8") as f:
         records = json.load(f)
     print(f"Test set: {len(records)} emails\n")
 
@@ -333,11 +348,13 @@ def main():
     print_summary(metrics, baseline)
 
     # ── Save all outputs ──────────────────────────────────────────────────────
-    out_dir = Path("eval_results/classifier")
-    out_dir.mkdir(exist_ok=True)
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     result_data = {
         "model": FINETUNED_MODEL,
+        "test_path": args.test,
+        "raw": args.raw,
         "num_test": len(results),
         "overall": metrics["overall"],
         "per_category": metrics["per_category"],
@@ -345,7 +362,7 @@ def main():
     }
     with open(out_dir / "evaluation_results.json", "w") as f:
         json.dump(result_data, f, indent=2)
-    print("\nSaved → eval_results/classifier/evaluation_results.json")
+    print(f"\nSaved → {out_dir}/evaluation_results.json")
 
     save_predictions_csv(results, str(out_dir / "predictions.csv"))
     plot_confusion_matrix(metrics["y_true"], metrics["y_pred"], str(out_dir / "confusion_matrix.png"))

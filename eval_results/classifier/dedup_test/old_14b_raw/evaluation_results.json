@@ -1,0 +1,80 @@
+{
+  "model": "phishing-detector-14b",
+  "test_path": "data/dedup/test/data.json",
+  "raw": true,
+  "num_test": 267,
+  "overall": {
+    "accuracy": 0.9962546816479401,
+    "precision": 1.0,
+    "recall": 0.9911504424778761,
+    "f1": 0.9955555555555555
+  },
+  "per_category": {
+    "human_phishing": {
+      "count": 13,
+      "correct": 12,
+      "accuracy": 0.9230769230769231,
+      "precision": 1.0,
+      "recall": 0.9230769230769231,
+      "f1": 0.96
+    },
+    "human_legitimate": {
+      "count": 54,
+      "correct": 54,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "llm_phishing": {
+      "count": 100,
+      "correct": 100,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "llm_legitimate": {
+      "count": 100,
+      "correct": 100,
+      "accuracy": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "baseline_per_category": {
+    "human_phishing": {
+      "count": 100,
+      "correct": 100,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "human_legitimate": {
+      "count": 100,
+      "correct": 0,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "llm_phishing": {
+      "count": 100,
+      "correct": 100,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "llm_legitimate": {
+      "count": 100,
+      "correct": 0,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  }
+}

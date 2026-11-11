@@ -12,8 +12,9 @@ from unsloth import FastLanguageModel
 import sys
 from pathlib import Path
 
-ADAPTER_PATH   = "training_runs/results/lora_adapter"
-GGUF_OUTPUT    = "gguf_export_gguf"
+# usage: export_gguf.py [ADAPTER_PATH] [GGUF_OUTPUT]
+ADAPTER_PATH   = sys.argv[1] if len(sys.argv) > 1 else "training_runs/results/lora_adapter"
+GGUF_OUTPUT    = sys.argv[2] if len(sys.argv) > 2 else "gguf_export_gguf"
 QUANT_METHOD   = "q4_k_m"
 MAX_SEQ_LENGTH = 2048
 
