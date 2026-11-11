@@ -98,6 +98,15 @@ def write_report(rows: list[dict], tags: dict[int, str]):
     ]
     lines += [f"| {lab} / {src} | {pct(sum(r['classification'] == lab for r in sub(lab, src)), len(sub(lab, src)))} |"
               for lab, src in groups]
+    # about 1/3 of data/test duplicates train emails; data/dedup/test keeps the rest (orig_index)
+    clean = {r["orig_index"] for r in json.loads((ROOT / "data/dedup/test/data.json").read_text(encoding="utf-8"))}
+    crow = [r for r in rows if r["test_index"] in clean]
+    if crow:
+        lines += ["", f"只算不跟 train 重複的 {len(crow)} 封（data/dedup/test）：分類正確 "
+                      f"{pct(sum(r['classification'] == r['label'] for r in crow), len(crow))}", ""]
+        lines += ["| 類別 | 分類正確（去重） |", "|---|---|"]
+        lines += [f"| {lab} / {src} | {pct(sum(r['classification'] == lab for r in crow if (r['label'], r['source']) == (lab, src)), sum((r['label'], r['source']) == (lab, src) for r in crow))} |"
+                  for lab, src in groups]
 
     lines += ["", "## 2. 判斷與分析不一致（demo 顯示「建議人工確認」）", "",
               "| 類別 | 判釣魚但沒找到招數 | 判正常但找到招數或警示 |", "|---|---|---|"]
@@ -154,7 +163,12 @@ def write_report(rows: list[dict], tags: dict[int, str]):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--out", default=None, help="output dir (default eval_results/pipeline)")
     args = parser.parse_args()
+    global OUT_DIR, RESULTS_PATH, REPORT_PATH
+    if args.out:
+        OUT_DIR = ROOT / args.out
+        RESULTS_PATH, REPORT_PATH = OUT_DIR / "results.jsonl", OUT_DIR / "report.md"
 
     records = json.loads(TEST_PATH.read_text(encoding="utf-8"))
     todo = list(range(len(records)))[: args.limit]

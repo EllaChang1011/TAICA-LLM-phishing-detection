@@ -7,6 +7,7 @@ Outputs:
   baseline_results.csv   — per-email predictions
 """
 
+import argparse
 import csv
 import json
 import re
@@ -140,6 +141,11 @@ def print_summary(metrics: dict):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--test", default=TEST_PATH)
+    ap.add_argument("--out", default="eval_results/classifier")
+    args = ap.parse_args()
+
     try:
         requests.get("http://localhost:11434", timeout=5).raise_for_status()
     except Exception:
@@ -147,7 +153,7 @@ def main():
 
     print(f"Model : {OLLAMA_MODEL} (Ollama, zero-shot)")
 
-    with open(TEST_PATH, encoding="utf-8") as f:
+    with open(args.test, encoding="utf-8") as f:
         records = json.load(f)
     print(f"Test set: {len(records)} emails\n")
 
@@ -157,26 +163,27 @@ def main():
     metrics = compute_metrics(results)
     print_summary(metrics)
 
-    out_dir = Path("eval_results/classifier")
-    out_dir.mkdir(exist_ok=True)
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     output = {
         "model":        OLLAMA_MODEL,
         "lora":         False,
+        "test_path":    args.test,
         "num_test":     len(results),
         "overall":      metrics["overall"],
         "per_category": metrics["per_category"],
     }
     with open(out_dir / "baseline_results.json", "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
-    print("\nSaved → eval_results/classifier/baseline_results.json")
+    print(f"\nSaved → {out_dir}/baseline_results.json")
 
     fields = ["email_id", "source", "true_label", "predicted_label", "correct", "text"]
     with open(out_dir / "baseline_results.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(results)
-    print("Saved → eval_results/classifier/baseline_results.csv")
+    print(f"Saved → {out_dir}/baseline_results.csv")
 
 
 if __name__ == "__main__":
