@@ -42,8 +42,10 @@ ADVICE_OPTIONS = {"temperature": 0.0, "num_predict": 1500, "num_ctx": NUM_CTX}
 KEEP_ALIVE = os.environ.get("OLLAMA_KEEP_ALIVE_DEMO", "30m")
 
 
-def call_ollama(prompt, options, model=MODEL_NAME, timeout=120, think=None):
+def call_ollama(prompt, options, model=MODEL_NAME, timeout=120, think=None, raw=False):
     payload = {"model": model, "prompt": prompt, "stream": False, "options": options, "keep_alive": KEEP_ALIVE}
+    if raw:
+        payload["raw"] = True  # skip the chat template
     if think is not None:
         # qwen3:14b ignores "/no_think" in the prompt and thinks anyway; the thinking
         # tokens use up num_predict and the answer comes back empty or cut off.
@@ -59,8 +61,9 @@ def call_ollama(prompt, options, model=MODEL_NAME, timeout=120, think=None):
 
 
 def classify_email(email_text):
-    prompt = f"""/no_think
-Classify the following email as phishing or legitimate. Reply with a single word: phishing or legitimate.
+    # raw: the classifier was trained on this plain-text format, not the chat template. Through the
+    # template it starts with <think> and often never answers (eval_results/classifier/dedup_val).
+    prompt = f"""Classify the following email as phishing or legitimate. Reply with a single word: phishing or legitimate.
 
 ### Email:
 {email_text}
@@ -68,7 +71,7 @@ Classify the following email as phishing or legitimate. Reply with a single word
 ### Classification:
 """
 
-    result = call_ollama(prompt, CLASSIFY_OPTIONS)
+    result = call_ollama(prompt, CLASSIFY_OPTIONS, raw=True)
     result_lower = result.lower().strip()
 
     if "phishing" in result_lower:
