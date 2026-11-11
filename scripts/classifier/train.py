@@ -168,7 +168,9 @@ def main():
         eval_strategy="steps",
         eval_steps=EVAL_STEPS,
         load_best_model_at_end=True,
-        metric_for_best_model="accuracy",  # val accuracy, not eval_loss
+        # val accuracy, not eval_loss. Trainer only replaces the best on a strictly higher score,
+        # so on a tie the earliest checkpoint wins (results_dedup: 100% from step 100 on).
+        metric_for_best_model="accuracy",
         greater_is_better=True,
         label_names=["labels"],  # PeftModel hides labels from Trainer's auto-detection
         completion_only_loss=True,
